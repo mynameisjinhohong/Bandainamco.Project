@@ -30,12 +30,13 @@ public class CameraManager : ManagerBase
 
     public bool isReturnedToPlayer;
     public bool endFadeOut = false;
+    public GameObject bg;
     public override void Init()
     {
+
         Instance = this;
         isReturnedToPlayer = false;
         SetOrthographicSizeWhole();
-
         virtualCams = brainCam.GetComponentsInChildren<CinemachineVirtualCamera>();
         virtualCamDic = new Dictionary<string, CinemachineVirtualCamera>();
 
@@ -51,7 +52,7 @@ public class CameraManager : ManagerBase
     {
         if (cameraName == CamValues.Whole)
         {
-            if ((GameObject.Find("BG").transform.rotation.z / 90) % 2 == 1)
+            if ((bg.transform.rotation.z / 90) % 2 == 1)
             {
                 virtualCamDic[cameraName].m_Lens.OrthographicSize = Mathf.Min(DataManager.Instance.bgSize.x, DataManager.Instance.bgSize.y) / 2;
             }

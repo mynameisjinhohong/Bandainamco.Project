@@ -17,7 +17,7 @@ public class EyeBG_HJH : MonoBehaviour
         eyeTrasform = new Vector3[eyes.Length];
         for(int i =0; i<eyes.Length; i++)
         {
-            eyeTrasform[i] = eyes[i].transform.position;
+            eyeTrasform[i] = eyes[i].GetComponent<RectTransform>().localPosition;
         }
     }
 
@@ -45,7 +45,7 @@ public class EyeBG_HJH : MonoBehaviour
                     {
                         for(int i =0; i< eyes.Length; i++)
                         {
-                            eyes[i].transform.position = eyeTrasform[i];
+                            eyes[i].GetComponent<RectTransform>().localPosition = eyeTrasform[i];
                         }
                         nowEye = true;
                         eyeCanvas.SetActive(true);

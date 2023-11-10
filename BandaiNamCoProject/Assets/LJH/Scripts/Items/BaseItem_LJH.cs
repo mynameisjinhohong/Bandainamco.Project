@@ -37,6 +37,7 @@ public class BaseItem_LJH : MonoBehaviour
                 }
             }
             myItem.isVisited = true;
+            GetComponent<SpriteRenderer>().enabled = false;
             Animator bubbleAni;
             if (bubble.TryGetComponent<Animator>(out bubbleAni))
             {

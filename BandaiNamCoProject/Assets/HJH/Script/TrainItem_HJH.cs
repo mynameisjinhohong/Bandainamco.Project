@@ -12,7 +12,7 @@ public class TrainItem_HJH : BaseItem_LJH
     public GameObject trainIcon;
     public GameObject[] trainRail;
     public Transform playerPos;
-    bool already = false;
+    bool already2 = false;
     bool trainStart = false;
     bool railStart = false;
     bool left = false;
@@ -27,9 +27,9 @@ public class TrainItem_HJH : BaseItem_LJH
 
     public override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && !already)
+        if (other.gameObject.CompareTag("Player") && !already2)
         {
-            already = true;
+            already2 = true;
             ItemManager_LJH.Instance.itemCount += 1;
             ItemManager_LJH.Instance.CurrItem = this;
 
