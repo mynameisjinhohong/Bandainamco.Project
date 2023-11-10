@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 8a83d15d54a5efe458b387adb2deb1fe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AroundCloud_1
+      rect:
+        serializedVersion: 2
+        x: 5186
+        y: 4219
+        width: 3612
+        height: 1392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa3cebf766d85c4887d5c98a781a087
+      internalID: -656832010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_2
+      rect:
+        serializedVersion: 2
+        x: 3828
+        y: 4693
+        width: 1029
+        height: 841
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63899e6c79cace4ba4f47f50f9b97c6
+      internalID: 725561826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 3349
+        width: 3155
+        height: 2170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b054a5a6fcba79a4cb74bb589e6fdff0
+      internalID: -1238695003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_9
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 3228
+        width: 2279
+        height: 1379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89249d7d0be22494ea34f3892d5efc96
+      internalID: 1130196700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_10
+      rect:
+        serializedVersion: 2
+        x: 5425
+        y: 2281
+        width: 2991
+        height: 1863
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c283e21abaf7b48418d0ff01d0b51dc8
+      internalID: -2057500497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_12
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1243
+        width: 3781
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cead188d2d309c243a7bbd5ba1f24e49
+      internalID: 1493917931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_15
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 2082
+        width: 739
+        height: 937
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7231c349145522845ae7375ec525b635
+      internalID: -1224967753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_19
+      rect:
+        serializedVersion: 2
+        x: 4140
+        y: 1331
+        width: 2390
+        height: 1110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e82a1da72841914fa96ac2d3cbbab22
+      internalID: 926748765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_22
+      rect:
+        serializedVersion: 2
+        x: 7396
+        y: 1625
+        width: 1402
+        height: 871
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9ec66650c0e264eb4d1f7d2f2f270a
+      internalID: -248409677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_38
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 312
+        width: 2751
+        height: 907
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b341fbc04f0c54b953267fc428fec5
+      internalID: 334618395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_39
+      rect:
+        serializedVersion: 2
+        x: 2635
+        y: 372
+        width: 1361
+        height: 656
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b459ba300a2db44b8c43922c3fa6975
+      internalID: -1591668541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_40
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 259
+        width: 2137
+        height: 892
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f657421a717554b8a0082aa348a4c0
+      internalID: 883140507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AroundCloud_41
+      rect:
+        serializedVersion: 2
+        x: 6601
+        y: 268
+        width: 2343
+        height: 1312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7602a1bde7b7b46bf850e89156a524
+      internalID: -1443923044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AroundCloud_0: 1546680166
+      AroundCloud_1: -656832010
+      AroundCloud_10: -2057500497
+      AroundCloud_11: 134933414
+      AroundCloud_12: 1493917931
+      AroundCloud_13: 869525870
+      AroundCloud_14: 1266928080
+      AroundCloud_15: -1224967753
+      AroundCloud_16: 1985868646
+      AroundCloud_17: 265860715
+      AroundCloud_18: -49731859
+      AroundCloud_19: 926748765
+      AroundCloud_2: 725561826
+      AroundCloud_20: 1222204802
+      AroundCloud_21: -1980867797
+      AroundCloud_22: -248409677
+      AroundCloud_23: 1416806518
+      AroundCloud_24: 1516143358
+      AroundCloud_25: -970890211
+      AroundCloud_26: 1185458945
+      AroundCloud_27: 1571760643
+      AroundCloud_28: 2109330783
+      AroundCloud_29: -556379662
+      AroundCloud_3: 1755592622
+      AroundCloud_30: 1794550124
+      AroundCloud_31: 550123118
+      AroundCloud_32: 2027120900
+      AroundCloud_33: 37436368
+      AroundCloud_34: -1474734746
+      AroundCloud_35: 282291928
+      AroundCloud_36: 212635417
+      AroundCloud_37: -2120927576
+      AroundCloud_38: 334618395
+      AroundCloud_39: -1591668541
+      AroundCloud_4: -1238695003
+      AroundCloud_40: 883140507
+      AroundCloud_41: -1443923044
+      AroundCloud_42: -2000199262
+      AroundCloud_43: 860103026
+      AroundCloud_44: -1817657364
+      AroundCloud_45: -462874380
+      AroundCloud_46: -924586928
+      AroundCloud_5: -819508503
+      AroundCloud_6: -799603563
+      AroundCloud_7: 247648538
+      AroundCloud_8: -1797557105
+      AroundCloud_9: 1130196700
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

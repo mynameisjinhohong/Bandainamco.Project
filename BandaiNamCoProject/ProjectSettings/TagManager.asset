@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - StartPoint
+  - Item
+  - FxTemporaire
+  - Edge
+  - Clock
+  - StarItemPre
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - StartPoint
+  - Item
+  - Player
+  - BG
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 3254752821
+    locked: 0
+  - name: bgCloud
+    uniqueID: 804109017
+    locked: 0
+  - name: Item
+    uniqueID: 3301562345
+    locked: 0
+  - name: Effect
+    uniqueID: 2380511431
+    locked: 0
