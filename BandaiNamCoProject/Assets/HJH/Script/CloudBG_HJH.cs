@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CloudBG_HJH : MonoBehaviour
 {
@@ -45,4 +46,5 @@ public class CloudBG_HJH : MonoBehaviour
             CloudBGCanvas.SetActive(true);
         }
     }
+
 }
