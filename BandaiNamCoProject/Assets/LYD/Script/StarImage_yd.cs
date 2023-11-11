@@ -67,9 +67,5 @@ public class StarImage_yd : MonoBehaviour
         Vector3 tarPos = new Vector3(transform.position.x, transform.position.y -5, transform.position.z);
        if(isOn)
             other.transform.position = Vector3.MoveTowards(collisionTr.position, tarPos, moveSpeed * Time.deltaTime);
-        Debug.Log(transform.position.x +"x");
-        Debug.Log(transform.position.y + "y");
-        Debug.Log("z" + transform.position.z);
-        Debug.Log(tarPos.x +"x" +  tarPos.y + "y" + tarPos.z + "z");
     }
 }

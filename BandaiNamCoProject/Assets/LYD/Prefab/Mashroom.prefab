@@ -131,9 +131,13 @@ MonoBehaviour:
     zoomText: 
     itemType: 3
     needWholeCam: 1
+    bgObject: {fileID: 0}
+    renderers: []
+    isShown: 0
+  bubble: {fileID: 0}
   scale: 2
-  resetTime: 1
-  originalScale: {x: 0, y: 0, z: 0}
+  resetTime: 5
+  oriScale: {x: 0, y: 0, z: 0}
   isScale: 0
   mashroomTime: 1
   mashroomEffect: {fileID: 1628744458893394, guid: acbbe02a8ddc31f4286f60097bfaea9c, type: 3}
