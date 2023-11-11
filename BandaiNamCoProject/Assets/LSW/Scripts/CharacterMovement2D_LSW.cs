@@ -151,6 +151,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 SetGravity(true);
                 transform.GetChild(0).gameObject.SetActive(true);
                 transform.GetChild(1).gameObject.SetActive(false);
+                gameObject.transform.rotation = Quaternion.identity;
             }
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float angle2 = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x) * Mathf.Rad2Deg;
@@ -201,6 +202,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         }
        
     }
+
     public void AddStar(GameObject obj)
     {
         starItem.Add(obj);
