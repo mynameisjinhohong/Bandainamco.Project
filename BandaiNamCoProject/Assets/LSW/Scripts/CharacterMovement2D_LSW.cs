@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using Cinemachine;
 public class CharacterMovement2D_LSW : MonoBehaviour
 {
     //점프힘
@@ -47,6 +47,16 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     #region 별
     public List<GameObject> starItem = new List<GameObject>();
     #endregion
+    #region 버섯
+    /* public List<bool> isDone = new List<bool>();
+     public List<Vector3> playerScale = new List<Vector3>();*/
+    public bool isCoroutine;
+    Coroutine coroutine;
+    public float mTime;
+    #endregion
+    public CinemachineVirtualCamera characterCam;
+    public StarBackground_yd starBack;
+    public float targetOrtho = 70;
     private void Start()
     {
         rb = GetComponentInChildren<Rigidbody2D>();
@@ -186,6 +196,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
             if (ItemManager_LJH.Instance.CurrItem.myItem.itemType == ItemType.Star)
             {
+                starBack.isOn = true;
                 if (starItem.Count > 1)
                 {
                     int itemsToRemove = starItem.Count - 1; // 남겨둘 아이템 개수 계산
@@ -198,9 +209,123 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 }
 
             }
+            if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Mushroom)
+            {
+                Debug.Log("머쉬루룰루룽ㅁ");
+                if (isCoroutine)
+                {
+                    if (coroutine != null)
+                    {
+                        StopCoroutine(coroutine);
+                        Debug.Log("DDDDDDD");
+                    }
+                    isCoroutine = false;
+
+                    Vector3 nowScale = transform.localScale;
+                    float now = characterCam.m_Lens.OrthographicSize;
+                    StartCoroutine(OriginScale(nowScale, 4, now)); //머쉬룸 타임은 머쉬룸 스크립트에서 숫자바뀔때같이 변경해줘야함
+
+                }
+
+
+            }
 
         }
        
+    }
+    IEnumerator OriginScale(Vector3 nowScale, float mTime, float now)
+    {
+        Debug.Log("????????????");
+        float currentTime = 0;
+        float oriOrtho = 50;
+        Vector3 oriScale = new Vector3(1, 1, 1);
+        while (currentTime < mTime)
+        {
+            transform.localScale = Vector3.Lerp(nowScale, oriScale, currentTime / mTime);
+            characterCam.m_Lens.OrthographicSize = Mathf.Lerp(now, oriOrtho, currentTime / mTime);
+
+            //yield return null;
+            currentTime += Time.deltaTime;
+            yield return null;
+
+            Debug.Log("작아짐");
+
+        }
+        characterCam.m_Lens.OrthographicSize = oriOrtho;
+
+        transform.localScale = oriScale;
+        Debug.Log(transform.localScale + "local");
+        yield return null;
+    }
+    public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
+    {
+        if (isCoroutine)
+        {
+            isCoroutine = false;
+            if (coroutine != null)
+            {
+                StopCoroutine(coroutine);
+            }
+
+
+        }
+        coroutine = StartCoroutine(PlayerScaleEvent(tr, scale, resetTime, mashroomTime, mashroomEffect));
+    }
+    IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
+    {
+        isCoroutine = true;
+        Vector3 oriScale = new Vector3(1, 1, 1);
+        targetTr.localScale = oriScale;
+        //  targetTr.GetComponent<CharacterMovement2D_LSW>().AddMushroom(oriScale, false);
+        //Vector3 originalScale = targetTr.localScale;
+        Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
+        float currentTime = 0;
+        targetTr.localScale = targetScale;
+        float oriOrtho = 50;
+        //  float targetOrtho = 70;
+        //GameObject me = Instantiate(mashroomEffect, targetTr.transform.parent, );
+        // Vector3 newPosition = new Vector3(0, 1, -8.0f);
+        GameObject me = Instantiate(mashroomEffect, targetTr.transform);
+        // me.transform.parent = targetTr.transform;
+        while (currentTime < mashroomTime)
+        {
+            targetTr.localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
+            characterCam.m_Lens.OrthographicSize = Mathf.Lerp(oriOrtho, targetOrtho, currentTime / mashroomTime);
+            currentTime += Time.deltaTime;
+            //Debug.Log("커짐");
+            yield return null;
+
+        }
+        targetTr.localScale = targetScale;
+        characterCam.m_Lens.OrthographicSize = targetOrtho;
+        yield return new WaitForSeconds(resetTime);
+        /* if (targetTr.GetComponent<CharacterMovement2D_LSW>().isDone[targetTr.GetComponent<CharacterMovement2D_LSW>().isDone.Count - 1] == false)
+         {
+             Debug.Log("중단");
+             return;
+         }*/
+        //yield return new WaitForSeconds(resetTime);
+        //Debug.Log("유지시간");
+        currentTime = 0f;
+
+
+        while (currentTime < mashroomTime)
+        {
+            targetTr.localScale = Vector3.Lerp(targetScale, oriScale, currentTime / mashroomTime);
+            characterCam.m_Lens.OrthographicSize = Mathf.Lerp(targetOrtho, oriOrtho, currentTime / mashroomTime);
+
+            currentTime += Time.deltaTime;
+            //yield return null;
+            yield return null;
+
+            Debug.Log("작아짐");
+
+        }
+        transform.localScale = oriScale;
+        characterCam.m_Lens.OrthographicSize = oriOrtho;
+        yield return null;
+        isCoroutine = false;
+
     }
     public IEnumerator RollBackRotation()
     {
