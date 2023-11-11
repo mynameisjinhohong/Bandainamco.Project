@@ -34,7 +34,7 @@ public class FishItem_HJH : BaseItem_LJH
             player.GetComponent<CharacterMovement2D_LSW>().SetGravity(true);
             player.transform.GetChild(0).gameObject.SetActive(true);
             player.transform.GetChild(1).gameObject.SetActive(false);
-            player.transform.rotation = Quaternion.identity;
+            player.GetComponent<CharacterMovement2D_LSW>().StartCoroutine(player.GetComponent<CharacterMovement2D_LSW>().RollBackRotation());
         }
     }
 }
