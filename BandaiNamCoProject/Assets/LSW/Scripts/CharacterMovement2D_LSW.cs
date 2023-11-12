@@ -57,6 +57,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public CinemachineVirtualCamera characterCam;
     public StarBackground_yd starBack;
     public float targetOrtho = 70;
+    public Vector3 startScale;
     private void Start()
     {
         rb = GetComponentInChildren<Rigidbody2D>();
@@ -66,6 +67,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         lastUsedItem = null;
         firstCoolTime = coolTime;
         firstJumpPower = jumpPower;
+        startScale = transform.GetChild(0).localScale;
     }
 
     private void FixedUpdate()
@@ -211,13 +213,12 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
             if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Mushroom)
             {
-                Debug.Log("¸Ó½¬·ç·ê·ç·î¤±");
+                //Debug.Log("¸Ó½¬·ç·ê·ç·î¤±");
                 if (isCoroutine)
                 {
                     if (coroutine != null)
                     {
                         StopCoroutine(coroutine);
-                        Debug.Log("DDDDDDD");
                     }
                     isCoroutine = false;
 
@@ -235,26 +236,26 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     }
     IEnumerator OriginScale(Vector3 nowScale, float mTime, float now)
     {
-        Debug.Log("????????????");
+        //Debug.Log("????????????");
         float currentTime = 0;
         float oriOrtho = 50;
-        Vector3 oriScale = new Vector3(1, 1, 1);
+        Vector3 oriScale = startScale;
         while (currentTime < mTime)
         {
-            transform.localScale = Vector3.Lerp(nowScale, oriScale, currentTime / mTime);
+            transform.GetChild(0).localScale = Vector3.Lerp(nowScale, oriScale, currentTime / mTime);
             characterCam.m_Lens.OrthographicSize = Mathf.Lerp(now, oriOrtho, currentTime / mTime);
 
             //yield return null;
             currentTime += Time.deltaTime;
             yield return null;
 
-            Debug.Log("ÀÛ¾ÆÁü");
+            //Debug.Log("ÀÛ¾ÆÁü");
 
         }
         characterCam.m_Lens.OrthographicSize = oriOrtho;
 
-        transform.localScale = oriScale;
-        Debug.Log(transform.localScale + "local");
+        transform.GetChild(0).localScale = oriScale;
+        //Debug.Log(transform.localScale + "local");
         yield return null;
     }
     public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
@@ -274,13 +275,13 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
     {
         isCoroutine = true;
-        Vector3 oriScale = new Vector3(1, 1, 1);
-        targetTr.localScale = oriScale;
+        Vector3 oriScale = startScale;
+        targetTr.GetChild(0).localScale = oriScale;
         //  targetTr.GetComponent<CharacterMovement2D_LSW>().AddMushroom(oriScale, false);
         //Vector3 originalScale = targetTr.localScale;
         Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
         float currentTime = 0;
-        targetTr.localScale = targetScale;
+        targetTr.GetChild(0).localScale = targetScale;
         float oriOrtho = 50;
         //  float targetOrtho = 70;
         //GameObject me = Instantiate(mashroomEffect, targetTr.transform.parent, );
@@ -289,14 +290,14 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         // me.transform.parent = targetTr.transform;
         while (currentTime < mashroomTime)
         {
-            targetTr.localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
+            targetTr.GetChild(0).localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
             characterCam.m_Lens.OrthographicSize = Mathf.Lerp(oriOrtho, targetOrtho, currentTime / mashroomTime);
             currentTime += Time.deltaTime;
             //Debug.Log("Ä¿Áü");
             yield return null;
 
         }
-        targetTr.localScale = targetScale;
+        targetTr.GetChild(0).localScale = targetScale;
         characterCam.m_Lens.OrthographicSize = targetOrtho;
         yield return new WaitForSeconds(resetTime);
         /* if (targetTr.GetComponent<CharacterMovement2D_LSW>().isDone[targetTr.GetComponent<CharacterMovement2D_LSW>().isDone.Count - 1] == false)
@@ -311,17 +312,17 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
         while (currentTime < mashroomTime)
         {
-            targetTr.localScale = Vector3.Lerp(targetScale, oriScale, currentTime / mashroomTime);
+            targetTr.GetChild(0).localScale = Vector3.Lerp(targetScale, oriScale, currentTime / mashroomTime);
             characterCam.m_Lens.OrthographicSize = Mathf.Lerp(targetOrtho, oriOrtho, currentTime / mashroomTime);
 
             currentTime += Time.deltaTime;
             //yield return null;
             yield return null;
 
-            Debug.Log("ÀÛ¾ÆÁü");
+            //Debug.Log("ÀÛ¾ÆÁü");
 
         }
-        transform.localScale = oriScale;
+        targetTr.GetChild(0).localScale = oriScale;
         characterCam.m_Lens.OrthographicSize = oriOrtho;
         yield return null;
         isCoroutine = false;
