@@ -27,7 +27,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public ItemManager_LSW itemManager;
     // 마지막 아이템 확인용
     public int? lastUsedItem;
-
+    public float rotateSpeed;
     //yd
     public ItemManager_LJH itemMan; //아이템매니저
     #region 연꽃용
@@ -96,7 +96,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         {
             if(mashroomBach)
             {
-                Debug.Log("버섯");
+                //Debug.Log("버섯");
                 Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 //  Vector2 direction = dir - (Vector2)transform.position;
                 //  direction = -direction;
@@ -127,7 +127,18 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
     void Update()
     {
-        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        if (rb.velocity.x != rb.velocity.y)
+        {
+            if (Mathf.Abs(rb.velocity.x) > Mathf.Abs(rb.velocity.y))
+            {
+                transform.GetChild(0).Rotate(Vector3.up * Time.deltaTime * rotateSpeed * rb.velocity.x);
+            }
+            else
+            {
+                transform.GetChild(0).Rotate(Vector3.right * Time.deltaTime * rotateSpeed * rb.velocity.y);
+            }
+        }
+
 
         // transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         //Debug.Log(transform.rotation + "회전?");
@@ -163,6 +174,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 SetGravity(true);
                 transform.GetChild(0).gameObject.SetActive(true);
                 transform.GetChild(1).gameObject.SetActive(false);
+                transform.rotation = Quaternion.identity;
                 StartCoroutine(RollBackRotation());
             }
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -222,9 +234,18 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                     }
                     isCoroutine = false;
 
-                    Vector3 nowScale = transform.localScale;
+                    Vector3 nowScale = transform.GetChild(0).localScale;
                     float now = characterCam.m_Lens.OrthographicSize;
-                    StartCoroutine(OriginScale(nowScale, 4, now)); //머쉬룸 타임은 머쉬룸 스크립트에서 숫자바뀔때같이 변경해줘야함
+                    if(ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Train)
+                    {
+                        StartCoroutine(OriginScale(nowScale, 4, now)); //머쉬룸 타임은 머쉬룸 스크립트에서 숫자바뀔때같이 변경해줘야함
+                    }
+                    else
+                    {
+                        transform.GetChild(0).localScale = startScale;
+                        float oriOrtho = 50;
+                        characterCam.m_Lens.OrthographicSize = oriOrtho;
+                    }
 
                 }
 
