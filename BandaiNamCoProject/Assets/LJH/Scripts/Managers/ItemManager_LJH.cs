@@ -86,7 +86,7 @@ public class ItemManager_LJH : ManagerBase
                     {
                         restart = true;
                     } //플레이어랑 너무 가까울 때
-                    if (su > 5000)
+                    if (su > 1000)
                     {
                         restart = false;
                         Debug.Log("가까운데도 생성이 되어 버렸다");

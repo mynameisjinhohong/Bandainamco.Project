@@ -377,7 +377,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     
     public void Rabbit(float moreJump,float time)
     {
-        jumpPower += moreJump;
+        jumpPower *= moreJump;
         StopCoroutine("RabbitCo");
         StartCoroutine(RabbitCo(time));
         

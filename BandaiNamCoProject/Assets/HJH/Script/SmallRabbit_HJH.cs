@@ -9,11 +9,13 @@ public class SmallRabbit_HJH : MonoBehaviour
     public float jumpPowerPlus;
     public float speedMax;
     public float speedMin;
-    bool start = false;
+    public  bool start = false;
+    public bool Item;
+    public RabbitBG_HJH rabbitBg;
     // Start is called before the first frame update
     void Start()
     {
-        transform.SetSiblingIndex(Random.Range(0,transform.parent.childCount));
+        transform.SetSiblingIndex(Random.Range(0, transform.parent.childCount));
         gameObject.SetActive(false);
     }
 
@@ -30,14 +32,29 @@ public class SmallRabbit_HJH : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 collision.GetComponent<CharacterMovement2D_LSW>().Rabbit(jumpPowerPlus,duringTime);
-                transform.parent.GetComponent<RabbitItrm_HJH>().end = true;
+                if (Item)
+                {
+                    transform.parent.GetComponent<RabbitItrm_HJH>().end = true;
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
             }
         }
     }
 
     private void OnEnable()
     {
-        StartCoroutine(Move());
+
+        if (Item)
+        {
+            StartCoroutine(Move());
+        }
+        else
+        {
+            transform.SetSiblingIndex(Random.Range(transform.parent.childCount - 5, transform.parent.childCount));
+        }
     }
 
     public IEnumerator Move()
