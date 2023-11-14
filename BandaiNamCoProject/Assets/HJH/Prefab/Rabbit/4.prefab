@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7489278491407546567}
   - component: {fileID: 6766004552050422644}
   - component: {fileID: 4864374670514016222}
+  - component: {fileID: 3514342582216166502}
   m_Layer: 7
   m_Name: 4
   m_TagString: Untagged
@@ -102,6 +103,9 @@ MonoBehaviour:
   jumpPowerPlus: 50
   speedMax: 50
   speedMin: 20
+  start: 0
+  Item: 0
+  rabbitBg: {fileID: 0}
 --- !u!61 &4864374670514016222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,3 +132,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.000096, y: 2.93}
   m_EdgeRadius: 0
+--- !u!95 &3514342582216166502
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016835521685507825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e7d1cb52361bdf418613a241f3c4cbd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
