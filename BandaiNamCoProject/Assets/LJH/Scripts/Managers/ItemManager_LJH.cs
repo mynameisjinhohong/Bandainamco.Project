@@ -89,6 +89,7 @@ public class ItemManager_LJH : ManagerBase
                     if (su > 1000)
                     {
                         restart = false;
+                        Debug.Log("가까운데도 생성이 되어 버렸다");
                     } // 너무 많이 반복할 때
                     if (!restart)
                     {
@@ -101,10 +102,10 @@ public class ItemManager_LJH : ManagerBase
                 bub.transform.position = item.transform.position;
                 bub.transform.parent = item.transform;
                 BaseItem_LJH baseItem = item.GetComponent<BaseItem_LJH>();
+                spawnItems.Add(baseItem);
                 baseItem.bubble = bub;
                 baseItem.myItem = items[i];
 
-                spawnItems.Add(baseItem);
             }
         }
         base.Init();

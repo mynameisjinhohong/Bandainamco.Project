@@ -27,7 +27,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public ItemManager_LSW itemManager;
     // 마지막 아이템 확인용
     public int? lastUsedItem;
-
+    public float rotateSpeed;
     //yd
     public ItemManager_LJH itemMan; //아이템매니저
     #region 연꽃용
@@ -57,6 +57,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public CinemachineVirtualCamera characterCam;
     public StarBackground_yd starBack;
     public float targetOrtho = 70;
+    public Vector3 startScale;
     private void Start()
     {
         rb = GetComponentInChildren<Rigidbody2D>();
@@ -66,6 +67,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         lastUsedItem = null;
         firstCoolTime = coolTime;
         firstJumpPower = jumpPower;
+        startScale = transform.GetChild(0).localScale;
     }
 
     private void FixedUpdate()
@@ -94,7 +96,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         {
             if(mashroomBach)
             {
-                Debug.Log("버섯");
+                //Debug.Log("버섯");
                 Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 //  Vector2 direction = dir - (Vector2)transform.position;
                 //  direction = -direction;
@@ -125,7 +127,18 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
     void Update()
     {
-        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        if (rb.velocity.x != rb.velocity.y)
+        {
+            if (Mathf.Abs(rb.velocity.x) > Mathf.Abs(rb.velocity.y))
+            {
+                transform.GetChild(0).Rotate(Vector3.up * Time.deltaTime * rotateSpeed * rb.velocity.x);
+            }
+            else
+            {
+                transform.GetChild(0).Rotate(Vector3.right * Time.deltaTime * rotateSpeed * rb.velocity.y);
+            }
+        }
+
 
         // transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         //Debug.Log(transform.rotation + "회전?");
@@ -161,6 +174,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 SetGravity(true);
                 transform.GetChild(0).gameObject.SetActive(true);
                 transform.GetChild(1).gameObject.SetActive(false);
+                transform.rotation = Quaternion.identity;
                 StartCoroutine(RollBackRotation());
             }
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -211,19 +225,27 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
             if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Mushroom)
             {
-                Debug.Log("머쉬루룰루룽ㅁ");
+                //Debug.Log("머쉬루룰루룽ㅁ");
                 if (isCoroutine)
                 {
                     if (coroutine != null)
                     {
                         StopCoroutine(coroutine);
-                        Debug.Log("DDDDDDD");
                     }
                     isCoroutine = false;
 
-                    Vector3 nowScale = transform.localScale;
+                    Vector3 nowScale = transform.GetChild(0).localScale;
                     float now = characterCam.m_Lens.OrthographicSize;
-                    StartCoroutine(OriginScale(nowScale, 4, now)); //머쉬룸 타임은 머쉬룸 스크립트에서 숫자바뀔때같이 변경해줘야함
+                    if(ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Train)
+                    {
+                        StartCoroutine(OriginScale(nowScale, 4, now)); //머쉬룸 타임은 머쉬룸 스크립트에서 숫자바뀔때같이 변경해줘야함
+                    }
+                    else
+                    {
+                        transform.GetChild(0).localScale = startScale;
+                        float oriOrtho = 50;
+                        characterCam.m_Lens.OrthographicSize = oriOrtho;
+                    }
 
                 }
 
@@ -235,26 +257,26 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     }
     IEnumerator OriginScale(Vector3 nowScale, float mTime, float now)
     {
-        Debug.Log("????????????");
+        //Debug.Log("????????????");
         float currentTime = 0;
         float oriOrtho = 50;
-        Vector3 oriScale = new Vector3(1, 1, 1);
+        Vector3 oriScale = startScale;
         while (currentTime < mTime)
         {
-            transform.localScale = Vector3.Lerp(nowScale, oriScale, currentTime / mTime);
+            transform.GetChild(0).localScale = Vector3.Lerp(nowScale, oriScale, currentTime / mTime);
             characterCam.m_Lens.OrthographicSize = Mathf.Lerp(now, oriOrtho, currentTime / mTime);
 
             //yield return null;
             currentTime += Time.deltaTime;
             yield return null;
 
-            Debug.Log("작아짐");
+            //Debug.Log("작아짐");
 
         }
         characterCam.m_Lens.OrthographicSize = oriOrtho;
 
-        transform.localScale = oriScale;
-        Debug.Log(transform.localScale + "local");
+        transform.GetChild(0).localScale = oriScale;
+        //Debug.Log(transform.localScale + "local");
         yield return null;
     }
     public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
@@ -274,13 +296,13 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
     {
         isCoroutine = true;
-        Vector3 oriScale = new Vector3(1, 1, 1);
-        targetTr.localScale = oriScale;
+        Vector3 oriScale = startScale;
+        targetTr.GetChild(0).localScale = oriScale;
         //  targetTr.GetComponent<CharacterMovement2D_LSW>().AddMushroom(oriScale, false);
         //Vector3 originalScale = targetTr.localScale;
         Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
         float currentTime = 0;
-        targetTr.localScale = targetScale;
+        targetTr.GetChild(0).localScale = targetScale;
         float oriOrtho = 50;
         //  float targetOrtho = 70;
         //GameObject me = Instantiate(mashroomEffect, targetTr.transform.parent, );
@@ -289,14 +311,14 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         // me.transform.parent = targetTr.transform;
         while (currentTime < mashroomTime)
         {
-            targetTr.localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
+            targetTr.GetChild(0).localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
             characterCam.m_Lens.OrthographicSize = Mathf.Lerp(oriOrtho, targetOrtho, currentTime / mashroomTime);
             currentTime += Time.deltaTime;
             //Debug.Log("커짐");
             yield return null;
 
         }
-        targetTr.localScale = targetScale;
+        targetTr.GetChild(0).localScale = targetScale;
         characterCam.m_Lens.OrthographicSize = targetOrtho;
         yield return new WaitForSeconds(resetTime);
         /* if (targetTr.GetComponent<CharacterMovement2D_LSW>().isDone[targetTr.GetComponent<CharacterMovement2D_LSW>().isDone.Count - 1] == false)
@@ -311,17 +333,17 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
         while (currentTime < mashroomTime)
         {
-            targetTr.localScale = Vector3.Lerp(targetScale, oriScale, currentTime / mashroomTime);
+            targetTr.GetChild(0).localScale = Vector3.Lerp(targetScale, oriScale, currentTime / mashroomTime);
             characterCam.m_Lens.OrthographicSize = Mathf.Lerp(targetOrtho, oriOrtho, currentTime / mashroomTime);
 
             currentTime += Time.deltaTime;
             //yield return null;
             yield return null;
 
-            Debug.Log("작아짐");
+            //Debug.Log("작아짐");
 
         }
-        transform.localScale = oriScale;
+        targetTr.GetChild(0).localScale = oriScale;
         characterCam.m_Lens.OrthographicSize = oriOrtho;
         yield return null;
         isCoroutine = false;
@@ -355,7 +377,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     
     public void Rabbit(float moreJump,float time)
     {
-        jumpPower += moreJump;
+        jumpPower *= moreJump;
         StopCoroutine("RabbitCo");
         StartCoroutine(RabbitCo(time));
         

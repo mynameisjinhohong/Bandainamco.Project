@@ -136,6 +136,7 @@ public class TrainItem_HJH : BaseItem_LJH
         if (railStart)
         {
             player.transform.position = playerPos.position;
+            player.transform.GetChild(0).rotation = Quaternion.identity;
         }
         if (!trainStart)
         {
@@ -148,6 +149,7 @@ public class TrainItem_HJH : BaseItem_LJH
         if (playerOn)
         {
             player.transform.position = playerPos.position;
+            player.transform.GetChild(0).rotation = Quaternion.identity;
         }
 
     }
