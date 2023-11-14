@@ -124,7 +124,7 @@ public class StartUI_HJH : MonoBehaviour
         Image image = img.GetComponent<Image>();
         float alpha = 0;
         Color color = image.color;
-        while (alpha < 1f)
+        while (alpha < 0.6f)
         {
             alpha += 0.01f;
             yield return new WaitForSeconds(fadeSpeed);
