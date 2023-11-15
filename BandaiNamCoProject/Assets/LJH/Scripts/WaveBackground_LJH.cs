@@ -10,7 +10,7 @@ public class WaveBackground_LJH : MonoBehaviour
     }
 
     [SerializeField] private float moveOffset;
-    [SerializeField] private Vector2 moveSpeedMinMax;
+    [SerializeField] private Vector2 moveSecMinMax;
     [SerializeField] private MoveState moveState;
     [SerializeField] private float addVelocity;
 
@@ -19,8 +19,8 @@ public class WaveBackground_LJH : MonoBehaviour
     Vector3 rightPos;
     Vector3 leftPos;
 
-    float elapsedOffset = 0f;
-    float moveSpeed;
+    float elapsedTime = 0f;
+    float moveSec;
 
     private void Awake()
     {
@@ -28,42 +28,37 @@ public class WaveBackground_LJH : MonoBehaviour
         rightPos = originPos + new Vector3(moveOffset, 0f, 0f);
         leftPos = originPos + new Vector3(-moveOffset, 0f, 0f);
 
-        moveSpeed = Random.Range(moveSpeedMinMax.x, moveSpeedMinMax.y);
+        moveSec = Random.Range(moveSecMinMax.x, moveSecMinMax.y);
     }
 
     private void Update()
     {
         if (!gameObject.activeSelf) return;
 
-        if (CheckDirection())
+        if (CheckFinish())
         {
+            elapsedTime = 0f;
             moveState = moveState == MoveState.Right ? MoveState.Left : MoveState.Right;
             if (attachedPlayer != null)
                 AddVelocity();
         }
+
+        elapsedTime += Time.unscaledDeltaTime;
+
         switch (moveState)
         {
             case MoveState.Left:
-                transform.localPosition += new Vector3(-moveSpeed * Time.unscaledDeltaTime , 0f, 0f);
+                transform.localPosition = Vector3.Lerp(rightPos, leftPos, elapsedTime / moveSec);
                 break;
             case MoveState.Right:
-                transform.localPosition += new Vector3(moveSpeed * Time.unscaledDeltaTime, 0f, 0f);
+                transform.localPosition = Vector3.Lerp(leftPos, rightPos, elapsedTime / moveSec);
                 break;
         }
     }
 
-    private bool CheckDirection()
+    private bool CheckFinish()
     {
-        if(moveState == MoveState.Left)
-        {
-            if (transform.localPosition.x < leftPos.x)
-                return true;
-        }
-        else if(moveState == MoveState.Right)
-        {
-            if (transform.localPosition.x > rightPos.x)
-                return true;
-        }
+        if (elapsedTime >= moveSec) return true;
         return false;
     }
 

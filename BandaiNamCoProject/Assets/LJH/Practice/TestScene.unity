@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: moveState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6252994411941428785, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
+      propertyPath: moveSecMinMax.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252994411941428785, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
+      propertyPath: moveSecMinMax.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6252994411941429198, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
       propertyPath: m_Name
       value: WaveBG (2)
@@ -446,11 +454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252994411941428784, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 328.78046
+      value: 349
       objectReference: {fileID: 0}
     - target: {fileID: 6252994411941428784, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 272.63644
+      value: 288
       objectReference: {fileID: 0}
     - target: {fileID: 6252994411941428784, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -483,6 +491,14 @@ PrefabInstance:
     - target: {fileID: 6252994411941428784, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252994411941428785, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
+      propertyPath: moveSecMinMax.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252994411941428785, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
+      propertyPath: moveSecMinMax.y
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6252994411941429198, guid: 90bc5e81885204d439381af5e29ae1f8, type: 3}
       propertyPath: m_Name
