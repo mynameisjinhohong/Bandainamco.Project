@@ -93,6 +93,7 @@ public class GamePlayManager_HJH : ManagerBase
                 {
                     characterMovement2D.SetPosition(Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0.5f)));
                     ItemManager_LJH.Instance.SetLotus(true);
+                    ItemManager_LJH.Instance.SetLotusShield(false);
                     return;
                 }
             }
