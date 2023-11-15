@@ -92,6 +92,7 @@ public class GamePlayManager_HJH : ManagerBase
                 if (ItemManager_LJH.Instance.CurrItem.myItem.itemType == ItemType.Lotus)
                 {
                     characterMovement2D.SetPosition(Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0.5f)));
+                    ItemManager_LJH.Instance.SetLotus(true);
                     return;
                 }
             }

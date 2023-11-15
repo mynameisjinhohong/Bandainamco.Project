@@ -39,10 +39,10 @@ public class ItemManager_LJH : ManagerBase
     public Transform bubbleParent;
     private List<Bubble_LJH> bubbles;
 
-    private void Awake()
-    {
 
-    }
+    [Header("Lotus")]
+    public LotusParticle_LJH lotus;
+
 
     Vector3 Return_RandomPosition()
     {
@@ -151,5 +151,13 @@ public class ItemManager_LJH : ManagerBase
             foreach (var bubble in bubbles)
                 bubble.FinishBubble();
         }
+    }
+
+    public void SetLotus(bool start)
+    {
+        if (start)
+            lotus.Play();
+        else
+            lotus.Stop();
     }
 }
