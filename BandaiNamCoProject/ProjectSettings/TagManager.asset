@@ -50,12 +50,12 @@ TagManager:
   - name: background
     uniqueID: 3254752821
     locked: 0
-  - name: bgCloud
-    uniqueID: 804109017
-    locked: 0
   - name: Item
     uniqueID: 3301562345
     locked: 0
   - name: Effect
     uniqueID: 2380511431
+    locked: 0
+  - name: bgCloud
+    uniqueID: 804109017
     locked: 0
