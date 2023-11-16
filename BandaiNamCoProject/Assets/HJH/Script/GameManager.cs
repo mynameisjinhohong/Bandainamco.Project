@@ -20,12 +20,13 @@ public class UserData_HJH
 [System.Serializable]
 public class StageData_HJH
 {
-    public bool[] itemOnOff;
+    public bool[] itemOnOff = new bool[10];
 }
 
 
 public class GameManager : MonoBehaviour
 {
+    public int[] itemCount;
     public UserData_HJH userData;
     public static GameManager instance = null;
 
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
                 for(int i =0; i< userData.stageDatas.Length; i++)
                 {
                     userData.stageDatas[i] = new StageData_HJH();
+                    userData.stageDatas[i].itemOnOff = new bool[itemCount[i]];
                 }
             }
         }

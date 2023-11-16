@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22354e48c3df3a43be0847b28286292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCount: 0a000000000000000000000000000000
   userData:
     stage: 0
     volume: 1

@@ -86,7 +86,7 @@ public class GameOver_HJH : MonoBehaviour
         image.color = color;
         while (alpha < 1f)
         {
-            alpha += 0.001f;
+            alpha += 0.01f;
             yield return new WaitForSecondsRealtime(fadeSpeed);
             color.a = alpha;
             image.color = color;
