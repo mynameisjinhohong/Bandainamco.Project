@@ -57,6 +57,14 @@ public class StartUI_HJH : MonoBehaviour
     public void NewGameButton()
     {
         GameManager.instance.userData = new UserData_HJH();
+        if (GameManager.instance.userData.stageDatas[0] == null)
+        {
+            for (int i = 0; i < GameManager.instance.userData.stageDatas.Length; i++)
+            {
+                GameManager.instance.userData.stageDatas[i] = new StageData_HJH();
+                GameManager.instance.userData.stageDatas[i].itemOnOff = new bool[GameManager.instance.itemCount[i]];
+            }
+        }
         if (audio != null)
         {
             audio.Play();

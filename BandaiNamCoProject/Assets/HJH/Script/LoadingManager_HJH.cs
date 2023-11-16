@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,12 +19,18 @@ public class LoadingManager_HJH : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("LoadingScene");
 
+
     }
     private void Start()
     {
         StartCoroutine(LoadSceneCo());
         StartCoroutine(LoadingText());
         //StartCoroutine(BgScroll());
+    }
+
+    public void Update()
+    {
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame

@@ -163,8 +163,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Loading...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 679f6edc5eced6f4cad97c63111d8ec5, type: 2}
-  m_sharedMaterial: {fileID: 4982075577820724956, guid: 679f6edc5eced6f4cad97c63111d8ec5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -287,6 +287,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22354e48c3df3a43be0847b28286292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemCount: 0a000000000000000000000000000000
+  userData:
+    stage: 0
+    volume: 1
+    stageDatas:
+    - itemOnOff: 00000000000000000000
+    - itemOnOff: 
+    - itemOnOff: 
+    - itemOnOff: 
+  volume: 0
+  audios: []
 --- !u!4 &445728708
 Transform:
   m_ObjectHideFlags: 0
@@ -508,6 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361908154}
   - component: {fileID: 1361908153}
+  - component: {fileID: 1361908155}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -592,6 +604,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1361908155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361908152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1665720088
 GameObject:
   m_ObjectHideFlags: 0

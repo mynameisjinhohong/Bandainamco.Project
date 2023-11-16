@@ -9,15 +9,24 @@ public class UserData_HJH
 {
     public int stage;
     public float volume = 1f;
+    public StageData_HJH[] stageDatas = new StageData_HJH[4];
     public UserData_HJH()
     {
         stage = 0;
         volume = 1f;
+        stageDatas = new StageData_HJH[4];
     }
 }
+[System.Serializable]
+public class StageData_HJH
+{
+    public bool[] itemOnOff = new bool[10];
+}
+
 
 public class GameManager : MonoBehaviour
 {
+    public int[] itemCount;
     public UserData_HJH userData;
     public static GameManager instance = null;
 
@@ -101,6 +110,14 @@ public class GameManager : MonoBehaviour
         else
         {
             userData = new UserData_HJH();
+            if (userData.stageDatas[0] == null)
+            {
+                for(int i =0; i< userData.stageDatas.Length; i++)
+                {
+                    userData.stageDatas[i] = new StageData_HJH();
+                    userData.stageDatas[i].itemOnOff = new bool[itemCount[i]];
+                }
+            }
         }
         Volume = userData.volume;
     }

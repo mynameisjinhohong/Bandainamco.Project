@@ -53,14 +53,56 @@ public class GamePlayManager_HJH : ManagerBase
         {
             case EndingType.Good:
                 endings[1].SetActive(true);
+                if(GameManager.instance != null)
+                {
+                    GameManager.instance.userData.stage++;
+                }
+                if (GameManager.instance != null)
+                {
+                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                    {
+                        if (ItemManager_LJH.Instance.items[i].isVisited)
+                        {
+                            GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i] = true;
+                        }
+                    }
+                    GameManager.instance.SaveUserData();
+                }
                 break;
             case EndingType.Bad:
                 endings[2].SetActive(true);
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.userData.stage++;
+                }
+                if (GameManager.instance != null)
+                {
+                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                    {
+                        if (ItemManager_LJH.Instance.items[i].isVisited)
+                        {
+                            GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i] = true;
+                        }
+                    }
+                    GameManager.instance.SaveUserData();
+                }
                 break;
             case EndingType.Over:
                 endings[0].SetActive(true);
+                if (GameManager.instance != null)
+                {
+                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                    {
+                        if (ItemManager_LJH.Instance.items[i].isVisited)
+                        {
+                            GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage].itemOnOff[i] = true;
+                        }
+                    }
+                    GameManager.instance.SaveUserData();
+                }
                 break;
         }
+
         base.GameOver();
     }
     private void Update()
