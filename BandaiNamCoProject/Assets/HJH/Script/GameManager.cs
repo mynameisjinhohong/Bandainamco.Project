@@ -2,7 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
+using UnityEditor;
+
+
+public class DataMenu
+{
+    [MenuItem("Data/DataClear")]
+    public static void DataClear()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+}
 
 [System.Serializable]
 public class UserData_HJH
@@ -10,11 +22,13 @@ public class UserData_HJH
     public int stage;
     public float volume = 1f;
     public StageData_HJH[] stageDatas = new StageData_HJH[4];
+    public int langaugeSet = 0;
     public UserData_HJH()
     {
         stage = 0;
         volume = 1f;
         stageDatas = new StageData_HJH[4];
+        langaugeSet = 0;
     }
 }
 [System.Serializable]
@@ -119,7 +133,13 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[userData.langaugeSet];
         Volume = userData.volume;
+    }
+
+    public void LangaugeSet(int langaugeIdx)
+    {
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[langaugeIdx];
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

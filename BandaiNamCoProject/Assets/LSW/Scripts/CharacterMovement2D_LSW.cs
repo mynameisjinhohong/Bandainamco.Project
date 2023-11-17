@@ -69,60 +69,74 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         firstJumpPower = jumpPower;
         startScale = transform.GetChild(0).localScale;
     }
-
+    IEnumerator Go_DownDown()
+    {
+        // 0.5초 동안 기다리고 실행.
+        yield return new WaitForSeconds(1.0f);
+        ani.SetTrigger("do_Down");
+        //실행시킨 거 비활성화
+    }
+    IEnumerator Go_Jump_Second()
+    {
+        // 0.56초 동안 기다리고 실행.
+        yield return new WaitForSeconds(0.4f);
+        ani.SetTrigger("doJump");
+        ani.SetBool("isJump", false);
+        //실행시킨 거 비활성화
+    }
     private void FixedUpdate()
     {
         if (jump)
         {
-            Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            
-            dir.Normalize();
-            if(dir.y > 0)
-            {
-                rb.velocity = Vector3.zero;
-            }
-            if(dir!= Vector2.zero)
-            {
-                rb.AddForce(dir * jumpPower,ForceMode2D.Impulse);
-                                
-            }
-            jumpIcon.fillAmount = 0;
-            jumpCoolText.gameObject.SetActive(true);
-            jump = false;
-            ani.SetBool("jump",false);
-            //ani.CrossFade("Fly", 0.1f);
-        }
-      if(mashroom)
-        {
-            if(mashroomBach)
-            {
-                //Debug.Log("버섯");
-                Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                //  Vector2 direction = dir - (Vector2)transform.position;
-                //  direction = -direction;
-               // dir = -dir;
-                dir.Normalize();
-                // 점프 방향을 반대로 바꾸기
 
+            Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            //ani.CrossFade("Fly", 0.1f);
+            if (!mashroom)
+            {
+
+                dir.Normalize();
                 if (dir.y > 0)
                 {
-                    rb.velocity = Vector2.zero;
+                    rb.velocity = Vector3.zero;
                 }
-
                 if (dir != Vector2.zero)
                 {
-                    rb.AddForce(-dir * jumpPower, ForceMode2D.Impulse);
+                    rb.AddForce(dir * jumpPower, ForceMode2D.Impulse);
+
                 }
                 jumpIcon.fillAmount = 0;
                 jumpCoolText.gameObject.SetActive(true);
-                mashroomBach = false;
-                ani.SetBool("jump", false);
-                mashroomBach = false;
+                jump = false;
+                StartCoroutine(Go_Jump_Second());
+
+
+                //Fix_Second로 가기
+                //트리거 do_Down실행
+                //몇 초 후에 실행할 건지 보기
+                StartCoroutine(Go_DownDown());
+
             }
-           
+            else
+            {
+                if (mashroomBach)
+                {
+                    dir.Normalize();
 
+                    rb.velocity = Vector2.zero;
 
+                    if (dir != Vector2.zero)
+                    {
+                        rb.AddForce(-dir * jumpPower, ForceMode2D.Impulse);
+                    }
+                    jumpIcon.fillAmount = 0;
+                    jumpCoolText.gameObject.SetActive(true);
+                    mashroomBach = false;
+                    StartCoroutine(Go_Jump_Second());
+                    StartCoroutine(Go_DownDown());
+                }
+            }
         }
+      
     }
 
     void Update()
@@ -151,7 +165,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 {
                     jump = true;
                     jumpReady = false;
-                    ani.SetBool("jump", true);
+                    ani.SetTrigger("doJump");
+                    ani.SetBool("isJump", true);
                     //ani.CrossFade("Jump", 0.1f);
                     StartCoroutine(JumpCoolTime());
                 }
@@ -161,7 +176,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             {
                 mashroomBach = true;
                 jumpReady = false;
-                ani.SetBool("jump", true);
+                jump = true;
+                ani.SetTrigger("doJump");
+                ani.SetBool("isJump", true);
                 StartCoroutine(JumpCoolTime());
 
             }

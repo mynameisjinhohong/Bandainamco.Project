@@ -16,14 +16,14 @@ public class MashroomBackground_yd : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("?");
+            //Debug.Log("?");
             //(collision.gameObject);
             collision.gameObject.GetComponent<CharacterMovement2D_LSW>().jump = false;
-            Debug.Log("1");
+            //Debug.Log("1");
             collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom = true;
             collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroomBach = true;
 
-            Debug.Log("2");
+            //Debug.Log("2");
             StartCoroutine(BackgroundTime(collision.gameObject));
         }
 
