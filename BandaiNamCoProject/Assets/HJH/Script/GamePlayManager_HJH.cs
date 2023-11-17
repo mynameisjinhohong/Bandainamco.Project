@@ -270,6 +270,11 @@ public class GamePlayManager_HJH : ManagerBase
         characterMovement2D.jumpPower *= multiplier;
     }
 
+    public void SetBackgroundMat(SpriteRenderer renderer)
+    {
+        renderer.sharedMaterial = backgroundMat;
+    }
+
     /*    public void GameOver()
         {
             endings[0].SetActive(true);

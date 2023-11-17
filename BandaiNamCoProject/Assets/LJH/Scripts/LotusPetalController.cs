@@ -42,8 +42,10 @@ public class LotusPetalController
         CurveMovement_LJH petal = GetRandomPetal();
         Vector3[] path = GetRandomPath();
 
+        petal.gameObject.SetActive(true);
         petal.DoPath(path, duration, ease, () => {
-            petal.ResetPetal();
+            petal.KillSeqeunce();
+            petal.gameObject.SetActive(false);
             StartPetal();
         });
     }

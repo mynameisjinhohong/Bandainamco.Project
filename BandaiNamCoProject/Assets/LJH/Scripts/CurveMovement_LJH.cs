@@ -33,22 +33,24 @@ public class CurveMovement_LJH : MonoBehaviour
     public void DoPath(Vector3[] wayPoints, float duration, Ease ease,  TweenCallback callback = null)
     {
         transform.position = wayPoints[0];
-        gameObject.SetActive(true);
 
         seq = DOTween.Sequence();
-        seq.Append(transform.DOPath(wayPoints, duration, PathType.CatmullRom)).SetEase(ease).onComplete = callback;
+        seq.Append(transform.DOPath(wayPoints, duration, PathType.CatmullRom)).SetEase(ease);
+        seq.AppendCallback(callback);
     }
 
-    public void ResetPetal()
+    public void KillSeqeunce()
     {
+        seq.Kill();
+        transform.DOKill();
+
         seq = null;
-        gameObject.SetActive(false);
     }
 
     public void StopPetal()
     {
-        //if(seq != null) { seq.Kill(); }
-        //seq = null;
-        //gameObject.SetActive(false);
+        if(seq != null)
+        { KillSeqeunce(); }
+        gameObject.SetActive(false);
     }
 }

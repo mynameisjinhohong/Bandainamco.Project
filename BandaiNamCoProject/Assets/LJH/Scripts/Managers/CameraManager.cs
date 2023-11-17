@@ -116,6 +116,11 @@ public class CameraManager : ManagerBase
             await UniTask.Yield();
         }
 
+        foreach(var r in item.renderers)
+        {
+            GamePlayManager_HJH.Instance.SetBackgroundMat(r);
+        }
+
         item.isShown = true;
         //if (item.isShown) return;
 
