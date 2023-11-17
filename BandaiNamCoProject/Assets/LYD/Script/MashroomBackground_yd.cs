@@ -46,7 +46,7 @@ public class MashroomBackground_yd : MonoBehaviour
           
         }*/
        collision.gameObject.GetComponent<CharacterMovement2D_LSW>().jump = true;
-    Debug.Log("Z");
+    //Debug.Log("Z");
        collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom = false;
     }
 

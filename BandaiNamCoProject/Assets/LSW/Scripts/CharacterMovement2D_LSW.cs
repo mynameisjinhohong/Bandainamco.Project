@@ -121,9 +121,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 if (mashroomBach)
                 {
                     dir.Normalize();
-
                     rb.velocity = Vector2.zero;
-
                     if (dir != Vector2.zero)
                     {
                         rb.AddForce(-dir * jumpPower, ForceMode2D.Impulse);
