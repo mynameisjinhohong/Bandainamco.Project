@@ -26,12 +26,18 @@ public class WaveCollider_LJH : MonoBehaviour
 
         if (collision.transform.CompareTag(TagStrings.PlayerTag))
         {
+            //파도 닿았으면 파도 종료
             Debug.Log("Wave Collision : " + collision.name);
-            isCollided = true;
-            ItemManager_LJH.Instance.SetBubble(false);
-            WorldManager.Instance.NotifyItemEffect(ItemType.Wave, false);
-            FinishWave();
+            Finish();
         }
+    }
+
+    public void Finish()
+    {
+        isCollided = true;
+        ItemManager_LJH.Instance.SetBubble(false);
+        WorldManager.Instance.NotifyItemEffect(ItemType.Wave, false);
+        FinishWave();
     }
 
     public async void StartWave()
@@ -50,6 +56,10 @@ public class WaveCollider_LJH : MonoBehaviour
             transform.localPosition = Vector3.Lerp(originPos, targetPos, elapsedTime / moveSec);
             await UniTask.Yield();
         }
+
+        //파도 끝났으면 파도 종료
+        isCollided = true;
+        Finish();
     }
 
     public async void FinishWave()
@@ -59,9 +69,10 @@ public class WaveCollider_LJH : MonoBehaviour
         while   (elapsedTime < downMoveSec)
         {
             elapsedTime += Time.deltaTime;
-            transform.localPosition = Vector3.Lerp(currPos, originPos, elapsedTime / moveSec);
+            transform.localPosition = Vector3.Lerp(currPos, originPos, elapsedTime / downMoveSec);
             await UniTask.Yield();
         }
         isCollided = false;
+        gameObject.SetActive(false);
     }
 }

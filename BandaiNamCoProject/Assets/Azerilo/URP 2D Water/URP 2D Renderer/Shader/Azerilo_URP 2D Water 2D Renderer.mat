@@ -36,13 +36,13 @@ Material:
     m_Floats:
     - Refraction_Noise: 70
     - Refraction_Speed: 12.9
-    - Vector1_D775EAAC: 0.7
+    - Vector1_D775EAAC: 1.34
     - Water_Level: 0.769
     - Water_Top_Width: 5
     - Wave_Depth: 1.5
     - Wave_Frequency: 18
     - Wave_Speed: 3
     m_Colors:
-    - Water_Color: {r: 0, g: 0.6747333, b: 0.8867924, a: 0}
+    - Water_Color: {r: 0, g: 0.6747332, b: 0.8867924, a: 1}
     - Water_Top_Color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

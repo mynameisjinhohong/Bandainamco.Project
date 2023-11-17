@@ -18,6 +18,7 @@ public class GamePlayManager_HJH : ManagerBase
     public CharacterMovement2D_LSW characterMovement2D;
     public GameObject player;
     public SpriteRenderer emptyBgSpriteRenderer;
+    public Material backgroundMat;
     public float bgFadeinSec;
     // public ItemManager_LSW itemManager;
     public float currentTime;
@@ -190,6 +191,7 @@ public class GamePlayManager_HJH : ManagerBase
 
             await UniTask.Yield();
         }
+        emptyBgSpriteRenderer.sharedMaterial = backgroundMat;
     }
 
     //아이템 먹은 후, 플레이어에게 나타날 효과를 switch문으로 정리
@@ -260,6 +262,12 @@ public class GamePlayManager_HJH : ManagerBase
     {
         characterMovement2D.Reset();
         base.Reset();
+    }
+
+    public void MulJumpPower(float multiplier)
+    {
+        characterMovement2D.SetVelocity(Vector2.zero);
+        characterMovement2D.jumpPower *= multiplier;
     }
 
     /*    public void GameOver()

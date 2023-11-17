@@ -447,4 +447,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         transform.position = pos;
     }
 
+    public void SetVelocity(Vector2 vel)
+    {
+        rb.velocity = vel;
+    }
 }
