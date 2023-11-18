@@ -19,6 +19,9 @@ public class ItemManager_LJH : ManagerBase
     public static ItemManager_LJH Instance;
     public GameObject bubble;
 
+    //yd ¹ö¼¸ ·£´ý
+    [SerializeField] private List<GameObject> mushroomImage = new List<GameObject>();
+
     private BaseItem_LJH currItem;
     public BaseItem_LJH CurrItem
     {
@@ -52,6 +55,12 @@ public class ItemManager_LJH : ManagerBase
         return randomPostion;
     }
 
+/*    public int RandomMushroom()
+    {
+        int mu = UnityEngine.Random.Range(0, mushroomImage.Count);
+        return mu;
+    }*/
+
     public async override void Init()
     {
         await UniTask.WaitUntil(() => DataManager.Instance.isInit);
@@ -64,7 +73,11 @@ public class ItemManager_LJH : ManagerBase
         for (int i = 0; i < items.Length; i++)
         {
             for (int j = 0; j < items[i].itemCount; j++)
-            {
+            {/*
+                if(items[i].prefab.name.Contains("Mushroom"))
+                    {
+                    GameObject item = Instantiate(i)
+                }*/
                 GameObject item = Instantiate(items[i].prefab);
                 GameObject bub = Instantiate(bubble);
                 Vector3 pos;

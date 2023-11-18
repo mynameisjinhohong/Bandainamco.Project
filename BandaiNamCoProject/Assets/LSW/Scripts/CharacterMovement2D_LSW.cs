@@ -48,8 +48,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public List<GameObject> starItem = new List<GameObject>();
     #endregion
     #region ¹ö¼¸
-    /* public List<bool> isDone = new List<bool>();
-     public List<Vector3> playerScale = new List<Vector3>();*/
+     public List<int> mushNums  = new List<int>();
+    [SerializeField] private int mushNum = 0;
+    // public List<Vector3> playerScale = new List<Vector3>();*/
     public bool isCoroutine;
     Coroutine coroutine;
     public float mTime;
@@ -314,31 +315,46 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
     {
         isCoroutine = true;
-        Vector3 oriScale = startScale;
-        targetTr.GetChild(0).localScale = oriScale;
+            Vector3 oriScale = startScale;
+            targetTr.GetChild(0).localScale = oriScale;
+            Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
+            float currentTime = 0;
+            float oriOrtho = 50;
+        mushNum++;
+        mushNums.Add(mushNum);
+     //Ã³À½¿¡¸¸ 
+     if(mushNums.Count < 1)
+        {
+            targetTr.GetChild(0).localScale = targetScale;
+            //  float targetOrtho = 70;
+            //GameObject me = Instantiate(mashroomEffect, targetTr.transform.parent, );
+            // Vector3 newPosition = new Vector3(0, 1, -8.0f);
+            GameObject me = Instantiate(mashroomEffect, targetTr.transform);
+            // me.transform.parent = targetTr.transform;
+            while (currentTime < mashroomTime)
+            {
+                targetTr.GetChild(0).localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
+                characterCam.m_Lens.OrthographicSize = Mathf.Lerp(oriOrtho, targetOrtho, currentTime / mashroomTime);
+                currentTime += Time.deltaTime;
+                //Debug.Log("Ä¿Áü");
+                yield return null;
+
+            }
+        }
+     
+            targetTr.GetChild(0).localScale = targetScale;
+            characterCam.m_Lens.OrthographicSize = targetOrtho;
+            for (int i = 0; i < mushNums.Count; i++)
+            {
+                resetTime *= i;
+
+            }
         //  targetTr.GetComponent<CharacterMovement2D_LSW>().AddMushroom(oriScale, false);
         //Vector3 originalScale = targetTr.localScale;
-        Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
-        float currentTime = 0;
-        targetTr.GetChild(0).localScale = targetScale;
-        float oriOrtho = 50;
-        //  float targetOrtho = 70;
-        //GameObject me = Instantiate(mashroomEffect, targetTr.transform.parent, );
-        // Vector3 newPosition = new Vector3(0, 1, -8.0f);
-        GameObject me = Instantiate(mashroomEffect, targetTr.transform);
-        // me.transform.parent = targetTr.transform;
-        while (currentTime < mashroomTime)
-        {
-            targetTr.GetChild(0).localScale = Vector3.Lerp(oriScale, targetScale, currentTime / mashroomTime);
-            characterCam.m_Lens.OrthographicSize = Mathf.Lerp(oriOrtho, targetOrtho, currentTime / mashroomTime);
-            currentTime += Time.deltaTime;
-            //Debug.Log("Ä¿Áü");
-            yield return null;
-
-        }
-        targetTr.GetChild(0).localScale = targetScale;
-        characterCam.m_Lens.OrthographicSize = targetOrtho;
+       
         yield return new WaitForSeconds(resetTime);
+
+
         /* if (targetTr.GetComponent<CharacterMovement2D_LSW>().isDone[targetTr.GetComponent<CharacterMovement2D_LSW>().isDone.Count - 1] == false)
          {
              Debug.Log("Áß´Ü");
@@ -364,6 +380,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         targetTr.GetChild(0).localScale = oriScale;
         characterCam.m_Lens.OrthographicSize = oriOrtho;
         yield return null;
+        mushNums.Clear();
+        mushNum = 0;
         isCoroutine = false;
 
     }

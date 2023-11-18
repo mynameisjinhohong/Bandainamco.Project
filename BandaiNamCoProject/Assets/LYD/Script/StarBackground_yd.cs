@@ -4,8 +4,9 @@ using UnityEngine;
 using Cinemachine;
 public class StarBackground_yd : MonoBehaviour
 {
-    [SerializeField] float m_force = 0f;
-    [SerializeField] Vector3 m_offset = Vector3.zero;
+    [SerializeField] float m_force = 50f;
+    // [SerializeField] Vector3 m_offset = Vector3.zero;
+    [SerializeField] Vector3 m_offset = new Vector3(10, 10, 10);
 
     [SerializeField] private 
 
@@ -49,7 +50,10 @@ public class StarBackground_yd : MonoBehaviour
             currentTime += Time.deltaTime;
             if (currentTime > createTime)
             {
-                    GameObject star = Instantiate(starPre, gameObject.transform);
+                Vector3 camPos = new Vector3(characterCam.transform.position.x + 10, characterCam.transform.position.y + 10, characterCam.transform.position.z);
+                    GameObject star = Instantiate(starPre, characterCam.transform);
+                star.transform.position = camPos;
+
                 isMake = true;
                 isCoroutine = false;
                     currentTime = 0;
