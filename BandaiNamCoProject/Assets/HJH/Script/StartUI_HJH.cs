@@ -141,7 +141,7 @@ public class StartUI_HJH : MonoBehaviour
         Color color = image.color;
         while (alpha < 0.6f)
         {
-            alpha += 0.01f;
+            alpha += 0.1f;
             yield return new WaitForSeconds(fadeSpeed);
             color.a = alpha;
             image.color = color;
@@ -155,7 +155,7 @@ public class StartUI_HJH : MonoBehaviour
         float alpha = color.a;
         while (alpha > 0f)
         {
-            alpha -= 0.01f;
+            alpha -= 0.1f;
             yield return new WaitForSeconds(fadeSpeed);
             color.a = alpha;
             image.color = color;
