@@ -170,7 +170,6 @@ public class GameManager : MonoBehaviour
     {
         string data = JsonUtility.ToJson(userData);
         PlayerPrefs.SetString("UserData", data);
-        SaveUserData();
     }
 
 
