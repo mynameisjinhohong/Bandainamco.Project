@@ -94,8 +94,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             //ani.CrossFade("Fly", 0.1f);
             if (!mashroom)
             {
-                //Quaternion rot = Quaternion.LookRotation(dir.normalized);
-                //transform.rotation = rot;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
                 dir.Normalize();
                 if (dir.y > 0)
                 {
@@ -122,8 +122,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             {
                 if (mashroomBach)
                 {
-                    //Quaternion rot = Quaternion.LookRotation(dir.normalized * -1);
-                    //transform.rotation = rot;
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                    transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
                     dir.Normalize();
                     rb.velocity = Vector2.zero;
                     if (dir != Vector2.zero)
