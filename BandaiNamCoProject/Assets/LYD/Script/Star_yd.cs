@@ -58,7 +58,7 @@ public class Star_yd : BaseItem_LJH
         Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance +54, oriPos.z);
 
         GameObject effect = Instantiate(starEffect, starEffectPos, Quaternion.Euler(90, 0, 0)); //Quaternion.Euler(64, 64, 64));
-        Debug.Log(starEffectPos);
+        //Debug.Log(starEffectPos);
        await UniTask.Delay(1 * 1000);
         Vector3 startPos = new Vector3(oriPos.x, oriPos.y + starDistance, oriPos.z);
 
@@ -80,8 +80,8 @@ public class Star_yd : BaseItem_LJH
 
         //Invoke("StopMove", StarMoveTime);
 
-        Debug.Log(oriPos + "ori");
-        Debug.Log(startPos + "start");
+        //Debug.Log(oriPos + "ori");
+        //Debug.Log(startPos + "start");
 
         //러프로 올라갈때 별이 움직이면서 올라가도록 
         //star.transform.GetChild(0).gameObject.SetActive(true); //라이트 혹은 불빛
