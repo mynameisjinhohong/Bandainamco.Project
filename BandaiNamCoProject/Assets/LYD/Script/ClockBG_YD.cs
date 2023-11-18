@@ -26,16 +26,13 @@ public class ClockBG_YD : MonoBehaviour
     {
         while(true)
         {
-            await BGRotate(second, 90, secondTime);
+            //await BGRotate(second, 90, secondTime);
             await BGRotate(clock, 90, bgRotTime);
-
-            await BGRotate(second, 180, secondTime);
+            //await BGRotate(second, 180, secondTime);
             await BGRotate(clock, 180, bgRotTime);
-
-            await BGRotate(second, 270, secondTime);
+            //await BGRotate(second, 270, secondTime);
             await BGRotate(clock, 270, bgRotTime);
-
-            await BGRotate(second, 360, secondTime);
+            //await BGRotate(second, 360, secondTime);
             await BGRotate(clock, 360, bgRotTime);
             /* //초침이 돌아간다 -> 90도로
              while (currentTime < secondTime)
@@ -119,12 +116,14 @@ public class ClockBG_YD : MonoBehaviour
     async UniTask BGRotate(GameObject ob, float targetE, float obTime)
     {
         currentTime = 0;
+        Quaternion ori = ob.transform.rotation;
+        Quaternion target = Quaternion.Euler(0, 0, targetE);
         while(currentTime < obTime)
         {
-            Quaternion ori = ob.transform.rotation;
-            Quaternion target = Quaternion.Euler(0, 0, targetE);
-            Quaternion now = Quaternion.Lerp(ori, target, speed * Time.deltaTime);
+            Quaternion now = Quaternion.Lerp(ori, target, currentTime/obTime);
+            Debug.Log(currentTime/obTime);
             ob.transform.rotation = now;
+            currentTime += Time.deltaTime;
             await UniTask.Yield();
         }
     }

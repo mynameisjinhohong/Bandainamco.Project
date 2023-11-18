@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -993404951
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 53edf4cb8a5310946bf7b920dbec3f18, type: 3}
-  m_Color: {r: 0.8962264, g: 0, b: 0.03447038, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,3 +141,8 @@ MonoBehaviour:
   isScale: 0
   mashroomTime: 1
   mashroomEffect: {fileID: 1628744458893394, guid: acbbe02a8ddc31f4286f60097bfaea9c, type: 3}
+  renders:
+  - {fileID: 21300000, guid: bb69c37c88c5a284c9e16f392905eee6, type: 3}
+  - {fileID: 21300000, guid: 4888af3a54cf0ec40b4158c7c974ca7c, type: 3}
+  - {fileID: 21300000, guid: 9cf5b8fc0ec70a14ab9b977e4f0ff05c, type: 3}
+  - {fileID: 21300000, guid: 546b1bfb4fad39d439b66cae5853adfb, type: 3}

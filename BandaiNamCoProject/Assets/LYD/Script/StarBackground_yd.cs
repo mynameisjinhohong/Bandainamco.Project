@@ -66,7 +66,7 @@ public class StarBackground_yd : MonoBehaviour
             }
             if(!isMake)
             {
-                Debug.Log("aaaaaaaaaaaaaaaa");
+                //Debug.Log("aaaaaaaaaaaaaaaa");
                 StopAllCoroutines();
                 // StartCoroutine(ResetEvent());
                 characterCam.transform.rotation = m_originRot;

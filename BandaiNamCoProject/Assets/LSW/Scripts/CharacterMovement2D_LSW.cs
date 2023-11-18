@@ -94,8 +94,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             //ani.CrossFade("Fly", 0.1f);
             if (!mashroom)
             {
-                Quaternion rot = Quaternion.LookRotation(dir.normalized);
-                transform.rotation = rot;
+                //Quaternion rot = Quaternion.LookRotation(dir.normalized);
+                //transform.rotation = rot;
                 dir.Normalize();
                 if (dir.y > 0)
                 {
@@ -122,8 +122,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             {
                 if (mashroomBach)
                 {
-                    Quaternion rot = Quaternion.LookRotation(dir.normalized * -1);
-                    transform.rotation = rot;
+                    //Quaternion rot = Quaternion.LookRotation(dir.normalized * -1);
+                    //transform.rotation = rot;
                     dir.Normalize();
                     rb.velocity = Vector2.zero;
                     if (dir != Vector2.zero)
@@ -307,8 +307,6 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             {
                 StopCoroutine(coroutine);
             }
-
-
         }
         coroutine = StartCoroutine(PlayerScaleEvent(tr, scale, resetTime, mashroomTime, mashroomEffect));
     }
@@ -323,7 +321,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         mushNum++;
         mushNums.Add(mushNum);
      //처음에만 
-     if(mushNums.Count < 1)
+     if(mushNums.Count < 2)
         {
             targetTr.GetChild(0).localScale = targetScale;
             //  float targetOrtho = 70;
@@ -344,11 +342,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
      
             targetTr.GetChild(0).localScale = targetScale;
             characterCam.m_Lens.OrthographicSize = targetOrtho;
-            for (int i = 0; i < mushNums.Count; i++)
-            {
-                resetTime *= i;
-
-            }
+        resetTime *= mushNums.Count;
         //  targetTr.GetComponent<CharacterMovement2D_LSW>().AddMushroom(oriScale, false);
         //Vector3 originalScale = targetTr.localScale;
        
