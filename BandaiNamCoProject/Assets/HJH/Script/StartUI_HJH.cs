@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,13 +14,20 @@ public class StartUI_HJH : MonoBehaviour
     public float fadeSpeed;
     public GameObject optionCanvas;
     public Slider volumeSlider;
-
+    public TMP_Dropdown langaugeDropdown;
 
     // Start is called before the first frame update
     void Start()
     {
         volumeSlider.value = GameManager.instance.userData.volume;
         volumeSlider.onValueChanged.AddListener(VolumeChange);
+    }
+
+    public void LangaugeChange()
+    {
+        int val = langaugeDropdown.value;
+        GameManager.instance.userData.langaugeSet = val;
+        GameManager.instance.LangaugeSet(val);
     }
     void VolumeChange(float value)
     {

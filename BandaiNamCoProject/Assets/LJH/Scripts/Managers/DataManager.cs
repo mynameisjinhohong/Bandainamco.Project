@@ -18,6 +18,7 @@ public class DataManager : ManagerBase
 
     private Vector3 GetBGSize()
     {
+        Debug.Log(bg.sprite.rect.size);
         Vector2 bgSpriteSize = bg.sprite.rect.size;
         Vector2 localbGSize = bgSpriteSize / bg.sprite.pixelsPerUnit;
         Debug.Log("bgSpriteSize : " + bgSpriteSize);

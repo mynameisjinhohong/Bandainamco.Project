@@ -1,11 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
-using UnityEditor;
-
 
 public class DataMenu
 {
@@ -43,6 +41,38 @@ public class GameManager : MonoBehaviour
     public int[] itemCount;
     public UserData_HJH userData;
     public static GameManager instance = null;
+
+    #region 언어 관련
+    //public const string enFont;
+    //public const string koFont;
+    //public const string jaFont;
+
+    public void ChangeFont()
+    {
+        List<TMP_Text> texts = new List<TMP_Text>();
+        GameObject[] all = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in all)
+        {
+            TMP_Text text;
+            if (obj.TryGetComponent<TMP_Text>(out text))
+            {
+                switch (userData.langaugeSet)
+                {
+                    case 0:
+                        text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("여기에 영어꺼");
+                        break;
+                    case 1:
+                        text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("여기에 일본꺼");
+                        break;
+                    case 2:
+                        text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("여기에 한국꺼");
+                        break;
+
+                }
+            }
+        }
+    }
+    #endregion
 
     #region 볼륨 조절 관련
     [SerializeField]
@@ -126,7 +156,7 @@ public class GameManager : MonoBehaviour
             userData = new UserData_HJH();
             if (userData.stageDatas[0] == null)
             {
-                for(int i =0; i< userData.stageDatas.Length; i++)
+                for (int i = 0; i < userData.stageDatas.Length; i++)
                 {
                     userData.stageDatas[i] = new StageData_HJH();
                     userData.stageDatas[i].itemOnOff = new bool[itemCount[i]];
@@ -144,21 +174,24 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         FindAudioSource();
+        //ChangeFont();
     }
     public void SaveUserData()
     {
         string data = JsonUtility.ToJson(userData);
         PlayerPrefs.SetString("UserData", data);
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
