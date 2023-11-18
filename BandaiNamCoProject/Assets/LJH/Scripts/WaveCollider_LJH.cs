@@ -58,8 +58,8 @@ public class WaveCollider_LJH : MonoBehaviour
         }
 
         //파도 끝났으면 파도 종료
-        isCollided = true;
-        Finish();
+        //isCollided = true;
+        //Finish();
     }
 
     public async void FinishWave()
