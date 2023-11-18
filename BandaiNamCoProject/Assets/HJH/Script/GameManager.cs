@@ -49,26 +49,14 @@ public class GameManager : MonoBehaviour
 
     public void ChangeFont()
     {
-        List<TMP_Text> texts = new List<TMP_Text>();
+        List<LocalizeTextSet_HJH> texts = new List<LocalizeTextSet_HJH>();
         GameObject[] all = FindObjectsOfType<GameObject>();
         foreach (GameObject obj in all)
         {
-            TMP_Text text;
-            if (obj.TryGetComponent<TMP_Text>(out text))
+            LocalizeTextSet_HJH text;
+            if (obj.TryGetComponent<LocalizeTextSet_HJH>(out text))
             {
-                switch (userData.langaugeSet)
-                {
-                    case 0:
-                        text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("여기에 영어꺼");
-                        break;
-                    case 1:
-                        text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("여기에 일본꺼");
-                        break;
-                    case 2:
-                        text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>("여기에 한국꺼");
-                        break;
-
-                }
+                text.SetLangauge();
             }
         }
     }
@@ -169,7 +157,9 @@ public class GameManager : MonoBehaviour
 
     public void LangaugeSet(int langaugeIdx)
     {
+        userData.langaugeSet = langaugeIdx;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[langaugeIdx];
+        ChangeFont();
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -180,6 +170,7 @@ public class GameManager : MonoBehaviour
     {
         string data = JsonUtility.ToJson(userData);
         PlayerPrefs.SetString("UserData", data);
+        SaveUserData();
     }
 
 
