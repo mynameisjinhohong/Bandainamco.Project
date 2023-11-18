@@ -5673,7 +5673,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297183592}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -70, y: -218.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6251,6 +6251,8 @@ MonoBehaviour:
   mashroom: 0
   mashroomBach: 0
   starItem: []
+  mushNums: 
+  mushNum: 0
   isCoroutine: 0
   mTime: 0
   characterCam: {fileID: 0}
@@ -7097,7 +7099,7 @@ PrefabInstance:
     - target: {fileID: 7678640975993053877, guid: 0034b399d5d4ca546a9f0bba9b10e12c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d875260e13448b2429e87d1814f3d2d1, type: 2}
+      objectReference: {fileID: 9100000, guid: 5cc226da5e1efcb4fa74256b4c6a7435, type: 2}
     - target: {fileID: 7783386119075167743, guid: 0034b399d5d4ca546a9f0bba9b10e12c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -7876,6 +7878,7 @@ MonoBehaviour:
   itemCount: 0
   xyLine: 30
   bubble: {fileID: 8723197070997239749, guid: 3f77e2bc54da72b45b7ee92e30f5a348, type: 3}
+  mushroomImage: []
   prevItem: {fileID: 0}
   currBackground: {fileID: 0}
   wave: {fileID: 1829283825}
@@ -37720,7 +37723,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -165, y: -458.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38876,7 +38879,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -40973,6 +40976,8 @@ MonoBehaviour:
   mashroom: 0
   mashroomBach: 0
   starItem: []
+  mushNums: 
+  mushNum: 0
   isCoroutine: 0
   mTime: 0
   characterCam: {fileID: 1334037714}
@@ -41407,7 +41412,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

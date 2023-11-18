@@ -420,13 +420,13 @@ AnimatorStateMachine:
     m_Position: {x: 450, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 310803670815468710}
-    m_Position: {x: -3.2910767, y: 26.276703, z: 0}
+    m_Position: {x: 90, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5353569039107869001}
-    m_Position: {x: -30, y: -160, z: 0}
+    m_Position: {x: -270, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9071856300205540597}
-    m_Position: {x: 40, y: -100, z: 0}
+    m_Position: {x: -60, y: -80, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 5998518889451300531}
