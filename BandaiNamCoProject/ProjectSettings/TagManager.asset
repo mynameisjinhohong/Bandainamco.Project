@@ -50,6 +50,9 @@ TagManager:
   - name: background
     uniqueID: 3254752821
     locked: 0
+  - name: Player
+    uniqueID: 3358236427
+    locked: 0
   - name: Item
     uniqueID: 3301562345
     locked: 0

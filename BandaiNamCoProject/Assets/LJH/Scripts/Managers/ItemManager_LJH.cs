@@ -45,7 +45,7 @@ public class ItemManager_LJH : ManagerBase
 
     [Header("Lotus")]
     public LotusParticle_LJH lotus;
-    public LotusShield_LJH lotusShield;
+    public GameObject lotusShield;
 
     Vector3 Return_RandomPosition()
     {
@@ -176,9 +176,6 @@ public class ItemManager_LJH : ManagerBase
 
     public void SetLotusShield(bool start)
     {
-        if(start)
-            lotusShield.Play();
-        else
-            lotusShield.Stop();
+        lotusShield.SetActive(start);
     }
 }
