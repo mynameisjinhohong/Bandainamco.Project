@@ -16,6 +16,13 @@ public class Mashroom_yd : BaseItem_LJH
     [SerializeField] private float mashroomTime = 0f;
     Transform tr;
     public GameObject mashroomEffect;
+
+    [SerializeField] private Sprite[] renders;
+    private void OnEnable()
+    {
+        int random = Random.Range(0, renders.Length);
+        transform.GetComponent<SpriteRenderer>().sprite = renders[random];
+    }
     //원래크기
     //Vector3 
     public override void OnTriggerEnter2D(Collider2D collision)
