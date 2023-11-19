@@ -101,7 +101,6 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         {
             eyeNow = true;
             idleEye.SetActive(true);
-            Debug.Log(idleEye.transform.localPosition);
             fishEye.SetActive(true);
         }
         else
@@ -163,11 +162,15 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             {
                 if (idleEye.activeInHierarchy)
                 {
+                    eyeAni1.SetTrigger("doJump");
+                    eyeAni1.SetBool("isJump", true);
                     StartCoroutine(Go_Jump_Second(eyeAni1));
                     StartCoroutine(Go_DownDown(eyeAni1));
                 }
                 if (fishEye.activeInHierarchy)
                 {
+                    eyeAni2.SetTrigger("doJump");
+                    eyeAni2.SetBool("isJump", true);
                     StartCoroutine(Go_Jump_Second(eyeAni2));
                     StartCoroutine(Go_DownDown(eyeAni2));
                 }
