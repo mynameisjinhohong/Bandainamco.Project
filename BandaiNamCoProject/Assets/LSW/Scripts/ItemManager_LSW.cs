@@ -20,7 +20,9 @@ public class Item_HJH
     //줌 될 위치
     //public Transform zoomPosition;
     //줌 될때 나올 텍스트
-    public string zoomText;
+    public string korText;
+    public string engText;
+    public string japText;
     //줌 될때 카메라 사이즈
     //public int camSize;
     public ItemType itemType;
@@ -232,7 +234,7 @@ public class ItemManager_LSW : MonoBehaviour
             //}
         }
         zoomCanvas.SetActive(true);
-        StartCoroutine(TextAni(items[itemIdx].zoomText));
+        //StartCoroutine(TextAni(items[itemIdx].zoomText));
         for (int i = 0; i < clouds.Length; i++)
         {
             StartCoroutine(FadeIn(clouds[i]));

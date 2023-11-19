@@ -20,7 +20,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 245581707198464
-    m_Key: New Entry
+    m_Key: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643113574711296
+    m_Key: 'Options '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643465153855488
+    m_Key: 'Quit '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 645207320936448
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646120316059648
+    m_Key: KeyBoard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646213345722368
+    m_Key: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646374604128256
+    m_Key: Language
     m_Metadata:
       m_Items: []
   m_Metadata:

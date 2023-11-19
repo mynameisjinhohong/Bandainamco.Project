@@ -22,6 +22,34 @@ MonoBehaviour:
     m_Localized: Continue
     m_Metadata:
       m_Items: []
+  - m_Id: 245581707198464
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643113574711296
+    m_Localized: "Options\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643465153855488
+    m_Localized: "Quit\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 645207320936448
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646120316059648
+    m_Localized: KeyBoard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646213345722368
+    m_Localized: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 646374604128256
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

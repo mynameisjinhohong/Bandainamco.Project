@@ -203,7 +203,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             float angle2 = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x) * Mathf.Rad2Deg;
             if(Time.timeScale != 0f && (mousePos - (Vector2)transform.position).magnitude > 1f )
             {
-                transform.rotation = Quaternion.AngleAxis(angle2 - 180, Vector3.forward);
+                transform.rotation = Quaternion.AngleAxis(angle2 - 90, Vector3.forward);
             }
             transform.position += new Vector3(mousePos.x - transform.position.x, mousePos.y - transform.position.y, 0).normalized * Time.deltaTime * fishSpeed;
         }

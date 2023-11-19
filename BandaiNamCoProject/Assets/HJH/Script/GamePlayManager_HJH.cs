@@ -8,7 +8,7 @@ using static UnityEditor.Progress;
 
 public enum EndingType
 {
-    Bad, Over, Good
+    Over, Good
 }
 
 public class GamePlayManager_HJH : ManagerBase
@@ -23,8 +23,9 @@ public class GamePlayManager_HJH : ManagerBase
     // public ItemManager_LSW itemManager;
     public float currentTime;
     public TMP_Text timeText;
-
-    public float goodEndingTime;
+    public string koEndingText;
+    public string enEndingText;
+    public string jaEndingText;
 
     public GameObject[] endings; //임시 나중에 지울것
     private EndingType endingType;
@@ -55,24 +56,6 @@ public class GamePlayManager_HJH : ManagerBase
             case EndingType.Good:
                 endings[1].SetActive(true);
                 if(GameManager.instance != null)
-                {
-                    GameManager.instance.userData.stage++;
-                }
-                if (GameManager.instance != null)
-                {
-                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
-                    {
-                        if (ItemManager_LJH.Instance.items[i].isVisited)
-                        {
-                            GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i] = true;
-                        }
-                    }
-                    GameManager.instance.SaveUserData();
-                }
-                break;
-            case EndingType.Bad:
-                endings[2].SetActive(true);
-                if (GameManager.instance != null)
                 {
                     GameManager.instance.userData.stage++;
                 }
@@ -156,20 +139,8 @@ public class GamePlayManager_HJH : ManagerBase
         }
         if (itemCount >= ItemManager_LJH.Instance.items.Length)
         {
-            if (currentTime > goodEndingTime)
-            {
-                //Time.timeScale = 0f;
-                endingType = EndingType.Bad;
-                gameEnd = true;
-                //BadEnding();
-            }
-            else
-            {
-                //Time.timeScale = 0f;
-                endingType = EndingType.Good;
-                gameEnd = true;
-                //GoodEnding();
-            }
+           endingType = EndingType.Good;
+           gameEnd = true;
         }
         if (gameEnd)
         {
