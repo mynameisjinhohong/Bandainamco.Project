@@ -7,18 +7,12 @@ public class EyeBG_HJH : MonoBehaviour
     public float eyeCoolTime;
     public float eyeRemainTime;
     float currentTime;
-    public GameObject eyeCanvas;
-    public GameObject[] eyes;
-    Vector3[] eyeTrasform;
+    public CharacterMovement2D_LSW player;
+
     bool nowEye;
     // Start is called before the first frame update
     void Start()
     {
-        eyeTrasform = new Vector3[eyes.Length];
-        for(int i =0; i<eyes.Length; i++)
-        {
-            eyeTrasform[i] = eyes[i].GetComponent<RectTransform>().localPosition;
-        }
     }
 
     // Update is called once per frame
@@ -33,8 +27,8 @@ public class EyeBG_HJH : MonoBehaviour
                 {
                     if (currentTime > eyeRemainTime)
                     {
+                        player.EyeStart(false);
                         nowEye = false;
-                        eyeCanvas.SetActive(false);
                         Camera.main.cullingMask = -1;
                         currentTime = 0;
                     }
@@ -43,23 +37,17 @@ public class EyeBG_HJH : MonoBehaviour
                 {
                     if (currentTime > eyeCoolTime)
                     {
-                        for(int i =0; i< eyes.Length; i++)
-                        {
-                            eyes[i].GetComponent<RectTransform>().localPosition = eyeTrasform[i];
-                        }
                         nowEye = true;
-                        eyeCanvas.SetActive(true);
+                        player.EyeStart(true);
                         Camera.main.cullingMask = ~(1 << 7);
                         currentTime = 0;
                     }
                 }
-
             }
         }
         else
         {
             nowEye = false;
-            eyeCanvas.SetActive(false);
             currentTime = 0;
         }
     }

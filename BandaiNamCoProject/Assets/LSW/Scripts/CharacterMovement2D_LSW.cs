@@ -57,6 +57,13 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     Coroutine coroutine;
     public float mTime;
     #endregion
+    #region 눈알
+    public bool eyeNow;
+    public GameObject idleEye;
+    public GameObject fishEye;
+    public Animator eyeAni1;
+    public Animator eyeAni2;
+    #endregion
     public CinemachineVirtualCamera characterCam;
     public StarBackground_yd starBack;
     public float targetOrtho = 70;
@@ -72,26 +79,43 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         firstJumpPower = jumpPower;
         startScale = transform.GetChild(0).localScale;
     }
-    IEnumerator Go_DownDown()
+    IEnumerator Go_DownDown(Animator an)
     {
         // 0.5초 동안 기다리고 실행.
         yield return new WaitForSeconds(1.0f);
-        ani.SetTrigger("do_Down");
+        an.SetTrigger("do_Down");
         //실행시킨 거 비활성화
     }
-    IEnumerator Go_Jump_Second()
+    IEnumerator Go_Jump_Second(Animator an)
     {
         // 0.56초 동안 기다리고 실행.
         yield return new WaitForSeconds(0.4f);
-        ani.SetTrigger("doJump");
-        ani.SetBool("isJump", false);
+        an.SetTrigger("doJump");
+        an.SetBool("isJump", false);
         //실행시킨 거 비활성화
     }
+
+    public void EyeStart(bool eye)
+    {
+        if (eye)
+        {
+            eyeNow = true;
+            idleEye.SetActive(true);
+            Debug.Log(idleEye.transform.localPosition);
+            fishEye.SetActive(true);
+        }
+        else
+        {
+            eyeNow = false;
+            idleEye.SetActive(true);
+            fishEye.SetActive(true);
+        }
+    }
+
     private void FixedUpdate()
     {
         if (jump)
         {
-
             Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             Instantiate(jumpEffect, effectTransform);
             //ani.CrossFade("Fly", 0.1f);
@@ -112,19 +136,15 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 jumpIcon.fillAmount = 0;
                 jumpCoolText.gameObject.SetActive(true);
                 jump = false;
-                StartCoroutine(Go_Jump_Second());
-
-
+                StartCoroutine(Go_Jump_Second(ani));
                 //Fix_Second로 가기
                 //트리거 do_Down실행
                 //몇 초 후에 실행할 건지 보기
-                StartCoroutine(Go_DownDown());
-
+                StartCoroutine(Go_DownDown(ani));
             }
-            else
+            else if (mashroomBach)
             {
-                if (mashroomBach)
-                {
+
                     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                     transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
                     dir.Normalize();
@@ -136,9 +156,22 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                     jumpIcon.fillAmount = 0;
                     jumpCoolText.gameObject.SetActive(true);
                     mashroomBach = false;
-                    StartCoroutine(Go_Jump_Second());
-                    StartCoroutine(Go_DownDown());
+                    StartCoroutine(Go_Jump_Second(ani));
+                    StartCoroutine(Go_DownDown(ani));
+            }
+            if (eyeNow)
+            {
+                if (idleEye.activeInHierarchy)
+                {
+                    StartCoroutine(Go_Jump_Second(eyeAni1));
+                    StartCoroutine(Go_DownDown(eyeAni1));
                 }
+                if (fishEye.activeInHierarchy)
+                {
+                    StartCoroutine(Go_Jump_Second(eyeAni2));
+                    StartCoroutine(Go_DownDown(eyeAni2));
+                }
+
             }
         }
       
