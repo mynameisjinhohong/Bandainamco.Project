@@ -21,9 +21,13 @@ public class StarBackground_yd : MonoBehaviour
     public bool isMake;
     public float starTime; //스타유지시간
     bool isCoroutine;
+    //임펄스
+     CinemachineImpulseSource impulse;
+    //[SerializeField] private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        impulse = transform.GetComponent <CinemachineImpulseSource>();
         m_originRot = transform.rotation;
     }
     private void OnEnable()
@@ -98,25 +102,28 @@ public class StarBackground_yd : MonoBehaviour
         {
             float currentTime = 0;
             Vector3 t_originEuler = characterCam.transform.eulerAngles;
-            while (currentTime < starTime)
+            /*while (currentTime < starTime)
             {
-                float t_rotX = Random.Range(-m_offset.x, m_offset.x);
-                float t_rotY = Random.Range(-m_offset.y, m_offset.y);
-                float t_rotZ = Random.Range(-m_offset.z, m_offset.z);
+                  float t_rotX = Random.Range(-m_offset.x, m_offset.x);
+                   float t_rotY = Random.Range(-m_offset.y, m_offset.y);
+                   float t_rotZ = Random.Range(-m_offset.z, m_offset.z);
 
-                Vector3 t_randomRot = t_originEuler + new Vector3(t_rotX, t_rotY, t_rotZ);
-                Quaternion t_rot = Quaternion.Euler(t_randomRot);
-                while (Quaternion.Angle(characterCam.transform.rotation, t_rot) > 0.1f)
-                {
-                    characterCam.transform.rotation = Quaternion.RotateTowards(characterCam.transform.rotation, t_rot, m_force * Time.deltaTime);
+                   Vector3 t_randomRot = t_originEuler + new Vector3(t_rotX, t_rotY, t_rotZ);
+                   Quaternion t_rot = Quaternion.Euler(t_randomRot);
+                   while (Quaternion.Angle(characterCam.transform.rotation, t_rot) > 0.1f)
+                   {
+                       characterCam.transform.rotation = Quaternion.RotateTowards(characterCam.transform.rotation, t_rot, m_force * Time.deltaTime);
+                   currentTime += Time.deltaTime;
+                       yield return null;
+                   }
                 currentTime += Time.deltaTime;
-                    yield return null;
-                }
                 yield return null;
-            }
-                isMake = false;
+            }*/
+                impulse.GenerateImpulse();
+            Debug.Log("??????");
+             //   isMake = false;
         }
-        characterCam.transform.rotation = m_originRot;
+       // characterCam.transform.rotation = m_originRot;
         //StartCoroutine(Reset());
 
     }

@@ -253,7 +253,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                     if (coroutine != null)
                     {
                         StopCoroutine(coroutine);
-                    }
+                        mushNum = 0;
+                        mushNums.Clear();
+                        }
                     isCoroutine = false;
 
                     Vector3 nowScale = transform.GetChild(0).localScale;
