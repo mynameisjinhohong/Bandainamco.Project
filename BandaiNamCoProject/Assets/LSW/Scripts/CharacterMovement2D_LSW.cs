@@ -11,6 +11,8 @@ using Cinemachine;
 public class CharacterMovement2D_LSW : MonoBehaviour
 {
     //점프힘
+    public GameObject jumpEffect;
+    public Transform effectTransform;
     public float jumpPower = 100.0f;
     public float firstJumpPower;
     //점프 아이콘
@@ -91,6 +93,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         {
 
             Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            Instantiate(jumpEffect, effectTransform);
             //ani.CrossFade("Fly", 0.1f);
             if (!mashroom)
             {
