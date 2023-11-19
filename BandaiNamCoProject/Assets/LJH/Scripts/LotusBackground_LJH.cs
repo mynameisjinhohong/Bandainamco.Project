@@ -5,20 +5,20 @@ using UnityEngine;
 public class LotusBackground_LJH : MonoBehaviour
 {
     [SerializeField] private Transform petalsGroup;
-    [SerializeField] private Transform waypointsGroup;
-    [SerializeField] private float duration;
-    [SerializeField] private DG.Tweening.Ease ease;
+    [SerializeField] private int delaySec;
+    [SerializeField] private int numOfPetalsToSpawn;
+    [SerializeField] private float petalSpeed;
+    [SerializeField] private float petalDisappearTime;
 
     private LotusPetalController controller;
 
     private void Awake()
     {
-        List<Transform> temp = new List<Transform>();
-        for(int i=0;i<waypointsGroup.childCount;i++)
-            temp.Add(waypointsGroup.GetChild(i).transform);
-
-        controller = new LotusPetalController(petalsGroup.GetComponentsInChildren<CurveMovement_LJH>(true),
-                                              temp.ToArray(), duration, ease);
+        controller = new LotusPetalController(petalsGroup.GetComponentsInChildren<LotusPetal_LJH>(true),
+                                                delaySec,
+                                                numOfPetalsToSpawn,
+                                                petalSpeed,
+                                                petalDisappearTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +30,6 @@ public class LotusBackground_LJH : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag(TagStrings.PlayerTag))
-            controller.StopAllPetal();
+            controller.StopPetal();
     }
 }
