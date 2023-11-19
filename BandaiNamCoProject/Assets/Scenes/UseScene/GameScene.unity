@@ -6220,6 +6220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821496f3adbf5e442802151cfa306b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpEffect: {fileID: 0}
+  effectTransform: {fileID: 0}
   jumpPower: 500
   firstJumpPower: 0
   jumpIcon: {fileID: 513643427}
@@ -7813,7 +7815,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 5337970322375770073, guid: 12eb04a5de987ff4790cb1dac25978b0, type: 3}
-    itemCount: 20
+    itemCount: 0
     isVisited: 0
     zoomText: star
     itemType: 4
@@ -7822,7 +7824,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 7223446109375240118, guid: e1c0081ae197a4646bc4fc5aea6c8410, type: 3}
-    itemCount: 0
+    itemCount: 10
     isVisited: 0
     zoomText: Her father has been filming mushrooms. She used to look at it and make
       a story of a girl whose body grows and becomes smaller when she eats mushrooms.
@@ -10581,6 +10583,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bef2faf2b997d9c45a54da152450731e, type: 3}
+--- !u!1 &539687310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539687311}
+  m_Layer: 8
+  m_Name: EffectTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539687311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539687310}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.7600098, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1758878015}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &542417038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10685,7 +10718,7 @@ Transform:
   - {fileID: 1201127230}
   - {fileID: 1987233365}
   m_Father: {fileID: 1949789409}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &543660681
 PrefabInstance:
@@ -21572,7 +21605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1949789409}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066514353
 GameObject:
@@ -40286,8 +40319,8 @@ Transform:
   m_Children:
   - {fileID: 1758878015}
   - {fileID: 1094226301}
-  - {fileID: 1066126273}
   - {fileID: 542717614}
+  - {fileID: 1066126273}
   m_Father: {fileID: 1302549799}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40303,6 +40336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821496f3adbf5e442802151cfa306b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpEffect: {fileID: 100000, guid: b134863683554704fbc9ed8e130b7121, type: 3}
+  effectTransform: {fileID: 539687311}
   jumpPower: 25
   firstJumpPower: 0
   jumpIcon: {fileID: 513643427}
@@ -40755,7 +40790,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
