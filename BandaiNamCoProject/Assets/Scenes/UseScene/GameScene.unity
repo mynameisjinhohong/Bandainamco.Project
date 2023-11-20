@@ -7403,8 +7403,8 @@ MonoBehaviour:
     isVisited: 0
     korText: "\uBB3C\uC5D0 \uBE60\uC9C4 \uC18C\uB140\uB294 \uC815\uC2E0\uC744 \uC783\uACE0
       \uBB3C\uAE38\uC5D0 \uD729\uC4F8\uB824 \uB5A0\uB0B4\uB824\uAC14\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'The drowning girl fainted and was swept away by the current. '
+    japText: "\u6EBA\u308C\u305F\u5C11\u5973\u306F\u6C17\u3092\u5931\u3044\u3001\u6CE2\u306B\u6D41\u3055\u308C\u3066\u3044\u304D\u307E\u3057\u305F\u3002 "
     itemType: 5
     needWholeCam: 1
     bgObject: {fileID: 104675156}
@@ -7418,8 +7418,11 @@ MonoBehaviour:
       \uAC00\uC57C\uD55C\uB2E4\uACE0 \uB9D0\uD588\uC2B5\uB2C8\uB2E4. \uD1A0\uB07C\uAC00
       \uAC00\uB9AC\uD0A8 \uADF8 \uACF5\uAC04\uC744 \uBC14\uB77C \uBCF4\uB2C8 \uACF5\uAC04\uC774
       \uB4A4\uD2C0\uB9AC\uACE0 \uC788\uC5C8\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'At the end of the performance, the rabbit pointed to the clock and
+      one side and said he had to leave now. Looking at the spacee that the rabbit
+      pointed out, the space was twisted. '
+    japText: "\u6F14\u594F\u304C\u7D42\u308F\u308B\u3068\u3001\u30A6\u30B5\u30AE\u306F\u6642\u8A08\u3092\u6301\u3063\u3066\u3042\u308B\u65B9\u5411\u3092\u6307\u5DEE\u3057\u306A\u304C\u3089\u3001\u3082\u3046\u884C\u304B\u306A\u3051\u308C\u3070\u306A\u3089\u306A\u3044\u3068\u8A00\u3044\u307E\u3057\u305F\u3002
+      \u30A6\u30B5\u30AE\u304C\u6307\u3057\u305F\u305D\u306E\u5148\u3092\u898B\u3064\u3081\u308B\u3068\u3001\u7A7A\u9593\u304C\u6B6A\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
     itemType: 0
     needWholeCam: 0
     bgObject: {fileID: 1591650753}
@@ -7434,8 +7437,12 @@ MonoBehaviour:
       \uC720\uC9C0\uD588\uC8E0. \uD558\uC9C0\uB9CC \uC5B4\uB290 \uB0A0, \uB3C5 \uBC84\uC12F\uC744
       \uC798\uBABB \uBA39\uC5B4 \uBC29\uD5A5\uAC10\uAC01\uC744 \uC783\uACE0 \uC232
       \uAE4A\uC219\uC774 \uB4E4\uC5B4\uAC00\uAC8C \uB418\uC5C8\uC2B5\uB2C8\uB2E4 "
-    engText: 
-    japText: 
+    engText: 'The girl grew up eating mushrooms gathered by herself in the forest.
+      When she grew up, she made a living selling those mushrooms. One day, she lost
+      a sense of diraction after eating a colorful, spotted poision mushroom, and
+      went deep into the forest. '
+    japText: "\u5C11\u5973\u306F\u68EE\u306E\u4E2D\u3067\u30AD\u30CE\u30B3\u3092\u63A1\u308A\u3001\u305D\u308C\u3092\u98DF\u3079\u306A\u304C\u3089\u80B2\u3063\u3066\u304D\u307E\u3057\u305F\u3002
+      \u6210\u9577\u3057\u3066\u304B\u3089\u306F\u3001\u305D\u306E\u30AD\u30CE\u30B3\u3092\u58F2\u3063\u3066\u751F\u6D3B\u3092\u3057\u3066\u3044\u304D\u307E\u3057\u305F\u3002\u3057\u304B\u3057\u3042\u308B\u65E5\u3001\u6BD2\u30AD\u30CE\u30B3\u3092\u98DF\u3079\u3066\u3057\u307E\u3063\u305F\u5C11\u5973\u306F\u3001\u65B9\u5411\u611F\u899A\u3092\u5931\u3044\u3001\u68EE\u306E\u5965\u6DF1\u304F\u3078\u5165\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3057\u305F\u3002 "
     itemType: 3
     needWholeCam: 0
     bgObject: {fileID: 226081294}
@@ -7450,8 +7457,11 @@ MonoBehaviour:
       \uAE30\uCC28\uC5D0\uC11C \uB0B4\uB9AC\uC790 \uC18C\uB140\uC758 \uBC1C \uBC11\uC740
       \uAD6C\uB984\uC774\uC5C8\uACE0 \uD558\uB298\uC5D0\uB294 \uB2EC\uC774 \uB5A0
       \uC788\uC5C8\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'The train slowly entered into the clouds, and soon the view outside
+      the window was filled with white clouds. When the girl stepped off the trainn,
+      beneath her feet was a clouds and the moon hung in the sky. '
+    japText: "\u96FB\u8ECA\u306F\u5F90\u3005\u306B\u96F2\u306E\u4E2D\u3078\u5165\u308A\u3001\u96FB\u8ECA\u306E\u7A93\u304B\u3089\u898B\u305F\u5916\u306E\u666F\u8272\u306F\u767D\u3044\u96F2\u3067\u3044\u3063\u3071\u3044\u306B\u306A\u3063\u3066\u3044\u307E\u3057\u305F\u3002
+      \u96FB\u8ECA\u304B\u3089\u964D\u308A\u308B\u3068\u3001\u5730\u9762\u304C\u3059\u3079\u3066\u96F2\u306B\u306A\u3063\u3066\u3044\u3066\u3001\u7A7A\u306B\u306F\u6708\u304C\u6D6E\u304B\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
     itemType: 6
     needWholeCam: 0
     bgObject: {fileID: 162475445}
@@ -7471,8 +7481,16 @@ MonoBehaviour:
       \uB4A4\uC5D0\uC11C \uB291\uB300\uB4E4\uC774 \uC810\uC810 \uB2E4\uAC00\uC624\uC790
       \uC18C\uB140\uB294 \uB9DD\uC124\uC784 \uC5C6\uC774 \uBB3C\uB85C \uB6F0\uC5B4\uB4E4\uC5C8\uC2B5
       \uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'That night, the girl was surrounded by wolves. In the dark forest,
+      the wolves'' eyes staring through the vines and leaves became her trauma. The
+      girl threw the mushrooms she had to the wolves and ran frantically. After that,
+      what she faced was a cliff over a huge valley. As the wolve were getting closer
+      to her, the girl jumped into the water right away without any hesitation. '
+    japText: "\u305D\u306E\u65E5\u3001\u5C11\u5973\u306F\u30AA\u30AA\u30AB\u30DF\u305F\u3061\u306B\u56F2\u307E\u308C\u3066\u3057\u307E\u3044\u307E\u3057\u305F\u3002
+      \u8584\u6697\u3044\u68EE\u306E\u4E2D\u3001\u3064\u308B\u3068\u8449\u3063\u3071\u306E\u5408\u9593\u3067\u5C11\u5973\u3058\u3063\u3068\u898B\u3064\u3081\u3066\u3044\u305F\u30AA\u30AA\u30AB\u30DF\u306E\u76EE\u306F\u3001\u5C11\u5973\u306B\u3068\u3063\u3066\u30C8\u30E9\u30A6\u30DE\u306B\u306A\u308A\u307E\u3057\u305F\u3002
+      \u5C11\u5973\u306F\u6301\u3063\u3066\u3044\u305F\u30AD\u30CE\u30B3\u3092\u30AA\u30AA\u30AB\u30DF\u305F\u3061\u306E\u76EE\u306E\u524D\u306B\u6295\u3052\u3064\u3051\u3001\u9003\u3052\u308B\u305F\u3081\u306B\u5FC5\u6B7B\u3067\u8D70\u308A\u307E\u3057\u305F\u3002
+      \u8D70\u308A\u7D9A\u3051\u305F\u5C11\u5973\u306E\u524D\u306B\u73FE\u308C\u305F\u666F\u8272\u306F\u3001\u5927\u304D\u306A\u8C37\u306E\u4E0A\u306E\u5D16\u3067\u3057\u305F\u3002
+      \u5F8C\u308D\u304B\u3089\u30AA\u30AA\u30AB\u30DF\u305F\u3061\u304C\u3069\u3093\u3069\u3093\u8FD1\u3065\u3044\u3066\u6765\u308B\u3068\u3001\u5C11\u5973\u306F\u8FF7\u308F\u305A\u5D16\u304B\u3089\u98DB\u3073\u964D\u308A\u307E\u3057\u305F\u3002 "
     itemType: 2
     needWholeCam: 1
     bgObject: {fileID: 1703395856}
@@ -7488,8 +7506,14 @@ MonoBehaviour:
       \uBCC4\uB625\uBCC4\uC744 \uBCF4\uBA70 \uC18C\uB140\uB294 \uB208\uC744 \uAF2D
       \uAC10\uACE0 \uC18C\uC6D0\uC744 \uBE4C\uC5C8\uC2B5\uB2C8\uB2E4. \uC544\uD504\uC9C0
       \uC54A\uAC8C \uD574\uC8FC\uC138\uC694. "
-    engText: 
-    japText: 
+    engText: 'The girl thought she was going to drown in this deep cold water. The
+      sky the girl was as she fell was beautiful. Twinkling stars were falling in
+      the night sky. Looking at a shooting star, the girl closed her eyes tightly
+      and made a wish, "Please don''t let me hurt.." '
+    japText: "\u5C11\u5973\u306F\u81EA\u5206\u304C\u6EBA\u308C\u3066\u6B7B\u306C\u3068\u601D\u3063\u3066\u3044\u307E\u3057\u305F\u3002
+      \u5D16\u304B\u3089\u843D\u3061\u306A\u304C\u3089\u773A\u3081\u305F\u7A7A\u306F\u3068\u3066\u3082\u7DBA\u9E97\u3067\u3057\u305F\u3002\u7A7A\u304B\u3089\u306F\u6D41\u308C\u661F\u304C\u964D\u3063\u3066\u3044\u307E\u3057\u305F\u3002
+      \u6D41\u308C\u661F\u3092\u898B\u3066\u5C11\u5973\u306F\u76EE\u3092\u304E\u3085\u3063\u3068\u9589\u3058\u3066\u7948\u308A\u307E\u3057\u305F\u3002
+      \u3069\u3046\u304B\u6700\u5F8C\u304C\u82E6\u3057\u304F\u306A\u3089\u306A\u3044\u3088\u3046\u306B\u3002 "
     itemType: 4
     needWholeCam: 0
     bgObject: {fileID: 478959302}
@@ -7509,8 +7533,18 @@ MonoBehaviour:
       \uBC1F\uC790 \uC789\uC5B4\uB294 \uD558\uB298\uB85C \uC62C\uB77C\uAC00 \uB2EC\uC774
       \uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uC18C\uB140\uB294 \uB2EC\uC774 \uB41C \uC789\uC5B4\uB97C
       \uBCF4\uBA70 \uB530\uB77C \uAC77\uAE30 \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'When she looked out the lotus flower, she saw a carp in the water.
+      There was a koi in front of her that she had only seen in books. The carp circled
+      around the girl. The movements of the carp seemed as if it were letting the
+      girl to ride on it. The carp took the girl to the surface as she ride on the
+      carp. '
+    japText: "\u82B1\u3073\u3089\u306E\u5408\u9593\u304B\u3089\u5916\u3092\u773A\u3081\u308B\u3068\u3001\u6C34\u306E\u4E2D\u306B\u9BC9\u304C\u3044\u307E\u3057\u305F\u3002
+      \u672C\u306E\u4E2D\u3067\u3057\u304B\u898B\u305F\u3053\u3068\u306E\u306A\u3044\u9326\u9BC9\u304C\u76EE\u306E\u524D\u306B\u3044\u307E\u3057\u305F\u3002
+      \u9BC9\u306F\u5C11\u5973\u306E\u5468\u308A\u3092\u3050\u308B\u3050\u308B\u56DE\u308A\u307E\u3057\u305F\u3002
+      \u307E\u308B\u3067\u81EA\u5206\u306E\u80CC\u4E2D\u306B\u4E57\u3063\u3066\u307B\u3057\u3044\u3068\u8A00\u3063\u3066\u3044\u308B\u3088\u3046\u306B\u898B\u3048\u307E\u3057\u305F\u3002
+      \u5C11\u5973\u304C\u9BC9\u306E\u80CC\u4E2D\u306B\u4E57\u308B\u3068\u3001\u9BC9\u306F\u5C11\u5973\u3092\u5730\u4E0A\u306B\u9023\u308C\u3066\u884C\u3063\u3066\u304F\u308C\u307E\u3057\u305F\u3002
+      \u5C11\u5973\u304C\u5730\u9762\u3092\u8E0F\u3080\u3068\u3001\u9BC9\u306F\u7A7A\u306B\u767B\u3063\u3066\u6708\u306B\u306A\u308A\u307E\u3057\u305F\u3002
+      \u5C11\u5973\u306F\u6708\u306B\u306A\u3063\u305F\u9BC9\u3092\u9053\u3057\u308B\u3079\u306B\u6B69\u304D\u59CB\u3081\u307E\u3057\u305F\u3002 "
     itemType: 7
     needWholeCam: 0
     bgObject: {fileID: 492259257}
@@ -7526,8 +7560,14 @@ MonoBehaviour:
       \uBCF4\uC600\uC8E0. \uC790\uC2E0\uC774 \uC81C\uC77C \uC88B\uC544\uD558\uB294
       \uAF43 \uC18D\uC5D0 \uC788\uB294 \uD604\uC7AC\uC758 \uC0C1\uD669\uC774 \uC18C\uB140\uB294
       \uBE44\uD604\uC2E4\uC801\uC774\uB77C\uACE0 \uB290\uAEF4\uC84C\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'After a while, a dreamy scent woke the girl up. She opened her eyes
+      and noticed that she was in a lotus flower floating on the water. The lotus
+      flower seemed to protect her from danger. The girl felt that her current situation,
+      nestled within her favorite flowers, seemed surreal to her. '
+    japText: "\u5C11\u5973\u306F\u3044\u3044\u9999\u308A\u306B\u76EE\u3092\u899A\u307E\u3057\u307E\u3057\u305F\u3002
+      \u5C11\u5973\u306F\u3001\u6C34\u306E\u4E0A\u306B\u6D6E\u304B\u3093\u3067\u3044\u308B\u84EE\u306E\u82B1\u306E\u4E2D\u306B\u3044\u307E\u3057\u305F\u3002
+      \u84EE\u306E\u82B1\u306F\u307E\u308B\u3067\u5C11\u5973\u3092\u5B88\u3063\u3066\u3044\u308B\u3088\u3046\u306B\u898B\u3048\u307E\u3057\u305F\u3002
+      \u81EA\u5206\u304C\u4E00\u756A\u597D\u304D\u306A\u82B1\u306E\u4E2D\u306B\u3044\u308B\u306A\u3093\u3066\u3002\u5C11\u5973\u306F\u4ECA\u306E\u72B6\u6CC1\u304C\u975E\u73FE\u5B9F\u7684\u3060\u3068\u601D\u3044\u307E\u3057\u305F\u3002 "
     itemType: 1
     needWholeCam: 0
     bgObject: {fileID: 1159345646}
@@ -7545,8 +7585,14 @@ MonoBehaviour:
       \uD1A0\uB07C\uB294 \uC18C\uB140\uAC00 \uC9D1\uC5D0\uC11C \uD765\uC5BC\uAC70\uB9AC\uB358
       \uB178\uB798 \uB97C \uC120\uBB3C\uC774\uB77C\uBA70 \uBA4B\uC788\uAC8C \uC5F0\uC8FC\uD574
       \uC8FC\uC5C8\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'While walking along the moon, the girl heard a familiar sound of the
+      violin. When the girl moved her gaze, there was a rabbit playing the violin.
+      The rabbit was a blind bunny that had been abandoned by its mother and that
+      the girl had raised when she was young. The rabbit played the song that the
+      girl hummed at home in a cool way, saying it was a gift. '
+    japText: "\u6708\u3092\u898B\u306A\u304C\u3089\u6B69\u3044\u3066\u3044\u304F\u3068\u3001\u805E\u304D\u6163\u308C\u305F\u30D0\u30A4\u30AA\u30EA\u30F3\u306E\u65CB\u5F8B\u304C\u805E\u3053\u3048\u3066\u304D\u307E\u3057\u305F\u3002
+      \u30A6\u30B5\u30AE\u304C\u30D0\u30A4\u30AA\u30EA\u30F3\u3092\u5F3E\u3044\u3066\u3044\u307E\u3057\u305F\u3001\u5C11\u5973\u306F\u76EE\u304C\u958B\u3051\u3089\u308C\u306A\u304F\u3066\u6BCD\u89AA\u306B\u6368\u3066\u3089\u308C\u305F\u30A6\u30B5\u30AE\u306E\u8D64\u3061\u3083\u3093\u3092\u62FE\u3063\u3066\u304D\u3066\u80B2\u3066\u3066\u3044\u305F\u306E\u3067\u3059\u3002
+      \u305D\u306E\u30A6\u30B5\u30AE\u306F\u5C11\u5973\u304C\u5BB6\u3067\u53E3\u305A\u3055\u3093\u3067\u3044\u305F\u66F2\u3092\u30D7\u30EC\u30BC\u30F3\u30C8\u3057\u305F\u3044\u3068\u8A00\u3044\u306A\u304C\u3089\u3001\u7D20\u6575\u306A\u6F14\u594F\u3092\u805E\u304B\u305B\u3066\u304F\u308C\u307E\u3057\u305F\u3002 "
     itemType: 8
     needWholeCam: 0
     bgObject: {fileID: 44976230}
@@ -7562,8 +7608,13 @@ MonoBehaviour:
       \uACE7 \uB2E4\uC2DC \uB9CC\uB0A0 \uAC70\uB77C \uB9D0\uD588\uC2B5\uB2C8\uB2E4.
       \uAE30\uCC28\uAC00 \uACBD\uC801\uC18C\uB9AC\uB97C \uB0B4\uBA70 \uC6C0\uC9C1\uC774\uAE30
       \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4. "
-    engText: 
-    japText: 
+    engText: 'The rabbit drove the girl to the front of the train. In front of the
+      train, the girl said rabbit to go with her, but the rabbit shook his head.
+      But he said he''ll see her again soon. The train began to move with a horn. '
+    japText: "\u30A6\u30B5\u30AE\u306F\u5C11\u5973\u3092\u96FB\u8ECA\u306E\u524D\u307E\u3067\u9023\u308C\u3066\u884C\u3063\u3066\u304F\u308C\u307E\u3057\u305F\u3002
+      \u96FB\u8ECA\u306E\u524D\u3067\u5C11\u5973\u306F\u4E00\u7DD2\u306B\u884C\u3053\u3046\u3068\u8A00\u3044\u307E\u3057\u305F\u304C\u3001\u30A6\u30B5\u30AE\u306F\u305D\u308C\u304C\u3067\u304D\u306A\u3044\u3068\u8A00\u3044\u307E\u3057\u305F\u3002
+      \u3067\u3082\u3001\u3059\u3050\u306B\u307E\u305F\u4F1A\u3048\u308B\u3068\u8A00\u3044\u307E\u3057\u305F\u3002
+      \u3082\u3046\u3059\u3050\u96FB\u8ECA\u306F\u97F3\u3092\u9CF4\u3089\u3057\u306A\u304C\u3089\u52D5\u304D\u51FA\u3057\u307E\u3057\u305F\u3002 "
     itemType: 9
     needWholeCam: 0
     bgObject: {fileID: 1425066098}
@@ -37024,7 +37075,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -165, y: -458.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37265,8 +37316,14 @@ MonoBehaviour:
     \uAE38\uAC8C \uD574\uC11C \uC26C\uACE0 \uC2F6\uC5C8\uC2B5\uB2C8\uB2E4. \uC624\uB298
     \uBCF8 \uBE44\uD604\uC2E4\uC801\uC778 \uAD11\uACBD\uB4E4\uC774 \uB108\uBB34 \uC544\uB984\uB2E4\uC6CC
     \uC18C\uB140\uB294 \uAE4A\uAC8C \uC7A0\uB4E4 \uC218 \uC788\uC744 \uAC83 \uAC19\uC558\uC2B5\uB2C8\uB2E4. "
-  enEndingText: 
-  jaEndingText: 
+  enEndingText: 'The girl began to walk following the moon. As she continued walking,
+    a hotel appeared in front of her. The girl wanted to take a break from her long
+    adventure. The surreal sights she had witnessed today were so beautiful that
+    she felt like she could sleep deeply. '
+  jaEndingText: "\u5C11\u5973\u306F\u6708\u3092\u9053\u3057\u308B\u3079\u306B\u6B69\u304D\u59CB\u3081\u307E\u3057\u305F\u3002
+    \u6B69\u304D\u7D9A\u3051\u308B\u3068\u3001\u5C11\u5973\u306E\u76EE\u306E\u524D\u306B\u30DB\u30C6\u30EB\u304C\u73FE\u308C\u307E\u3057\u305F\u3002
+    \u5C11\u5973\u306F\u9577\u3044\u5192\u967A\u306B\u75B2\u308C\u3066\u3044\u307E\u3057\u305F\u306E\u3067\u3001\u4F11\u307F\u305F\u3044\u3068\u601D\u3044\u307E\u3057\u305F\u3002
+    \u4ECA\u65E5\u898B\u305F\u975E\u73FE\u5B9F\u7684\u306A\u5149\u666F\u306F\u3069\u308C\u3082\u7F8E\u3057\u304F\u3001\u5C11\u5973\u306F\u3050\u3063\u3059\u308A\u7720\u308C\u305D\u3046\u3067\u3057\u305F\u3002 "
   endings:
   - {fileID: 2102580589}
   - {fileID: 942882365}
@@ -38157,7 +38214,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -40417,7 +40474,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

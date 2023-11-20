@@ -27,6 +27,7 @@ public class StartUI_HJH : MonoBehaviour
     {
         int val = langaugeDropdown.value;
         GameManager.instance.LangaugeSet(val);
+        GameManager.instance.SaveUserData();
     }
     void VolumeChange(float value)
     {

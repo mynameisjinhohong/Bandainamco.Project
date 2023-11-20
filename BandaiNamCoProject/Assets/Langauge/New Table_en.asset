@@ -50,6 +50,18 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 1093606172246016
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1095858748375040
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1096297225109504
+    m_Localized: Are you sure you quit the game?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

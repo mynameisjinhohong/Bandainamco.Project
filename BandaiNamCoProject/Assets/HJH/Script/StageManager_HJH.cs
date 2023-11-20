@@ -9,7 +9,7 @@ public class StageManager_HJH : MonoBehaviour
     public GameObject optionDoor;
     public Sprite closeDoorSprite; //¿­¸°¹® , ´ÝÈù¹®
     public GameObject bg;
-    int doorNum;
+    public int doorNum;
 
     public GameObject optionCanvas;
     public Slider volumeSlider;
@@ -60,12 +60,14 @@ public class StageManager_HJH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool findDoor = false;
        for(int i =0; i<doors.Count; i++)
         {
             if (Mathf.Abs(doors[i].transform.position.x - Camera.main.transform.position.x )< 2f)
             {
                 doors[i].transform.GetChild(0).gameObject.SetActive(true);
                 doorNum = i;
+                findDoor = true;
             }
             else
             {
@@ -76,31 +78,36 @@ public class StageManager_HJH : MonoBehaviour
        {
             doorNum = -1;
             optionDoor.transform.GetChild(0).gameObject.SetActive(true);
+            findDoor = true;
         }
         else
         {
             optionDoor.transform.GetChild(0).gameObject.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+       if(findDoor)
         {
-            if(GameManager.instance != null)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if(doorNum <= GameManager.instance.userData.stage)
+                if (GameManager.instance != null)
                 {
-                    if(doorNum < 0)
+                    if (doorNum <= GameManager.instance.userData.stage)
                     {
-                        optionDoor.GetComponent<Animator>().SetTrigger("Open");
-                        Invoke("OptionOn", 2f);
-                    }
-                    else
-                    {
-                        doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
-                        StartCoroutine(CameraZoomIn());
-                        Invoke("MoveScene", 2f);
+                        if (doorNum < 0)
+                        {
+                            optionDoor.GetComponent<Animator>().SetTrigger("Open");
+                            Invoke("OptionOn", 2f);
+                        }
+                        else
+                        {
+                            doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
+                            StartCoroutine(CameraZoomIn());
+                            Invoke("MoveScene", 2f);
+                        }
                     }
                 }
             }
         }
+
 
         if(optionDoor.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
         {
