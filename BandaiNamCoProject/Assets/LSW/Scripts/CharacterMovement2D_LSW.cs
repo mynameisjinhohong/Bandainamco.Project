@@ -63,6 +63,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public GameObject fishEye;
     public Animator eyeAni1;
     public Animator eyeAni2;
+    bool eyeOn = false;
     #endregion
     public CinemachineVirtualCamera characterCam;
     public StarBackground_yd starBack;
@@ -99,15 +100,23 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     {
         if (eye)
         {
-            eyeNow = true;
-            idleEye.SetActive(true);
-            fishEye.SetActive(true);
+            if (ani.GetCurrentAnimatorStateInfo(0).IsName("Fix_Idle_2"))
+            {
+                eyeNow = true;
+                idleEye.SetActive(true);
+                fishEye.SetActive(true);
+            }
+            else
+            {
+                eyeOn = true;
+            }
+
         }
         else
         {
             eyeNow = false;
-            idleEye.SetActive(true);
-            fishEye.SetActive(true);
+            idleEye.SetActive(false);
+            fishEye.SetActive(false);
         }
     }
 
@@ -193,7 +202,16 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 transform.GetChild(0).Rotate(Vector3.right * Time.deltaTime * rotateSpeed * rb.velocity.y);
             }
         }
-
+        if (eyeOn)
+        {
+            if (ani.GetCurrentAnimatorStateInfo(0).IsName("Fix_Idle_2") || fish.Count > 0)
+            {
+                eyeNow = true;
+                eyeOn = false;
+                idleEye.SetActive(true);
+                fishEye.SetActive(true);
+            }
+        }
 
         // transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         //Debug.Log(transform.rotation + "È¸Àü?");

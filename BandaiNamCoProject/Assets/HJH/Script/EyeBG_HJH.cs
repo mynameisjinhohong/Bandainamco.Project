@@ -9,7 +9,7 @@ public class EyeBG_HJH : MonoBehaviour
     float currentTime;
     public CharacterMovement2D_LSW player;
 
-    bool nowEye;
+    bool nowEye = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +27,7 @@ public class EyeBG_HJH : MonoBehaviour
                 {
                     if (currentTime > eyeRemainTime)
                     {
+                        Debug.Log("EyeEnd");
                         player.EyeStart(false);
                         nowEye = false;
                         Camera.main.cullingMask = -1;
@@ -37,6 +38,7 @@ public class EyeBG_HJH : MonoBehaviour
                 {
                     if (currentTime > eyeCoolTime)
                     {
+                        Debug.Log("EyeStart");
                         nowEye = true;
                         player.EyeStart(true);
                         Camera.main.cullingMask = ~(1 << 7);
@@ -48,6 +50,7 @@ public class EyeBG_HJH : MonoBehaviour
         else
         {
             nowEye = false;
+            player.EyeStart(false);
             currentTime = 0;
         }
     }
