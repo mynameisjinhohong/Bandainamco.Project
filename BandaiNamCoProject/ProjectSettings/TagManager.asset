@@ -10,6 +10,7 @@ TagManager:
   - Edge
   - Clock
   - StarItemPre
+  - NoDissolve
   layers:
   - Default
   - TransparentFX

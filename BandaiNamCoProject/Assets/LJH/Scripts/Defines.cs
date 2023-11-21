@@ -6,4 +6,5 @@ public enum ItemType
 public class TagStrings
 {
     public const string PlayerTag = "Player";
+    public const string NoDissolveTag = "NoDissolve";
 }

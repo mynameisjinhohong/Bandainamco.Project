@@ -111,6 +111,7 @@ public class CameraManager : ManagerBase
             float progress = Mathf.Lerp(0f, 1f, elapsedTime / dissolveSec);
             foreach (var r in item.renderers)
             {
+                if (r.CompareTag(TagStrings.NoDissolveTag)) continue;
                 r.sharedMaterial.SetFloat("_Progress", progress);
             }
             await UniTask.Yield();
@@ -118,6 +119,7 @@ public class CameraManager : ManagerBase
 
         foreach(var r in item.renderers)
         {
+            if (r.CompareTag(TagStrings.NoDissolveTag)) continue;
             GamePlayManager_HJH.Instance.SetBackgroundMat(r);
         }
 
