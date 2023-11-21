@@ -59,6 +59,18 @@ MonoBehaviour:
     m_Key: New Entry
     m_Metadata:
       m_Items: []
+  - m_Id: 1362600993210368
+    m_Key: Go to Welcome screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1379137221279744
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1380197256118272
+    m_Key: Retry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

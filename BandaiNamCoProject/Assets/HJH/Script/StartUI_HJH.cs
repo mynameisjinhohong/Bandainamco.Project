@@ -21,6 +21,10 @@ public class StartUI_HJH : MonoBehaviour
     {
         volumeSlider.value = GameManager.instance.userData.volume;
         volumeSlider.onValueChanged.AddListener(VolumeChange);
+        if(GameManager.instance != null)
+        {
+            langaugeDropdown.value = GameManager.instance.userData.langaugeSet;
+        }
     }
 
     public void LangaugeChange()
@@ -32,6 +36,7 @@ public class StartUI_HJH : MonoBehaviour
     void VolumeChange(float value)
     {
         GameManager.instance.Volume = value;
+        GameManager.instance.SaveUserData();
     }
     // Update is called once per frame
     void Update()
@@ -64,7 +69,8 @@ public class StartUI_HJH : MonoBehaviour
 
     public void NewGameButton()
     {
-        GameManager.instance.userData = new UserData_HJH();
+        GameManager.instance.userData.stage = 0;
+        GameManager.instance.userData.stageDatas = new StageData_HJH[4];
         if (GameManager.instance.userData.stageDatas[0] == null)
         {
             for (int i = 0; i < GameManager.instance.userData.stageDatas.Length; i++)

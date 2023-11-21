@@ -8,7 +8,7 @@ public class LocalizeTextSet_HJH : MonoBehaviour
     public TMP_FontAsset en;
     TMP_Text mytext;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         mytext = GetComponent<TMP_Text>();
         SetLangauge();
@@ -23,6 +23,7 @@ public class LocalizeTextSet_HJH : MonoBehaviour
     {
         switch (GameManager.instance.userData.langaugeSet)
         {
+            
             case 0:
                 mytext.font = en;
                 break;

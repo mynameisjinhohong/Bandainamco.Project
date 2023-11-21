@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameUI_HJH : MonoBehaviour
@@ -11,6 +13,7 @@ public class GameUI_HJH : MonoBehaviour
     public GameObject optionCanvas;
     public GameObject gameOverCanvas;
     public Slider volumeSlider;
+    public TMP_Dropdown langaugeDropdown;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +21,16 @@ public class GameUI_HJH : MonoBehaviour
         if(GameManager.instance != null)
         {
             volumeSlider.value = GameManager.instance.userData.volume;
+            langaugeDropdown.value = GameManager.instance.userData.langaugeSet;
         }
         volumeSlider.onValueChanged.AddListener(VolumeChange);
     }
-
+    public void LangaugeChange()
+    {
+        int val = langaugeDropdown.value;
+        GameManager.instance.LangaugeSet(val);
+        GameManager.instance.SaveUserData();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -125,6 +134,11 @@ public class GameUI_HJH : MonoBehaviour
         {
             WorldManager.Instance.MainState = MainState.Pause;
         }
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void VolumeChange(float value)

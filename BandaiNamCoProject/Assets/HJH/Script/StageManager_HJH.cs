@@ -21,7 +21,6 @@ public class StageManager_HJH : MonoBehaviour
         {
             volumeSlider.value = GameManager.instance.userData.volume;
         }
-        volumeSlider.onValueChanged.AddListener(VolumeChange);
         for(int i =0; i< doors.Count; i++)
         {
             if(GameManager.instance != null)
@@ -51,10 +50,6 @@ public class StageManager_HJH : MonoBehaviour
         //        }
         //    }
         //}
-    }
-    void VolumeChange(float value)
-    {
-        GameManager.instance.Volume = value;
     }
 
     // Update is called once per frame
