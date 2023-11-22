@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
-public class DataMenu
-{
-    [MenuItem("Data/DataClear")]
-    public static void DataClear()
-    {
-        PlayerPrefs.DeleteAll();
-    }
-}
+//public class DataMenu
+//{
+//    [MenuItem("Data/DataClear")]
+//    public static void DataClear()
+//    {
+//        PlayerPrefs.DeleteAll();
+//    }
+//}
 
 [System.Serializable]
 public class UserData_HJH

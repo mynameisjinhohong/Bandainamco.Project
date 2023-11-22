@@ -1,9 +1,6 @@
 ﻿#region Using statements
 
 using Cysharp.Threading.Tasks;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.U2D.Sprites;
 using UnityEngine;
 
 #endregion
