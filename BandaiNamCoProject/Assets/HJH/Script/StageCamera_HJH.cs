@@ -6,6 +6,8 @@ public class StageCamera_HJH : MonoBehaviour
     public GameObject upButton;
     public GameObject downButton;
     public AudioSource[] walkAudio;
+    public AudioSource elevatorSound;
+    public AudioSource buttonSound;
     int walkCount = 0;
     public float cameraMoverSpeed;
     public float startPoint;
@@ -200,6 +202,7 @@ public class StageCamera_HJH : MonoBehaviour
             {
                 elevatorTime = 0;
                 elevatorStage = ElevatorStage.Up;
+                elevatorSound.Play();
             }
         }
         else if (elevatorStage == ElevatorStage.Up)
@@ -218,11 +221,13 @@ public class StageCamera_HJH : MonoBehaviour
             {
                 elevatorTime = 0;
                 elevatorStage = ElevatorStage.OpenStart;
+                elevatorSound.Stop();
             }
             if (Mathf.Abs(elevator.transform.position.x - Camera.main.transform.position.x) > 2f)
             {
                 elevatorTime = 0;
                 elevatorStage = ElevatorStage.Down;
+                elevatorSound.Stop();
             }
         }
     }
@@ -257,10 +262,19 @@ public class StageCamera_HJH : MonoBehaviour
 
     public void QuitYes()
     {
-        LoadingManager_HJH.LoadScene("StartScene");
+        buttonSound.Play();
+        Invoke("GotoStartScene", 0.3f);
     }
+
+    void GotoStartScene()
+    {
+        LoadingManager_HJH.LoadScene("StartScene");
+
+    }
+
     public void QuitNo()
     {
+        buttonSound.Play();
         quitPopUp.SetActive(false);
         Time.timeScale = 1f;
     }

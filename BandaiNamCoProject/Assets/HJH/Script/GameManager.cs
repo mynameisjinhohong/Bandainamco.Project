@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     public int[] itemCount;
     public UserData_HJH userData;
     public static GameManager instance = null;
-
+    public AudioClip[] bgms;
     #region 언어 관련
     //public const string enFont;
     //public const string koFont;
@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
     #region 볼륨 조절 관련
     [SerializeField]
     float volume;
-
     public List<AudioSource> audios;
 
     public float Volume
@@ -106,6 +105,9 @@ public class GameManager : MonoBehaviour
         List<AudioSource> audioSources = new List<AudioSource>();
         GameObject[] all = FindObjectsOfType<GameObject>();
         AudioSource myAudio = gameObject.GetComponent<AudioSource>();
+        audioSources.Add(myAudio);
+        myAudio.volume = volume;
+        ChangeAudio(myAudio);
         foreach (GameObject obj in all)
         {
             AudioSource audio;
@@ -165,6 +167,29 @@ public class GameManager : MonoBehaviour
     {
         FindAudioSource();
         //ChangeFont();
+    }
+    void ChangeAudio(AudioSource myaudio)
+    {
+        if(SceneManager.GetActiveScene().name != "LoadingScene")
+        {
+            if (LoadingManager_HJH.nextScene == "StartScene")
+            {
+                myaudio.clip = bgms[0];
+                myaudio.Play();
+            }
+            else if (LoadingManager_HJH.nextScene == "StageScene")
+            {
+                myaudio.clip = bgms[1];
+                myaudio.Play();
+
+            }
+            else if (LoadingManager_HJH.nextScene == "GameScene")
+            {
+                myaudio.clip = bgms[2];
+                myaudio.Play();
+            }
+        }
+
     }
     public void SaveUserData()
     {

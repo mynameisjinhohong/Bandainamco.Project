@@ -11,6 +11,10 @@ public class StageManager_HJH : MonoBehaviour
     public GameObject bg;
     public int doorNum;
 
+    public AudioSource doorOpenSound;
+    public AudioSource doorCantOpenSound;
+    public AudioSource buttonSound;
+
     public GameObject optionCanvas;
     public Slider volumeSlider;
     public float cameraZoomInSpeed;
@@ -90,14 +94,20 @@ public class StageManager_HJH : MonoBehaviour
                         if (doorNum < 0)
                         {
                             optionDoor.GetComponent<Animator>().SetTrigger("Open");
+                            doorOpenSound.Play();
                             Invoke("OptionOn", 2f);
                         }
                         else
                         {
                             doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
+                            doorOpenSound.Play();
                             StartCoroutine(CameraZoomIn());
                             Invoke("MoveScene", 2f);
                         }
+                    }
+                    else
+                    {
+                        doorCantOpenSound.Play();
                     }
                 }
             }
@@ -134,6 +144,7 @@ public class StageManager_HJH : MonoBehaviour
     public void OptionOff()
     {
         Time.timeScale = 1f;
+        buttonSound.Play();
         optionCanvas.SetActive(false);
         optionDoor.GetComponent<Animator>().SetTrigger("Close");
     }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class StartUI_HJH : MonoBehaviour
 {
     public GameObject quitPopUp;           
-    public AudioSource audio;
+    public AudioSource aud;
     public GameObject[] mouseOverImage;
     public float fadeSpeed;
     public GameObject optionCanvas;
@@ -59,9 +59,9 @@ public class StartUI_HJH : MonoBehaviour
 
     public void StartButton()
     {
-        if(audio != null)
+        if(aud != null)
         {
-            audio.Play();
+            aud.Play();
         }
         Invoke("MoveScene", 0.01f);
     }
@@ -78,11 +78,11 @@ public class StartUI_HJH : MonoBehaviour
                 GameManager.instance.userData.stageDatas[i].itemOnOff = new bool[GameManager.instance.itemCount[i]];
             }
         }
-        if (audio != null)
+        if (aud != null)
         {
-            audio.Play();
+            aud.Play();
         }
-        Invoke("MoveScene", 0.01f);
+        Invoke("MoveScene", 0.3f);
     }
     public void MoveScene()
     {
@@ -95,6 +95,7 @@ public class StartUI_HJH : MonoBehaviour
 
     public void QuitButton()
     {
+        aud.Play();
         if (!quitPopUp.activeInHierarchy) {
             quitPopUp.SetActive(true);
         }
@@ -102,6 +103,7 @@ public class StartUI_HJH : MonoBehaviour
 
     public void QuitOffButton()
     {
+        aud.Play();
         if (quitPopUp.activeInHierarchy)
         {
             quitPopUp.SetActive(false);
@@ -110,6 +112,7 @@ public class StartUI_HJH : MonoBehaviour
 
     public void OptionButton()
     {
+        aud.Play();
         if (!optionCanvas.activeInHierarchy)
         {
             optionCanvas.SetActive(true);
@@ -118,7 +121,8 @@ public class StartUI_HJH : MonoBehaviour
 
     public void OptionOffButton()
     {
-        if(optionCanvas.activeInHierarchy)
+        aud.Play();
+        if (optionCanvas.activeInHierarchy)
         {
             optionCanvas.SetActive(false);
         }

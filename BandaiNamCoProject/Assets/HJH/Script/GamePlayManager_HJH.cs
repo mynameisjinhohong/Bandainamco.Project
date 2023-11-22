@@ -13,7 +13,7 @@ public enum EndingType
 public class GamePlayManager_HJH : ManagerBase
 {
     public static GamePlayManager_HJH Instance;
-
+    public AudioSource gameOverSound;
     public CharacterMovement2D_LSW characterMovement2D;
     public GameObject player;
     public SpriteRenderer emptyBgSpriteRenderer;
@@ -124,7 +124,7 @@ public class GamePlayManager_HJH : ManagerBase
             }
             endingType = EndingType.Over;
             gameEnd = true;
-
+            gameOverSound.Play();
             //Time.timeScale = 0f;
             //GameOver();
         }

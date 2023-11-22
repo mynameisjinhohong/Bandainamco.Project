@@ -22,7 +22,7 @@ public class UIManager : ManagerBase
 {
     public static UIManager Instance;
     private bool isGameOver = false;
-
+    public AudioSource uiAudio;
     [SerializeField] private CloudInfo[] clouds;
     [SerializeField] private Ease ease;
     [SerializeField] private TextMeshProUGUI text;
@@ -39,7 +39,6 @@ public class UIManager : ManagerBase
         if (isGameOver) return;
 
         currTime += Time.deltaTime;
-        timeText.text = currTime.ToString();
         if (isCloud && !EventSystem.current.IsPointerOverGameObject())
         {
             if (Input.GetMouseButtonDown(0))
@@ -55,11 +54,6 @@ public class UIManager : ManagerBase
     {
         Instance = this;
 
-        foreach (CloudInfo cloud in clouds)
-        {
-            cloud.FirstPos = cloud.cloudRT.anchoredPosition;
-            cloud.MyImage = cloud.cloudRT.GetComponent<Image>();
-        }
 
         base.Init();
     }
@@ -102,6 +96,7 @@ public class UIManager : ManagerBase
         //});
 
         itemCanvas.SetActive(true);
+        uiAudio.Play();
         if (GameManager.instance != null)
         {
             switch (GameManager.instance.userData.langaugeSet)

@@ -10,7 +10,7 @@ public class LoadingManager_HJH : MonoBehaviour
     public float minWait = 0.5f;
     public MeshRenderer bgMat;
     public float bgScrollSpeed = 1.0f;
-    static string nextScene = "StartScene";
+    static public string nextScene = "StartScene";
     public float textSpeed = 1.0f;
     // Start is called before the first frame update
     public static void LoadScene(string sceneName)
