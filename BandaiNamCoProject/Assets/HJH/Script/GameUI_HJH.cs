@@ -55,7 +55,7 @@ public class GameUI_HJH : MonoBehaviour
     {
         if(WorldManager.Instance.MainState != MainState.GameFinish)
         {
-
+            buttonAudio.Play();
             WorldManager.Instance.MainState = MainState.UiOn;
             pauseCanvas.SetActive(true);
         }
@@ -71,6 +71,7 @@ public class GameUI_HJH : MonoBehaviour
         {
             WorldManager.Instance.MainState =MainState.Pause;
         }
+        buttonAudio.Play();
         pauseCanvas.SetActive(false);
     }
 
@@ -119,6 +120,7 @@ public class GameUI_HJH : MonoBehaviour
 
     public void OptionOnButton()
     {
+        buttonAudio.Play();
         optionCanvas.SetActive(true);
         pauseCanvas.SetActive(false);
         gameOverCanvas.SetActive(false);
@@ -126,6 +128,7 @@ public class GameUI_HJH : MonoBehaviour
 
     public void OptionOffButton()
     {
+        buttonAudio.Play();
         optionCanvas.SetActive(false);
         if (CameraManager.Instance.currCamera == CamValues.Character || GamePlayManager_HJH.Instance.start == false)
         {
@@ -139,7 +142,13 @@ public class GameUI_HJH : MonoBehaviour
 
     public void RestartButton()
     {
+        buttonAudio.Play();
+        Invoke("Restart", 0.3f);
+    }
+    void Restart()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     void VolumeChange(float value)
@@ -149,9 +158,14 @@ public class GameUI_HJH : MonoBehaviour
 
     public void QuitButton()
     {
+        buttonAudio.Play();
         WorldManager.Instance.MainState = MainState.Play;
-        
+        Invoke("GoStart", 0.3f);
+    }
+    void GoStart()
+    {
         LoadingManager_HJH.LoadScene("StartScene");
+
     }
 
   

@@ -63,7 +63,8 @@ public class StageCamera_HJH : MonoBehaviour
     {
         Time.timeScale = 0f;
         Camera cam = Camera.main;
-        float x = cameraSize - cam.orthographicSize; 
+        float x = cameraSize - cam.orthographicSize;
+        elevatorOpen.Play();
         elevatorStage = ElevatorStage.Opened;
         while (true)
         {
