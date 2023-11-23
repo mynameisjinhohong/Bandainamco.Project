@@ -299,9 +299,9 @@ MonoBehaviour:
     - itemOnOff: 
     langaugeSet: 0
   bgms:
-  - {fileID: 8300000, guid: 1d62bfb6921af374c9cc51f2b404545c, type: 3}
-  - {fileID: 8300000, guid: b0ac5b53512d8bb4f889edb63101e040, type: 3}
-  - {fileID: 8300000, guid: 79862f00c0a67bd488e1e1afea70b7a3, type: 3}
+  - {fileID: 8300000, guid: 515bd753f1008be4c8f765693bfc38cd, type: 3}
+  - {fileID: 8300000, guid: 4a9a184b5003f594291c1ee2fccc0894, type: 3}
+  - {fileID: 8300000, guid: fd142565656ce224b89545e758e40898, type: 3}
   volume: 0
   audios: []
 --- !u!4 &445728708

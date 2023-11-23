@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,14 +15,33 @@ public class StartUI_HJH : MonoBehaviour
     public GameObject optionCanvas;
     public Slider volumeSlider;
     public TMP_Dropdown langaugeDropdown;
+    public Button conti;
 
     // Start is called before the first frame update
     void Start()
     {
+
         volumeSlider.value = GameManager.instance.userData.volume;
         volumeSlider.onValueChanged.AddListener(VolumeChange);
         if(GameManager.instance != null)
         {
+            if(GameManager.instance.userData.stage == 0)
+            {
+                bool first = false;
+                for(int i =0; i< GameManager.instance.userData.stageDatas[0].itemOnOff.Length; i++)
+                {
+                    if (GameManager.instance.userData.stageDatas[0].itemOnOff[i])
+                    {
+                        first = true;
+                        break;
+                    }
+                }
+                if (!first)
+                {
+                    conti.interactable = false;
+                    conti.GetComponent<EventTrigger>().enabled = false;
+                }
+            }
             langaugeDropdown.value = GameManager.instance.userData.langaugeSet;
         }
     }
@@ -63,7 +83,7 @@ public class StartUI_HJH : MonoBehaviour
         {
             aud.Play();
         }
-        Invoke("MoveScene", 0.01f);
+        Invoke("MoveScene", 0.3f);
     }
 
     public void NewGameButton()
@@ -86,6 +106,7 @@ public class StartUI_HJH : MonoBehaviour
     }
     public void MoveScene()
     {
+
         LoadingManager_HJH.LoadScene("StageScene");
     }
     public void QuitApp()
