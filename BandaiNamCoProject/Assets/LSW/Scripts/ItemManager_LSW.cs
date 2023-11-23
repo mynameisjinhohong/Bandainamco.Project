@@ -27,6 +27,7 @@ public class Item_HJH
     //public int camSize;
     public ItemType itemType;
     public bool needWholeCam;
+    public bool particleMaterial;
     public GameObject bgObject;
     [HideInInspector] public List<SpriteRenderer> renderers = null;
     [HideInInspector] public bool isShown = false;

@@ -48,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BgWaveBack
+    uniqueID: 3224621197
+    locked: 0
   - name: background
     uniqueID: 3254752821
     locked: 0
@@ -63,7 +66,7 @@ TagManager:
   - name: bgCloud
     uniqueID: 804109017
     locked: 0
-  - name: bgWave
+  - name: BgWaveFront
     uniqueID: 847711591
     locked: 0
   - name: Frame
