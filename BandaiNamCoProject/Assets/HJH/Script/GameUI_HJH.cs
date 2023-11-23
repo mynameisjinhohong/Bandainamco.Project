@@ -14,6 +14,7 @@ public class GameUI_HJH : MonoBehaviour
     public GameObject gameOverCanvas;
     public Slider volumeSlider;
     public TMP_Dropdown langaugeDropdown;
+    public AudioSource buttonAudio;
 
     // Start is called before the first frame update
     void Start()
