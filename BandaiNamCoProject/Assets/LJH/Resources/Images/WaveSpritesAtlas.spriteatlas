@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaveSpritesAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 1a299c29f2f429f4cbec561f677dfb4d, type: 3}
+    - {fileID: 2800000, guid: b95a756e3c5518a42b3727edc6e66148, type: 3}
+    - {fileID: 2800000, guid: bba57c4f8e573d24db3128a35196003c, type: 3}
+    - {fileID: 2800000, guid: 32794cdeab4dac044a5df7aa64e94a09, type: 3}
+    - {fileID: 2800000, guid: 39a9fe95b4e05ae4e936f721ec60adab, type: 3}
+    - {fileID: 2800000, guid: 5bb4c401d958dba479d168f2ee1fb4ea, type: 3}
+    - {fileID: 2800000, guid: eba8185e60b2bcd47977f2be1b364d14, type: 3}
+    - {fileID: 2800000, guid: 4f418914af3c1984f870250c98c61c97, type: 3}
+    - {fileID: 2800000, guid: 100bc0da80c0ffe4e99dfda5afacc131, type: 3}
+    - {fileID: 2800000, guid: 5652877dd02a5524f9b503b674cfb725, type: 3}
+    - {fileID: 2800000, guid: 598e363dffed70646b73dd61aed71846, type: 3}
+    - {fileID: 2800000, guid: b77a817b382fac74889fcd8356e72f09, type: 3}
+    - {fileID: 2800000, guid: 95594170ffe2f2a498e96c916db60a79, type: 3}
+    - {fileID: 2800000, guid: 564f4e009d4cfda428f9c7139d2552e7, type: 3}
+    - {fileID: 2800000, guid: 6bd025fecbabd634f890c0a030e7e2b1, type: 3}
+    - {fileID: 2800000, guid: d1107dbbff73d35459efb59a80d9afb8, type: 3}
+    - {fileID: 2800000, guid: ea50950b42b79b949932fe24038694f1, type: 3}
+    - {fileID: 2800000, guid: bf1140b3c32f7f34282e8fa4a2bbd9ee, type: 3}
+    - {fileID: 2800000, guid: 606c4a0b27ef0884b953fa414c0e8f57, type: 3}
+    - {fileID: 2800000, guid: 233ec2209feef8f46863519aeae65634, type: 3}
+    - {fileID: 2800000, guid: 5f88fce65948d3b4b9e709063269e83f, type: 3}
+    - {fileID: 2800000, guid: 59f6e5fb7039cdc489294826770e4e73, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: WaveSpritesAtlas
+  m_IsVariant: 0
