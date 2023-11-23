@@ -7,6 +7,8 @@ public class StageCamera_HJH : MonoBehaviour
     public GameObject downButton;
     public AudioSource[] walkAudio;
     public AudioSource elevatorSound;
+    public AudioSource elevatorOpen;
+    public AudioSource elevatorClose;
     public AudioSource buttonSound;
     int walkCount = 0;
     public float cameraMoverSpeed;
@@ -233,6 +235,7 @@ public class StageCamera_HJH : MonoBehaviour
     }
     IEnumerator ElevatorOpen()
     {
+        elevatorOpen.Play();
         elevatorStage = ElevatorStage.Opening;
         while (true)
         {
@@ -281,6 +284,7 @@ public class StageCamera_HJH : MonoBehaviour
 
     IEnumerator ElevatorClose()
     {
+        elevatorClose.Play();
         elevatorStage = ElevatorStage.Closing;
         while (true)
         {

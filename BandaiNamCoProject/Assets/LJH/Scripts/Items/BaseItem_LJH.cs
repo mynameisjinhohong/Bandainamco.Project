@@ -43,6 +43,7 @@ public class BaseItem_LJH : MonoBehaviour
             {
                 bubbleAni.SetTrigger("Pop");
             }
+            bubble.GetComponent<AudioSource>().Play();
             ActiveFalse();
             already = true;
         }
