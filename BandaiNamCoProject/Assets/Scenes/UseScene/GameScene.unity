@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.15626818, g: 0.10671938, b: 0.20344092, a: 1}
+  m_IndirectSpecularColor: {r: 0.1565139, g: 0.10720735, b: 0.20377918, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5467,7 +5467,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297183592}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -70, y: -218.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7320,7 +7320,7 @@ MonoBehaviour:
   backgrounds: []
   items:
   - prefab: {fileID: 1886797856406526305, guid: bea3fe1109884b34dba1d1e0dcda3d41, type: 3}
-    itemCount: 5
+    itemCount: 0
     isVisited: 0
     korText: "\uBB3C\uC5D0 \uBE60\uC9C4 \uC18C\uB140\uB294 \uC815\uC2E0\uC744 \uC783\uACE0
       \uBB3C\uAE38\uC5D0 \uD729\uC4F8\uB824 \uB5A0\uB0B4\uB824\uAC14\uC2B5\uB2C8\uB2E4. "
@@ -7328,7 +7328,8 @@ MonoBehaviour:
     japText: "\u6EBA\u308C\u305F\u5C11\u5973\u306F\u6C17\u3092\u5931\u3044\u3001\u6CE2\u306B\u6D41\u3055\u308C\u3066\u3044\u304D\u307E\u3057\u305F\u3002 "
     itemType: 5
     needWholeCam: 1
-    particleMaterial: 1
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 1
     bgObject: {fileID: 104675156}
     renderers: []
     isShown: 0
@@ -7347,7 +7348,8 @@ MonoBehaviour:
       \u30A6\u30B5\u30AE\u304C\u6307\u3057\u305F\u305D\u306E\u5148\u3092\u898B\u3064\u3081\u308B\u3068\u3001\u7A7A\u9593\u304C\u6B6A\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 1591650753}
     renderers: []
     isShown: 0
@@ -7368,12 +7370,13 @@ MonoBehaviour:
       \u6210\u9577\u3057\u3066\u304B\u3089\u306F\u3001\u305D\u306E\u30AD\u30CE\u30B3\u3092\u58F2\u3063\u3066\u751F\u6D3B\u3092\u3057\u3066\u3044\u304D\u307E\u3057\u305F\u3002\u3057\u304B\u3057\u3042\u308B\u65E5\u3001\u6BD2\u30AD\u30CE\u30B3\u3092\u98DF\u3079\u3066\u3057\u307E\u3063\u305F\u5C11\u5973\u306F\u3001\u65B9\u5411\u611F\u899A\u3092\u5931\u3044\u3001\u68EE\u306E\u5965\u6DF1\u304F\u3078\u5165\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3057\u305F\u3002 "
     itemType: 3
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 226081294}
     renderers: []
     isShown: 0
   - prefab: {fileID: 1084897196651440658, guid: 8b6fa87c60597224286e1343420484d5, type: 3}
-    itemCount: 0
+    itemCount: 7
     isVisited: 0
     korText: "\uAE30\uCC28\uB294 \uAD6C\uB984 \uC18D\uC73C\uB85C \uC11C\uC11C\uD788
       \uB4E4\uC5B4\uAC14\uACE0 \uACE7 \uAE30\uCC28\uC758 \uCC3D\uBB38 \uBC16\uC740
@@ -7388,7 +7391,8 @@ MonoBehaviour:
       \u96FB\u8ECA\u304B\u3089\u964D\u308A\u308B\u3068\u3001\u5730\u9762\u304C\u3059\u3079\u3066\u96F2\u306B\u306A\u3063\u3066\u3044\u3066\u3001\u7A7A\u306B\u306F\u6708\u304C\u6D6E\u304B\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
     itemType: 6
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 1
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 162475445}
     renderers: []
     isShown: 0
@@ -7418,7 +7422,8 @@ MonoBehaviour:
       \u5F8C\u308D\u304B\u3089\u30AA\u30AA\u30AB\u30DF\u305F\u3061\u304C\u3069\u3093\u3069\u3093\u8FD1\u3065\u3044\u3066\u6765\u308B\u3068\u3001\u5C11\u5973\u306F\u8FF7\u308F\u305A\u5D16\u304B\u3089\u98DB\u3073\u964D\u308A\u307E\u3057\u305F\u3002 "
     itemType: 2
     needWholeCam: 1
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 1703395856}
     renderers: []
     isShown: 0
@@ -7442,7 +7447,8 @@ MonoBehaviour:
       \u3069\u3046\u304B\u6700\u5F8C\u304C\u82E6\u3057\u304F\u306A\u3089\u306A\u3044\u3088\u3046\u306B\u3002 "
     itemType: 4
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 478959302}
     renderers: []
     isShown: 0
@@ -7474,7 +7480,8 @@ MonoBehaviour:
       \u5C11\u5973\u306F\u6708\u306B\u306A\u3063\u305F\u9BC9\u3092\u9053\u3057\u308B\u3079\u306B\u6B69\u304D\u59CB\u3081\u307E\u3057\u305F\u3002 "
     itemType: 7
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 492259257}
     renderers: []
     isShown: 0
@@ -7498,7 +7505,8 @@ MonoBehaviour:
       \u81EA\u5206\u304C\u4E00\u756A\u597D\u304D\u306A\u82B1\u306E\u4E2D\u306B\u3044\u308B\u306A\u3093\u3066\u3002\u5C11\u5973\u306F\u4ECA\u306E\u72B6\u6CC1\u304C\u975E\u73FE\u5B9F\u7684\u3060\u3068\u601D\u3044\u307E\u3057\u305F\u3002 "
     itemType: 1
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 1159345646}
     renderers: []
     isShown: 0
@@ -7524,7 +7532,8 @@ MonoBehaviour:
       \u305D\u306E\u30A6\u30B5\u30AE\u306F\u5C11\u5973\u304C\u5BB6\u3067\u53E3\u305A\u3055\u3093\u3067\u3044\u305F\u66F2\u3092\u30D7\u30EC\u30BC\u30F3\u30C8\u3057\u305F\u3044\u3068\u8A00\u3044\u306A\u304C\u3089\u3001\u7D20\u6575\u306A\u6F14\u594F\u3092\u805E\u304B\u305B\u3066\u304F\u308C\u307E\u3057\u305F\u3002 "
     itemType: 8
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 44976230}
     renderers: []
     isShown: 0
@@ -7547,7 +7556,8 @@ MonoBehaviour:
       \u3082\u3046\u3059\u3050\u96FB\u8ECA\u306F\u97F3\u3092\u9CF4\u3089\u3057\u306A\u304C\u3089\u52D5\u304D\u51FA\u3057\u307E\u3057\u305F\u3002 "
     itemType: 9
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 1425066098}
     renderers: []
     isShown: 0
@@ -8836,7 +8846,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8851,7 +8862,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8863,7 +8875,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8875,7 +8888,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8887,7 +8901,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8899,7 +8914,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8911,7 +8927,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -8923,7 +8940,8 @@ MonoBehaviour:
     japText: 
     itemType: 0
     needWholeCam: 0
-    particleMaterial: 0
+    transparentMaterial: 0
+    opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 0}
     renderers: []
     isShown: 0
@@ -17777,7 +17795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911122327}
-  m_LocalRotation: {x: -4e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: 103.100006, y: -375.6, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25863,7 +25881,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333836076}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -4e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: -199.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38266,7 +38284,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -165, y: -458.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38422,7 +38440,8 @@ MonoBehaviour:
   player: {fileID: 1949789408}
   emptyBgSpriteRenderer: {fileID: 2016071354}
   backgroundMat: {fileID: 2100000, guid: 280d95ed41abd074d8f94cf6447c14ea, type: 2}
-  particleMat: {fileID: 2100000, guid: d9aa3f392165ed044a3da703228261a8, type: 2}
+  opaqueAlphaClipMat: {fileID: 2100000, guid: d9aa3f392165ed044a3da703228261a8, type: 2}
+  transparentMat: {fileID: 2100000, guid: 6af15350f4a93504780f95db3302ebe5, type: 2}
   bgFadeinSec: 3
   currentTime: 0
   timeText: {fileID: 0}
