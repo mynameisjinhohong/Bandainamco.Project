@@ -67,6 +67,7 @@ public class TrainItem_HJH : BaseItem_LJH
         if(ran == 0)
         {
             left = true;
+            playerPos.transform.localPosition = new Vector3(playerPos.transform.localPosition.x, playerPos.transform.localPosition.y, 15);
             train.transform.rotation = Quaternion.identity;
             for(int i =0; i< trainRail.Length; i++)
             {
@@ -76,7 +77,7 @@ public class TrainItem_HJH : BaseItem_LJH
         else 
         {
             left = false;
-            playerPos.transform.localPosition = new Vector3(playerPos.transform.localPosition.x, playerPos.transform.localPosition.y, -10);
+            playerPos.transform.localPosition = new Vector3(playerPos.transform.localPosition.x, playerPos.transform.localPosition.y, -15);
             train.transform.rotation = Quaternion.Euler(0,180,0);
             for (int i = 0; i < trainRail.Length; i++)
             {
