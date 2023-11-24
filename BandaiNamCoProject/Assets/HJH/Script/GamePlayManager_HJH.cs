@@ -18,7 +18,8 @@ public class GamePlayManager_HJH : ManagerBase
     public GameObject player;
     public SpriteRenderer emptyBgSpriteRenderer;
     public Material backgroundMat;
-    public Material particleMat;
+    public Material opaqueAlphaClipMat;
+    public Material transparentMat;
     public float bgFadeinSec;
     // public ItemManager_LSW itemManager;
     public float currentTime;
@@ -241,10 +242,12 @@ public class GamePlayManager_HJH : ManagerBase
         characterMovement2D.jumpPower *= multiplier;
     }
 
-    public void SetBackgroundMat(bool isParticlaMat, SpriteRenderer renderer)
+    public void SetBackgroundMat(Item_HJH item, SpriteRenderer renderer)
     {
-        if (isParticlaMat)
-            renderer.sharedMaterial = particleMat;
+        if (item.opaqueAlphaClipMaterial)
+            renderer.sharedMaterial = opaqueAlphaClipMat;
+        else if (item.transparentMaterial)
+            renderer.sharedMaterial = transparentMat;
         else
             renderer.sharedMaterial = backgroundMat;
         

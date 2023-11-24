@@ -120,7 +120,7 @@ public class CameraManager : ManagerBase
         foreach(var r in item.renderers)
         {
             if (r.CompareTag(TagStrings.NoDissolveTag)) continue;
-            GamePlayManager_HJH.Instance.SetBackgroundMat(item.particleMaterial, r);
+            GamePlayManager_HJH.Instance.SetBackgroundMat(item, r);
         }
 
         item.isShown = true;
