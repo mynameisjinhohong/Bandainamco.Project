@@ -5,6 +5,7 @@ using UnityEngine;
 public class RabbitBG_HJH : MonoBehaviour
 {
     public Animator rabbitAni;
+    public AudioSource rabbitAudio;
     public float aniTime; //애니메이션 지속시간
     public float aniCoolTime; // 애니메이션 쿨타임
     public float noteTime; //음표 생성 시간
@@ -30,7 +31,7 @@ public class RabbitBG_HJH : MonoBehaviour
             if (currentTime > aniCoolTime)
             {
                 currentTime = 0;
-                //애니메이션 시작하는 스크립트
+                rabbitAni.SetTrigger("Rabbit");
                 aniNow = true;
             }
         }
@@ -55,6 +56,7 @@ public class RabbitBG_HJH : MonoBehaviour
                     notes.RemoveAt(0);
                 }
                 currentTime = 0;
+                rabbitAni.SetTrigger("RabbitEnd");
                 aniNow = false;
             }
         }

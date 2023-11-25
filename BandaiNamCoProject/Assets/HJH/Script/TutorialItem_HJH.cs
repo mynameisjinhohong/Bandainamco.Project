@@ -95,6 +95,7 @@ public class TutorialItem_HJH : MonoBehaviour
         img.color = color;
         while (alpha < 1f)
         {
+            transform.position = new Vector3(transform.position.x,transform.position.y,0);  
             alpha += 0.005f;
             yield return new WaitForSeconds(fadeSpeed);
             color.a = alpha;
@@ -110,6 +111,7 @@ public class TutorialItem_HJH : MonoBehaviour
         img.color = color;
         while (alpha > 0f)
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             alpha -= 0.005f;
             yield return new WaitForSeconds(fadeSpeed);
             color.a = alpha;
