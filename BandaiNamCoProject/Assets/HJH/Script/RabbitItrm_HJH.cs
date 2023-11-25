@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RabbitItrm_HJH : BaseItem_LJH
@@ -10,6 +11,9 @@ public class RabbitItrm_HJH : BaseItem_LJH
     float currentTime2;
     public float makeTime;
     bool not = true;
+    bool startAudio = false;
+    public Animator animator;
+    public AudioSource rabbitAudio;
     public override void OnTriggerEnter2D(Collider2D other)
     {
         if (not)
@@ -57,11 +61,23 @@ public class RabbitItrm_HJH : BaseItem_LJH
     {
 
     }
-
+    private void Update()
+    {
+        if (startAudio)
+        {
+            if(Time.timeScale > 0)
+            {
+                rabbitAudio.Play();
+                startAudio = false;
+            }
+        }
+    }
 
     async void RabbitAni()
     {
         int su = 0;
+        animator.SetTrigger("Rabbit");
+        startAudio = true;
         transform.GetChild(su).gameObject.SetActive(true);
         su++;
         while (true)

@@ -27,7 +27,8 @@ public class Item_HJH
     //public int camSize;
     public ItemType itemType;
     public bool needWholeCam;
-    public bool particleMaterial;
+    public bool transparentMaterial; //Cloud
+    public bool opaqueAlphaClipMaterial; //WAve
     public GameObject bgObject;
     [HideInInspector] public List<SpriteRenderer> renderers = null;
     [HideInInspector] public bool isShown = false;
