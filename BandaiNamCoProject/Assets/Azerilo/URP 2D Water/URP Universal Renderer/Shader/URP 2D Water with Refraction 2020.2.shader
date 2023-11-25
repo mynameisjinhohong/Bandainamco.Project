@@ -23,7 +23,7 @@ Shader "Azerilo/URP 2D Water with Refraction"
                 "RenderPipeline"="UniversalPipeline"
                 "RenderType"="Transparent"
                 "UniversalMaterialType" = "Unlit"
-                "Queue"="Transparent"
+                "Queue"="Transparent+1"
             }
             Pass
             {
