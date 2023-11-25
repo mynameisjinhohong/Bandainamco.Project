@@ -31,7 +31,7 @@ public class ItemManager_LJH : ManagerBase
             prevItem = currItem;
             currItem = value;
 
-            if(currItem.GetType() != typeof(LotusItem_LJH) && prevItem.GetType() == typeof(LotusItem_LJH))
+            if(currItem.myItem.itemType != ItemType.Lotus && prevItem.myItem.itemType == ItemType.Lotus)
             {
                 SetLotusShield(false);
             }
