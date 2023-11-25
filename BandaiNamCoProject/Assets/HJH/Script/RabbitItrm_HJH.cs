@@ -76,7 +76,7 @@ public class RabbitItrm_HJH : BaseItem_LJH
     async void RabbitAni()
     {
         int su = 0;
-        animator.SetTrigger("Rabbit");
+
         startAudio = true;
         transform.GetChild(su).gameObject.SetActive(true);
         su++;
