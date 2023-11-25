@@ -169,8 +169,8 @@ MonoBehaviour:
   - {fileID: 4235182538444739163}
   - {fileID: 4235182538369403624}
   m_Bounds:
-    m_Center: {x: -1.5368648, y: 0.004339218, z: 0}
-    m_Extent: {x: 4.4545565, y: 4.331838, z: 0}
+    m_Center: {x: 0, y: 0.0000014305115, z: 0}
+    m_Extent: {x: 4.375001, y: 4.2150006, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -313,8 +313,8 @@ MonoBehaviour:
   - {fileID: 4235182536877801482}
   - {fileID: 4235182538698106923}
   m_Bounds:
-    m_Center: {x: 0.011161089, y: 0.04848671, z: 0}
-    m_Extent: {x: 2.8979895, y: 8.788992, z: 0}
+    m_Center: {x: 0.000015258789, y: 0.00049591064, z: 0}
+    m_Extent: {x: 2.8550003, y: 8.835806, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -419,8 +419,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4235182538643118941}
   m_Bounds:
-    m_Center: {x: -0.45271015, y: -0.3186345, z: -0.00623475}
-    m_Extent: {x: 2.3372402, y: 2.383986, z: 0.007792468}
+    m_Center: {x: -0.001024723, y: -0.004481435, z: 0}
+    m_Extent: {x: 2.6039753, y: 1.8855195, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -528,8 +528,8 @@ MonoBehaviour:
   - {fileID: 4235182536708360107}
   - {fileID: 4235182536877801482}
   m_Bounds:
-    m_Center: {x: -0.05525911, y: 0.040988207, z: 0}
-    m_Extent: {x: 1.0488033, y: 3.5775394, z: 0}
+    m_Center: {x: -0.00000059604645, y: 0.00000023841858, z: 0}
+    m_Extent: {x: 0.9950005, y: 3.6099997, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -606,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4235182538605128002}
   - component: {fileID: 4235182538605128003}
+  - component: {fileID: 8950811728613983922}
   m_Layer: 0
   m_Name: FishP
   m_TagString: Untagged
@@ -655,6 +656,102 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &8950811728613983922
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235182538605128000}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 466b7b79040f21f4aa8e0363b5d2bf53, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4235182538618907621
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,8 +853,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4235182538728714103}
   m_Bounds:
-    m_Center: {x: 0.31692266, y: -0.31808472, z: -0.0052251667}
-    m_Extent: {x: 2.41363, y: 2.2819934, z: 0.08070576}
+    m_Center: {x: -0.0017752647, y: -0.0000023841858, z: 0}
+    m_Extent: {x: 2.603241, y: 1.890001, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

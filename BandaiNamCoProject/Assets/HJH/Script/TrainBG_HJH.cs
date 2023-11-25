@@ -12,10 +12,12 @@ public class TrainBG_HJH : MonoBehaviour
     bool trainStart = true;
     float currentTime;
     public float trainPower;
+    AudioSource myAudio;
+    bool audioPlay = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,8 +37,17 @@ public class TrainBG_HJH : MonoBehaviour
             currentTime += Time.deltaTime;
             if (currentTime > trainTime)
             {
+                audioPlay = true;
                 trainStart = true;
                 currentTime = 0;
+            }
+        }
+        if(audioPlay)
+        {
+            if(Time.timeScale > 0)
+            {
+                myAudio.Play();
+                audioPlay = false;
             }
         }
     }
