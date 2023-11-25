@@ -12,12 +12,15 @@ public class TrainItem_HJH : BaseItem_LJH
     public GameObject trainIcon;
     public GameObject[] trainRail;
     public Transform playerPos;
+    public AudioSource startTrain;
+    public AudioSource nowTrain;
     bool already2 = false;
     bool trainStart = false;
     bool railStart = false;
     bool left = false;
     bool playerOn = true;
     bool railReady = false;
+    bool playSound = false;
 
     // Start is called before the first frame update
     void Start()
@@ -53,8 +56,15 @@ public class TrainItem_HJH : BaseItem_LJH
             }
             myItem.isVisited = true;
             player = other.GetComponent<CharacterMovement2D_LSW>();
+            playSound = true;
             TrainActivate();
         }
+    }
+
+    IEnumerator AfterSound()
+    {
+        yield return new WaitForSeconds(startTrain.clip.length);
+        nowTrain.Play();
     }
 
     async void TrainActivate()
@@ -111,6 +121,16 @@ public class TrainItem_HJH : BaseItem_LJH
                 }
                 railReady = true;
             }
+        }
+        if (playSound)
+        {
+            if(Time.timeScale > 0)
+            {
+                startTrain.Play();
+                playSound = false;
+                StartCoroutine(AfterSound());
+            }
+
         }
         if (!trainStart)
         {

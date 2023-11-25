@@ -15,7 +15,7 @@ public class TutorialItem_HJH : MonoBehaviour
     public float fadeSpeed;
     bool tuToOn = false;
     bool idxOn = false;
-    int myIndex = 0;
+    public int myIndex = 0;
     // Start is called before the first frame update
     void Start()
     {

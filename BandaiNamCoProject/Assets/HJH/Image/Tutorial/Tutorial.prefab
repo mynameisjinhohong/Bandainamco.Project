@@ -217,6 +217,7 @@ MonoBehaviour:
   isItem: 1
   myType: 9
   fadeSpeed: 0.01
+  myIndex: 0
 --- !u!1 &3481626861707227699
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +435,7 @@ MonoBehaviour:
   isItem: 0
   myType: 9
   fadeSpeed: 0.001
+  myIndex: 0
 --- !u!1 &3481626861931091864
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3481626862719128799}
+  - component: {fileID: 6957751612628871186}
   m_Layer: 8
   m_Name: Tutorial
   m_TagString: Untagged
@@ -636,6 +639,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6957751612628871186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481626862719128798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5341a22b907c8b047ab15f1aaaad1b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &3481626862796920997
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,3 +704,4 @@ MonoBehaviour:
   isItem: 1
   myType: 4
   fadeSpeed: 0.01
+  myIndex: 0
