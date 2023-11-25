@@ -91,7 +91,7 @@ MonoBehaviour:
   bubble: {fileID: 0}
   end: 0
   player: {fileID: 0}
-  duringTime: 5
+  duringTime: 7
   makeTime: 1
   animator: {fileID: 4076486252890269939}
   rabbitAudio: {fileID: 2041007730380914948}

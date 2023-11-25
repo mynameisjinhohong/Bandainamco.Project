@@ -68,6 +68,7 @@ public class RabbitItrm_HJH : BaseItem_LJH
             if(Time.timeScale > 0)
             {
                 rabbitAudio.Play();
+                startAudio = false;
             }
         }
     }

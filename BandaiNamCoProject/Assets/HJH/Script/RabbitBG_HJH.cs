@@ -32,6 +32,7 @@ public class RabbitBG_HJH : MonoBehaviour
             {
                 currentTime = 0;
                 rabbitAni.SetTrigger("Rabbit");
+                rabbitAudio.Play();
                 aniNow = true;
             }
         }
@@ -55,6 +56,7 @@ public class RabbitBG_HJH : MonoBehaviour
                     notes[0].SetActive(false);
                     notes.RemoveAt(0);
                 }
+                rabbitAudio.Stop();
                 currentTime = 0;
                 rabbitAni.SetTrigger("RabbitEnd");
                 aniNow = false;
