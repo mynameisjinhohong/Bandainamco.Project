@@ -30,6 +30,11 @@ public class ItemManager_LJH : ManagerBase
         {
             prevItem = currItem;
             currItem = value;
+
+            if(currItem.GetType() != typeof(LotusItem_LJH) && prevItem.GetType() == typeof(LotusItem_LJH))
+            {
+                SetLotusShield(false);
+            }
         }
     }
     public BaseItem_LJH prevItem;
