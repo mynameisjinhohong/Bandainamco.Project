@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:BandaiNamCoProject/Assets/LSW/Animaiton/Rabbit/RabbitpIdle.anim.meta
 guid: c9c67982facfe7e429fc02526d71ab9b
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
+========
+guid: 7516b47dd684754468dc2f6814bb5fde
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> leejinho2:BandaiNamCoProject/Assets/HJH/Image/Item/Train/Legacy.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

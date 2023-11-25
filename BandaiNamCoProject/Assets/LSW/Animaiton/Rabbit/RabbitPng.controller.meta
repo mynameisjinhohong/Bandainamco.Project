@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:BandaiNamCoProject/Assets/LSW/Animaiton/Rabbit/RabbitPng.controller.meta
 guid: 40afc88acd9a45b48851334a53829a69
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: 66395e62087daaa4ca7ed5858429c4d6
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> leejinho2:BandaiNamCoProject/Assets/HJH/Image/Eye/Legacy.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
