@@ -1,6 +1,4 @@
-using Cysharp.Threading.Tasks;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FishBG_HJH : MonoBehaviour
@@ -13,10 +11,13 @@ public class FishBG_HJH : MonoBehaviour
     public Transform fishOrigin;
     public Transform fishTarget;
     bool start = false;
+    Animator myAni;
+    bool fishAni = false;
+    public float waitFishAniTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAni = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,9 +26,18 @@ public class FishBG_HJH : MonoBehaviour
         if (start)
         {
             currentTime += Time.deltaTime;
+            if (!fishAni)
+            {
+                if (currentTime > waitFishAniTime)
+                {
+                    myAni.SetTrigger("Fish");
+                    fishAni = true;
+                }
+            }
+
         }
     }
-    
+
     public void MakeFishStart()
     {
         start = true;
