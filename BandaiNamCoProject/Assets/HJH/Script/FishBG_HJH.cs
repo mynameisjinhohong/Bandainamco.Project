@@ -4,7 +4,6 @@ using UnityEngine;
 public class FishBG_HJH : MonoBehaviour
 {
     public GameObject smallFish;
-    public float aniTime; //애니메이션에서 물고기 도는 시간
     float currentTime;
     public float minTime; //최소한 이 시간 후에 다음 생선 나옴
     public float maxTime; //최소한 이 시간 전에는 나옴
@@ -36,25 +35,33 @@ public class FishBG_HJH : MonoBehaviour
 
     public void MakeFishStart()
     {
-        StopAllCoroutines();
-        currentTime = 0;
-        StartCoroutine(FishGo());
+        if(fishAni)
+        {
+            StopAllCoroutines();
+            currentTime = 0;
+            StartCoroutine(FishGo());
+            Debug.Log("Start");
+        }
+
     }
 
     IEnumerator FishGo()
     {
-        while (currentTime < aniTime)
+        while (true)
         {
             float nextTime = Random.Range(minTime, maxTime);
             yield return new WaitForSeconds(nextTime);
+            Debug.Log("Make");
             MakeFish();
         }
-        fishAni = false;
     }
 
     public void MakeFishEnd()
     {
+        fishAni = false;
         StopAllCoroutines();
+        currentTime = 0;
+        Debug.Log("stop");
     }
 
     public void MakeFish()

@@ -7631,7 +7631,7 @@ MonoBehaviour:
     needWholeCam: 0
     transparentMaterial: 0
     opaqueAlphaClipMaterial: 0
-    bgObject: {fileID: 0}
+    bgObject: {fileID: 496606860}
     renderers: []
     isShown: 0
   - prefab: {fileID: 9048971040173981333, guid: 48d311d19e003034aad3ad73d0f5d77a, type: 3}
@@ -9540,7 +9540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smallFish: {fileID: 4235182538605128000, guid: e657185da99feaf42a63f880be724e9e, type: 3}
-  aniTime: 8
   minTime: 0.5
   maxTime: 1
   fishOrigin: {fileID: 737488732}
@@ -17935,7 +17934,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911122327}
-  m_LocalRotation: {x: -0, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -4e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: 103.100006, y: -375.6, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38456,7 +38455,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -165, y: -458.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39430,7 +39429,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41302,7 +41301,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42249,7 +42248,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2736c3d691f893c468d1668be3366e1b, type: 2}
+  - {fileID: 2100000, guid: 280d95ed41abd074d8f94cf6447c14ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44282,7 +44281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smallFish: {fileID: 4235182538605128000, guid: e657185da99feaf42a63f880be724e9e, type: 3}
-  aniTime: 3
   minTime: 0.5
   maxTime: 1
   fishOrigin: {fileID: 737488732}
