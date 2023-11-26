@@ -22,6 +22,7 @@ public class StarImage_yd : MonoBehaviour
     {
          if(collision.gameObject.CompareTag("Player"))
           {
+            Debug.Log("????????????????????????????????");
             collision.transform.rotation = Quaternion.Euler(0, 0, 0);
             collision.transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             collision.GetComponent<Rigidbody2D>().gravityScale = 0;
