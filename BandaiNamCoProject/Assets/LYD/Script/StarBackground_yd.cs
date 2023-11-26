@@ -4,11 +4,11 @@ using UnityEngine;
 using Cinemachine;
 public class StarBackground_yd : MonoBehaviour
 {
-    [SerializeField] float m_force = 50f;
+ //   [SerializeField] float m_force = 50f;
     // [SerializeField] Vector3 m_offset = Vector3.zero;
-    [SerializeField] Vector3 m_offset = new Vector3(10, 10, 10);
+  //  [SerializeField] Vector3 m_offset = new Vector3(10, 10, 10);
 
-    [SerializeField] private 
+   // [SerializeField] private 
 
     Quaternion m_originRot;
     [SerializeField] private GameObject starPre;
@@ -23,16 +23,31 @@ public class StarBackground_yd : MonoBehaviour
     bool isCoroutine;
     //임펄스
      CinemachineImpulseSource impulse;
-    //[SerializeField] private GameObject player;
+    [SerializeField] private GameObject player;
+    public float x;
+    public float y;
+    public float twinkleTime; //몇초에껐다켜지는지
+    private GameObject twinkleStar;
     // Start is called before the first frame update
     void Start()
     {
         impulse = transform.GetComponent <CinemachineImpulseSource>();
-        m_originRot = transform.rotation;
+        twinkleStar = transform.GetChild(1).gameObject;
     }
     private void OnEnable()
     {
         isFirst = true;
+        StartCoroutine(TwinkleStar());
+    }
+    IEnumerator TwinkleStar()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(twinkleTime);
+            twinkleStar.SetActive(false);
+            yield return new WaitForSeconds(twinkleTime);
+            twinkleStar.SetActive(true);
+        }
     }
     // Update is called once per frame
     void Update()
@@ -44,49 +59,31 @@ public class StarBackground_yd : MonoBehaviour
             //별 생성
             if(isFirst)
             {
-
-                GameObject star = Instantiate(starPre, gameObject.transform);
-
-                isMake = true;
+                Vector3 camPos = player.transform.position;
+                camPos.x += 40;
+                camPos.y += 50;
+                GameObject star = Instantiate(starPre, camPos, starPre.transform.rotation, player.transform);
                 isFirst = false;
+                impulse.GenerateImpulse();
+
+              /*  isMake = true;
+                isFirst = false;*/
             }
 
             currentTime += Time.deltaTime;
             if (currentTime > createTime)
             {
-                Vector3 camPos = new Vector3(characterCam.transform.position.x + 10, characterCam.transform.position.y + 10, characterCam.transform.position.z);
-                    GameObject star = Instantiate(starPre, characterCam.transform);
-                star.transform.position = camPos;
+                Vector3 camPos = player.transform.position;
+                camPos.x += x;
+                camPos.y += y;
+                GameObject star = Instantiate(starPre, camPos, starPre.transform.rotation, player.transform);
+                impulse.GenerateImpulse();
 
-                isMake = true;
-                isCoroutine = false;
+                Debug.Log("별생성");
                     currentTime = 0;
                 
             }
-            if(isMake &&!isCoroutine)
-            {
-                StartCoroutine(ShakeCoroutine());
-
-            }
-            if(!isMake)
-            {
-                //Debug.Log("aaaaaaaaaaaaaaaa");
-                StopAllCoroutines();
-                // StartCoroutine(ResetEvent());
-                characterCam.transform.rotation = m_originRot;
-
-            }
-            /*            if (gameObject.transform.childCount == 1)
-                        {
-                            Debug.Log("Dddddd");
-                            StartCoroutine(ShakeCoroutine());
-                        }
-                        else if (gameObject.transform.childCount == 0)
-                        {
-                            StopAllCoroutines();
-                            StartCoroutine(Reset());
-                        }*/
-            //   }
+       
         }
 
     }
@@ -127,14 +124,6 @@ public class StarBackground_yd : MonoBehaviour
         //StartCoroutine(Reset());
 
     }
-    /*IEnumerator ResetEvent()
-    {
-        Debug.Log("reset");
-        while (Quaternion.Angle(characterCam.transform.rotation, m_originRot) > 0.1f)
-        {
-            characterCam.transform.rotation = Quaternion.RotateTowards(characterCam.transform.rotation, m_originRot, m_force * Time.deltaTime);
-            yield return null;
-        }
-    }*/
+
 
 }
