@@ -38,8 +38,12 @@ public class StartUI_HJH : MonoBehaviour
                 }
                 if (!first)
                 {
-                    conti.interactable = false;
-                    conti.GetComponent<EventTrigger>().enabled = false;
+                    if(conti != null)
+                    {
+                        conti.interactable = false;
+                        conti.GetComponent<EventTrigger>().enabled = false;
+                    }
+
                 }
             }
             langaugeDropdown.value = GameManager.instance.userData.langaugeSet;
