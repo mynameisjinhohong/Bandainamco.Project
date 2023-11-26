@@ -143,10 +143,11 @@ public class GameUI_HJH : MonoBehaviour
     public void RestartButton()
     {
         buttonAudio.Play();
-        Invoke("Restart", 0.3f);
+        StartCoroutine(Restart());
     }
-    void Restart()
+    IEnumerator Restart()
     {
+        yield return new WaitForSecondsRealtime(0.3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
@@ -160,10 +161,11 @@ public class GameUI_HJH : MonoBehaviour
     {
         buttonAudio.Play();
         WorldManager.Instance.MainState = MainState.Play;
-        Invoke("GoStart", 0.3f);
+        StartCoroutine(GoStart());
     }
-    void GoStart()
+    IEnumerator GoStart()
     {
+        yield return new WaitForSecondsRealtime(0.3f);
         LoadingManager_HJH.LoadScene("StartScene");
 
     }
