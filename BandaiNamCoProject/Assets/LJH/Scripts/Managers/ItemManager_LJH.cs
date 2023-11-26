@@ -30,11 +30,14 @@ public class ItemManager_LJH : ManagerBase
         {
             prevItem = currItem;
             currItem = value;
-
-            if(currItem.myItem.itemType != ItemType.Lotus && prevItem.myItem.itemType == ItemType.Lotus)
+            if(prevItem != null)
             {
-                SetLotusShield(false);
+                if (currItem.myItem.itemType != ItemType.Lotus && prevItem.myItem.itemType == ItemType.Lotus)
+                {
+                    SetLotusShield(false);
+                }
             }
+
         }
     }
     public BaseItem_LJH prevItem;
