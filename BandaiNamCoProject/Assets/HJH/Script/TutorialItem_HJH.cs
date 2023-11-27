@@ -17,6 +17,8 @@ public class TutorialItem_HJH : MonoBehaviour
     bool tuToOn = false;
     bool idxOn = false;
     public int myIndex = 0;
+    float currentTime = 0;
+    public float wasdTime = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +76,8 @@ public class TutorialItem_HJH : MonoBehaviour
                     }
                     break;
                 case TutoType.Wasd:
-                    if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+                    currentTime += Time.deltaTime;
+                    if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 || currentTime  > wasdTime)
                     {
                         ballon.SetActive(false);
                         gameObject.SetActive(false);
