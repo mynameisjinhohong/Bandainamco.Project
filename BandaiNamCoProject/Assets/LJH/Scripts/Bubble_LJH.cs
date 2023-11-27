@@ -53,6 +53,7 @@ public class Bubble_LJH : MonoBehaviour
         else if (collision.gameObject.CompareTag(TagStrings.PlayerTag))
         {
             GamePlayManager_HJH.Instance.MulJumpPower(0.8f);
+            ItemManager_LJH.Instance.PlayWaterdropClip();
             //GamePlayManager_HJH.Instance.characterMovement2D.jumpPower *= 0.8f;
             ResetBubble();
             Debug.Log("Bubble Collided Player");

@@ -38,6 +38,7 @@ public class WaveCollider_LJH : MonoBehaviour
             particle.gameObject.SetActive(true);
             particle.transform.position = collision.transform.position;
             particle.Play();
+            ItemManager_LJH.Instance.PlayWaveCollisionClip();
             Finish();
         }
     }

@@ -49,6 +49,8 @@ public class ItemManager_LJH : ManagerBase
     public WaveCollider_LJH wave;
     public Transform bubbleParent;
     private List<Bubble_LJH> bubbles;
+    public AudioClip waveClip;
+    public AudioClip waterdropClip;
 
 
     [Header("Lotus")]
@@ -189,7 +191,22 @@ public class ItemManager_LJH : ManagerBase
 
     public void PlayLotusClip()
     {
-        GamePlayManager_HJH.Instance.characterMovement2D.SetAudioClip(lotusClip);
+        PlayAudio(lotusClip);
+    }
+
+    public void PlayWaveCollisionClip()
+    {
+        PlayAudio(waveClip);
+    }
+
+    public void PlayWaterdropClip()
+    {
+        PlayAudio(waterdropClip);
+    }
+
+    private void PlayAudio(AudioClip clip)
+    {
+        GamePlayManager_HJH.Instance.characterMovement2D.SetAudioClip(clip);
         GamePlayManager_HJH.Instance.characterMovement2D.PlayAudio();
     }
 }
