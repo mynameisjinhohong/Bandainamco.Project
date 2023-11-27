@@ -1072,8 +1072,6 @@ GameObject:
   m_Component:
   - component: {fileID: 55170048}
   - component: {fileID: 55170051}
-  - component: {fileID: 55170050}
-  - component: {fileID: 55170049}
   m_Layer: 0
   m_Name: Leaf (4)
   m_TagString: Untagged
@@ -1096,49 +1094,6 @@ Transform:
   m_Father: {fileID: 5574624024233960967}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &55170049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55170047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d7787c199798d468a85e9e0da0d365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  petalsGroup: {fileID: 0}
-  delaySec: 5
-  numOfPetalsToSpawn: 3
-  petalSpeed: 40
-  petalDisappearTime: 1000
---- !u!61 &55170050
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55170047}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.97, y: 22.698668}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22.44426, y: 23.44}
-  m_EdgeRadius: 0
 --- !u!212 &55170051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7831,7 +7786,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 5337970322375770073, guid: dd94b6016f523fd43b8cfc7b0bebfaf9, type: 3}
-    itemCount: 6
+    itemCount: 0
     isVisited: 0
     korText: "\uC18C\uB140\uB294 \uC232\uC18D\uC5D0\uC11C \uBC84\uC12F\uC744 \uCE90
       \uBA39\uC73C\uBA70 \uC790\uB790\uC2B5\uB2C8\uB2E4. \uC790\uB77C\uC11C\uB294
@@ -7963,7 +7918,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 9048971040173981333, guid: 48d311d19e003034aad3ad73d0f5d77a, type: 3}
-    itemCount: 0
+    itemCount: 7
     isVisited: 0
     korText: "\uC88B\uC740 \uD5A5\uC774 \uC18C\uB140\uB97C \uAE68\uC6E0\uC2B5\uB2C8\uB2E4.
       \uB208\uC744 \uB72C \uC18C\uB140\uB294 \uBB3C \uC704\uC5D0 \uB5A0 \uC788\uB294
@@ -13278,7 +13233,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642667811}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 65, y: -283.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23837,6 +23792,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059887089}
   m_CullTransparentMesh: 1
+--- !u!1 &1060003804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060003805}
+  - component: {fileID: 1060003806}
+  m_Layer: 0
+  m_Name: LotusAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060003805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060003804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 117.1, y: -176.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5574624024233960967}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1060003806
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060003804}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dd180a0ef7a174240b81a5cbe608b60d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1060357929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4072767099700929671, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
@@ -27819,7 +27902,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333836076}
-  m_LocalRotation: {x: -4e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: -199.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41002,7 +41085,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -165, y: -458.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41981,7 +42064,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44204,7 +44287,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46589,6 +46672,89 @@ MonoBehaviour:
   ko: {fileID: 11400000, guid: a2de3868e978aab46ab3f48b7d684264, type: 2}
   ja: {fileID: 11400000, guid: 3e35d711deefb8246b1958225504ca8d, type: 2}
   en: {fileID: 11400000, guid: 4fced76279c9c444f8a98b39ab01fc6b, type: 2}
+--- !u!1 &2058309876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058309877}
+  - component: {fileID: 2058309879}
+  - component: {fileID: 2058309878}
+  m_Layer: 0
+  m_Name: LotusBGCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2058309877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058309876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 110, y: -173.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5574624024233960967}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2058309878
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058309876}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -15.68, y: 130}
+      - {x: 90, y: 130}
+      - {x: 90, y: -70}
+      - {x: -150, y: -70}
+--- !u!114 &2058309879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058309876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d7787c199798d468a85e9e0da0d365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petalsGroup: {fileID: 1433091159}
+  delaySec: 5
+  numOfPetalsToSpawn: 3
+  petalSpeed: 40
+  petalDisappearTime: 1000
+  audioSource: {fileID: 1060003806}
+  audioFadeTime: 3
+  customMaxVolume: 1
+  maxVolume: 0.7
 --- !u!1001 &2058978196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53948,8 +54114,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5574624023432212777}
   - component: {fileID: 5574624023432212780}
-  - component: {fileID: 5574624023432212779}
-  - component: {fileID: 5574624023432212778}
   m_Layer: 0
   m_Name: Leaf (3)
   m_TagString: Untagged
@@ -53972,49 +54136,6 @@ Transform:
   m_Father: {fileID: 5574624024233960967}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5574624023432212778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624023432212776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d7787c199798d468a85e9e0da0d365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  petalsGroup: {fileID: 0}
-  delaySec: 5
-  numOfPetalsToSpawn: 3
-  petalSpeed: 40
-  petalDisappearTime: 1000
---- !u!61 &5574624023432212779
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624023432212776}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 22.44426, y: 23.44}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22.44426, y: 23.44}
-  m_EdgeRadius: 0
 --- !u!212 &5574624023432212780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54077,8 +54198,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5574624023756822082}
   - component: {fileID: 5574624023756822085}
-  - component: {fileID: 5574624023756822084}
-  - component: {fileID: 5574624023756822083}
   m_Layer: 0
   m_Name: Leaf (1)
   m_TagString: Untagged
@@ -54101,49 +54220,6 @@ Transform:
   m_Father: {fileID: 5574624024233960967}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5574624023756822083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624023756822081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d7787c199798d468a85e9e0da0d365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  petalsGroup: {fileID: 0}
-  delaySec: 5
-  numOfPetalsToSpawn: 3
-  petalSpeed: 40
-  petalDisappearTime: 1000
---- !u!61 &5574624023756822084
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624023756822081}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 44.59, y: 10.080649}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 30.64, y: 6.6}
-  m_EdgeRadius: 0
 --- !u!212 &5574624023756822085
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54206,8 +54282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5574624023991555529}
   - component: {fileID: 5574624023991555532}
-  - component: {fileID: 5574624023991555531}
-  - component: {fileID: 5574624023991555530}
   m_Layer: 0
   m_Name: Leaf
   m_TagString: Untagged
@@ -54230,49 +54304,6 @@ Transform:
   m_Father: {fileID: 5574624024233960967}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5574624023991555530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624023991555528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d7787c199798d468a85e9e0da0d365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  petalsGroup: {fileID: 0}
-  delaySec: 5
-  numOfPetalsToSpawn: 3
-  petalSpeed: 40
-  petalDisappearTime: 1000
---- !u!61 &5574624023991555531
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624023991555528}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 34.120003, y: 27.022774}
-    newSize: {x: 11.97, y: 22.698668}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 34.120003, y: 27.022774}
-  m_EdgeRadius: 0
 --- !u!212 &5574624023991555532
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54418,7 +54449,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5574624024233960967}
-  - component: {fileID: 5574624024233960968}
   m_Layer: 0
   m_Name: LotusBG (1)
   m_TagString: Untagged
@@ -54447,105 +54477,11 @@ Transform:
   - {fileID: 55170048}
   - {fileID: 1889546814}
   - {fileID: 1783906220}
+  - {fileID: 1060003805}
+  - {fileID: 2058309877}
   m_Father: {fileID: 2100920074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &5574624024233960968
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5574624024233960966}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd180a0ef7a174240b81a5cbe608b60d, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &5772310323592544256
 MonoBehaviour:
   m_ObjectHideFlags: 0
