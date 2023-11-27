@@ -8,6 +8,10 @@ public class WaveCollider_LJH : MonoBehaviour
 {
     [SerializeField] private float targetY;
     [SerializeField] private float moveSec;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private bool customMaxVolume;
+    [Range(0f, 1f)]
+    [SerializeField] private float maxVolume;
     private float downMoveSec;
     private Vector3 originPos;
     private Vector3 targetPos;
@@ -47,6 +51,9 @@ public class WaveCollider_LJH : MonoBehaviour
         await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
 
         float elapsedTime = 0f;
+        audioSource.Play();
+
+        float myMaxVolume = customMaxVolume == true ? maxVolume : 1f;
         
         while(elapsedTime < moveSec)
         {
@@ -54,6 +61,7 @@ public class WaveCollider_LJH : MonoBehaviour
 
             elapsedTime += Time.deltaTime;
             transform.localPosition = Vector3.Lerp(originPos, targetPos, elapsedTime / moveSec);
+            audioSource.volume = Mathf.Lerp(0f, myMaxVolume, elapsedTime / moveSec);
             await UniTask.Yield();
         }
 
@@ -66,13 +74,18 @@ public class WaveCollider_LJH : MonoBehaviour
     {
         float elapsedTime = 0f;
         Vector3 currPos = transform.localPosition;
+
+        float currVolume = audioSource.volume;
+
         while   (elapsedTime < downMoveSec)
         {
             elapsedTime += Time.deltaTime;
             transform.localPosition = Vector3.Lerp(currPos, originPos, elapsedTime / downMoveSec);
+            audioSource.volume = Mathf.Lerp(currVolume, 0f, elapsedTime/ downMoveSec);
             await UniTask.Yield();
         }
         isCollided = false;
+        audioSource.Stop();
         gameObject.SetActive(false);
     }
 }
