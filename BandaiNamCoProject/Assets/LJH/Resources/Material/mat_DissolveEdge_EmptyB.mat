@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mat_DissolveEdge_TrainBG
+  m_Name: mat_DissolveEdge_EmptyB
   m_Shader: {fileID: 4800000, guid: 3e7899f24eae03e43910c579b8481df4, type: 3}
   m_ValidKeywords:
   - EDGE_COLOR
