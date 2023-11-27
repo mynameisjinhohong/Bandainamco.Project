@@ -146,6 +146,7 @@ public class StageManager_HJH : MonoBehaviour
         Time.timeScale = 1f;
         buttonSound.Play();
         optionCanvas.SetActive(false);
+        doorOpenSound.Play();
         optionDoor.GetComponent<Animator>().SetTrigger("Close");
     }
     public void MoveScene()

@@ -6,7 +6,7 @@ public class LotusParticle_LJH : Particles_LJH
 {
     [SerializeField] private List<ParticleSystem> extraParticles;
 
-    protected override void Init()
+    public override void Init()
     {
         base.Init();
 

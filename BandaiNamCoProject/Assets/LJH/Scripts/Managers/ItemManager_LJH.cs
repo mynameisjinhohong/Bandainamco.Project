@@ -49,12 +49,14 @@ public class ItemManager_LJH : ManagerBase
     public WaveCollider_LJH wave;
     public Transform bubbleParent;
     private List<Bubble_LJH> bubbles;
+    public AudioClip waveClip;
+    public AudioClip waterdropClip;
 
 
     [Header("Lotus")]
     public LotusParticle_LJH lotus;
     public GameObject lotusShield;
-
+    public AudioClip lotusClip;
     Vector3 Return_RandomPosition()
     {
         float x = UnityEngine.Random.Range(-DataManager.Instance.bgSize.x / 2 + itemsDistance, DataManager.Instance.bgSize.x / 2 - xyLine);
@@ -185,5 +187,26 @@ public class ItemManager_LJH : ManagerBase
     public void SetLotusShield(bool start)
     {
         lotusShield.SetActive(start);
+    }
+
+    public void PlayLotusClip()
+    {
+        PlayAudio(lotusClip);
+    }
+
+    public void PlayWaveCollisionClip()
+    {
+        PlayAudio(waveClip);
+    }
+
+    public void PlayWaterdropClip()
+    {
+        PlayAudio(waterdropClip);
+    }
+
+    private void PlayAudio(AudioClip clip)
+    {
+        GamePlayManager_HJH.Instance.characterMovement2D.SetAudioClip(clip);
+        GamePlayManager_HJH.Instance.characterMovement2D.PlayAudio();
     }
 }

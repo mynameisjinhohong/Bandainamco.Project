@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TutorialItem_HJH : MonoBehaviour
 {
+    public GameObject ballon;
     public enum TutoType
     {
         Click,
@@ -42,6 +43,7 @@ public class TutorialItem_HJH : MonoBehaviour
             {
                 if (!tuToOn)
                 {
+                    ballon.SetActive(true);
                     for (int i = 0; i < transform.childCount; i++)
                     {
                         transform.GetChild(i).gameObject.SetActive(true);
@@ -68,17 +70,20 @@ public class TutorialItem_HJH : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         gameObject.SetActive(false);
+                        ballon.SetActive(false);
                     }
                     break;
                 case TutoType.Wasd:
                     if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
                     {
+                        ballon.SetActive(false);
                         gameObject.SetActive(false);
                     }
                     break;
                 case TutoType.Space:
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
+                        ballon.SetActive(false);
                         gameObject.SetActive(false);
                     }
                     break;

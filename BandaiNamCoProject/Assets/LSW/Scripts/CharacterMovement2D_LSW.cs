@@ -18,18 +18,21 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     //점프 아이콘
     public Image jumpIcon;
     public TMP_Text jumpCoolText;
-    //점프 쿨타임
     public float coolTime = 1f;
-    float firstCoolTime = 0;
+    public bool jump = false;
     //점프가 가능한지에 대한 불값
-    bool jumpReady = true;
-   public bool jump = false;
-    private Rigidbody2D rb;
-    Animator ani;
     public ItemManager_LSW itemManager;
     // 마지막 아이템 확인용
     public int? lastUsedItem;
     public float rotateSpeed;
+    public AudioSource audioSource;
+
+    //점프 쿨타임
+    private float firstCoolTime = 0;
+    private bool jumpReady = true;
+    private Rigidbody2D rb;
+    private Animator ani;
+
     //yd
     public ItemManager_LJH itemMan; //아이템매니저
     #region 연꽃용
@@ -50,7 +53,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public List<GameObject> starItem = new List<GameObject>();
     #endregion
     #region 버섯
-     public List<int> mushNums  = new List<int>();
+    public List<int> mushNums = new List<int>();
     [SerializeField] private int mushNum = 0;
     // public List<Vector3> playerScale = new List<Vector3>();*/
     public bool isCoroutine;
@@ -72,8 +75,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     private void Start()
     {
         rb = GetComponentInChildren<Rigidbody2D>();
-        ani =GetComponentInChildren<Animator>();
-        minBoundary = new Vector2(-(itemManager.bgSize.x / 2) , -(itemManager.bgSize.y / 2));
+        ani = GetComponentInChildren<Animator>();
+        minBoundary = new Vector2(-(itemManager.bgSize.x / 2), -(itemManager.bgSize.y / 2));
         maxBoundary = new Vector2((itemManager.bgSize.x / 2), (itemManager.bgSize.y / 2));
         lastUsedItem = null;
         firstCoolTime = coolTime;
@@ -153,19 +156,19 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             else if (mashroomBach)
             {
 
-                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-                    dir.Normalize();
-                    rb.velocity = Vector2.zero;
-                    if (dir != Vector2.zero)
-                    {
-                        rb.AddForce(-dir * jumpPower, ForceMode2D.Impulse);
-                    }
-                    jumpIcon.fillAmount = 0;
-                    jumpCoolText.gameObject.SetActive(true);
-                    mashroomBach = false;
-                    StartCoroutine(Go_Jump_Second(ani));
-                    StartCoroutine(Go_DownDown(ani));
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+                dir.Normalize();
+                rb.velocity = Vector2.zero;
+                if (dir != Vector2.zero)
+                {
+                    rb.AddForce(-dir * jumpPower, ForceMode2D.Impulse);
+                }
+                jumpIcon.fillAmount = 0;
+                jumpCoolText.gameObject.SetActive(true);
+                mashroomBach = false;
+                StartCoroutine(Go_Jump_Second(ani));
+                StartCoroutine(Go_DownDown(ani));
             }
             if (eyeNow)
             {
@@ -186,7 +189,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
             }
         }
-      
+
     }
 
     void Update()
@@ -218,9 +221,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonDown(0) && jumpReady && fish.Count <1) //점프 쿨타임이 지나고 물고기 안타고 있을 때
+            if (Input.GetMouseButtonDown(0) && jumpReady && fish.Count < 1) //점프 쿨타임이 지나고 물고기 안타고 있을 때
             {
-                if(!mashroom) //버섯배경아닐때 추가
+                if (!mashroom) //버섯배경아닐때 추가
                 {
                     jump = true;
                     jumpReady = false;
@@ -229,9 +232,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                     //ani.CrossFade("Jump", 0.1f);
                     StartCoroutine(JumpCoolTime());
                 }
-                
+
             }
-            if(Input.GetMouseButton(0) && mashroom)
+            if (Input.GetMouseButton(0) && mashroom)
             {
                 mashroomBach = true;
                 jumpReady = false;
@@ -242,9 +245,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
             }
         }
-        if (fish.Count >0)
+        if (fish.Count > 0)
         {
-            if(ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Fish)
+            if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Fish)
             {
                 fish = new List<bool>();
                 SetGravity(true);
@@ -255,13 +258,13 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float angle2 = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x) * Mathf.Rad2Deg;
-            if(Time.timeScale != 0f && (mousePos - (Vector2)transform.position).magnitude > 1f )
+            if (Time.timeScale != 0f && (mousePos - (Vector2)transform.position).magnitude > 1f)
             {
                 transform.rotation = Quaternion.AngleAxis(angle2 - 90, Vector3.forward);
             }
             transform.position += new Vector3(mousePos.x - transform.position.x, mousePos.y - transform.position.y, 0).normalized * Time.deltaTime * fishSpeed;
         }
-        if(ItemManager_LJH.Instance.CurrItem != null)
+        if (ItemManager_LJH.Instance.CurrItem != null)
         {
             /*if (ItemManager_LJH.Instance.CurrItem.myItem.itemType == ItemType.Lotus)
             {
@@ -277,8 +280,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
             if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Star)
             {
-                if(GameObject.FindWithTag("StarItemPre"))
-                 {
+                if (GameObject.FindWithTag("StarItemPre"))
+                {
                     GameObject ob = GameObject.FindWithTag("StarItemPre").gameObject;
                     Destroy(ob);
                 }
@@ -309,12 +312,12 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                         StopCoroutine(coroutine);
                         mushNum = 0;
                         mushNums.Clear();
-                        }
+                    }
                     isCoroutine = false;
 
                     Vector3 nowScale = transform.GetChild(0).localScale;
                     float now = characterCam.m_Lens.OrthographicSize;
-                    if(ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Train)
+                    if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Train)
                     {
                         StartCoroutine(OriginScale(nowScale, 4, now)); //머쉬룸 타임은 머쉬룸 스크립트에서 숫자바뀔때같이 변경해줘야함
                     }
@@ -331,7 +334,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
 
         }
-       
+
     }
     IEnumerator OriginScale(Vector3 nowScale, float mTime, float now)
     {
@@ -372,15 +375,15 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
     {
         isCoroutine = true;
-            Vector3 oriScale = startScale;
-            targetTr.GetChild(0).localScale = oriScale;
-            Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
-            float currentTime = 0;
-            float oriOrtho = 50;
+        Vector3 oriScale = startScale;
+        targetTr.GetChild(0).localScale = oriScale;
+        Vector3 targetScale = new Vector3(oriScale.x * scale, oriScale.y * scale, oriScale.z * scale);
+        float currentTime = 0;
+        float oriOrtho = 50;
         mushNum++;
         mushNums.Add(mushNum);
-     //처음에만 
-     if(mushNums.Count < 2)
+        //처음에만 
+        if (mushNums.Count < 2)
         {
             targetTr.GetChild(0).localScale = targetScale;
             //  float targetOrtho = 70;
@@ -398,13 +401,13 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
             }
         }
-     
-            targetTr.GetChild(0).localScale = targetScale;
-            characterCam.m_Lens.OrthographicSize = targetOrtho;
+
+        targetTr.GetChild(0).localScale = targetScale;
+        characterCam.m_Lens.OrthographicSize = targetOrtho;
         resetTime *= mushNums.Count;
         //  targetTr.GetComponent<CharacterMovement2D_LSW>().AddMushroom(oriScale, false);
         //Vector3 originalScale = targetTr.localScale;
-       
+
         yield return new WaitForSeconds(resetTime);
 
 
@@ -442,12 +445,12 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     {
         Vector3 first = transform.eulerAngles;
         float cur = 0;
-        while(true)
+        while (true)
         {
             cur += Time.deltaTime;
             yield return null;
-            transform.eulerAngles = Vector3.Lerp(first,Vector3.zero,cur/2f);
-            if(transform.eulerAngles == Vector3.zero)
+            transform.eulerAngles = Vector3.Lerp(first, Vector3.zero, cur / 2f);
+            if (transform.eulerAngles == Vector3.zero)
             {
                 break;
             }
@@ -460,16 +463,16 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     }
     public void RemoveStar()
     {
-        if(starItem.Count>1)
-        starItem.RemoveAt(0);
+        if (starItem.Count > 1)
+            starItem.RemoveAt(0);
     }
-    
-    public void Rabbit(float moreJump,float time)
+
+    public void Rabbit(float moreJump, float time)
     {
         jumpPower *= moreJump;
         StopCoroutine("RabbitCo");
         StartCoroutine(RabbitCo(time));
-        
+
     }
     IEnumerator RabbitCo(float time)
     {
@@ -495,9 +498,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         {
             yield return null;
             currentTime += Time.deltaTime;
-            jumpIcon.fillAmount = currentTime/coolTime;
-            jumpCoolText.text = string.Format("{0:N1}",coolTime - currentTime);
-            if(currentTime > coolTime)
+            jumpIcon.fillAmount = currentTime / coolTime;
+            jumpCoolText.text = string.Format("{0:N1}", coolTime - currentTime);
+            if (currentTime > coolTime)
             {
                 break;
             }
@@ -539,5 +542,21 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public void SetVelocity(Vector2 vel)
     {
         rb.velocity = vel;
+    }
+
+    public void SetAudioClip(AudioClip clip)
+    {
+        audioSource.clip = clip;
+    }
+
+    public void PlayAudio()
+    {
+        audioSource.Stop();
+        audioSource.Play();
+    }
+
+    public void StopAudio()
+    {
+        audioSource.Stop();
     }
 }

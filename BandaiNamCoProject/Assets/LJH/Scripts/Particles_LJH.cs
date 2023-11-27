@@ -7,15 +7,19 @@ public class Particles_LJH : MonoBehaviour
     protected List<ParticleSystem> particles;
     protected List<float> originEmission;
 
+    private bool isInit = false;
+
     private void Awake()
     {
         Init();
     }
 
-    protected virtual void Init()
+    public virtual void Init()
     {
+        if (isInit) return;
+
         particles = new List<ParticleSystem>();
-        particles.AddRange(GetComponentsInChildren<ParticleSystem>());
+        particles.AddRange(GetComponentsInChildren<ParticleSystem>(true));
 
         originEmission = new List<float>();
 
@@ -23,6 +27,8 @@ public class Particles_LJH : MonoBehaviour
         {
             originEmission.Add(p.emission.rateOverTimeMultiplier);
         }
+
+        isInit = true;
     }
 
     public virtual void Play() {
