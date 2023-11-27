@@ -118,7 +118,6 @@ public class UIManager : ManagerBase
 
         finishCallback?.Invoke();
         isFinished = false;
-        text.gameObject.SetActive(false);
 
         //for (int i = 0; i < clouds.Length; i++)
         //{

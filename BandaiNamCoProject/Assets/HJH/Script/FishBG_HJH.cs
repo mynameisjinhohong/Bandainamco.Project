@@ -51,7 +51,6 @@ public class FishBG_HJH : MonoBehaviour
         {
             float nextTime = Random.Range(minTime, maxTime);
             yield return new WaitForSeconds(nextTime);
-            Debug.Log("Make");
             MakeFish();
         }
     }
@@ -61,7 +60,6 @@ public class FishBG_HJH : MonoBehaviour
         fishAni = false;
         StopAllCoroutines();
         currentTime = 0;
-        Debug.Log("stop");
     }
 
     public void MakeFish()
