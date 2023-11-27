@@ -12,6 +12,7 @@ public class WaveCollider_LJH : MonoBehaviour
     [SerializeField] private bool customMaxVolume;
     [Range(0f, 1f)]
     [SerializeField] private float maxVolume;
+    [SerializeField] private Particles_LJH particle;
     private float downMoveSec;
     private Vector3 originPos;
     private Vector3 targetPos;
@@ -22,6 +23,8 @@ public class WaveCollider_LJH : MonoBehaviour
         downMoveSec = moveSec * 0.5f;
         originPos = transform.localPosition;
         targetPos = new Vector3(originPos.x, targetY, originPos.z);
+
+        particle.Init();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,6 +35,9 @@ public class WaveCollider_LJH : MonoBehaviour
         {
             //파도 닿았으면 파도 종료
             Debug.Log("Wave Collision : " + collision.name);
+            particle.gameObject.SetActive(true);
+            particle.transform.position = collision.transform.position;
+            particle.Play();
             Finish();
         }
     }
@@ -86,6 +92,7 @@ public class WaveCollider_LJH : MonoBehaviour
         }
         isCollided = false;
         audioSource.Stop();
+        //particle.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
 }
