@@ -6,25 +6,29 @@ public class MashroomBackground_yd : MonoBehaviour
 {
     float currentTime = 0;
     public float createTime = 2;
-
+    Animator myAni;
+    bool now = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAni = GetComponent<Animator>();
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("?");
-            //(collision.gameObject);
-            collision.gameObject.GetComponent<CharacterMovement2D_LSW>().jump = false;
-            //Debug.Log("1");
-            collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom = true;
-            collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroomBach = true;
+            if (!now)
+            {
+                //Debug.Log("?");
+                //(collision.gameObject);
+                now = true;
+                myAni.SetTrigger("Act");
+                //Debug.Log("1");
+                collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.Add(true);
 
-            //Debug.Log("2");
-            StartCoroutine(BackgroundTime(collision.gameObject));
+                //Debug.Log("2");
+                StartCoroutine(BackgroundTime(collision.gameObject));
+            }
         }
 
         //   itemManager.StartCoroutine(itemManager.PlayerScale(collision.transform, scale, resetTime));
@@ -45,9 +49,9 @@ public class MashroomBackground_yd : MonoBehaviour
             Debug.Log("4");
           
         }*/
-       collision.gameObject.GetComponent<CharacterMovement2D_LSW>().jump = true;
     //Debug.Log("Z");
-       collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom = false;
+       collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.RemoveAt(0);
+       now = false;
     }
 
     //public 

@@ -47,7 +47,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     bool rabbitGoing;
     #endregion
     #region 버섯 배경
-    public bool mashroom, mashroomBach;
+    public List<bool> mashroom = new List<bool>();
     #endregion
     #region 별
     public List<GameObject> starItem = new List<GameObject>();
@@ -130,7 +130,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             Instantiate(jumpEffect, effectTransform);
             //ani.CrossFade("Fly", 0.1f);
-            if (!mashroom)
+            if (mashroom.Count <1)
             {
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
@@ -153,11 +153,11 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 //몇 초 후에 실행할 건지 보기
                 StartCoroutine(Go_DownDown(ani));
             }
-            else if (mashroomBach)
+            else
             {
 
                 float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+                transform.GetChild(0).rotation = Quaternion.AngleAxis(angle - 270, Vector3.forward);
                 dir.Normalize();
                 rb.velocity = Vector2.zero;
                 if (dir != Vector2.zero)
@@ -166,7 +166,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 }
                 jumpIcon.fillAmount = 0;
                 jumpCoolText.gameObject.SetActive(true);
-                mashroomBach = false;
+                jump = false;
                 StartCoroutine(Go_Jump_Second(ani));
                 StartCoroutine(Go_DownDown(ani));
             }
@@ -223,27 +223,14 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && jumpReady && fish.Count < 1) //점프 쿨타임이 지나고 물고기 안타고 있을 때
             {
-                if (!mashroom) //버섯배경아닐때 추가
-                {
-                    jump = true;
-                    jumpReady = false;
-                    ani.SetTrigger("doJump");
-                    ani.SetBool("isJump", true);
-                    //ani.CrossFade("Jump", 0.1f);
-                    StartCoroutine(JumpCoolTime());
-                }
-
-            }
-            if (Input.GetMouseButton(0) && mashroom)
-            {
-                mashroomBach = true;
-                jumpReady = false;
                 jump = true;
+                jumpReady = false;
                 ani.SetTrigger("doJump");
                 ani.SetBool("isJump", true);
+                //ani.CrossFade("Jump", 0.1f);
                 StartCoroutine(JumpCoolTime());
-
             }
+
         }
         if (fish.Count > 0)
         {
