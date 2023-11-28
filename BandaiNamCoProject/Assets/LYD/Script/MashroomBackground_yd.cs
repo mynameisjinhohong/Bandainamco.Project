@@ -25,7 +25,10 @@ public class MashroomBackground_yd : MonoBehaviour
                 myAni.SetTrigger("Act");
                 //Debug.Log("1");
                 collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.Add(true);
-
+                if(collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.Count == 1)
+                {
+                    collision.gameObject.GetComponent<CharacterMovement2D_LSW>().stunEffect.SetActive(true);
+                }
                 //Debug.Log("2");
                 StartCoroutine(BackgroundTime(collision.gameObject));
             }
@@ -51,6 +54,10 @@ public class MashroomBackground_yd : MonoBehaviour
         }*/
     //Debug.Log("Z");
        collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.RemoveAt(0);
+    if(collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.Count < 1)
+        {
+            collision.gameObject.GetComponent<CharacterMovement2D_LSW>().stunEffect.SetActive(false);
+        }
        now = false;
     }
 

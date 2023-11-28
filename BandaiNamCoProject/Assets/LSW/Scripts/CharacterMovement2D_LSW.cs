@@ -48,6 +48,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     #endregion
     #region ¹ö¼¸ ¹è°æ
     public List<bool> mashroom = new List<bool>();
+    public GameObject stunEffect;
     #endregion
     #region º°
     public List<GameObject> starItem = new List<GameObject>();
