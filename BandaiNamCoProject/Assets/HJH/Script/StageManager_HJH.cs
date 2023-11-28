@@ -151,6 +151,12 @@ public class StageManager_HJH : MonoBehaviour
     }
     public void MoveScene()
     {
-        LoadingManager_HJH.LoadScene("GameScene");
+        switch (doorNum)
+        {
+            case 0:
+               LoadingManager_HJH.LoadScene("GameScene");
+                break;
+
+        }
     }
 }
