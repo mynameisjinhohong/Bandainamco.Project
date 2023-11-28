@@ -60,6 +60,7 @@ public class ItemManager_LJH : ManagerBase
     public LotusPetalController controller;
     [SerializeField] private Transform petalsGroup;
     [SerializeField] private int delaySec;
+    [Range(1, 9)]
     [SerializeField] private int numOfPetalsToSpawn;
     [SerializeField] private float petalSpeed;
     [SerializeField] private float petalDisappearTime;
