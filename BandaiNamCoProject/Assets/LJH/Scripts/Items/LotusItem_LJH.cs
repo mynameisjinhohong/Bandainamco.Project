@@ -6,8 +6,9 @@ public class LotusItem_LJH : BaseItem_LJH
 {
     public override void OnTriggerEnter2D(Collider2D other)
     {
+        if (!myItem.isVisited) ItemManager_LJH.Instance.StartLotusPetal();
         base.OnTriggerEnter2D(other);
-        ItemManager_LJH.Instance.SetLotusShield(true);
+        ItemManager_LJH.Instance.SetLotusShield(true);    
     }
 
     public override void Reset()

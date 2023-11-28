@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1576069, g: 0.10809283, b: 0.2047761, a: 1}
+  m_IndirectSpecularColor: {r: 0.1565139, g: 0.10720735, b: 0.20377918, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7798,7 +7798,7 @@ MonoBehaviour:
   backgrounds: []
   items:
   - prefab: {fileID: 1886797856406526305, guid: bea3fe1109884b34dba1d1e0dcda3d41, type: 3}
-    itemCount: 1
+    itemCount: 0
     isVisited: 0
     korText: "\uBB3C\uC5D0 \uBE60\uC9C4 \uC18C\uB140\uB294 \uC815\uC2E0\uC744 \uC783\uACE0
       \uBB3C\uAE38\uC5D0 \uD729\uC4F8\uB824 \uB5A0\uB0B4\uB824\uAC14\uC2B5\uB2C8\uB2E4. "
@@ -7812,7 +7812,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 1886797856406526305, guid: 6abe8bf0adc3f3a4ca153aa010cde49d, type: 3}
-    itemCount: 5
+    itemCount: 0
     isVisited: 0
     korText: "\uC5F0\uC8FC\uAC00 \uB05D\uB098\uC790 \uD1A0\uB07C\uB294 \uC2DC\uACC4\uC640
       \uD55C\uCABD \uACF5\uAC04\uC744 \uAC00\uB9AC\uD0A4\uBA74\uC11C \uC774\uC820
@@ -7906,7 +7906,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 5337970322375770073, guid: 12eb04a5de987ff4790cb1dac25978b0, type: 3}
-    itemCount: 1
+    itemCount: 0
     isVisited: 0
     korText: "\uC18C\uB140\uB294 \uC774\uB807\uAC8C \uBB3C\uC5D0 \uBE60\uC838 \uC8FD\uB294
       \uAC74\uAC00 \uC2F6\uC5C8\uC2B5\uB2C8\uB2E4. \uB5A8\uC5B4\uC9C0\uBA74\uC11C
@@ -7964,7 +7964,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 9048971040173981333, guid: 48d311d19e003034aad3ad73d0f5d77a, type: 3}
-    itemCount: 0
+    itemCount: 7
     isVisited: 0
     korText: "\uC88B\uC740 \uD5A5\uC774 \uC18C\uB140\uB97C \uAE68\uC6E0\uC2B5\uB2C8\uB2E4.
       \uB208\uC744 \uB72C \uC18C\uB140\uB294 \uBB3C \uC704\uC5D0 \uB5A0 \uC788\uB294
@@ -7989,7 +7989,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 1993416602313422098, guid: 838abeefcb2881c488d810a12f1383cd, type: 3}
-    itemCount: 7
+    itemCount: 0
     isVisited: 0
     korText: "\uB2EC\uC744 \uB530\uB77C \uAC77\uB358 \uC911, \uC18C\uB140\uB294 \uADC0\uC5D0
       \uC775\uC740 \uBC14\uC774\uC62C\uB9B0 \uC18C\uB9AC\uB97C \uB4E4\uC5C8\uC2B5\uB2C8\uB2E4.
@@ -8054,6 +8054,11 @@ MonoBehaviour:
   lotus: {fileID: 1201127233}
   lotusShield: {fileID: 1987233366}
   lotusClip: {fileID: 8300000, guid: b724b46b9d595f143b0bfbffec6bb7e4, type: 3}
+  petalsGroup: {fileID: 1433091159}
+  delaySec: 5
+  numOfPetalsToSpawn: 3
+  petalSpeed: 40
+  petalDisappearTime: 3000
 --- !u!4 &390498904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4845131598448131883, guid: bef2faf2b997d9c45a54da152450731e, type: 3}
@@ -13597,7 +13602,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642667811}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 65, y: -283.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20249,7 +20254,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911122327}
-  m_LocalRotation: {x: -0, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -4e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: 103.100006, y: -375.6, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -28501,7 +28506,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333836076}
-  m_LocalRotation: {x: -4e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: -199.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41684,7 +41689,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -165, y: -458.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42663,7 +42668,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44792,7 +44797,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47267,11 +47272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d7787c199798d468a85e9e0da0d365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petalsGroup: {fileID: 1433091159}
-  delaySec: 5
-  numOfPetalsToSpawn: 3
-  petalSpeed: 40
-  petalDisappearTime: 1000
   audioSource: {fileID: 1060003806}
   audioFadeTime: 3
   customMaxVolume: 1

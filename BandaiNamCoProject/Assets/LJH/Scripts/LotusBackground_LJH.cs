@@ -5,34 +5,19 @@ using UnityEngine;
 
 public class LotusBackground_LJH : MonoBehaviour
 {
-    [SerializeField] private Transform petalsGroup;
-    [SerializeField] private int delaySec;
-    [SerializeField] private int numOfPetalsToSpawn;
-    [SerializeField] private float petalSpeed;
-    [SerializeField] private float petalDisappearTime;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float audioFadeTime;
     [SerializeField] private bool customMaxVolume;
     [Range(0f,1f)]
     [SerializeField] private float maxVolume;
 
-    private LotusPetalController controller;
-
-    private void Awake()
-    {
-        controller = new LotusPetalController(petalsGroup.GetComponentsInChildren<LotusPetal_LJH>(true),
-                                                delaySec,
-                                                numOfPetalsToSpawn,
-                                                petalSpeed,
-                                                petalDisappearTime);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(TagStrings.PlayerTag))
         {
             SetAudio(true);
-            controller.StartPetal();
+            //controller.StartPetal();
         }
     }
 
@@ -41,7 +26,7 @@ public class LotusBackground_LJH : MonoBehaviour
         if (collision.CompareTag(TagStrings.PlayerTag))
         {
             SetAudio(false);
-            controller.StopPetal();
+            //controller.StopPetal();
         }
     }
 

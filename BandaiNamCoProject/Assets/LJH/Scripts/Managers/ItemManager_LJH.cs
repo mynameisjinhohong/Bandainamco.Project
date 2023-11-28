@@ -57,6 +57,13 @@ public class ItemManager_LJH : ManagerBase
     public LotusParticle_LJH lotus;
     public GameObject lotusShield;
     public AudioClip lotusClip;
+    public LotusPetalController controller;
+    [SerializeField] private Transform petalsGroup;
+    [SerializeField] private int delaySec;
+    [SerializeField] private int numOfPetalsToSpawn;
+    [SerializeField] private float petalSpeed;
+    [SerializeField] private float petalDisappearTime;
+
     Vector3 Return_RandomPosition()
     {
         float x = UnityEngine.Random.Range(-DataManager.Instance.bgSize.x / 2 + itemsDistance, DataManager.Instance.bgSize.x / 2 - xyLine);
@@ -131,6 +138,12 @@ public class ItemManager_LJH : ManagerBase
 
             }
         }
+
+        controller = new LotusPetalController(petalsGroup.GetComponentsInChildren<LotusPetal_LJH>(true),
+                                                delaySec,
+                                                numOfPetalsToSpawn,
+                                                petalSpeed,
+                                                petalDisappearTime);
         base.Init();
     }
 
@@ -208,5 +221,10 @@ public class ItemManager_LJH : ManagerBase
     {
         GamePlayManager_HJH.Instance.characterMovement2D.SetAudioClip(clip);
         GamePlayManager_HJH.Instance.characterMovement2D.PlayAudio();
+    }
+
+    public void StartLotusPetal()
+    {
+        controller.StartPetal();
     }
 }
