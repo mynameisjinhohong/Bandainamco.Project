@@ -59,7 +59,7 @@ public class StageCamera_HJH : MonoBehaviour
         StartCoroutine(StartCutScene());
         eleNum = 8;
         elevatorTime = 0;
-        tuto.SetActive(true);
+
     }
     IEnumerator StartCutScene()
     {
@@ -80,6 +80,13 @@ public class StageCamera_HJH : MonoBehaviour
                 leftDoor.transform.position = new Vector3(-2.6f, leftDoor.transform.position.y, 0);
                 rightDoor.transform.position = new Vector3(2.6f, rightDoor.transform.position.y, 0);
                 break;
+            }
+        }
+        if (GameManager.instance != null)
+        {
+            if (!GameManager.instance.userData.stageTuto)
+            {
+                tuto.SetActive(true);
             }
         }
         Time.timeScale = 1f;

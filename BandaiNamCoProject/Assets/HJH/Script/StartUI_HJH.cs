@@ -102,6 +102,7 @@ public class StartUI_HJH : MonoBehaviour
                 GameManager.instance.userData.stageDatas[i].itemOnOff = new bool[GameManager.instance.itemCount[i]];
             }
         }
+        GameManager.instance.userData.stageTuto = false;
         if (aud != null)
         {
             aud.Play();

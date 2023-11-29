@@ -95,7 +95,7 @@ public class TrainItem_HJH : BaseItem_LJH
             }
         }
         railStart = true;
-        await UniTask.WaitUntil(() => Mathf.Abs(trainRail[0].transform.position.y - trainRail[0].GetComponent<TrainRail_HJH>().railMaxY)< 1);
+        await UniTask.WaitUntil(() => Mathf.Abs(trainRail[0].transform.localPosition.y - trainRail[0].GetComponent<TrainRail_HJH>().railMaxY)< 1);
         trainStart = true;
         railStart = false;
     }
@@ -112,11 +112,12 @@ public class TrainItem_HJH : BaseItem_LJH
                 train.gameObject.SetActive(true);
                 for (int i =0; i< trainRail.Length; i++)
                 {
-                    TrainRail_HJH train = trainRail[i].GetComponent<TrainRail_HJH>();
+                    TrainRail_HJH trains = trainRail[i].GetComponent<TrainRail_HJH>();
                     trainRail[i].transform.position = new Vector3(trainRail[i].transform.position.x, Camera.main.ViewportToWorldPoint(new Vector2(0, 0f)).y, 0);
-                    train.railMaxY = (GetComponent<BoxCollider2D>().bounds.center.y - GetComponent<BoxCollider2D>().bounds.extents.y);
-                    train.railSu = i;
-                    train.StartMove();
+                    trains.railMaxY = -0.9f;
+                    trains.railSu = i;
+                    trains.railUpSpeed = railSpeed;
+                    trains.StartMove();
                     trainRail[i].gameObject.SetActive(true);
                 }
                 railReady = true;
@@ -144,11 +145,11 @@ public class TrainItem_HJH : BaseItem_LJH
         }
         if (left)
         {
-            train.transform.position += Vector3.left * trainSpeed * Time.deltaTime;
+            train.transform.localPosition += Vector3.left * trainSpeed * Time.deltaTime;
         }
         else
         {
-            train.transform.position += Vector3.right * trainSpeed * Time.deltaTime;
+            train.transform.localPosition += Vector3.right * trainSpeed * Time.deltaTime;
         }
 
     }
