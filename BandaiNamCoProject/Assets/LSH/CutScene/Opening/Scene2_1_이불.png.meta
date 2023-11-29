@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90bf32b47c39766408c2a5b242bae521
+guid: 816d85632cf35514084c326facd04395
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "scene1_2_\uC18C\uB140_0"
+      name: "Scene2_1_\uC774\uBD88_2"
       rect:
         serializedVersion: 2
-        x: 1820
-        y: 128
-        width: 1273
-        height: 1666
+        x: 361
+        y: 103
+        width: 1429
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4277d503e5b86c439da07b8c462d714
-      internalID: 1274839532
+      spriteID: 57f44a3ac854dc949ac09847e6cae847
+      internalID: 90231134
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,29 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "scene1_2_\uC18C\uB140_0": 1274839532
+      "Scene2_1_\uC774\uBD88_0": -991397312
+      "Scene2_1_\uC774\uBD88_1": 888254391
+      "Scene2_1_\uC774\uBD88_10": -1786077972
+      "Scene2_1_\uC774\uBD88_11": 1078525418
+      "Scene2_1_\uC774\uBD88_12": -278237068
+      "Scene2_1_\uC774\uBD88_13": 922720480
+      "Scene2_1_\uC774\uBD88_14": 1175364923
+      "Scene2_1_\uC774\uBD88_15": -1890278626
+      "Scene2_1_\uC774\uBD88_16": 1863122764
+      "Scene2_1_\uC774\uBD88_17": -1027186774
+      "Scene2_1_\uC774\uBD88_18": 1522586693
+      "Scene2_1_\uC774\uBD88_19": 432598751
+      "Scene2_1_\uC774\uBD88_2": 90231134
+      "Scene2_1_\uC774\uBD88_20": 1854091135
+      "Scene2_1_\uC774\uBD88_21": 1857816993
+      "Scene2_1_\uC774\uBD88_22": -1933059744
+      "Scene2_1_\uC774\uBD88_3": 222998220
+      "Scene2_1_\uC774\uBD88_4": 1756964665
+      "Scene2_1_\uC774\uBD88_5": -959548799
+      "Scene2_1_\uC774\uBD88_6": -81518693
+      "Scene2_1_\uC774\uBD88_7": 484669254
+      "Scene2_1_\uC774\uBD88_8": 87871918
+      "Scene2_1_\uC774\uBD88_9": -1255059398
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

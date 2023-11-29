@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90bf32b47c39766408c2a5b242bae521
+guid: 62ebd04b02c843644ba04f4749af0b8a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,22 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "scene1_2_\uC18C\uB140_0"
+      name: "Scene2_1_\uC18C\uB140_7"
       rect:
         serializedVersion: 2
-        x: 1820
-        y: 128
-        width: 1273
-        height: 1666
+        x: 309
+        y: 126
+        width: 1480
+        height: 1676
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4277d503e5b86c439da07b8c462d714
-      internalID: 1274839532
+      spriteID: da27fb65e1ee29d4d9cd270f141f9edc
+      internalID: -156458561
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "scene1_2_\uC18C\uB140_0": 1274839532
+      "Scene2_1_\uC18C\uB140_0": 647794453
+      "Scene2_1_\uC18C\uB140_1": -1001636449
+      "Scene2_1_\uC18C\uB140_10": 1365861381
+      "Scene2_1_\uC18C\uB140_11": 2034590567
+      "Scene2_1_\uC18C\uB140_12": 1930459676
+      "Scene2_1_\uC18C\uB140_2": 134885642
+      "Scene2_1_\uC18C\uB140_3": -1899234740
+      "Scene2_1_\uC18C\uB140_4": 1048927612
+      "Scene2_1_\uC18C\uB140_5": 2047308652
+      "Scene2_1_\uC18C\uB140_6": -1384779667
+      "Scene2_1_\uC18C\uB140_7": -156458561
+      "Scene2_1_\uC18C\uB140_8": 1561246285
+      "Scene2_1_\uC18C\uB140_9": 1670982494
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
