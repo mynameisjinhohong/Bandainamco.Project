@@ -20,10 +20,10 @@ public class TrainRail_HJH : MonoBehaviour
     {
         if (start)
         {
-            transform.position += new Vector3(0, railUpSpeed * Time.deltaTime, 0);
-            if(transform.position.y > railMaxY)
+            transform.localPosition += new Vector3(0, railUpSpeed * Time.deltaTime, 0);
+            if(transform.localPosition.y > railMaxY)
             {
-                transform.position = new Vector3(transform.position.x, railMaxY,transform.position.z);
+                transform.localPosition = new Vector3(transform.localPosition.x, railMaxY,transform.localPosition.z);
                 start = false;
             }
         }

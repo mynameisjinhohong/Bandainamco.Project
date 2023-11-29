@@ -25,11 +25,11 @@ public class TrainBG_HJH : MonoBehaviour
     {
         if (trainStart)
         {
-            transform.position += new Vector3(-trainSpeed * Time.deltaTime, 0, 0);
-            if(transform.position.x < endPos.position.x)
+            transform.localPosition += new Vector3(-trainSpeed * Time.deltaTime, 0, 0);
+            if(transform.localPosition.x < endPos.localPosition.x)
             {
                 trainStart = false;
-                transform.position = startPos.position;
+                transform.localPosition = startPos.localPosition;
             }
         }
         else
