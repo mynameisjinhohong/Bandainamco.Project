@@ -73,7 +73,6 @@ public class StageManager_HJH : MonoBehaviour
                     if (!GameManager.instance.userData.stageTuto)
                     {
                         tuto.SetActive(true);
-
                     }
                 }
             }

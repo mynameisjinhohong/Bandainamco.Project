@@ -59,7 +59,13 @@ public class StageCamera_HJH : MonoBehaviour
         StartCoroutine(StartCutScene());
         eleNum = 8;
         elevatorTime = 0;
-        tuto.SetActive(true);
+        if(GameManager.instance  != null)
+        {
+            if (!GameManager.instance.userData.stageTuto)
+            {
+                tuto.SetActive(true);
+            }
+        }
     }
     IEnumerator StartCutScene()
     {
