@@ -78,7 +78,7 @@ public class TrainItem_HJH : BaseItem_LJH
         {
             left = true;
             playerPos.transform.localPosition = new Vector3(playerPos.transform.localPosition.x, playerPos.transform.localPosition.y, 15);
-            train.transform.rotation = Quaternion.identity;
+            train.transform.localRotation = Quaternion.identity;
             for(int i =0; i< trainRail.Length; i++)
             {
                 trainRail[i].transform.position += new Vector3(-i * (trainSize.x), 0 , 0);
@@ -88,7 +88,7 @@ public class TrainItem_HJH : BaseItem_LJH
         {
             left = false;
             playerPos.transform.localPosition = new Vector3(playerPos.transform.localPosition.x, playerPos.transform.localPosition.y, -15);
-            train.transform.rotation = Quaternion.Euler(0,180,0);
+            train.transform.localRotation = Quaternion.Euler(0,180,0);
             for (int i = 0; i < trainRail.Length; i++)
             {
                 trainRail[i].transform.position += new Vector3(i * (trainSize.x), 0, 0);

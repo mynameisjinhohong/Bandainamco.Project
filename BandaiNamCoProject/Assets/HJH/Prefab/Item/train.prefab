@@ -3151,7 +3151,7 @@ MonoBehaviour:
     isShown: 0
   bubble: {fileID: 0}
   player: {fileID: 0}
-  trainSpeed: 25
+  trainSpeed: 15
   railSpeed: 10
   train: {fileID: 4967024506900576391}
   trainIcon: {fileID: 6631129406483632805}
