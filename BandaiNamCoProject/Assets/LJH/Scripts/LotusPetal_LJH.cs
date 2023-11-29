@@ -6,15 +6,13 @@ public class LotusPetal_LJH : MonoBehaviour
 {
     private float speed;
     private Vector3 originPos;
-    private float disappearTime;
 
     private bool start = false;
     private Vector3 dir;
 
-    public void Init(float speed, float disappearTime)
+    public void Init(float speed)
     {
         this.speed = speed;
-        this.disappearTime = disappearTime;
         originPos = transform.position;
     }
 

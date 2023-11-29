@@ -75,6 +75,14 @@ MonoBehaviour:
     m_Key: EyeBGText
     m_Metadata:
       m_Items: []
+  - m_Id: 4179496478162944
+    m_Key: "Press A\u2190 or \u2192D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4187067108802560
+    m_Key: Press the Space
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

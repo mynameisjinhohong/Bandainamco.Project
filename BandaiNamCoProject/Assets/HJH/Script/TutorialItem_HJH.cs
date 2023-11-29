@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TutorialItem_HJH : MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class TutorialItem_HJH : MonoBehaviour
         }
         else
         {
+            ballon.SetActive(true);
             for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
@@ -69,7 +71,7 @@ public class TutorialItem_HJH : MonoBehaviour
             switch (tutoType)
             {
                 case TutoType.Click:
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
                     {
                         gameObject.SetActive(false);
                         ballon.SetActive(false);
@@ -103,6 +105,7 @@ public class TutorialItem_HJH : MonoBehaviour
         img.color = color;
         while (alpha < 1f)
         {
+            ballon.transform.position = new Vector3(ballon.transform.position.x,ballon.transform.position.y,0);
             transform.position = new Vector3(transform.position.x,transform.position.y,0);  
             alpha += 0.005f;
             yield return new WaitForSeconds(fadeSpeed);
@@ -119,6 +122,7 @@ public class TutorialItem_HJH : MonoBehaviour
         img.color = color;
         while (alpha > 0f)
         {
+            ballon.transform.position = new Vector3(ballon.transform.position.x, ballon.transform.position.y, 0);
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             alpha -= 0.005f;
             yield return new WaitForSeconds(fadeSpeed);

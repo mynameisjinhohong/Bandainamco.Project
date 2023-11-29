@@ -63,7 +63,6 @@ public class ItemManager_LJH : ManagerBase
     [Range(1, 9)]
     [SerializeField] private int numOfPetalsToSpawn;
     [SerializeField] private float petalSpeed;
-    [SerializeField] private float petalDisappearTime;
 
     Vector3 Return_RandomPosition()
     {
@@ -143,8 +142,7 @@ public class ItemManager_LJH : ManagerBase
         controller = new LotusPetalController(petalsGroup.GetComponentsInChildren<LotusPetal_LJH>(true),
                                                 delaySec,
                                                 numOfPetalsToSpawn,
-                                                petalSpeed,
-                                                petalDisappearTime);
+                                                petalSpeed);
         base.Init();
     }
 

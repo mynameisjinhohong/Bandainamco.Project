@@ -21,6 +21,7 @@ public class UserData_HJH
     public float volume = 1f;
     public StageData_HJH[] stageDatas = new StageData_HJH[4];
     public int langaugeSet = 0;
+    public bool stageTuto = false;
     public UserData_HJH()
     {
         stage = 0;

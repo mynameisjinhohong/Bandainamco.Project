@@ -12,7 +12,7 @@ public class LotusPetalController
     private float petalSpeed;
     private bool isStart;
 
-    public LotusPetalController(LotusPetal_LJH[] petalsArr, int delaySec, int numOfPetalsToSpawn, float petalSpeed, float disappearTime)
+    public LotusPetalController(LotusPetal_LJH[] petalsArr, int delaySec, int numOfPetalsToSpawn, float petalSpeed)
     {
         petals = new List<LotusPetal_LJH>();
         petals.AddRange(petalsArr);
@@ -20,7 +20,7 @@ public class LotusPetalController
         this.numOfPetalsToSpawn = numOfPetalsToSpawn;
 
         foreach (var p in petals)
-            p.Init(petalSpeed, disappearTime);
+            p.Init(petalSpeed);
     }
 
     public async void StartPetal()
