@@ -78,6 +78,14 @@ MonoBehaviour:
     m_Localized: I want to avoid eye contact...
     m_Metadata:
       m_Items: []
+  - m_Id: 4179496478162944
+    m_Localized: "Press A\u2190 or \u2192D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4187067108802560
+    m_Localized: Press the Space
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

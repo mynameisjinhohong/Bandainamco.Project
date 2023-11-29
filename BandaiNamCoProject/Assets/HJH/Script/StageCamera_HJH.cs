@@ -24,6 +24,7 @@ public class StageCamera_HJH : MonoBehaviour
     public GameObject background;
     public Vector3 backgroundSize;
 
+    public GameObject tuto;
     #region ÄÆ¾À
     [Header("ÄÆ¾À")]
     public float cutSceneSpeed;
@@ -58,6 +59,7 @@ public class StageCamera_HJH : MonoBehaviour
         StartCoroutine(StartCutScene());
         eleNum = 8;
         elevatorTime = 0;
+        tuto.SetActive(true);
     }
     IEnumerator StartCutScene()
     {
@@ -115,6 +117,7 @@ public class StageCamera_HJH : MonoBehaviour
         if (!walk && stageMove != 0 && Time.timeScale != 0)
         {
             StartCoroutine(Walk(stageMove));
+            tuto.SetActive(false);
             walkCount++;
             if(walkCount > 1)
             {

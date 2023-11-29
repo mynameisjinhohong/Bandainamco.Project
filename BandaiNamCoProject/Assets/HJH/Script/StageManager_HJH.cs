@@ -18,6 +18,7 @@ public class StageManager_HJH : MonoBehaviour
     public GameObject optionCanvas;
     public Slider volumeSlider;
     public float cameraZoomInSpeed;
+    public GameObject tuto;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +26,11 @@ public class StageManager_HJH : MonoBehaviour
         {
             volumeSlider.value = GameManager.instance.userData.volume;
         }
-        for(int i =0; i< doors.Count; i++)
+        for (int i = 0; i < doors.Count; i++)
         {
-            if(GameManager.instance != null)
+            if (GameManager.instance != null)
             {
-                if(GameManager.instance.userData.stage < i)
+                if (GameManager.instance.userData.stage < i)
                 {
                     doors[i].transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = closeDoorSprite;
                 }
@@ -60,30 +61,45 @@ public class StageManager_HJH : MonoBehaviour
     void Update()
     {
         bool findDoor = false;
-       for(int i =0; i<doors.Count; i++)
+        for (int i = 0; i < doors.Count; i++)
         {
-            if (Mathf.Abs(doors[i].transform.position.x - Camera.main.transform.position.x )< 2f)
+            if (Mathf.Abs(doors[i].transform.position.x - Camera.main.transform.position.x) < 2f)
             {
                 doors[i].transform.GetChild(0).gameObject.SetActive(true);
                 doorNum = i;
                 findDoor = true;
+                if (GameManager.instance != null)
+                {
+                    if (!GameManager.instance.userData.stageTuto)
+                    {
+                        tuto.SetActive(true);
+
+                    }
+                }
             }
             else
             {
                 doors[i].transform.GetChild(0).gameObject.SetActive(false);
             }
         }
-       if(Mathf.Abs(optionDoor.transform.position.x - Camera.main.transform.position.x) < 2f)
-       {
+        if (Mathf.Abs(optionDoor.transform.position.x - Camera.main.transform.position.x) < 2f)
+        {
             doorNum = -1;
             optionDoor.transform.GetChild(0).gameObject.SetActive(true);
             findDoor = true;
+            if (GameManager.instance != null)
+            {
+                if (!GameManager.instance.userData.stageTuto)
+                {
+                    tuto.SetActive(true);
+                }
+            }
         }
         else
         {
             optionDoor.transform.GetChild(0).gameObject.SetActive(false);
         }
-       if(findDoor)
+        if (findDoor)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -95,6 +111,12 @@ public class StageManager_HJH : MonoBehaviour
                         {
                             optionDoor.GetComponent<Animator>().SetTrigger("Open");
                             doorOpenSound.Play();
+                            if (GameManager.instance != null)
+                            {
+                                GameManager.instance.userData.stageTuto = true;
+                                tuto.SetActive(false);
+                                GameManager.instance.SaveUserData();
+                            }
                             Invoke("OptionOn", 2f);
                         }
                         else
@@ -102,6 +124,12 @@ public class StageManager_HJH : MonoBehaviour
                             doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
                             doorOpenSound.Play();
                             StartCoroutine(CameraZoomIn());
+                            if (GameManager.instance != null)
+                            {
+                                GameManager.instance.userData.stageTuto = true;
+                                tuto.SetActive(false);
+                                GameManager.instance.SaveUserData();
+                            }
                             Invoke("MoveScene", 2f);
                         }
                     }
@@ -112,9 +140,13 @@ public class StageManager_HJH : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            tuto.SetActive(false);
+        }
 
 
-        if(optionDoor.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
+        if (optionDoor.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
         {
             OptionOff();
         }
@@ -125,18 +157,18 @@ public class StageManager_HJH : MonoBehaviour
         Camera cam = Camera.main;
         while (true)
         {
-            if(cam.orthographicSize > 0)
+            if (cam.orthographicSize > 0)
             {
                 cam.orthographicSize -= cameraZoomInSpeed;
             }
-            if(Mathf.Abs(cam.transform.position.x - doors[doorNum].transform.position.x) > 0.5f)
+            if (Mathf.Abs(cam.transform.position.x - doors[doorNum].transform.position.x) > 0.5f)
             {
                 cam.transform.position += new Vector3((doors[doorNum].transform.position.x - cam.transform.position.x) * 0.005f, 0, 0);
             }
             yield return new WaitForSeconds(0.01f);
         }
     }
-    public void OptionOn() 
+    public void OptionOn()
     {
         optionCanvas.SetActive(true);
         Time.timeScale = 0;
@@ -154,7 +186,7 @@ public class StageManager_HJH : MonoBehaviour
         switch (doorNum)
         {
             case 0:
-               LoadingManager_HJH.LoadScene("GameScene");
+                LoadingManager_HJH.LoadScene("GameScene");
                 break;
 
         }
