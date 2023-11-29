@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class WaveItem_LJH : BaseItem_LJH
 {
-    [SerializeField] private float zoomLerpSec = 3f;
-    [SerializeField] private int delayTime = 3;
-
     public override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
