@@ -19,6 +19,9 @@ public class StageManager_HJH : MonoBehaviour
     public Slider volumeSlider;
     public float cameraZoomInSpeed;
     public GameObject tuto;
+
+    public GameObject firstScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -185,7 +188,7 @@ public class StageManager_HJH : MonoBehaviour
         switch (doorNum)
         {
             case 0:
-                LoadingManager_HJH.LoadScene("GameScene");
+                firstScene.SetActive(true);
                 break;
 
         }
