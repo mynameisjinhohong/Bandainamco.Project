@@ -34,7 +34,7 @@ public class GamePlayManager_HJH : ManagerBase
     private List<BaseItem_LJH> consumedItems;
 
     #region 시작부분
-    public GameObject startCloud;
+
     public bool start = false;
     #endregion
 
@@ -92,10 +92,7 @@ public class GamePlayManager_HJH : ManagerBase
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            startCloud.SetActive(false);
-        }
+
         if (player.transform.position.y < DataManager.Instance.bgSize.y / 2 && !start)
         {
             start = true;

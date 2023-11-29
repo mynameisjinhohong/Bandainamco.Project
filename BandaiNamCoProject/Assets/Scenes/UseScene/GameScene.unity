@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a874bf1c1f1b00b4b8ce789d848f0b5a, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -5879,7 +5879,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297183592}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -70, y: -218.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6321,6 +6321,7 @@ MonoBehaviour:
   starBack: {fileID: 0}
   targetOrtho: 70
   startScale: {x: 0, y: 0, z: 0}
+  startCloud: {fileID: 0}
 --- !u!212 &328588136
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7738,7 +7739,7 @@ MonoBehaviour:
   backgrounds: []
   items:
   - prefab: {fileID: 1886797856406526305, guid: bea3fe1109884b34dba1d1e0dcda3d41, type: 3}
-    itemCount: 0
+    itemCount: 2
     isVisited: 0
     korText: "\uBB3C\uC5D0 \uBE60\uC9C4 \uC18C\uB140\uB294 \uC815\uC2E0\uC744 \uC783\uACE0
       \uBB3C\uAE38\uC5D0 \uD729\uC4F8\uB824 \uB5A0\uB0B4\uB824\uAC14\uC2B5\uB2C8\uB2E4. "
@@ -7815,7 +7816,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 1886797856406526305, guid: 5f6126bfbc7d52c4fa6c9d4d12d78f6f, type: 3}
-    itemCount: 10
+    itemCount: 2
     isVisited: 0
     korText: "\uADF8\uB0A0, \uC18C\uB140\uB294 \uB291\uB300\uB4E4\uC5D0\uAC8C \uB458\uB7EC
       \uC313\uC600\uC2B5\uB2C8\uB2E4. \uC5B4\uB450\uCEF4\uCEF4\uD55C \uC232\uC18D\uC5D0\uC11C
@@ -7998,7 +7999,6 @@ MonoBehaviour:
   delaySec: 5
   numOfPetalsToSpawn: 3
   petalSpeed: 40
-  petalDisappearTime: 3000
 --- !u!4 &390498904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4845131598448131883, guid: bef2faf2b997d9c45a54da152450731e, type: 3}
@@ -24034,7 +24034,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911122327}
-  m_LocalRotation: {x: -0, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -4e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: 103.100006, y: -375.6, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45605,7 +45605,6 @@ MonoBehaviour:
   - {fileID: 2102580589}
   - {fileID: 942882365}
   - {fileID: 447339997}
-  startCloud: {fileID: 1968919559}
   start: 0
 --- !u!4 &1792308418
 Transform:
@@ -46400,7 +46399,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47833,6 +47832,7 @@ MonoBehaviour:
   starBack: {fileID: 478959304}
   targetOrtho: 70
   startScale: {x: 0, y: 0, z: 0}
+  startCloud: {fileID: 1968919559}
 --- !u!70 &1949789411
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

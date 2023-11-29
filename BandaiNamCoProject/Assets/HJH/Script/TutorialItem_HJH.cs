@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TutorialItem_HJH : MonoBehaviour
 {
@@ -70,7 +71,7 @@ public class TutorialItem_HJH : MonoBehaviour
             switch (tutoType)
             {
                 case TutoType.Click:
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
                     {
                         gameObject.SetActive(false);
                         ballon.SetActive(false);
