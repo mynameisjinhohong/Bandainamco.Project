@@ -86,6 +86,12 @@ MonoBehaviour:
     m_Localized: "Press A\u2190 or \u2192D"
     m_Metadata:
       m_Items: []
+  - m_Id: 4628092801851392
+    m_Localized: 'It''s not ready yet.
+
+      Please wait for the next update.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

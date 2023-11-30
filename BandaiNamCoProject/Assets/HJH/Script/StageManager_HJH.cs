@@ -19,6 +19,7 @@ public class StageManager_HJH : MonoBehaviour
     public Slider volumeSlider;
     public float cameraZoomInSpeed;
     public GameObject tuto;
+    public GameObject yetCanvas;
 
     public GameObject firstScene;
 
@@ -190,7 +191,16 @@ public class StageManager_HJH : MonoBehaviour
             case 0:
                 firstScene.SetActive(true);
                 break;
-
+            default:
+                yetCanvas.SetActive(true);
+                Time.timeScale = 0f;
+                break;
         }
+    }
+
+    public void YetOff()
+    {
+        yetCanvas.SetActive(false) ;
+        Time.timeScale = 1f;
     }
 }

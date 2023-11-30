@@ -83,6 +83,10 @@ MonoBehaviour:
     m_Key: "Press A\u2190 or \u2192D"
     m_Metadata:
       m_Items: []
+  - m_Id: 4628092801851392
+    m_Key: It's not ready yet. Please wait for the next update.
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
