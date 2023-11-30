@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public UserData_HJH userData;
     public static GameManager instance = null;
     public AudioClip[] bgms;
+    AudioSource myAudio;
     #region 언어 관련
     //public const string enFont;
     //public const string koFont;
@@ -105,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         List<AudioSource> audioSources = new List<AudioSource>();
         GameObject[] all = FindObjectsOfType<GameObject>();
-        AudioSource myAudio = gameObject.GetComponent<AudioSource>();
+        myAudio = gameObject.GetComponent<AudioSource>();
         audioSources.Add(myAudio);
         myAudio.volume = volume;
         ChangeAudio(myAudio);
@@ -190,8 +191,13 @@ public class GameManager : MonoBehaviour
                 myaudio.Play();
             }
         }
-
     }
+
+    public void AudioOff()
+    {
+        myAudio.Stop();
+    }
+
     public void SaveUserData()
     {
         string data = JsonUtility.ToJson(userData);

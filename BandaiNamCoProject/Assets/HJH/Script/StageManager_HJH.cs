@@ -14,6 +14,7 @@ public class StageManager_HJH : MonoBehaviour
     public AudioSource doorOpenSound;
     public AudioSource doorCantOpenSound;
     public AudioSource buttonSound;
+    public AudioSource openingCutScene;
 
     public GameObject optionCanvas;
     public Slider volumeSlider;
@@ -150,8 +151,6 @@ public class StageManager_HJH : MonoBehaviour
         {
             tuto.SetActive(false);
         }
-
-
         if (optionDoor.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
         {
             OptionOff();
@@ -194,6 +193,8 @@ public class StageManager_HJH : MonoBehaviour
             case 0:
                 firstScene.SetActive(true);
                 cutScene = true;
+                openingCutScene.Play();
+                GameManager.instance.AudioOff();
                 break;
             default:
                 yetCanvas.SetActive(true);
