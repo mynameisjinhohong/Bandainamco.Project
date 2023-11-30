@@ -121,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08401124}
+  m_Offset: {x: 0, y: -0.06455381}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.8019775}
+  m_Size: {x: 1, y: 0.84089243}
   m_EdgeRadius: 0
 --- !u!50 &7752989518483776923
 Rigidbody2D:
@@ -183,6 +183,8 @@ MonoBehaviour:
   audioSource: {fileID: 1929647103}
   customMaxVolume: 1
   maxVolume: 0.7
+  particle: {fileID: 0}
+  particlePrefab: {fileID: 6426444615825775873, guid: 053606508a8d8654e8ed4ad12a931544, type: 3}
 --- !u!82 &1929647103
 AudioSource:
   m_ObjectHideFlags: 0
@@ -195,7 +197,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6ba7c68ded18279479feaa76c3a0fddf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -239,7 +241,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
