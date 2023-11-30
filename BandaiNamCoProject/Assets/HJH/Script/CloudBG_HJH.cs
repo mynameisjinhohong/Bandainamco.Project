@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CloudBG_HJH : MonoBehaviour
 {
+
     public float startX;
     public float endX;
     public GameObject CloudBGCanvas;
@@ -22,18 +23,18 @@ public class CloudBG_HJH : MonoBehaviour
     {
         if (left)
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-            if (transform.position.x < startX)
+            transform.localPosition += Vector3.left * speed * Time.deltaTime;
+            if (transform.localPosition.x < startX)
             {
-                transform.position = new Vector3(endX, transform.position.y, transform.position.z);
+                transform.localPosition = new Vector3(endX, transform.localPosition.y, transform.localPosition.z);
             }
         }
         else
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            if (transform.position.x > endX)
+            transform.localPosition += Vector3.right * speed * Time.deltaTime;
+            if (transform.localPosition.x > endX)
             {
-                transform.position = new Vector3(startX, transform.position.y, transform.position.z);
+                transform.localPosition = new Vector3(startX, transform.localPosition.y, transform.localPosition.z);
             }
         }
 

@@ -24,6 +24,7 @@ public class GamePlayManager_HJH : ManagerBase
     // public ItemManager_LSW itemManager;
     public float currentTime;
     public TMP_Text timeText;
+    public bool gameOver = false;
     public string koEndingText;
     public string enEndingText;
     public string jaEndingText;
@@ -41,6 +42,7 @@ public class GamePlayManager_HJH : ManagerBase
     private void Awake()
     {
         Instance = this;
+        gameOver = false;
     }
 
     public override void Init()
@@ -108,8 +110,7 @@ public class GamePlayManager_HJH : ManagerBase
         {
             return;
         }
-        Vector3 pos = Camera.main.WorldToViewportPoint(player.transform.position);
-        if (pos.x > 1f || pos.x < 0f || pos.y > 1f || pos.y < 0)
+        if (gameOver)
         {
             if (ItemManager_LJH.Instance.CurrItem != null)
             {
@@ -122,6 +123,7 @@ public class GamePlayManager_HJH : ManagerBase
                     ItemManager_LJH.Instance.PlayLotusClip();
                     SetPlayerVelocity(Vector2.zero);
                     ItemManager_LJH.Instance.CurrItem = null;
+                    gameOver = false;
                     return;
                 }
             }
