@@ -51,6 +51,7 @@ public class EyeBG_HJH : MonoBehaviour
         else
         {
             nowEye = false;
+            eyeCanvas.SetActive(false);
             player.EyeStart(false);
             currentTime = 0;
         }
