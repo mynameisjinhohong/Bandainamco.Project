@@ -22,7 +22,7 @@ public class StageManager_HJH : MonoBehaviour
     public GameObject yetCanvas;
 
     public GameObject firstScene;
-
+    bool cutScene = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -193,6 +193,7 @@ public class StageManager_HJH : MonoBehaviour
         {
             case 0:
                 firstScene.SetActive(true);
+                cutScene = true;
                 break;
             default:
                 yetCanvas.SetActive(true);
