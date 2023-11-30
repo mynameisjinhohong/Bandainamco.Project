@@ -139,6 +139,8 @@ public class StageManager_HJH : MonoBehaviour
                     else
                     {
                         doorCantOpenSound.Play();
+                        yetCanvas.SetActive(true);
+                        Time.timeScale = 0f;
                     }
                 }
             }
@@ -192,8 +194,6 @@ public class StageManager_HJH : MonoBehaviour
                 firstScene.SetActive(true);
                 break;
             default:
-                yetCanvas.SetActive(true);
-                Time.timeScale = 0f;
                 break;
         }
     }
