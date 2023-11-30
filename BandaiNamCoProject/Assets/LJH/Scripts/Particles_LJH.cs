@@ -35,9 +35,11 @@ public class Particles_LJH : MonoBehaviour
         for(int i=0; i<particles.Count; i++)
         {
             var p = particles[i];
+            p.gameObject.SetActive(true);
             var emission = p.emission;
+            emission.enabled = true;
             emission.rateOverTimeMultiplier = originEmission[i];
-            p.Clear();
+            //p.Clear();
             p.Play();
         }
     }

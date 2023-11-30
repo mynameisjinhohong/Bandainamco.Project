@@ -22,6 +22,7 @@ public class ItemManager_LJH : ManagerBase
     //yd ¹ö¼¸ ·£´ý
     [SerializeField] private List<GameObject> mushroomImage = new List<GameObject>();
 
+    private Dictionary<ItemType, Item_HJH> itemDic;
     private BaseItem_LJH currItem;
     public BaseItem_LJH CurrItem
     {
@@ -87,8 +88,13 @@ public class ItemManager_LJH : ManagerBase
         bubbles = new List<Bubble_LJH>();
         bubbles.AddRange(bubbleParent.GetComponentsInChildren<Bubble_LJH>(true));
 
+        itemDic = new Dictionary<ItemType, Item_HJH>();
+
         for (int i = 0; i < items.Length; i++)
         {
+            if (!itemDic.ContainsKey(items[i].itemType))
+                itemDic.Add(items[i].itemType, items[i]);
+
             for (int j = 0; j < items[i].itemCount; j++)
             {/*
                 if(items[i].prefab.name.Contains("Mushroom"))
@@ -171,7 +177,7 @@ public class ItemManager_LJH : ManagerBase
 
     public void SetWave(Action callback = null)
     {
-        wave.StartWave();
+        wave.StartWave(itemDic[ItemType.Wave].isVisited);
     }
 
     public void SetBubble(bool isSet)

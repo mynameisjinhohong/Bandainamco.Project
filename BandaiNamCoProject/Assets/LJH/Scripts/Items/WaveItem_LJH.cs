@@ -9,7 +9,6 @@ public class WaveItem_LJH : BaseItem_LJH
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            base.OnTriggerEnter2D(other);
             //직접적인 아이템 기능
             ItemManager_LJH.Instance.SetWave(() =>
             {
@@ -22,6 +21,7 @@ public class WaveItem_LJH : BaseItem_LJH
 
             //점프 쿨타임 감소, 중력 제거 등 효과
             WorldManager.Instance.NotifyItemEffect(myItem.itemType, true);
+            base.OnTriggerEnter2D(other);
         }
     }
 }

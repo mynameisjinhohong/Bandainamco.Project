@@ -13,6 +13,7 @@ public class WaveCollider_LJH : MonoBehaviour
     [Range(0f, 1f)]
     [SerializeField] private float maxVolume;
     [SerializeField] private Particles_LJH particle;
+    [SerializeField] private GameObject particlePrefab;
     private float downMoveSec;
     private Vector3 originPos;
     private Vector3 targetPos;
@@ -35,6 +36,10 @@ public class WaveCollider_LJH : MonoBehaviour
         {
             //파도 닿았으면 파도 종료
             Debug.Log("Wave Collision : " + collision.name);
+            if(particle == null)
+            {
+                particle = Instantiate(particlePrefab).GetComponent<Particles_LJH>();
+            }
             particle.gameObject.SetActive(true);
             particle.transform.position = collision.transform.position;
             particle.Play();
@@ -43,26 +48,27 @@ public class WaveCollider_LJH : MonoBehaviour
         }
     }
 
-    public void Finish()
+    public async void Finish()
     {
         isCollided = true;
         ItemManager_LJH.Instance.SetBubble(false);
+        await FinishWave();
         WorldManager.Instance.NotifyItemEffect(ItemType.Wave, false);
-        FinishWave();
     }
 
-    public async void StartWave()
+    public async void StartWave(bool isVisited)
     {
         gameObject.SetActive(true);
 
-        await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
+        if (!isVisited)
+            await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
 
         float elapsedTime = 0f;
         audioSource.Play();
 
         float myMaxVolume = customMaxVolume == true ? maxVolume : 1f;
-        
-        while(elapsedTime < moveSec)
+
+        while (elapsedTime < moveSec)
         {
             if (isCollided) break;
 
@@ -77,18 +83,18 @@ public class WaveCollider_LJH : MonoBehaviour
         //Finish();
     }
 
-    public async void FinishWave()
+    public async UniTask FinishWave()
     {
         float elapsedTime = 0f;
         Vector3 currPos = transform.localPosition;
 
         float currVolume = audioSource.volume;
 
-        while   (elapsedTime < downMoveSec)
+        while (elapsedTime < downMoveSec)
         {
             elapsedTime += Time.deltaTime;
             transform.localPosition = Vector3.Lerp(currPos, originPos, elapsedTime / downMoveSec);
-            audioSource.volume = Mathf.Lerp(currVolume, 0f, elapsedTime/ downMoveSec);
+            audioSource.volume = Mathf.Lerp(currVolume, 0f, elapsedTime / downMoveSec);
             await UniTask.Yield();
         }
         isCollided = false;
