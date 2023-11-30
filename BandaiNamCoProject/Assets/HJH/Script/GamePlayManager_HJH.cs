@@ -120,6 +120,7 @@ public class GamePlayManager_HJH : ManagerBase
                     ItemManager_LJH.Instance.SetLotus(true);
                     ItemManager_LJH.Instance.SetLotusShield(false);
                     ItemManager_LJH.Instance.PlayLotusClip();
+                    ItemManager_LJH.Instance.CurrItem = null;
                     return;
                 }
             }
