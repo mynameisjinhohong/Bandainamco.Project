@@ -8,6 +8,7 @@ public class scene1_LSH : MonoBehaviour
     public GameObject nextScene;
     void scene1Animation()
     {
+        Debug.Log("1111111111111");
         nextScene.SetActive(true);
         gameObject.SetActive(false); 
     }

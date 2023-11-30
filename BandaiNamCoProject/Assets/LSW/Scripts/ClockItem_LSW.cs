@@ -6,12 +6,12 @@ using Cysharp.Threading.Tasks;
 public class ClockItem_LSW : BaseItem_LJH
 {
     public float coolTimeReduce = 0.5f;
-    //public GameObject watchPrefab;
+    public GameObject watchPrefab;
     //  public 
-   // public float rotSpeed = 10;
-   // public bool isRot;
-    //public float clockSizeTime = 1; //시계 작아지는 시간
-  //  public float scale = 2;
+    public float rotSpeed = 10;
+    public bool isRot;
+    public float clockSizeTime = 1; //시계 작아지는 시간
+    public float scale = 2;
     Animator anim;
     GameObject obj;
     Vector3 oriScale = new Vector3(5, 5, 5);

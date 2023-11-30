@@ -11,7 +11,7 @@ public class Star_yd : BaseItem_LJH
     GameObject star;
     public int starDistance = 50;
     public int resetTime = 1;
-    //public float starTime = 1; //별이 starPos까지 가는데 걸리는 시간
+    public float starTime = 1; //별이 starPos까지 가는데 걸리는 시간
     // Start is called before the first frame update
     void Start()
     {
