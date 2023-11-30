@@ -110,30 +110,33 @@ public class StageManager_HJH : MonoBehaviour
                 {
                     if (doorNum <= GameManager.instance.userData.stage)
                     {
-                        if (doorNum < 0)
+                        if (!cutScene)
                         {
-                            optionDoor.GetComponent<Animator>().SetTrigger("Open");
-                            doorOpenSound.Play();
-                            if (GameManager.instance != null)
+                            if (doorNum < 0)
                             {
-                                GameManager.instance.userData.stageTuto = true;
-                                tuto.SetActive(false);
-                                GameManager.instance.SaveUserData();
+                                optionDoor.GetComponent<Animator>().SetTrigger("Open");
+                                doorOpenSound.Play();
+                                if (GameManager.instance != null)
+                                {
+                                    GameManager.instance.userData.stageTuto = true;
+                                    tuto.SetActive(false);
+                                    GameManager.instance.SaveUserData();
+                                }
+                                Invoke("OptionOn", 2f);
                             }
-                            Invoke("OptionOn", 2f);
-                        }
-                        else
-                        {
-                            doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
-                            doorOpenSound.Play();
-                            StartCoroutine(CameraZoomIn());
-                            if (GameManager.instance != null)
+                            else
                             {
-                                GameManager.instance.userData.stageTuto = true;
-                                tuto.SetActive(false);
-                                GameManager.instance.SaveUserData();
+                                doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
+                                doorOpenSound.Play();
+                                StartCoroutine(CameraZoomIn());
+                                if (GameManager.instance != null)
+                                {
+                                    GameManager.instance.userData.stageTuto = true;
+                                    tuto.SetActive(false);
+                                    GameManager.instance.SaveUserData();
+                                }
+                                Invoke("MoveScene", 2f);
                             }
-                            Invoke("MoveScene", 2f);
                         }
                     }
                     else
