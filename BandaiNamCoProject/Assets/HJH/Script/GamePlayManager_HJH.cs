@@ -120,6 +120,7 @@ public class GamePlayManager_HJH : ManagerBase
                     ItemManager_LJH.Instance.SetLotus(true);
                     ItemManager_LJH.Instance.SetLotusShield(false);
                     ItemManager_LJH.Instance.PlayLotusClip();
+                    SetPlayerVelocity(Vector2.zero);
                     ItemManager_LJH.Instance.CurrItem = null;
                     return;
                 }
@@ -197,6 +198,11 @@ public class GamePlayManager_HJH : ManagerBase
 
         }
         base.ItemEffect(itemType, start);
+    }
+
+    private void SetPlayerVelocity(Vector2 velocity)
+    {
+        characterMovement2D.SetVelocity(velocity);
     }
 
     private void SetPlayerGravity(bool hasGravity)

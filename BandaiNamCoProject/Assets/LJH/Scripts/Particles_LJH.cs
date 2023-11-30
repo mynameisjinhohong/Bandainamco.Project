@@ -23,7 +23,7 @@ public class Particles_LJH : MonoBehaviour
 
         originEmission = new List<float>();
 
-        foreach(var p in particles)
+        foreach (var p in particles)
         {
             originEmission.Add(p.emission.rateOverTimeMultiplier);
         }
@@ -31,20 +31,22 @@ public class Particles_LJH : MonoBehaviour
         isInit = true;
     }
 
-    public virtual void Play() {
-        for(int i=0; i<particles.Count; i++)
+    public virtual void Play()
+    {
+        for (int i = 0; i < particles.Count; i++)
         {
             var p = particles[i];
             p.gameObject.SetActive(true);
             var emission = p.emission;
-            emission.enabled = true;
-            emission.rateOverTimeMultiplier = originEmission[i];
+            if (emission.enabled)
+                emission.rateOverTimeMultiplier = originEmission[i];
             //p.Clear();
             p.Play();
         }
     }
-    public virtual void Stop() {
-        foreach(var p in particles)
+    public virtual void Stop()
+    {
+        foreach (var p in particles)
         {
             var emission = p.emission;
             emission.rateOverTimeMultiplier = 0;

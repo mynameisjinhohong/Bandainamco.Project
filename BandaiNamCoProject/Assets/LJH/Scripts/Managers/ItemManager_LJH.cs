@@ -31,7 +31,7 @@ public class ItemManager_LJH : ManagerBase
         {
             prevItem = currItem;
             currItem = value;
-            if(prevItem != null)
+            if(prevItem != null && currItem != null)
             {
                 if (currItem.myItem.itemType != ItemType.Lotus && prevItem.myItem.itemType == ItemType.Lotus)
                 {

@@ -45,7 +45,7 @@ public class LotusPetal_LJH : MonoBehaviour
     {
         if (collision.CompareTag(TagStrings.PlayerTag))
         {
-            GamePlayManager_HJH.Instance.MulJumpPower(0.5f);
+            GamePlayManager_HJH.Instance.MulJumpPower(0.9f);
             Stop();
         }
         else if (collision.CompareTag("Edge"))
