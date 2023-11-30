@@ -17,9 +17,9 @@ public class StarBackground_yd : MonoBehaviour
     public bool isOn;
     public CinemachineVirtualCamera characterCam;
     public bool isFirst;
-    public float waitTime;
+   // public float waitTime;
     public bool isMake;
-    public float starTime; //스타유지시간
+   // public float starTime; //스타유지시간
     bool isCoroutine;
     //임펄스
      CinemachineImpulseSource impulse;
@@ -87,7 +87,7 @@ public class StarBackground_yd : MonoBehaviour
         }
 
     }
-    IEnumerator ShakeCoroutine()
+   /* IEnumerator ShakeCoroutine()
     {
         isCoroutine = true;
         
@@ -99,7 +99,7 @@ public class StarBackground_yd : MonoBehaviour
         {
             float currentTime = 0;
             Vector3 t_originEuler = characterCam.transform.eulerAngles;
-            /*while (currentTime < starTime)
+            *//*while (currentTime < starTime)
             {
                   float t_rotX = Random.Range(-m_offset.x, m_offset.x);
                    float t_rotY = Random.Range(-m_offset.y, m_offset.y);
@@ -115,7 +115,7 @@ public class StarBackground_yd : MonoBehaviour
                    }
                 currentTime += Time.deltaTime;
                 yield return null;
-            }*/
+            }*//*
                 impulse.GenerateImpulse();
             Debug.Log("??????");
              //   isMake = false;
@@ -123,7 +123,7 @@ public class StarBackground_yd : MonoBehaviour
        // characterCam.transform.rotation = m_originRot;
         //StartCoroutine(Reset());
 
-    }
+    }*/
 
 
 }

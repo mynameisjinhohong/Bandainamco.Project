@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StarImage_yd : MonoBehaviour
 {
-    public float rotionSpeed = 30f;
+    //public float rotionSpeed = 30f;
     public bool isOn;
     public int starSpeed = 5; //별이 좌우아래로 움직일때 
     public int moveSpeed = 1; // 베개에서 별까지 움직이는 스피드
