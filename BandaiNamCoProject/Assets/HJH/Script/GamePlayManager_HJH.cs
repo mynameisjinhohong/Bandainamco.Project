@@ -14,6 +14,7 @@ public class GamePlayManager_HJH : ManagerBase
 {
     public static GamePlayManager_HJH Instance;
     public AudioSource gameOverSound;
+    public AudioSource endingSound;
     public CharacterMovement2D_LSW characterMovement2D;
     public GameObject player;
     public SpriteRenderer emptyBgSpriteRenderer;
@@ -60,7 +61,9 @@ public class GamePlayManager_HJH : ManagerBase
                 endings[1].SetActive(true);
                 if(GameManager.instance != null)
                 {
+                    GameManager.instance.AudioOff();
                     GameManager.instance.userData.stage++;
+                    endingSound.Play();
                 }
                 if (GameManager.instance != null)
                 {
@@ -187,7 +190,6 @@ public class GamePlayManager_HJH : ManagerBase
                     SetPlayerJumpCoolTime(0f);
                     break;
             }
-
         }
         else
         {
