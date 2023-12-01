@@ -76,8 +76,8 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     {
         rb = GetComponentInChildren<Rigidbody2D>();
         ani = GetComponentInChildren<Animator>();
-        minBoundary = new Vector2(-(itemManager.bgSize.x / 2), -(itemManager.bgSize.y / 2));
-        maxBoundary = new Vector2((itemManager.bgSize.x / 2), (itemManager.bgSize.y / 2));
+        minBoundary = new Vector2(-(DataManager.Instance.bgSize.x / 2), -(DataManager.Instance.bgSize.y / 2));
+        maxBoundary = new Vector2((DataManager.Instance.bgSize.x / 2), (DataManager.Instance.bgSize.y / 2));
         lastUsedItem = null;
         firstCoolTime = coolTime;
         firstJumpPower = jumpPower;

@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class ItemManager_LJH : ManagerBase
 {
-    [SerializeField] private List<BaseItem_LJH> spawnItems;
+    public List<BaseItem_LJH> spawnItems;
     [SerializeField] private Transform itemParent;
     public BaseBackground_LJH[] backgrounds;
     public Item_HJH[] items;
