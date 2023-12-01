@@ -8562,7 +8562,7 @@ MonoBehaviour:
     japText: "\u6708\u3092\u898B\u306A\u304C\u3089\u6B69\u3044\u3066\u3044\u304F\u3068\u3001\u805E\u304D\u6163\u308C\u305F\u30D0\u30A4\u30AA\u30EA\u30F3\u306E\u65CB\u5F8B\u304C\u805E\u3053\u3048\u3066\u304D\u307E\u3057\u305F\u3002
       \u30A6\u30B5\u30AE\u304C\u30D0\u30A4\u30AA\u30EA\u30F3\u3092\u5F3E\u3044\u3066\u3044\u307E\u3057\u305F\u3001\u5C11\u5973\u306F\u76EE\u304C\u958B\u3051\u3089\u308C\u306A\u304F\u3066\u6BCD\u89AA\u306B\u6368\u3066\u3089\u308C\u305F\u30A6\u30B5\u30AE\u306E\u8D64\u3061\u3083\u3093\u3092\u62FE\u3063\u3066\u304D\u3066\u80B2\u3066\u3066\u3044\u305F\u306E\u3067\u3059\u3002
       \u305D\u306E\u30A6\u30B5\u30AE\u306F\u5C11\u5973\u304C\u5BB6\u3067\u53E3\u305A\u3055\u3093\u3067\u3044\u305F\u66F2\u3092\u30D7\u30EC\u30BC\u30F3\u30C8\u3057\u305F\u3044\u3068\u8A00\u3044\u306A\u304C\u3089\u3001\u7D20\u6575\u306A\u6F14\u594F\u3092\u805E\u304B\u305B\u3066\u304F\u308C\u307E\u3057\u305F\u3002 "
-    itemSprite: {fileID: 0}
+    itemSprite: {fileID: 21300000, guid: c70a3dfebc66e4b4d8a1ae3398ea42c1, type: 3}
     korExplain: "\uD1A0\uB07C\uC758 \uBC14\uC774\uC62C\uB9B0 \uC5F0\uC8FC\uB97C \uB4E4\uC73C\uBA74\uC11C
       \uB2E4\uC591\uD55C \uD798\uC744 \uB0BC \uC218 \uC788\uC5B4\uC694!"
     engExplain: 'You can get various effects while listening to the rabbit''s violin
@@ -13894,7 +13894,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642667811}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 65, y: -283.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25026,7 +25026,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911122327}
-  m_LocalRotation: {x: -4e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: 103.100006, y: -375.6, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33487,7 +33487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333836076}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -4e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: -199.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47373,7 +47373,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
-  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -102.8, y: -384.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -48347,7 +48347,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -6e-45, y: -3e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: -3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -50381,7 +50381,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961870089}
-  m_LocalRotation: {x: -1e-45, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -6e-45, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43, y: -408.7, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
