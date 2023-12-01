@@ -5,6 +5,7 @@ using Cinemachine;
 using Cysharp.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine.Video;
+using System;
 
 public class CamValues
 {
@@ -80,10 +81,16 @@ public class CameraManager : ManagerBase
             Camera.main.cullingMask = ~((1 << 7) | (1 << 8));
         }
         await UniTask.Delay(1000, true);
+
         if (ItemManager_LJH.Instance.CurrItem.myItem.bgObject != null)
         {
-            MakeBG(ItemManager_LJH.Instance.CurrItem.myItem); //배경에 오브젝트 생기는거 연출할 함수 일단 임의로 만들어 놓음
+            bool isFinished = false;
+            MakeBG(ItemManager_LJH.Instance.CurrItem.myItem, () => {
+                isFinished = true;
+            }); //배경에 오브젝트 생기는거 연출할 함수 일단 임의로 만들어 놓음
+            await UniTask.WaitUntil(() => isFinished);
         }
+
         UIManager.Instance.ControlCloud(async () =>
         {
             await UniTask.WaitUntil(() => endFadeOut == true);
@@ -95,7 +102,7 @@ public class CameraManager : ManagerBase
         });
     }
 
-    public async void MakeBG(Item_HJH item)
+    public async void MakeBG(Item_HJH item, Action callback = null)
     {
         if (item.isShown) return;
 
@@ -124,6 +131,8 @@ public class CameraManager : ManagerBase
         }
 
         item.isShown = true;
+
+        callback?.Invoke();
         //if (item.isShown) return;
 
         //item.bgObject.SetActive(true);
