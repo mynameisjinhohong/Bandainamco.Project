@@ -14,6 +14,7 @@ public class TrainBG_HJH : MonoBehaviour
     public float trainPower;
     AudioSource myAudio;
     bool audioPlay = true;
+    public GameObject rail;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +50,14 @@ public class TrainBG_HJH : MonoBehaviour
                 myAudio.Play();
                 audioPlay = false;
             }
+        }
+        if (ItemManager_LJH.Instance.items[0].isVisited)
+        {
+            rail.SetActive(true);
+        }
+        else
+        {
+            rail.SetActive (false);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
