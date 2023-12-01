@@ -17,7 +17,6 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public float firstJumpPower;
     //점프 아이콘
     public Image jumpIcon;
-    public TMP_Text jumpCoolText;
     public float coolTime = 1f;
     public bool jump = false;
     //점프가 가능한지에 대한 불값
@@ -147,7 +146,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
                 }
                 jumpIcon.fillAmount = 0;
-                jumpCoolText.gameObject.SetActive(true);
+                //jumpCoolText.gameObject.SetActive(true);
                 jump = false;
                 StartCoroutine(Go_Jump_Second(ani));
                 //Fix_Second로 가기
@@ -167,7 +166,6 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                     rb.AddForce(-dir * jumpPower, ForceMode2D.Impulse);
                 }
                 jumpIcon.fillAmount = 0;
-                jumpCoolText.gameObject.SetActive(true);
                 jump = false;
                 StartCoroutine(Go_Jump_Second(ani));
                 StartCoroutine(Go_DownDown(ani));
@@ -489,14 +487,12 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             yield return null;
             currentTime += Time.deltaTime;
             jumpIcon.fillAmount = currentTime / coolTime;
-            jumpCoolText.text = string.Format("{0:N1}", coolTime - currentTime);
             if (currentTime > coolTime)
             {
                 break;
             }
 
         }
-        jumpCoolText.gameObject.SetActive(false);
         jumpReady = true;
     }
 
