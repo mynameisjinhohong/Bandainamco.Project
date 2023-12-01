@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class TrainItem_HJH : BaseItem_LJH
 {
@@ -140,6 +141,7 @@ public class TrainItem_HJH : BaseItem_LJH
         if (Input.GetKeyDown(KeyCode.Space))
         {
             player.SetGravity(true);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
             player.gameObject.tag = "Player";
             playerOn = false;
         }
