@@ -90,6 +90,7 @@ public class TutorialManager_HJH : MonoBehaviour
                     Time.timeScale = 0;
                     if (Input.GetMouseButtonDown(0))
                     {
+                        playerRigid.velocity = Vector3.zero;
                         tutoidx++;
                         Time.timeScale = 1;
                         tutoBG.SetActive(false) ;
