@@ -23,6 +23,11 @@ public class Item_HJH
     public string korText;
     public string engText;
     public string japText;
+    public Sprite itemSprite;
+    public string korExplain;
+    public string engExplain;
+    public string japExplain;
+
     //줌 될때 카메라 사이즈
     //public int camSize;
     public ItemType itemType;

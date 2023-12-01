@@ -26,7 +26,9 @@ public class UIManager : ManagerBase
     [SerializeField] private CloudInfo[] clouds;
     [SerializeField] private Ease ease;
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private TextMeshProUGUI timeText;
+    [SerializeField] private TextMeshProUGUI explainText;
+    [SerializeField] private Image explainImage;
+    [SerializeField] private GameObject explainObj;
 
     public Animator uiani;
     public GameObject itemCanvas;
@@ -34,6 +36,7 @@ public class UIManager : ManagerBase
     private float currTime = 0f;
     public bool isCloud = false;
     bool isFinished = false;
+    bool explain = false;
     private void Update()
     {
         if (isGameOver) return;
@@ -43,8 +46,35 @@ public class UIManager : ManagerBase
         {
             if (Input.GetMouseButtonDown(0))
             {
-                isCloud = false;
-                isFinished = true;
+                if(!explain)
+                {
+                    uiAudio.Play();
+                    explain = true;
+                    text.gameObject.SetActive(false);
+                    explainObj.SetActive(true);
+                    if (GameManager.instance != null)
+                    {
+                        switch (GameManager.instance.userData.langaugeSet)
+                        {
+                            case 0:
+                                explainText.text = ItemManager_LJH.Instance.CurrItem.myItem.engExplain;
+                                break;
+                            case 1:
+                                explainText.text = ItemManager_LJH.Instance.CurrItem.myItem.japExplain;
+                                break;
+                            case 2:
+                                explainText.text = ItemManager_LJH.Instance.CurrItem.myItem.korExplain;
+                                break;
+                        }
+                    }
+                    explainImage.sprite = ItemManager_LJH.Instance.CurrItem.myItem.itemSprite;
+                }
+                else
+                {
+                    explain = false;
+                    isCloud = false;
+                    isFinished = true;
+                }
             }
         }
     }
@@ -178,6 +208,7 @@ public class UIManager : ManagerBase
         finishCallback?.Invoke();
         isFinished = false;
         text.gameObject.SetActive(false);
+        explainObj.SetActive(false);
 
         //for (int i = 0; i < clouds.Length; i++)
         //{
