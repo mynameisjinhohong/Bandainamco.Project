@@ -10,8 +10,10 @@ public class SmallCloud_HJH : MonoBehaviour
     public float moveTime;
     public float remainTime;
     bool moveDone = false;
+    AudioSource audio;
     public void Start()
     {
+        audio = GetComponent<AudioSource>();
         StartCoroutine(RandomMove());
         StartCoroutine(TimeCheck());
     }
@@ -23,6 +25,7 @@ public class SmallCloud_HJH : MonoBehaviour
             rigid.velocity = Vector3.zero;
             rigid.AddForce(jumpPower, ForceMode2D.Impulse);
             gameObject.SetActive(false);
+            audio.Play();
         }
     }
 
