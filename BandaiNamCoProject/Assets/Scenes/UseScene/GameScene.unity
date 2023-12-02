@@ -8298,7 +8298,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 1886797856406526305, guid: 6abe8bf0adc3f3a4ca153aa010cde49d, type: 3}
-    itemCount: 3
+    itemCount: 0
     isVisited: 0
     korText: "\uC5F0\uC8FC\uAC00 \uB05D\uB098\uC790 \uD1A0\uB07C\uB294 \uC2DC\uACC4\uC640
       \uD55C\uCABD \uACF5\uAC04\uC744 \uAC00\uB9AC\uD0A4\uBA74\uC11C \uC774\uC820
@@ -8428,7 +8428,7 @@ MonoBehaviour:
     renderers: []
     isShown: 0
   - prefab: {fileID: 5337970322375770073, guid: 12eb04a5de987ff4790cb1dac25978b0, type: 3}
-    itemCount: 0
+    itemCount: 3
     isVisited: 0
     korText: "\uC18C\uB140\uB294 \uC774\uB807\uAC8C \uBB3C\uC5D0 \uBE60\uC838 \uC8FD\uB294
       \uAC74\uAC00 \uC2F6\uC5C8\uC2B5\uB2C8\uB2E4. \uB5A8\uC5B4\uC9C0\uBA74\uC11C
@@ -10160,9 +10160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048130f6934733c498588e0cd8b1fe23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starPre: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
+  starPrefab: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
   createTime: 10
-  isOn: 0
   characterCam: {fileID: 1334037714}
   isFirst: 0
   waitTime: 3
@@ -10171,7 +10170,8 @@ MonoBehaviour:
   player: {fileID: 1949789408}
   x: 68.8
   y: 46.6
-  twinkleTime: 0
+  shootingStarDelayTime: 10
+  twinkleTime: 0.2
   starBGSound: {fileID: 478959307}
   shootingStarSound: {fileID: 1066514355}
 --- !u!114 &478959306
@@ -29381,7 +29381,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e2510189b3480894791271a71249d4a1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -48742,7 +48742,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: 3e-45, y: 1e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -50307,7 +50307,7 @@ MonoBehaviour:
   jumpPower: 35
   firstJumpPower: 3.4
   jumpIcon: {fileID: 513643427}
-  coolTime: 3.4
+  coolTime: 0
   jump: 0
   itemManager: {fileID: 0}
   rotateSpeed: 1

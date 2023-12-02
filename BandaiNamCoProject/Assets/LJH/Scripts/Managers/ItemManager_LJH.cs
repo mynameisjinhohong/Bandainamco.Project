@@ -31,7 +31,7 @@ public class ItemManager_LJH : ManagerBase
         {
             prevItem = currItem;
             currItem = value;
-            if(prevItem != null && currItem != null)
+            if (prevItem != null && currItem != null)
             {
                 if (currItem.myItem.itemType != ItemType.Lotus && prevItem.myItem.itemType == ItemType.Lotus)
                 {
@@ -73,11 +73,11 @@ public class ItemManager_LJH : ManagerBase
         return randomPostion;
     }
 
-/*    public int RandomMushroom()
-    {
-        int mu = UnityEngine.Random.Range(0, mushroomImage.Count);
-        return mu;
-    }*/
+    /*    public int RandomMushroom()
+        {
+            int mu = UnityEngine.Random.Range(0, mushroomImage.Count);
+            return mu;
+        }*/
 
     public async override void Init()
     {
@@ -232,4 +232,9 @@ public class ItemManager_LJH : ManagerBase
     {
         controller.StartPetal();
     }
+
+    //public void StartBackground(BaseBackground_LJH background)
+    //{
+    //    background.StartBackground();
+    //}
 }
