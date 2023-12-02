@@ -12,9 +12,16 @@ public class WatchSecond_yd : MonoBehaviour
     public bool isRot;
     float targetRotation = 0;
     float currentRotation;
+
+    public AudioSource clockSound;
     void Start()
     {
         //currentRotation = second.transform.rotation.eulerAngles.z;
+    }
+    public void Clock()
+    {
+        clockSound.Play();
+
     }
     int num = 0;
     // Update is called once per frame

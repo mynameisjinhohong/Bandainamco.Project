@@ -32,6 +32,7 @@ public class ClockItem_LSW : BaseItem_LJH
 
     public async void Watch()
     {
+       // if(ItemManager_LJH.Instance.)
         await UniTask.Delay(1);
         obj.transform.GetChild(0).gameObject.SetActive(true);
          await UniTask.Delay(2*1000);
@@ -45,7 +46,11 @@ public class ClockItem_LSW : BaseItem_LJH
 
     public void Update()
     {
+       // if (obj != null)
+        //{
         obj = GameObject.FindWithTag("Clock");
+
+//        }
  
 
     }
