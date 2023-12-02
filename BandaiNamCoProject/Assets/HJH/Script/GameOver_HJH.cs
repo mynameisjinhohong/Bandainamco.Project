@@ -15,7 +15,7 @@ public class GameOver_HJH : MonoBehaviour
     public GameObject fish;
     public GameObject lotus;
     public GameObject rabbit;
-    public GameObject[] train;
+    public GameObject train;
     public float fadeSpeed;
     public void GameOver()
     {
@@ -64,11 +64,8 @@ public class GameOver_HJH : MonoBehaviour
                         StartCoroutine(FadeIn(star));
                         break;
                     case ItemType.Train:
-                        for(int j = 0; j <train.Length; j++)
-                        {
-                            train[j].SetActive(true);
-                            StartCoroutine(FadeIn(train[j]));
-                        }
+                        train.SetActive(true);
+                        StartCoroutine(FadeIn(train));
                         break;
                 }
             }
