@@ -18,6 +18,7 @@ public class Mashroom_yd : BaseItem_LJH
     public GameObject mashroomEffect;
 
     [SerializeField] private Sprite[] renders;
+    [SerializeField] private AudioSource mushSound;
     private void OnEnable()
     {
         int random = Random.Range(0, renders.Length);
@@ -40,6 +41,7 @@ public class Mashroom_yd : BaseItem_LJH
         //}
         collision.GetComponent<CharacterMovement2D_LSW>().PlayerScale(collision.transform, scale, resetTime, mashroomTime ,mashroomEffect);
         base.OnTriggerEnter2D(collision);
+        mushSound.Play();
         //StartCoroutine(PlayerScale(collision.transform,scale,resetTime));
     }
 

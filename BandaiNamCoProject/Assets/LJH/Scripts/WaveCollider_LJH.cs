@@ -52,8 +52,8 @@ public class WaveCollider_LJH : MonoBehaviour
     {
         isCollided = true;
         ItemManager_LJH.Instance.SetBubble(false);
-        await FinishWave();
         WorldManager.Instance.NotifyItemEffect(ItemType.Wave, false);
+        await FinishWave();
     }
 
     public async void StartWave(bool isVisited)

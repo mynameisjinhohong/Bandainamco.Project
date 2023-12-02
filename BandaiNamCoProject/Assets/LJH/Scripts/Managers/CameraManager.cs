@@ -68,7 +68,7 @@ public class CameraManager : ManagerBase
         virtualCamDic[cameraName].Priority = CamValues.priorityOn;
     }
 
-    public async void CameraControlAfterItem(string cameraName, bool isWhole)
+    public async UniTask CameraControlAfterItem(string cameraName, bool isWhole)
     {
         isReturnedToPlayer = false;
         if (isWhole)

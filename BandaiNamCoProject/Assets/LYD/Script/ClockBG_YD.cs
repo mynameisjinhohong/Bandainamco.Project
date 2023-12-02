@@ -11,6 +11,8 @@ public class ClockBG_YD : MonoBehaviour
     public GameObject clock;
     Animator animator;
     public float waitTime = 2;
+    public AudioSource clockSound;
+    public AudioSource clockMoveSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +25,29 @@ public class ClockBG_YD : MonoBehaviour
     public void Clock()
     {
         BGRotate(clock, 90, bgRotTime, "First");
+        clockSound.Play();
+        clockMoveSound.Play();
     }
     public void Clock1()
     {
         BGRotate(clock, 180, bgRotTime, "Second");
+        clockSound.Play();
+        clockMoveSound.Play();
+
     }
     public void Clock2()
     {
         BGRotate(clock, 270, bgRotTime, "Third");
+        clockSound.Play();
+        clockMoveSound.Play();
+
     }
     public void Clock3()
     {
       BGRotate(clock, 360, bgRotTime, "Ori");
+        clockSound.Play();
+        clockMoveSound.Play();
+
     }
     /* public async void ClockBackground()
      {
