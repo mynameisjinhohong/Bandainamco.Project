@@ -59,6 +59,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public bool isCoroutine;
     Coroutine coroutine;
     public float mTime;
+    public AudioSource mush;
     #endregion
     #region ´«¾Ë
     public bool eyeNow;
@@ -346,7 +347,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         //Debug.Log(transform.localScale + "local");
         yield return null;
     }
-    public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect, AudioSource mush)
+    public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
     {
         if (isCoroutine)
         {
@@ -356,9 +357,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 StopCoroutine(coroutine);
             }
         }
-        coroutine = StartCoroutine(PlayerScaleEvent(tr, scale, resetTime, mashroomTime, mashroomEffect, mush));
+        coroutine = StartCoroutine(PlayerScaleEvent(tr, scale, resetTime, mashroomTime, mashroomEffect));
     }
-    IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect, AudioSource mush)
+    IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
     {
         isCoroutine = true;
         Vector3 oriScale = startScale;

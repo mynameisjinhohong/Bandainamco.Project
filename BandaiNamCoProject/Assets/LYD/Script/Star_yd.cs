@@ -13,11 +13,14 @@ public class Star_yd : BaseItem_LJH
     public int resetTime = 1;
     public float starTime = 1; //별이 starPos까지 가는데 걸리는 시간
 
-    public AudioSource starEffectSound;
+    public GameObject starAudio;
+    AudioSource starEffectSound;
+    bool isStar;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        starAudio = GameObject.FindWithTag("StarSound");
+        starEffectSound = starAudio.GetComponent<AudioSource>();
     }
     public override async void OnTriggerEnter2D(Collider2D collision)
     {
@@ -66,6 +69,7 @@ public class Star_yd : BaseItem_LJH
         Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance +54, oriPos.z);
 
         GameObject effect = Instantiate(starEffect, starEffectPos, Quaternion.Euler(90, 0, 0)); //Quaternion.Euler(64, 64, 64));
+        isStar = true;
         starEffectSound.Play();
         //Debug.Log(starEffectPos);
        await UniTask.Delay(1 * 1000);
@@ -104,6 +108,10 @@ public class Star_yd : BaseItem_LJH
     // Update is called once per frame
     void Update()
     {
-        
+        /*if (isStar)
+        {
+            starEffectSound.Play();
+            isStar = false;
+        }*/
     }
 }
