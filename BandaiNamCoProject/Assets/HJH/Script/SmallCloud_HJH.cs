@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SmallCloud_HJH : MonoBehaviour
 {
-    public float jumpPower;
+    public Vector2 jumpPower;
+    public Vector3 goTransform;
     public float moveRange;
     public float moveTime;
     public float remainTime;
-
+    bool moveDone = false;
     public void Start()
     {
         StartCoroutine(RandomMove());
@@ -16,31 +17,32 @@ public class SmallCloud_HJH : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && moveDone)
         {
             Rigidbody2D rigid = collision.transform.gameObject.GetComponent<Rigidbody2D>();
             rigid.velocity = Vector3.zero;
-            rigid.AddForce(jumpPower * (Vector2)((collision.transform.position - transform.position).normalized) , ForceMode2D.Impulse);
+            rigid.AddForce(jumpPower, ForceMode2D.Impulse);
             gameObject.SetActive(false);
         }
     }
 
     IEnumerator RandomMove()
     {
-        Vector2 ran = Random.insideUnitCircle * moveRange;
-        if(ran.y > 0)
-        {
-            ran = new Vector2(ran.x, -ran.y);
-        }
+        //Vector2 ran = Random.insideUnitCircle * moveRange;
+        //if(ran.y > 0)
+        //{
+        //    ran = new Vector2(ran.x, -ran.y);
+        //}
         float currentTime = 0;
         Vector3 current = transform.position;
         while (currentTime < moveTime)
         {
             currentTime += Time.deltaTime;
-            transform.position = Vector3.Lerp(current, current + (Vector3)ran, currentTime / moveTime);
+            transform.position = Vector3.Lerp(current, goTransform, currentTime / moveTime);
             yield return null;
         }
-        transform.position = current + (Vector3)ran;
+        transform.position = goTransform;
+        moveDone = true;
     }
     IEnumerator TimeCheck()
     {
