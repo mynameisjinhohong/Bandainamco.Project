@@ -28,6 +28,8 @@ public class StarBackground_yd : MonoBehaviour
     public float y;
     public float twinkleTime; //몇초에껐다켜지는지
     private GameObject twinkleStar;
+    public AudioSource starBGSound;
+    public AudioSource shootingStarSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class StarBackground_yd : MonoBehaviour
     private void OnEnable()
     {
         isFirst = true;
+        starBGSound.Play();
         StartCoroutine(TwinkleStar());
     }
     IEnumerator TwinkleStar()
@@ -63,6 +66,7 @@ public class StarBackground_yd : MonoBehaviour
                 camPos.x += 40;
                 camPos.y += 50;
                 GameObject star = Instantiate(starPre, camPos, starPre.transform.rotation, player.transform);
+                shootingStarSound.Play();
                 isFirst = false;
                 impulse.GenerateImpulse();
 
@@ -77,6 +81,8 @@ public class StarBackground_yd : MonoBehaviour
                 camPos.x += x;
                 camPos.y += y;
                 GameObject star = Instantiate(starPre, camPos, starPre.transform.rotation, player.transform);
+                shootingStarSound.Play();
+
                 impulse.GenerateImpulse();
 
                 Debug.Log("별생성");

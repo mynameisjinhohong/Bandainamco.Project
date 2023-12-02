@@ -22,30 +22,34 @@ public class ClockBG_YD : MonoBehaviour
     {
        // ClockBackground();
     }
+    public void ClockSound()
+    {
+        clockSound.Play();
+
+    }
     public void Clock()
     {
         BGRotate(clock, 90, bgRotTime, "First");
-        clockSound.Play();
         clockMoveSound.Play();
     }
     public void Clock1()
     {
         BGRotate(clock, 180, bgRotTime, "Second");
-        clockSound.Play();
+     //   clockSound.Play();
         clockMoveSound.Play();
 
     }
     public void Clock2()
     {
         BGRotate(clock, 270, bgRotTime, "Third");
-        clockSound.Play();
+   //     clockSound.Play();
         clockMoveSound.Play();
 
     }
     public void Clock3()
     {
       BGRotate(clock, 360, bgRotTime, "Ori");
-        clockSound.Play();
+     //   clockSound.Play();
         clockMoveSound.Play();
 
     }
