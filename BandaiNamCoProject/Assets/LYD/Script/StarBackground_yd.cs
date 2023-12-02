@@ -28,6 +28,7 @@ public class StarBackground_yd : MonoBehaviour
     public float y;
     public float twinkleTime; //몇초에껐다켜지는지
     private GameObject twinkleStar;
+    public AudioSource starBGSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,7 @@ public class StarBackground_yd : MonoBehaviour
     private void OnEnable()
     {
         isFirst = true;
+        starBGSound.Play();
         StartCoroutine(TwinkleStar());
     }
     IEnumerator TwinkleStar()
