@@ -8,6 +8,7 @@ public class MashroomBackground_yd : MonoBehaviour
     public float createTime = 2;
     Animator myAni;
     bool now = false;
+    public AudioSource mushBGSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class MashroomBackground_yd : MonoBehaviour
                 if(collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.Count == 1)
                 {
                     collision.gameObject.GetComponent<CharacterMovement2D_LSW>().stunEffect.SetActive(true);
+                    mushBGSound.Play();
                 }
                 //Debug.Log("2");
                 StartCoroutine(BackgroundTime(collision.gameObject));
@@ -57,6 +59,7 @@ public class MashroomBackground_yd : MonoBehaviour
     if(collision.gameObject.GetComponent<CharacterMovement2D_LSW>().mashroom.Count < 1)
         {
             collision.gameObject.GetComponent<CharacterMovement2D_LSW>().stunEffect.SetActive(false);
+            mushBGSound.Stop();
         }
        now = false;
     }
