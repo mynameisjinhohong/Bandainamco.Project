@@ -672,7 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 0}
   speed: 50
-  power: 30
+  power: 60
 --- !u!61 &7289513100232446440
 BoxCollider2D:
   m_ObjectHideFlags: 0
