@@ -17,10 +17,16 @@ public class ClockBG_YD : MonoBehaviour
     void Start()
     {
         animator = transform.GetComponent<Animator>();
+        animator.enabled = false;
     }
     public void OnEnable()
     {
-       // ClockBackground();
+        ClcockBackGround();
+    }
+    public async void ClcockBackGround()
+    {
+        await UniTask.Delay(400);
+        animator.enabled = true;
     }
     public void ClockSound()
     {
