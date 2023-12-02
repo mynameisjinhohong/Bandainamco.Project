@@ -157,7 +157,7 @@ MonoBehaviour:
   bubble: {fileID: 0}
   smallCloud: {fileID: 1084897196651440658, guid: ae598d68a579ab545919eb2e98972de2, type: 3}
   cloudNum: 5
-  jumpPower: {x: -5, y: 10}
+  jumpPower: {x: -7, y: 20}
 --- !u!61 &1603607676445632639
 BoxCollider2D:
   m_ObjectHideFlags: 0
