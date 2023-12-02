@@ -19,16 +19,20 @@ public class Star_yd : BaseItem_LJH
     {
         
     }
-    public override void OnTriggerEnter2D(Collider2D collision)
+    public override async void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            base.OnTriggerEnter2D(collision);
+
+            await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
+
+
             Star(collision.gameObject);
         }
         
 
         //   itemManager.StartCoroutine(itemManager.PlayerScale(collision.transform, scale, resetTime));
-        base.OnTriggerEnter2D(collision);
 
     }
 
@@ -50,7 +54,8 @@ public class Star_yd : BaseItem_LJH
 
         }*/
 
-        await UniTask.Delay(400);
+        await UniTask.Delay(600);
+
         Debug.Log("º°");
         collision.transform.rotation = Quaternion.Euler(0, 0, 0
             );

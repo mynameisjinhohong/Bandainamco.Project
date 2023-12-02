@@ -38,7 +38,7 @@ public class ClockItem_LSW : BaseItem_LJH
     public async void StartClock()
     {
         //카메라가 배경->플레이어로 이동하는 시간때문에 어쩔수 없이 Delay 추가
-        await UniTask.Delay(400);
+        await UniTask.Delay(600);
 
         GamePlayManager_HJH.Instance.characterMovement2D.coolTime -= coolTimeReduce;
 

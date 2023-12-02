@@ -372,7 +372,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         if (mushNums.Count < 2)
         {
 
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.6f);
             yield return new WaitUntil(()=> CameraManager.Instance.isReturnedToPlayer);
             targetTr.GetChild(0).localScale = targetScale;
             //  float targetOrtho = 70;
