@@ -80,7 +80,7 @@ public class ClockBG_YD : MonoBehaviour
         while (currentTime < obTime)
         {
             Quaternion now = Quaternion.Lerp(ori, target, currentTime / obTime);
-            Debug.Log(currentTime / obTime);
+            //Debug.Log(currentTime / obTime);
             ob.transform.rotation = now;
             currentTime += Time.deltaTime;
             yield return null;

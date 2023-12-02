@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameOver_HJH : MonoBehaviour
 {
     public GameObject bg;
-    public GameObject[] wave;
+    public GameObject wave;
     public GameObject clock;
     public GameObject mushroom;
     public GameObject cloud;
@@ -28,11 +28,8 @@ public class GameOver_HJH : MonoBehaviour
                 switch (ItemManager_LJH.Instance.items[i].itemType)
                 {
                     case ItemType.Wave:
-                        for (int j = 0; j < wave.Length; j++)
-                        {
-                            wave[j].SetActive(true);
-                            StartCoroutine(FadeIn(wave[j]));
-                        }
+                        wave.SetActive(true);
+                        StartCoroutine(FadeIn(wave));
                         break;
                     case ItemType.Clock:
                         clock.SetActive(true);

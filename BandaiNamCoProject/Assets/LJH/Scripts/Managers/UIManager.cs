@@ -25,7 +25,7 @@ public class UIManager : ManagerBase
     public AudioSource uiAudio;
     [SerializeField] private CloudInfo[] clouds;
     [SerializeField] private Ease ease;
-    [SerializeField] private TextMeshProUGUI text;
+    public TextMeshProUGUI text;
     [SerializeField] private TextMeshProUGUI explainText;
     [SerializeField] private Image explainImage;
     [SerializeField] private GameObject explainObj;
@@ -71,6 +71,7 @@ public class UIManager : ManagerBase
                 }
                 else
                 {
+                    explainObj.SetActive(false);
                     explain = false;
                     isCloud = false;
                     isFinished = true;
@@ -154,7 +155,7 @@ public class UIManager : ManagerBase
         //    clouds[i].cloudRT.gameObject.SetActive(false);
         //}
     }
-    public async void EndingText(Action finishCallback = null)
+    public void EndingText(Action finishCallback = null)
     {
         //for (int i = 0; i < clouds.Length; i++)
         //{
@@ -202,17 +203,5 @@ public class UIManager : ManagerBase
             }
 
         }
-        await UniTask.WaitUntil(() => isFinished);
-        uiani.SetTrigger("Fadeout");
-
-        finishCallback?.Invoke();
-        isFinished = false;
-        text.gameObject.SetActive(false);
-        explainObj.SetActive(false);
-
-        //for (int i = 0; i < clouds.Length; i++)
-        //{
-        //    clouds[i].cloudRT.gameObject.SetActive(false);
-        //}
     }
 }

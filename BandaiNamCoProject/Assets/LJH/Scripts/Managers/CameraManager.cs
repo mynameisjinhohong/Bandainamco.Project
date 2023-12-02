@@ -96,6 +96,7 @@ public class CameraManager : ManagerBase
             await UniTask.WaitUntil(() => endFadeOut == true);
             endFadeOut = false;
             UIManager.Instance.itemCanvas.SetActive(false);
+            UIManager.Instance.text.gameObject.SetActive(true);
             SetCamera(CamValues.Character);
             StartCoroutine(AfterCameraChange());
             isReturnedToPlayer = true;

@@ -36,12 +36,16 @@ public class CloudBGCanvas_HJH : MonoBehaviour
 
     private void OnDisable()
     {
-        for (int i = 0; i < smokes.Count; i++)
+        if(smokes != null)
         {
-            Color c = smokes[i].color;
-            c.a = 1;
-            smokes[i].color = c;
+            for (int i = 0; i < smokes.Count; i++)
+            {
+                Color c = smokes[i].color;
+                c.a = 1;
+                smokes[i].color = c;
+            }
         }
+
     }
 
     async void CloseCanvas()

@@ -12,7 +12,6 @@ public class scene3_LSH : MonoBehaviour
 	}
 
 	void end_animation() {
-		Debug.Log("3333333333333333");
 		LoadingManager_HJH.LoadScene("GameScene");
 	}
 
