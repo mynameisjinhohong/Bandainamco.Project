@@ -127,6 +127,7 @@ public class UIManager : ManagerBase
         //});
 
         itemCanvas.SetActive(true);
+        Debug.Log("¸Ş¸ğÀå");
         uiAudio.Play();
         if (GameManager.instance != null)
         {

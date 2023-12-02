@@ -346,7 +346,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         //Debug.Log(transform.localScale + "local");
         yield return null;
     }
-    public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
+    public void PlayerScale(Transform tr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect, AudioSource mush)
     {
         if (isCoroutine)
         {
@@ -356,9 +356,9 @@ public class CharacterMovement2D_LSW : MonoBehaviour
                 StopCoroutine(coroutine);
             }
         }
-        coroutine = StartCoroutine(PlayerScaleEvent(tr, scale, resetTime, mashroomTime, mashroomEffect));
+        coroutine = StartCoroutine(PlayerScaleEvent(tr, scale, resetTime, mashroomTime, mashroomEffect, mush));
     }
-    IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect)
+    IEnumerator PlayerScaleEvent(Transform targetTr, float scale, int resetTime, float mashroomTime, GameObject mashroomEffect, AudioSource mush)
     {
         isCoroutine = true;
         Vector3 oriScale = startScale;
@@ -371,11 +371,16 @@ public class CharacterMovement2D_LSW : MonoBehaviour
         //처음에만 
         if (mushNums.Count < 2)
         {
+
+            yield return new WaitForSeconds(0.4f);
+            yield return new WaitUntil(()=> CameraManager.Instance.isReturnedToPlayer);
             targetTr.GetChild(0).localScale = targetScale;
             //  float targetOrtho = 70;
             //GameObject me = Instantiate(mashroomEffect, targetTr.transform.parent, );
             // Vector3 newPosition = new Vector3(0, 1, -8.0f);
             GameObject me = Instantiate(mashroomEffect, targetTr.transform);
+            mush.Play();
+            Debug.Log("버섯사운드");
             // me.transform.parent = targetTr.transform;
             while (currentTime < mashroomTime)
             {
