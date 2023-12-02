@@ -13,48 +13,57 @@ public class ClockItem_LSW : BaseItem_LJH
     public float clockSizeTime = 1; //시계 작아지는 시간
     public float scale = 2;
     Animator anim;
-    GameObject obj;
+    public GameObject obj;
     Vector3 oriScale = new Vector3(5, 5, 5);
-    public void Start()
-    {
-       // anim = watchPrefab.GetComponent<Animator>();
-        //Vector3 oriScale = watchPrefab.transform.GetChild(0).GetChild(0).GetComponent<RectTransform>().localScale;
 
+    private WatchSecond_yd clockAnim;
+
+    private void Awake()
+    {
+        obj = GameObject.FindWithTag("Clock");
+        if (obj != null)
+            clockAnim = obj.GetComponentInChildren<WatchSecond_yd>(true);
     }
-    public override void OnTriggerEnter2D(Collider2D other)
+
+    public override async void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Watch();
+            base.OnTriggerEnter2D(other);
+            await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
+            StartClock();
         }
-        base.OnTriggerEnter2D(other);
     }
 
-    public async void Watch()
+    public async void StartClock()
     {
-       // if(ItemManager_LJH.Instance.)
-        await UniTask.Delay(1);
-        obj.transform.GetChild(0).gameObject.SetActive(true);
-         await UniTask.Delay(2*1000);
-        obj.transform.GetChild(0).gameObject.SetActive(false);
-
+        //카메라가 배경->플레이어로 이동하는 시간때문에 어쩔수 없이 Delay 추가
+        await UniTask.Delay(400);
 
         GamePlayManager_HJH.Instance.characterMovement2D.coolTime -= coolTimeReduce;
 
-    }
-    
+        clockAnim.gameObject.SetActive(true);
 
-    public void Update()
-    {
-       // if (obj != null)
-        //{
-        obj = GameObject.FindWithTag("Clock");
+        bool isFinished = false;
 
-//        }
- 
+        clockAnim.StartClock(() =>
+            {
+                isFinished = true;
+            });
+
+        await UniTask.WaitUntil(() => isFinished);
+
+        clockAnim.gameObject.SetActive(false);
+
+        // if(ItemManager_LJH.Instance.)
+        //await UniTask.Delay(1);
+        //obj.transform.GetChild(0).gameObject.SetActive(true);
+        //await UniTask.Delay(2 * 1000);
+        //obj.transform.GetChild(0).gameObject.SetActive(false);
+
 
     }
 }
-    
+
 
 

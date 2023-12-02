@@ -1,45 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class WatchSecond_yd : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject second;
-    public GameObject pos;
-    public GameObject watch;
-    public float rotSpeed = 10;
-    public bool isRot;
-    float targetRotation = 0;
-    float currentRotation;
+    [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource audioSource;
 
-    public AudioSource clockSound;
-    void Start()
+    private string animParam = "Rotate";
+
+    public async void StartClock(System.Action callback = null)
     {
-        //currentRotation = second.transform.rotation.eulerAngles.z;
+        audioSource.Play();
+        animator.SetTrigger(animParam);
+        await UniTask.WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.98f);
+        callback?.Invoke();
     }
-    public void Clock()
-    {
-        clockSound.Play();
 
-    }
-    int num = 0;
-    // Update is called once per frame
-    void Update()
-    {
-/*
-        if (isRot)
-        {
-            
-            float rotationAmount = rotSpeed * Time.deltaTime;
-            Debug.Log("되느중");
-                second.transform.Rotate(0, 0, -rotationAmount);
-
-            if (second.transform.rotation.z > currentRotation) isRot = false;
-
-            Debug.Log("이믺릍");
-        }*/
-    }
    /* public async void Rotation()
     {
         while(isRot)

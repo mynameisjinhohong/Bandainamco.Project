@@ -57427,12 +57427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46561d1af23b674a93a69c7b8f7ecdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  second: {fileID: 0}
-  pos: {fileID: 0}
-  watch: {fileID: 0}
-  rotSpeed: 10
-  isRot: 0
-  clockSound: {fileID: 5772310323592544266}
+  animator: {fileID: 5772310323592544265}
+  audioSource: {fileID: 5772310323592544266}
 --- !u!1001 &3930474210904395846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57952,7 +57948,6 @@ GameObject:
   - component: {fileID: 5772310324978790347}
   - component: {fileID: 5772310324978790346}
   - component: {fileID: 5772310324978790345}
-  - component: {fileID: 5772310324978790352}
   m_Layer: 0
   m_Name: ClockCanvas
   m_TagString: Clock
@@ -57960,27 +57955,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &5772310324978790352
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5772310324978790351}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c7782ba073d0c5a4792de854bc8df6ef, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &6426444615737346015
 PrefabInstance:
   m_ObjectHideFlags: 0
