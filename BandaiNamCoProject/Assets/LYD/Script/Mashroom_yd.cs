@@ -39,9 +39,9 @@ public class Mashroom_yd : BaseItem_LJH
         //       StartCoroutine(PlayerScale(collision.transform));
         //    }
         //}
-        collision.GetComponent<CharacterMovement2D_LSW>().PlayerScale(collision.transform, scale, resetTime, mashroomTime ,mashroomEffect);
+        collision.GetComponent<CharacterMovement2D_LSW>().PlayerScale(collision.transform, scale, resetTime, mashroomTime ,mashroomEffect, mushSound);
         base.OnTriggerEnter2D(collision);
-        mushSound.Play();
+      //  mushSound.Play();
         //StartCoroutine(PlayerScale(collision.transform,scale,resetTime));
     }
 
