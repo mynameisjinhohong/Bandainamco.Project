@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CloudItem_HJH : BaseItem_LJH
 {
     public GameObject smallCloud;
     public int cloudNum;
-    public float jumpPower;
+    public Vector2 jumpPower;
 
     public override void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,12 +17,13 @@ public class CloudItem_HJH : BaseItem_LJH
 
     public void CloudItemActivate(GameObject player)
     {
-        for(int i =0; i < cloudNum; i++)
+        for (int i = 0; i < cloudNum; i++)
         {
-            Instantiate(smallCloud,transform.position,Quaternion.identity);
+            GameObject small = Instantiate(smallCloud, transform.position, Quaternion.identity);
+            small.GetComponent<SmallCloud_HJH>().goTransform = transform.GetChild(i).position;  
         }
         Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
         rigidbody2D.velocity = Vector3.zero;
-        rigidbody2D.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
+        rigidbody2D.AddForce(jumpPower, ForceMode2D.Impulse);
     }
 }
