@@ -50307,7 +50307,7 @@ MonoBehaviour:
   jumpPower: 35
   firstJumpPower: 3.4
   jumpIcon: {fileID: 513643427}
-  coolTime: 0
+  coolTime: 3.4
   jump: 0
   itemManager: {fileID: 0}
   rotateSpeed: 1
