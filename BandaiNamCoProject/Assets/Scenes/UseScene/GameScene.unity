@@ -6567,7 +6567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297183592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -70, y: -218.70001, z: 100}
+  m_LocalPosition: {x: -43.6, y: -5.300003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14344,7 +14344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642667811}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65, y: -283.7, z: 100}
+  m_LocalPosition: {x: 91.4, y: -70.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21774,7 +21774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743041455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 159, z: 0}
+  m_LocalPosition: {x: 3.6, y: 145.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25409,7 +25409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911122327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.100006, y: -375.6, z: 100}
+  m_LocalPosition: {x: 129.5, y: -162.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33977,7 +33977,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333836076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: -199.70001, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34007,7 +34007,7 @@ MonoBehaviour:
   m_Follow: {fileID: 743041456}
   m_Lens:
     FieldOfView: 160
-    OrthographicSize: 90
+    OrthographicSize: 105
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -36725,7 +36725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480742256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30, y: -358.7, z: 0}
+  m_LocalPosition: {x: -3.6, y: -145.3, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48020,7 +48020,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759099784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -102.8, y: -384.7, z: 100}
+  m_LocalPosition: {x: -76.4, y: -171.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48995,7 +48995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
   m_LocalRotation: {x: -1e-45, y: 1e-45, z: -0, w: 1}
-  m_LocalPosition: {x: -30, y: -223.70001, z: 100}
+  m_LocalPosition: {x: -3.6, y: -10.300003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49232,7 +49232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866499113}
   m_LocalRotation: {x: 1e-45, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 74, y: -519.9, z: 100}
+  m_LocalPosition: {x: 100.4, y: -304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50559,7 +50559,7 @@ MonoBehaviour:
   jumpPower: 35
   firstJumpPower: 3.4
   jumpIcon: {fileID: 513643427}
-  coolTime: 3.4
+  coolTime: 0
   jump: 0
   itemManager: {fileID: 0}
   rotateSpeed: 1
@@ -53928,7 +53928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072907047}
   m_LocalRotation: {x: 1e-45, y: 1e-45, z: -0, w: 1}
-  m_LocalPosition: {x: 125, y: -158.70001, z: 100}
+  m_LocalPosition: {x: 151.4, y: 54.699997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -57685,7 +57685,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3930474210788642712, guid: 88eb9633d3be14f4689c10ee4e895966, type: 3}
       propertyPath: m_Volume
-      value: 0.016285544
+      value: 0.5752334
       objectReference: {fileID: 0}
     - target: {fileID: 8923551140945638976, guid: 88eb9633d3be14f4689c10ee4e895966, type: 3}
       propertyPath: m_Name

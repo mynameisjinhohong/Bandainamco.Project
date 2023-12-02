@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotionSpeed: 500
   isOn: 0
-  starSpeed: 30
+  starSpeed: 20
   moveSpeed: 10
 --- !u!68 &4090628346081078713
 EdgeCollider2D:
