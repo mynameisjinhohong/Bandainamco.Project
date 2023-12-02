@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WaveItem_LJH : BaseItem_LJH
 {
-    public override void OnTriggerEnter2D(Collider2D other)
+    public override async void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -20,8 +20,8 @@ public class WaveItem_LJH : BaseItem_LJH
             ItemManager_LJH.Instance.SetBubble(true);
 
             //점프 쿨타임 감소, 중력 제거 등 효과
-            WorldManager.Instance.NotifyItemEffect(myItem.itemType, true);
             base.OnTriggerEnter2D(other);
+            await UniTask.WaitUntil(() => already);
         }
     }
 }
