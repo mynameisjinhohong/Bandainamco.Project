@@ -127,7 +127,7 @@ public class UIManager : ManagerBase
         //});
 
         itemCanvas.SetActive(true);
-        Debug.Log("메모장");
+        //Debug.Log("메모장");
         uiAudio.Play();
         if (GameManager.instance != null)
         {
