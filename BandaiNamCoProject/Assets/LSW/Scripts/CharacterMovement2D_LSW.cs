@@ -275,7 +275,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
             }
             if (ItemManager_LJH.Instance.CurrItem.myItem.itemType == ItemType.Star)
             {
-                starBack.isOn = true;
+                //starBack.isOn = true;
                 if (starItem.Count > 1)
                 {
                     int itemsToRemove = starItem.Count - 1; // 남겨둘 아이템 개수 계산

@@ -2,49 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-public class StarBackground_yd : MonoBehaviour
+using Cysharp.Threading.Tasks;
+using System;
+
+public class StarBackground_yd : BaseBackground_LJH
 {
- //   [SerializeField] float m_force = 50f;
-    // [SerializeField] Vector3 m_offset = Vector3.zero;
-  //  [SerializeField] Vector3 m_offset = new Vector3(10, 10, 10);
-
-   // [SerializeField] private 
-
-    Quaternion m_originRot;
-    [SerializeField] private GameObject starPre;
-    float currentTime = 0;
-    public float createTime = 10;
-    public bool isOn;
-    public CinemachineVirtualCamera characterCam;
-    public bool isFirst;
-    public float waitTime;
-    public bool isMake;
-    public float starTime; //스타유지시간
-    bool isCoroutine;
-    //임펄스
-     CinemachineImpulseSource impulse;
+    [SerializeField] private GameObject starPrefab;
     [SerializeField] private GameObject player;
-    public float x;
-    public float y;
-    public float twinkleTime; //몇초에껐다켜지는지
+    [Range(3f, 15f)]
+    [SerializeField] private double shootingStarDelayTime = 10;
+    [SerializeField] private float x;
+    [SerializeField] private float y;
+    [SerializeField] private float twinkleTime; //몇초에껐다켜지는지
+    [SerializeField] private AudioSource starBGSound;
+    [SerializeField] private AudioSource shootingStarSound;
+
+    //임펄스
+    private CinemachineImpulseSource impulse;
     private GameObject twinkleStar;
-    public AudioSource starBGSound;
-    public AudioSource shootingStarSound;
-    // Start is called before the first frame update
+    private bool isFinished = false;
+    private bool isOn;
+
     void Start()
     {
-        impulse = transform.GetComponent <CinemachineImpulseSource>();
+        impulse = transform.GetComponent<CinemachineImpulseSource>();
         twinkleStar = transform.GetChild(1).gameObject;
     }
     private void OnEnable()
     {
-        isFirst = true;
         starBGSound.Play();
+        isOn = true;
         StartCoroutine(TwinkleStar());
+        
+        SetEffect();
     }
     IEnumerator TwinkleStar()
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(twinkleTime);
             twinkleStar.SetActive(false);
@@ -52,84 +46,32 @@ public class StarBackground_yd : MonoBehaviour
             twinkleStar.SetActive(true);
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    async void Update()
     {
-
-        if (isOn)
-
-        {
-            //별 생성
-            if(isFirst)
-            {
-                Vector3 camPos = player.transform.position;
-                camPos.x += 40;
-                camPos.y += 50;
-                GameObject star = Instantiate(starPre, camPos, starPre.transform.rotation, player.transform);
-                shootingStarSound.Play();
-                isFirst = false;
-                impulse.GenerateImpulse();
-
-              /*  isMake = true;
-                isFirst = false;*/
-            }
-
-            currentTime += Time.deltaTime;
-            if (currentTime > createTime)
-            {
-                Vector3 camPos = player.transform.position;
-                camPos.x += x;
-                camPos.y += y;
-                GameObject star = Instantiate(starPre, camPos, starPre.transform.rotation, player.transform);
-                shootingStarSound.Play();
-
-                impulse.GenerateImpulse();
-
-                Debug.Log("별생성");
-                    currentTime = 0;
-                
-            }
-       
-        }
-
-    }
-    IEnumerator ShakeCoroutine()
-    {
-        isCoroutine = true;
-        
-        if(isFirst)
-        {
-            yield return new WaitForSeconds(waitTime);
-        }
-        if(isMake)
-        {
-            float currentTime = 0;
-            Vector3 t_originEuler = characterCam.transform.eulerAngles;
-            /*while (currentTime < starTime)
-            {
-                  float t_rotX = Random.Range(-m_offset.x, m_offset.x);
-                   float t_rotY = Random.Range(-m_offset.y, m_offset.y);
-                   float t_rotZ = Random.Range(-m_offset.z, m_offset.z);
-
-                   Vector3 t_randomRot = t_originEuler + new Vector3(t_rotX, t_rotY, t_rotZ);
-                   Quaternion t_rot = Quaternion.Euler(t_randomRot);
-                   while (Quaternion.Angle(characterCam.transform.rotation, t_rot) > 0.1f)
-                   {
-                       characterCam.transform.rotation = Quaternion.RotateTowards(characterCam.transform.rotation, t_rot, m_force * Time.deltaTime);
-                   currentTime += Time.deltaTime;
-                       yield return null;
-                   }
-                currentTime += Time.deltaTime;
-                yield return null;
-            }*/
-                impulse.GenerateImpulse();
-            Debug.Log("??????");
-             //   isMake = false;
-        }
-       // characterCam.transform.rotation = m_originRot;
-        //StartCoroutine(Reset());
-
+        if (!isOn) return;
+        if (isFinished)
+            await SetEffect(shootingStarDelayTime);
     }
 
+    private async UniTask SetEffect(double delayTime = 0)
+    {
+        if (CameraManager.Instance.isReturnedToPlayer == false)
+        {
+            await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
+            await UniTask.Delay(400);
+        }
+        isFinished = false;
+        await UniTask.Delay(TimeSpan.FromSeconds(delayTime));
 
+        Vector3 camPos = player.transform.position;
+        camPos += new Vector3(x, y, 0f);
+
+        GameObject star = Instantiate(starPrefab, camPos, starPrefab.transform.rotation, player.transform);
+        shootingStarSound.Play();
+
+        impulse.GenerateImpulse();
+
+        isFinished = true;
+    }
 }
