@@ -24,6 +24,7 @@ public class StageManager_HJH : MonoBehaviour
 
     public GameObject firstScene;
     bool cutScene = false;
+    bool yetOn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -142,9 +143,14 @@ public class StageManager_HJH : MonoBehaviour
                     }
                     else
                     {
-                        doorCantOpenSound.Play();
-                        yetCanvas.SetActive(true);
-                        Time.timeScale = 0f;
+                        if (!yetOn)
+                        {
+                            doorCantOpenSound.Play();
+                            yetOn = true;
+                            yetCanvas.SetActive(true);
+                            Time.timeScale = 0f;
+                        }
+
                     }
                 }
             }
@@ -207,7 +213,9 @@ public class StageManager_HJH : MonoBehaviour
 
     public void YetOff()
     {
+        buttonSound.Play();
         yetCanvas.SetActive(false) ;
+        yetOn = false;
         Time.timeScale = 1f;
     }
 }
