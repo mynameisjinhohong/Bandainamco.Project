@@ -70,7 +70,7 @@ public class TrainItem_HJH : BaseItem_LJH
 
     async void TrainActivate()
     {
-        int ran = Random.Range(0, 2);
+        int ran = (transform.position.x < 0) ? 1 : 0;
         player.gameObject.tag = "Untagged";
         player.SetGravity(false);
         Vector2 trainSize = trainRail[0].GetComponent<SpriteRenderer>().sprite.rect.size / trainRail[0].GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
