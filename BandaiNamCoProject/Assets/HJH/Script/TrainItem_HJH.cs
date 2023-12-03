@@ -95,7 +95,7 @@ public class TrainItem_HJH : BaseItem_LJH
             for (int i = 0; i < trainRail.Length; i++)
             {
                 trainRail[i].transform.localPosition -= new Vector3(i * (trainSize), 0, 0);
-                Debug.Log(trainRail[i].transform.localPosition);
+                //Debug.Log(trainRail[i].transform.localPosition);
             }
         }
         else 
@@ -106,7 +106,7 @@ public class TrainItem_HJH : BaseItem_LJH
             for (int i = 0; i < trainRail.Length; i++)
             {
                 trainRail[i].transform.localPosition += new Vector3(i * (trainSize), 0, 0);
-                Debug.Log(trainRail[i].transform.localPosition);
+                //Debug.Log(trainRail[i].transform.localPosition);
             }
 
         }
@@ -129,9 +129,9 @@ public class TrainItem_HJH : BaseItem_LJH
                 for (int i =0; i< trainRail.Length; i++)
                 {
                     TrainRail_HJH trains = trainRail[i].GetComponent<TrainRail_HJH>();
-                    Debug.Log(trainRail[i].transform.localPosition + "??");
+                    //Debug.Log(trainRail[i].transform.localPosition + "??");
                     trainRail[i].transform.localPosition = new Vector3(trainRail[i].transform.localPosition.x, railPos.localPosition.y, 0);
-                    Debug.Log(trainRail[i].transform.localPosition + "!!");
+                    //Debug.Log(trainRail[i].transform.localPosition + "!!");
                     trains.railMaxY = -0.9f;
                     trains.railSu = i;
                     trains.railUpSpeed = railSpeed;
