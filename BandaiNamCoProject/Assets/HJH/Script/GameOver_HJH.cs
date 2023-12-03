@@ -17,6 +17,8 @@ public class GameOver_HJH : MonoBehaviour
     public GameObject rabbit;
     public GameObject train;
     public float fadeSpeed;
+
+    Animator ani;
     public void GameOver()
     {
         bg.SetActive(true);
@@ -89,7 +91,8 @@ public class GameOver_HJH : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ani = GetComponent<Animator>();
+        ani.SetTrigger("Over");
     }
 
     // Update is called once per frame

@@ -134,6 +134,7 @@ public class GamePlayManager_HJH : ManagerBase
             endingType = EndingType.Over;
             gameEnd = true;
             gameOverSound.Play();
+            gameOver = false;
             //Time.timeScale = 0f;
             //GameOver();
         }
