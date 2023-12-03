@@ -109,7 +109,6 @@ public class GameManager : MonoBehaviour
         myAudio = gameObject.GetComponent<AudioSource>();
         audioSources.Add(myAudio);
         myAudio.volume = volume;
-
         foreach (GameObject obj in all)
         {
             AudioSource audio;

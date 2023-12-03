@@ -97,6 +97,7 @@ public class ClockBG_YD : MonoBehaviour
     }
     IEnumerator BGRotateEvent(GameObject ob, float targetE, float obTime, string anim)
     {
+        Time.timeScale = 0;
         currentTime = 0;
         Quaternion ori = ob.transform.rotation;
         Quaternion target = Quaternion.Euler(0, 0, targetE);
@@ -105,10 +106,11 @@ public class ClockBG_YD : MonoBehaviour
             Quaternion now = Quaternion.Lerp(ori, target, currentTime / obTime);
             //Debug.Log(currentTime / obTime);
             ob.transform.rotation = now;
-            currentTime += Time.deltaTime;
+            currentTime += Time.unscaledDeltaTime;
             yield return null;
 
         }
+        Time.timeScale = 1;
         yield return new WaitForSeconds(waitTime);
         yield return null;
         animator.SetTrigger(anim);
