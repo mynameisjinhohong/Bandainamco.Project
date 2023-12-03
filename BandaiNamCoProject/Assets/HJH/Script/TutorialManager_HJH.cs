@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TutorialManager_HJH : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class TutorialManager_HJH : MonoBehaviour
     {
         if(tutoidx < 2)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)&&!EventSystem.current.IsPointerOverGameObject())
             {
                 tutoidx++;
                 TutoOnOff(tutoidx);
@@ -59,7 +60,7 @@ public class TutorialManager_HJH : MonoBehaviour
         }
         else if(tutoidx == 2)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)&&!EventSystem.current.IsPointerOverGameObject())
             {
                 tutoidx++;
                 startCloud.SetActive(false);
