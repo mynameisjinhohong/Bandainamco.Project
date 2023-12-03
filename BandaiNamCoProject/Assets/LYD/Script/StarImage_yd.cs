@@ -65,7 +65,7 @@ public class StarImage_yd : MonoBehaviour
         var v = Input.GetAxis("Vertical");
         //transform.Rotate(0, 0, rotionSpeed * Time.deltaTime);  
 
-        Debug.Log(background + " back");
+        //Debug.Log(background + " back");
             Vector3 dir = new Vector3(h, v, 0);
             transform.position += dir * starSpeed * Time.deltaTime;
         Vector3 tarPos = new Vector3(transform.position.x, transform.position.y -5, transform.position.z);
