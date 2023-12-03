@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class WaveCollider_LJH : MonoBehaviour
 {
+    private enum WaveState
+    {
+        None, Up, Down
+    }
+
     [SerializeField] private float targetY;
     [SerializeField] private float moveSec;
     [SerializeField] private AudioSource audioSource;
@@ -17,7 +22,8 @@ public class WaveCollider_LJH : MonoBehaviour
     private float downMoveSec;
     private Vector3 originPos;
     private Vector3 targetPos;
-    private bool isCollided = false;
+    //private bool isCollided = false;
+    private WaveState waveState;
 
     private void Awake()
     {
@@ -30,13 +36,13 @@ public class WaveCollider_LJH : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isCollided) return;
+        //if (isCollided) return;
 
         if (collision.transform.CompareTag(TagStrings.PlayerTag))
         {
             //파도 닿았으면 파도 종료
             Debug.Log("Wave Collision : " + collision.name);
-            if(particle == null)
+            if (particle == null)
             {
                 particle = Instantiate(particlePrefab).GetComponent<Particles_LJH>();
             }
@@ -50,7 +56,7 @@ public class WaveCollider_LJH : MonoBehaviour
 
     public async void Finish()
     {
-        isCollided = true;
+        //isCollided = true;
         ItemManager_LJH.Instance.SetBubble(false);
         WorldManager.Instance.NotifyItemEffect(ItemType.Wave, false);
         await FinishWave();
@@ -58,6 +64,9 @@ public class WaveCollider_LJH : MonoBehaviour
 
     public async void StartWave(bool isVisited)
     {
+        waveState = WaveState.Up;
+        await UniTask.Yield();
+
         gameObject.SetActive(true);
 
         if (!isVisited)
@@ -65,12 +74,11 @@ public class WaveCollider_LJH : MonoBehaviour
 
         float elapsedTime = 0f;
         audioSource.Play();
-
         float myMaxVolume = customMaxVolume == true ? maxVolume : 1f;
 
         while (elapsedTime < moveSec)
         {
-            if (isCollided) break;
+            //if (isCollided) break;
 
             elapsedTime += Time.deltaTime;
             transform.localPosition = Vector3.Lerp(originPos, targetPos, elapsedTime / moveSec);
@@ -78,6 +86,7 @@ public class WaveCollider_LJH : MonoBehaviour
             await UniTask.Yield();
         }
 
+        waveState = WaveState.None;
         //파도 끝났으면 파도 종료
         //isCollided = true;
         //Finish();
@@ -85,6 +94,8 @@ public class WaveCollider_LJH : MonoBehaviour
 
     public async UniTask FinishWave()
     {
+        waveState = WaveState.Down;
+
         float elapsedTime = 0f;
         Vector3 currPos = transform.localPosition;
 
@@ -92,12 +103,16 @@ public class WaveCollider_LJH : MonoBehaviour
 
         while (elapsedTime < downMoveSec)
         {
+            //파도가 내려가는 중간에 아이템을 다시 먹었을 경우
+            if (waveState == WaveState.Up)
+                return;
+
             elapsedTime += Time.deltaTime;
             transform.localPosition = Vector3.Lerp(currPos, originPos, elapsedTime / downMoveSec);
             audioSource.volume = Mathf.Lerp(currVolume, 0f, elapsedTime / downMoveSec);
             await UniTask.Yield();
         }
-        isCollided = false;
+        waveState = WaveState.None;
         audioSource.Stop();
         //particle.gameObject.SetActive(false);
         gameObject.SetActive(false);
