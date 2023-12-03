@@ -23,6 +23,7 @@ public class StageManager_HJH : MonoBehaviour
     public GameObject yetCanvas;
 
     public GameObject firstScene;
+    public GameObject skipButton;
     bool cutScene = false;
     bool yetOn = false;
     // Start is called before the first frame update
@@ -203,12 +204,18 @@ public class StageManager_HJH : MonoBehaviour
                 cutScene = true;
                 openingCutScene.Play();
                 GameManager.instance.AudioOff();
+                skipButton.SetActive(true);
                 break;
             default:
                 yetCanvas.SetActive(true);
                 Time.timeScale = 0f;
                 break;
         }
+    }
+
+    public void CutSceneSkip()
+    {
+        LoadingManager_HJH.LoadScene("GameScene");
     }
 
     public void YetOff()
