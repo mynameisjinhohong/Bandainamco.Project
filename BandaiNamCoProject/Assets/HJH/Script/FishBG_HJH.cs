@@ -40,7 +40,6 @@ public class FishBG_HJH : MonoBehaviour
             StopAllCoroutines();
             currentTime = 0;
             StartCoroutine(FishGo());
-            Debug.Log("Start");
         }
 
     }
