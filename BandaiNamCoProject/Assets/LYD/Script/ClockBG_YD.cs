@@ -98,6 +98,8 @@ public class ClockBG_YD : MonoBehaviour
     }
     IEnumerator BGRotateEvent(GameObject ob, float targetE, float obTime, string anim)
     {
+        ItemManager_LJH.Instance.isClockRotating = true;
+
         Time.timeScale = 0;
         currentTime = 0;
         Quaternion ori = ob.transform.rotation;
@@ -126,25 +128,22 @@ public class ClockBG_YD : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         yield return null;
         animator.SetTrigger(anim);
-    }
-   /*  public void BGRotate(GameObject ob, float targetE, float obTime)
-    {
-        currentTime = 0;
-        Quaternion ori = ob.transform.rotation;
-        Quaternion target = Quaternion.Euler(0, 0, targetE);
-        while(currentTime < obTime)
-        {
-            Quaternion now = Quaternion.Lerp(ori, target, currentTime/obTime);
-            Debug.Log(currentTime/obTime);
-            ob.transform.rotation = now;
-            currentTime += Time.deltaTime;
 
-        }
-    }*/
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ItemManager_LJH.Instance.isClockRotating = false;
     }
+    /*  public void BGRotate(GameObject ob, float targetE, float obTime)
+     {
+         currentTime = 0;
+         Quaternion ori = ob.transform.rotation;
+         Quaternion target = Quaternion.Euler(0, 0, targetE);
+         while(currentTime < obTime)
+         {
+             Quaternion now = Quaternion.Lerp(ori, target, currentTime/obTime);
+             Debug.Log(currentTime/obTime);
+             ob.transform.rotation = now;
+             currentTime += Time.deltaTime;
+
+         }
+     }*/
+
 }
