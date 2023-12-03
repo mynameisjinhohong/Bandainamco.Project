@@ -171,7 +171,7 @@ public class GameUI_HJH : MonoBehaviour
     }
     public void EndingQuit()
     {
-        LoadingManager_HJH.LoadScene("StartScene");
+        LoadingManager_HJH.LoadScene("StageScene");
     }
   
 }

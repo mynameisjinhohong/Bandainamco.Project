@@ -167,6 +167,9 @@ public class TrainItem_HJH : BaseItem_LJH
         }
         if (Mathf.Abs(playerPos.transform.position.x) > DataManager.Instance.bgSize.x / 2)
         {
+            player.SetGravity(true);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 0);
+            player.gameObject.tag = "Player";
             gameObject.SetActive(false);
         }
         if (playerOn)
