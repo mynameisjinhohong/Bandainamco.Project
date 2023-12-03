@@ -71,7 +71,7 @@ public class StarImage_yd : MonoBehaviour
         Vector3 tarPos = new Vector3(transform.position.x, transform.position.y -5, transform.position.z);
        if(isOn)
         {
-            if(background.transform.rotation.z == 0 || background.transform.rotation.z == 90 || background.transform.rotation.z == 180 || 
+            /*if(background.transform.rotation.z == 0 || background.transform.rotation.z == 90 || background.transform.rotation.z == 180 || 
                 background.transform.rotation.z == -270 || background.transform.rotation.z == 360)
             {
                 starMove = false;
@@ -82,6 +82,14 @@ public class StarImage_yd : MonoBehaviour
                 starMove = true;
                 Debug.Log("starMove == true");
 
+            }*/
+            if(!ItemManager_LJH.Instance.isClockRotating)
+            {
+                starMove = false;
+            }
+            else
+            {
+                starMove = true;
             }
             if (starMove)
             {
