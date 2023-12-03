@@ -220,6 +220,7 @@ MonoBehaviour:
   isOn: 0
   starSpeed: 20
   moveSpeed: 10
+  star: {fileID: -3149935760147958392, guid: 12eb04a5de987ff4790cb1dac25978b0, type: 3}
 --- !u!68 &4090628346081078713
 EdgeCollider2D:
   m_ObjectHideFlags: 0
