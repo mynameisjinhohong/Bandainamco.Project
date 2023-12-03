@@ -10,6 +10,7 @@ public class ClockBG_YD : MonoBehaviour
     public float bgRotTime = 1; //배경이 회전하는 시간
     public GameObject clock;
     Animator animator;
+    public GameObject[] options;
     public float waitTime = 2;
     public AudioSource clockSound;
     public AudioSource clockMoveSound;
@@ -110,7 +111,18 @@ public class ClockBG_YD : MonoBehaviour
             yield return null;
 
         }
-        Time.timeScale = 1;
+        bool optionOff = true;
+        for(int i =0; i<options.Length; i++)
+        {
+            if (options[i].activeInHierarchy)
+            {
+                optionOff = false;
+            }
+        }
+        if(optionOff)
+        {
+            Time.timeScale = 1;
+        }
         yield return new WaitForSeconds(waitTime);
         yield return null;
         animator.SetTrigger(anim);
