@@ -12,10 +12,11 @@ public class GameUI_HJH : MonoBehaviour
     public GameObject pauseCanvas;
     public GameObject optionCanvas;
     public GameObject gameOverCanvas;
+    public GameObject tutoObj;
+    bool tuto = false;
     public Slider volumeSlider;
     public TMP_Dropdown langaugeDropdown;
     public AudioSource buttonAudio;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,11 @@ public class GameUI_HJH : MonoBehaviour
     {
         if(WorldManager.Instance.MainState != MainState.GameFinish)
         {
+            if (tutoObj.activeInHierarchy)
+            {
+                tuto = true;
+                tutoObj.SetActive(false);
+            }
             buttonAudio.Play();
             WorldManager.Instance.MainState = MainState.UiOn;
             pauseCanvas.SetActive(true);
@@ -63,6 +69,11 @@ public class GameUI_HJH : MonoBehaviour
 
     public void PauseOffButton()
     {
+        if (tuto)
+        {
+            tuto = false;
+            tutoObj.SetActive(true);
+        }
         if (CameraManager.Instance.currCamera == CamValues.Character || GamePlayManager_HJH.Instance.start == false)
         {
             WorldManager.Instance.MainState = MainState.Play;
@@ -120,6 +131,7 @@ public class GameUI_HJH : MonoBehaviour
 
     public void OptionOnButton()
     {
+
         buttonAudio.Play();
         optionCanvas.SetActive(true);
         pauseCanvas.SetActive(false);
@@ -128,6 +140,11 @@ public class GameUI_HJH : MonoBehaviour
 
     public void OptionOffButton()
     {
+        if (tuto)
+        {
+            tuto = false;
+            tutoObj.SetActive(true);
+        }
         buttonAudio.Play();
         optionCanvas.SetActive(false);
         if (CameraManager.Instance.currCamera == CamValues.Character || GamePlayManager_HJH.Instance.start == false)
