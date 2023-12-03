@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -26,6 +27,8 @@ public class GamePlayManager_HJH : ManagerBase
     public float currentTime;
     public TMP_Text timeText;
     public bool gameOver = false;
+    public GameObject mainCanvas;
+    public TMP_Text endingText;
     public string koEndingText;
     public string enEndingText;
     public string jaEndingText;
@@ -75,6 +78,35 @@ public class GamePlayManager_HJH : ManagerBase
                         }
                     }
                     GameManager.instance.SaveUserData();
+                    mainCanvas.SetActive(false);
+                    StringBuilder end = new StringBuilder();
+                    switch (GameManager.instance.userData.langaugeSet)
+                    {
+                        case 0:
+                            for(int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                            {
+                                end.Append(ItemManager_LJH.Instance.items[i].engText);
+                            }
+                            end.Append(enEndingText);
+                            endingText.text = end.ToString();
+                            break;
+                        case 1:
+                            for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                            {
+                                end.Append(ItemManager_LJH.Instance.items[i].japText);
+                            }
+                            end.Append(jaEndingText);
+                            endingText.text = end.ToString();
+                            break;
+                        case 2:
+                            for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                            {
+                                end.Append(ItemManager_LJH.Instance.items[i].korText);
+                            }
+                            end.Append(koEndingText);
+                            endingText.text = end.ToString();
+                            break;
+                    }
                 }
                 break;
             case EndingType.Over:
