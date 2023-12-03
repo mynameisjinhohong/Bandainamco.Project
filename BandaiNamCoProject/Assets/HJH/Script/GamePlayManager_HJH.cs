@@ -266,7 +266,10 @@ public class GamePlayManager_HJH : ManagerBase
     {
         allStoryObj.SetActive(true);
     }
-
+    public void TurnOfffullStory()
+    {
+        allStoryObj.SetActive(false);
+    }
 
     private void SetPlayerVelocity(Vector2 velocity)
     {
