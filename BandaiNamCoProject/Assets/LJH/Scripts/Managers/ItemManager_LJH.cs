@@ -47,6 +47,8 @@ public class ItemManager_LJH : ManagerBase
 
     public BaseBackground_LJH currBackground;
 
+    [HideInInspector] public bool isClockRotating = false;
+
     [Header("Wave")]
     public WaveCollider_LJH wave;
     public Transform bubbleParent;
@@ -232,6 +234,13 @@ public class ItemManager_LJH : ManagerBase
     public void StartLotusPetal()
     {
         controller.StartPetal();
+    }
+
+    public bool isOkayToMoveCamera()
+    {
+        if (itemDic[ItemType.Clock].isVisited == false)
+            return true;
+        return !isClockRotating && itemDic[ItemType.Clock].isVisited;
     }
 
     //public void StartBackground(BaseBackground_LJH background)
