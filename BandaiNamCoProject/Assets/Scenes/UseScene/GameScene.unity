@@ -8435,7 +8435,8 @@ MonoBehaviour:
   itemsDistance: 60
   player: {fileID: 1949789408}
   itemCount: 0
-  xyLine: 100
+  xLine: 30
+  yLine: 100
   bubble: {fileID: 8723197070997239749, guid: 3f77e2bc54da72b45b7ee92e30f5a348, type: 3}
   mushroomImage: []
   prevItem: {fileID: 0}

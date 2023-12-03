@@ -15,7 +15,8 @@ public class ItemManager_LJH : ManagerBase
     public float itemsDistance;
     public GameObject player;
     public int itemCount;
-    public float xyLine; //그림 끝이랑 너무 까깝지 않게 하기 위해서
+    public float xLine; //그림 끝이랑 너무 까깝지 않게 하기 위해서
+    public float yLine;
     public static ItemManager_LJH Instance;
     public GameObject bubble;
 
@@ -67,8 +68,8 @@ public class ItemManager_LJH : ManagerBase
 
     Vector3 Return_RandomPosition()
     {
-        float x = UnityEngine.Random.Range(-DataManager.Instance.bgSize.x / 2 + itemsDistance, DataManager.Instance.bgSize.x / 2 - xyLine);
-        float y = UnityEngine.Random.Range(-DataManager.Instance.bgSize.y / 2 + itemsDistance, DataManager.Instance.bgSize.y / 2 - xyLine);
+        float x = UnityEngine.Random.Range(-DataManager.Instance.bgSize.x / 2 + itemsDistance, DataManager.Instance.bgSize.x / 2 - xLine);
+        float y = UnityEngine.Random.Range(-DataManager.Instance.bgSize.y / 2 + itemsDistance, DataManager.Instance.bgSize.y / 2 - yLine);
         Vector3 randomPostion = new Vector3(x, y, 0);
         return randomPostion;
     }
@@ -125,7 +126,7 @@ public class ItemManager_LJH : ManagerBase
                     if (su > 1000)
                     {
                         restart = false;
-                        Debug.Log("가까운데도 생성이 되어 버렸다");
+                        //Debug.Log("가까운데도 생성이 되어 버렸다");
                     } // 너무 많이 반복할 때
                     if (!restart)
                     {
