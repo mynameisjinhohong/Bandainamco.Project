@@ -256,7 +256,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &6648026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4587,7 +4587,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &209815595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4720,7 +4720,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &220650278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6077,7 +6077,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &277582728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8177,7 +8177,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &387284131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21028,7 +21028,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &726646135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21277,7 +21277,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &737796395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23719,7 +23719,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &824858761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23847,7 +23847,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &827387367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24051,7 +24051,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &837441118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26094,7 +26094,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &925951045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27215,7 +27215,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &992374548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28923,7 +28923,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1043332242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31017,7 +31017,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1167032181
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32157,7 +32157,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1215594187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33131,7 +33131,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1275192007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38278,7 +38278,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1522091835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39838,7 +39838,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1571788270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47894,7 +47894,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1730304108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51768,7 +51768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpEffect: {fileID: 100000, guid: b134863683554704fbc9ed8e130b7121, type: 3}
   effectTransform: {fileID: 539687311}
-  jumpPower: 35
+  jumpPower: 27
   firstJumpPower: 3.4
   jumpIcon: {fileID: 513643427}
   coolTime: 3.4
@@ -52690,7 +52690,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &1965920632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53579,7 +53579,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &2019441448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56290,7 +56290,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 30
+  addVelocity: 17
 --- !u!61 &2105226793
 BoxCollider2D:
   m_ObjectHideFlags: 0
