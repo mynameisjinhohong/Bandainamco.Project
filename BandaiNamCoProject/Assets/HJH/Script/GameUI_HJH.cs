@@ -169,6 +169,9 @@ public class GameUI_HJH : MonoBehaviour
         LoadingManager_HJH.LoadScene("StartScene");
 
     }
-
+    public void EndingQuit()
+    {
+        LoadingManager_HJH.LoadScene("StartScene");
+    }
   
 }

@@ -49235,7 +49235,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: 3e-45, y: 1e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -51461,7 +51461,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 515622558}
         m_TargetAssemblyTypeName: GameUI_HJH, Assembly-CSharp
-        m_MethodName: QuitButton
+        m_MethodName: EndingQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -56344,9 +56344,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 515622558}
-        m_TargetAssemblyTypeName: GameUI_HJH, Assembly-CSharp
-        m_MethodName: OptionOnButton
+      - m_Target: {fileID: 1792308417}
+        m_TargetAssemblyTypeName: GamePlayManager_HJH, Assembly-CSharp
+        m_MethodName: TurnOnfullStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
