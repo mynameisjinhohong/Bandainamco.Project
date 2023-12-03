@@ -73,7 +73,9 @@ public class CameraManager : ManagerBase
         if(ItemManager_LJH.Instance.isOkayToMoveCamera() == false)
         {
             //시계가 회전 중이라면, 회전이 끝날 때까지 대기
+            Debug.Log("Fu");
             await UniTask.WaitUntil(() => ItemManager_LJH.Instance.isOkayToMoveCamera());
+            Debug.Log("ck");
         }
 
         isReturnedToPlayer = false;
