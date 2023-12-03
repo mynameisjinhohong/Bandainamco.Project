@@ -54,6 +54,8 @@ public class TrainItem_HJH : BaseItem_LJH
             {
                 bubbleAni.SetTrigger("Pop");
             }
+            AudioSource bubbleAudio = bubble.GetComponent<AudioSource>();
+            bubbleAudio.Play();
             myItem.isVisited = true;
             player = other.GetComponent<CharacterMovement2D_LSW>();
             playSound = true;
