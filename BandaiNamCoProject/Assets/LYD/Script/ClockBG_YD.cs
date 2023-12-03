@@ -113,6 +113,8 @@ public class ClockBG_YD : MonoBehaviour
             yield return null;
 
         }
+        ItemManager_LJH.Instance.isClockRotating = false;
+
         bool optionOff = true;
         for(int i =0; i<options.Length; i++)
         {
@@ -129,7 +131,6 @@ public class ClockBG_YD : MonoBehaviour
         yield return null;
         animator.SetTrigger(anim);
 
-        ItemManager_LJH.Instance.isClockRotating = false;
     }
     /*  public void BGRotate(GameObject ob, float targetE, float obTime)
      {
