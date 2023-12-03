@@ -94,11 +94,12 @@ public class ClockBG_YD : MonoBehaviour
      }*/
     public void BGRotate(GameObject ob, float targetE, float obTime, string anim)
     {
+        ItemManager_LJH.Instance.isClockRotating = true;
         StartCoroutine(BGRotateEvent(ob, targetE, obTime, anim));
     }
     IEnumerator BGRotateEvent(GameObject ob, float targetE, float obTime, string anim)
     {
-        ItemManager_LJH.Instance.isClockRotating = true;
+
 
         Time.timeScale = 0;
         currentTime = 0;

@@ -45,13 +45,13 @@ public class TutorialItem_HJH : MonoBehaviour
             {
                 if (!tuToOn)
                 {
-                    for (int i = 0; i < transform.childCount; i++)
+                    if(tutoType == TutoType.Wasd)
                     {
-                        transform.GetChild(i).gameObject.SetActive(true);
-                        if(i != transform.childCount - 1)
-                        {
-                            StartCoroutine(FadeOut(transform.GetChild(i).GetComponent<SpriteRenderer>()));
-                        }
+                        Invoke("FadeInStart", 1f);
+                    }
+                    else
+                    {
+                        FadeInStart();
                     }
                     tuToOn = true;
                 }
@@ -96,6 +96,18 @@ public class TutorialItem_HJH : MonoBehaviour
             }
         }
 
+    }
+
+    public void FadeInStart()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+            if (i != transform.childCount - 1)
+            {
+                StartCoroutine(FadeOut(transform.GetChild(i).GetComponent<SpriteRenderer>()));
+            }
+        }
     }
 
     IEnumerator FadeIn(SpriteRenderer img)
