@@ -16,6 +16,8 @@ public class Star_yd : BaseItem_LJH
     public GameObject starAudio;
     AudioSource starEffectSound;
     bool isStar;
+    GameObject background;
+    GameObject player;
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,7 +32,8 @@ public class Star_yd : BaseItem_LJH
 
             await UniTask.WaitUntil(() => CameraManager.Instance.isReturnedToPlayer);
 
-
+            background = collision.transform.parent.gameObject;
+            player = collision.transform.gameObject;
             Star(collision.gameObject);
         }
         
@@ -76,6 +79,7 @@ public class Star_yd : BaseItem_LJH
         Vector3 startPos = new Vector3(oriPos.x, oriPos.y + starDistance, oriPos.z);
 
         star = Instantiate(starImage, startPos, Quaternion.identity, collision.transform.parent); //, collision.transform);
+        Debug.Log(star + "스타");
         collision.GetComponent<CharacterMovement2D_LSW>().AddStar(star);
         // collision.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         //starImage.transform.GetComponent<StarImage_yd>().isOn = true;
@@ -108,6 +112,47 @@ public class Star_yd : BaseItem_LJH
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(star + "Ddd");
+
+        if(star != null)
+        {
+            Debug.Log("starr");
+            if(background.transform.rotation.z <90 && background.transform.rotation.z < 0)
+            {
+                Vector3 oriPos = player.transform.position;
+                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance + 54, oriPos.z);
+                star.transform.position = starEffectPos;
+                star.transform.rotation = Quaternion.Euler(0, 0, -90);
+                Debug.Log("1번");
+            }
+            if(background.transform.rotation.z < 180 && background.transform.rotation.z < 90)
+            {
+                Vector3 oriPos = player.transform.position;
+                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance + 54, oriPos.z);
+                star.transform.position = starEffectPos;
+                star.transform.rotation = Quaternion.Euler(0, 0, -180);
+                Debug.Log("2번");
+
+            }
+            if (background.transform.rotation.z < 270 && background.transform.rotation.z < 180)
+            {
+                Vector3 oriPos = player.transform.position;
+                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance + 54, oriPos.z);
+                star.transform.position = starEffectPos;
+                star.transform.rotation = Quaternion.Euler(0, 0, -270);
+                Debug.Log("3번");
+
+            }
+            if (background.transform.rotation.z < 360 && background.transform.rotation.z < 270)
+            {
+                Vector3 oriPos = player.transform.position;
+                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance + 54, oriPos.z);
+                star.transform.position = starEffectPos;
+                star.transform.rotation = Quaternion.Euler(0, 0, -360);
+                Debug.Log("4번");
+
+            }
+        }
         /*if (isStar)
         {
             starEffectSound.Play();
