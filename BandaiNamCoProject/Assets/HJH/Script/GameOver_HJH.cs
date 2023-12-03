@@ -16,8 +16,9 @@ public class GameOver_HJH : MonoBehaviour
     public GameObject lotus;
     public GameObject rabbit;
     public GameObject train;
+    public GameObject rail;
     public float fadeSpeed;
-
+    bool trainRail = false;
     Animator ani;
     public void GameOver()
     {
@@ -32,6 +33,7 @@ public class GameOver_HJH : MonoBehaviour
                     case ItemType.Wave:
                         wave.SetActive(true);
                         StartCoroutine(FadeIn(wave));
+                        trainRail = true;
                         break;
                     case ItemType.Clock:
                         clock.SetActive(true);
@@ -68,6 +70,11 @@ public class GameOver_HJH : MonoBehaviour
                     case ItemType.Train:
                         train.SetActive(true);
                         StartCoroutine(FadeIn(train));
+                        if (trainRail)
+                        {
+                            rail.SetActive(true);
+                            StartCoroutine(FadeIn(rail));
+                        }
                         break;
                 }
             }
