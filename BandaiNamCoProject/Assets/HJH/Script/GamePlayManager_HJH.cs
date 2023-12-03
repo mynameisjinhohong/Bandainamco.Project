@@ -28,7 +28,8 @@ public class GamePlayManager_HJH : ManagerBase
     public TMP_Text timeText;
     public bool gameOver = false;
     public GameObject mainCanvas;
-    public TMP_Text endingText;
+    public TMP_Text endingAllText;
+    public GameObject allStoryObj;
     public string koEndingText;
     public string enEndingText;
     public string jaEndingText;
@@ -88,7 +89,7 @@ public class GamePlayManager_HJH : ManagerBase
                                 end.Append(ItemManager_LJH.Instance.items[i].engText);
                             }
                             end.Append(enEndingText);
-                            endingText.text = end.ToString();
+                            endingAllText.text = end.ToString();
                             break;
                         case 1:
                             for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
@@ -96,7 +97,7 @@ public class GamePlayManager_HJH : ManagerBase
                                 end.Append(ItemManager_LJH.Instance.items[i].japText);
                             }
                             end.Append(jaEndingText);
-                            endingText.text = end.ToString();
+                            endingAllText.text = end.ToString();
                             break;
                         case 2:
                             for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
@@ -104,7 +105,7 @@ public class GamePlayManager_HJH : ManagerBase
                                 end.Append(ItemManager_LJH.Instance.items[i].korText);
                             }
                             end.Append(koEndingText);
-                            endingText.text = end.ToString();
+                            endingAllText.text = end.ToString();
                             break;
                     }
                 }
@@ -237,6 +238,11 @@ public class GamePlayManager_HJH : ManagerBase
         }
         base.ItemEffect(itemType, start);
     }
+    public void TurnOnfullStory()
+    {
+        allStoryObj.SetActive(true);
+    }
+
 
     private void SetPlayerVelocity(Vector2 velocity)
     {

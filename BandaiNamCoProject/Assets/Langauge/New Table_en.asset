@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 643113574711296
-    m_Localized: View the full story
+    m_Localized: Options
     m_Metadata:
       m_Items: []
   - m_Id: 643465153855488
@@ -106,6 +106,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5025453897924608
     m_Localized: Collect dream drops to complete the girl's dream!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5688325669896192
+    m_Localized: View the full story
     m_Metadata:
       m_Items: []
   references:

@@ -100,6 +100,10 @@ MonoBehaviour:
     m_Key: Collect dream drops to complete the girl's dream!
     m_Metadata:
       m_Items: []
+  - m_Id: 5688325669896192
+    m_Key: View the full story
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
