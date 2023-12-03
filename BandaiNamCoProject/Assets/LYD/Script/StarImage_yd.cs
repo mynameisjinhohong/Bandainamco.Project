@@ -70,7 +70,7 @@ public class StarImage_yd : MonoBehaviour
         Vector3 tarPos = new Vector3(transform.position.x, transform.position.y -5, transform.position.z);
        if(isOn)
         {
-            if (background.transform.rotation.z < 90 && background.transform.rotation.z < 0)
+            /*if (background.transform.rotation.z < 90 && background.transform.rotation.z < 0)
             {
                 Vector3 oriPos = other.transform.position;
                 Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance + 54, oriPos.z);
@@ -104,7 +104,7 @@ public class StarImage_yd : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0, 0, -360);
                 Debug.Log("4¹ø");
 
-            }
+            }*/
             other.transform.position = Vector3.MoveTowards(collisionTr.position, tarPos, moveSpeed * Time.deltaTime);
         }
    //     if (star != null)

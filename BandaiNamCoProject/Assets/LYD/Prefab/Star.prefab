@@ -148,7 +148,7 @@ MonoBehaviour:
   starImage: {fileID: 6722125444137186400, guid: 4c32cf75a934b2649b82ec9b1539c0bf, type: 3}
   starEffect: {fileID: 1247311384876784, guid: 4aac14409ccab1044a13e94c84b17c10, type: 3}
   StarMoveTime: 5
-  starDistance: 55
+  starDistance: 40
   resetTime: 10
   starTime: 5
-  starEffectSound: {fileID: 0}
+  starAudio: {fileID: 0}
