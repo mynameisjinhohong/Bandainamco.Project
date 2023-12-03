@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 
 public class TutorialItem_HJH : MonoBehaviour
 {
-    public GameObject ballon;
     public enum TutoType
     {
         Click,
@@ -46,11 +45,13 @@ public class TutorialItem_HJH : MonoBehaviour
             {
                 if (!tuToOn)
                 {
-                    ballon.SetActive(true);
                     for (int i = 0; i < transform.childCount; i++)
                     {
                         transform.GetChild(i).gameObject.SetActive(true);
-                        StartCoroutine(FadeOut(transform.GetChild(i).GetComponent<SpriteRenderer>()));
+                        if(i != transform.childCount - 1)
+                        {
+                            StartCoroutine(FadeOut(transform.GetChild(i).GetComponent<SpriteRenderer>()));
+                        }
                     }
                     tuToOn = true;
                 }
@@ -58,11 +59,14 @@ public class TutorialItem_HJH : MonoBehaviour
         }
         else
         {
-            ballon.SetActive(true);
             for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
-                StartCoroutine(FadeOut(transform.GetChild(i).GetComponent<SpriteRenderer>()));
+                if(i != transform.childCount - 1)
+                {
+                    StartCoroutine(FadeOut(transform.GetChild(i).GetComponent<SpriteRenderer>()));
+
+                }
             }
             tuToOn = true;
         }
@@ -74,21 +78,18 @@ public class TutorialItem_HJH : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
                     {
                         gameObject.SetActive(false);
-                        ballon.SetActive(false);
                     }
                     break;
                 case TutoType.Wasd:
                     currentTime += Time.deltaTime;
                     if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 || currentTime  > wasdTime)
                     {
-                        ballon.SetActive(false);
                         gameObject.SetActive(false);
                     }
                     break;
                 case TutoType.Space:
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        ballon.SetActive(false);
                         gameObject.SetActive(false);
                     }
                     break;
@@ -105,7 +106,6 @@ public class TutorialItem_HJH : MonoBehaviour
         img.color = color;
         while (alpha < 1f)
         {
-            ballon.transform.position = new Vector3(ballon.transform.position.x,ballon.transform.position.y,0);
             transform.position = new Vector3(transform.position.x,transform.position.y,0);  
             alpha += 0.005f;
             yield return new WaitForSeconds(fadeSpeed);
@@ -122,7 +122,6 @@ public class TutorialItem_HJH : MonoBehaviour
         img.color = color;
         while (alpha > 0f)
         {
-            ballon.transform.position = new Vector3(ballon.transform.position.x, ballon.transform.position.y, 0);
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             alpha -= 0.005f;
             yield return new WaitForSeconds(fadeSpeed);

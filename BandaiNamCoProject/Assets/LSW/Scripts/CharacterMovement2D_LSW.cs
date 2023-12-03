@@ -221,7 +221,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
 
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            if (Input.GetMouseButtonDown(0) && jumpReady && fish.Count < 1) //점프 쿨타임이 지나고 물고기 안타고 있을 때
+            if (Input.GetMouseButtonDown(0) && jumpReady && fish.Count < 1 && Time.timeScale >0) //점프 쿨타임이 지나고 물고기 안타고 있을 때
             {
                 jump = true;
                 jumpReady = false;
