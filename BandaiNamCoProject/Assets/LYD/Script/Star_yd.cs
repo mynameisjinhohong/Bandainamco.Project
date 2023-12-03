@@ -112,7 +112,7 @@ public class Star_yd : BaseItem_LJH
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(star + "Ddd");
+        //Debug.Log(star + "Ddd");
 
       
         /*if (isStar)
