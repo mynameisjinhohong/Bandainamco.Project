@@ -12,6 +12,7 @@ public class TrainItem_HJH : BaseItem_LJH
     public GameObject trainIcon;
     public GameObject[] trainRail;
     public Transform playerPos;
+    public Transform railPos;
     public AudioSource startTrain;
     public AudioSource nowTrain;
     bool already2 = false;
@@ -71,19 +72,30 @@ public class TrainItem_HJH : BaseItem_LJH
 
     async void TrainActivate()
     {
-        int ran = (transform.position.x < 0) ? 1 : 0;
+        int ran;
+        if (transform.position.x == railPos.position.x)
+        {
+            ran = (transform.position.x < 0) ? 1 : 0;
+        }
+        else
+        {
+            ran = (transform.position.y < 0) ? 1 : 0;
+        }
+
+             
         player.gameObject.tag = "Untagged";
         player.SetGravity(false);
-        Vector2 trainSize = trainRail[0].GetComponent<SpriteRenderer>().sprite.rect.size / trainRail[0].GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
-        trainSize.x *= trainRail[0].transform.lossyScale.x;
+        float trainSize = trainRail[0].GetComponent<SpriteRenderer>().sprite.rect.size.x / trainRail[0].GetComponent<SpriteRenderer>().sprite.pixelsPerUnit;
+        trainSize = trainSize * trainRail[0].transform.localScale.x;
         if(ran == 0)
         {
             left = true;
             playerPos.transform.localPosition = new Vector3(playerPos.transform.localPosition.x, playerPos.transform.localPosition.y, 15);
             train.transform.localRotation = Quaternion.identity;
-            for(int i =0; i< trainRail.Length; i++)
+            for (int i = 0; i < trainRail.Length; i++)
             {
-                trainRail[i].transform.position += new Vector3(-i * (trainSize.x), 0 , 0);
+                trainRail[i].transform.localPosition -= new Vector3(i * (trainSize), 0, 0);
+                Debug.Log(trainRail[i].transform.localPosition);
             }
         }
         else 
@@ -93,8 +105,10 @@ public class TrainItem_HJH : BaseItem_LJH
             train.transform.localRotation = Quaternion.Euler(0,180,0);
             for (int i = 0; i < trainRail.Length; i++)
             {
-                trainRail[i].transform.position += new Vector3(i * (trainSize.x), 0, 0);
+                trainRail[i].transform.localPosition += new Vector3(i * (trainSize), 0, 0);
+                Debug.Log(trainRail[i].transform.localPosition);
             }
+
         }
         railStart = true;
         await UniTask.WaitUntil(() => Mathf.Abs(trainRail[0].transform.localPosition.y - trainRail[0].GetComponent<TrainRail_HJH>().railMaxY)< 1);
@@ -115,7 +129,9 @@ public class TrainItem_HJH : BaseItem_LJH
                 for (int i =0; i< trainRail.Length; i++)
                 {
                     TrainRail_HJH trains = trainRail[i].GetComponent<TrainRail_HJH>();
-                    trainRail[i].transform.position = new Vector3(trainRail[i].transform.position.x, Camera.main.ViewportToWorldPoint(new Vector2(0, 0f)).y, 0);
+                    Debug.Log(trainRail[i].transform.localPosition + "??");
+                    trainRail[i].transform.localPosition = new Vector3(trainRail[i].transform.localPosition.x, railPos.localPosition.y, 0);
+                    Debug.Log(trainRail[i].transform.localPosition + "!!");
                     trains.railMaxY = -0.9f;
                     trains.railSu = i;
                     trains.railUpSpeed = railSpeed;

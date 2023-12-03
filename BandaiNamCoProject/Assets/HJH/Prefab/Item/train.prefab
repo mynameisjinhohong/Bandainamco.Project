@@ -3119,6 +3119,7 @@ Transform:
   - {fileID: 4182118936013769887}
   - {fileID: 7480525187370057136}
   - {fileID: 1592715971919695264}
+  - {fileID: 2477318480249904703}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3258,6 +3259,7 @@ MonoBehaviour:
   - {fileID: 4218919107253077480}
   - {fileID: 4913764748890369718}
   playerPos: {fileID: 3819136651219230075}
+  railPos: {fileID: 2477318480249904703}
   startTrain: {fileID: 3195542065992162840}
   nowTrain: {fileID: 6824156266864965740}
 --- !u!61 &5296626062798622671
@@ -4305,6 +4307,37 @@ MonoBehaviour:
   railUpSpeed: 1
   railMaxY: 0
   railSu: 0
+--- !u!1 &3800048226966219240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2477318480249904703}
+  m_Layer: 7
+  m_Name: RailPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2477318480249904703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800048226966219240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4219492490000944726}
+  m_RootOrder: 100
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4004203681910726364
 GameObject:
   m_ObjectHideFlags: 0
