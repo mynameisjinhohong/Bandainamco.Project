@@ -40192,7 +40192,7 @@ MonoBehaviour:
   options:
   - {fileID: 1396257737}
   - {fileID: 672569793}
-  waitTime: 2
+  waitTime: 4
   clockSound: {fileID: 1591650757}
   clockMoveSound: {fileID: 619855448}
 --- !u!95 &1591650756
