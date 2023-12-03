@@ -240,7 +240,8 @@ public class ItemManager_LJH : ManagerBase
     {
         if (itemDic[ItemType.Clock].isVisited == false)
             return true;
-        return !isClockRotating && itemDic[ItemType.Clock].isVisited;
+
+        return !isClockRotating;
     }
 
     //public void StartBackground(BaseBackground_LJH background)
