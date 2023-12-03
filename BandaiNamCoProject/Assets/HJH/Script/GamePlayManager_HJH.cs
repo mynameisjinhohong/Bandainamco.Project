@@ -111,7 +111,10 @@ public class GamePlayManager_HJH : ManagerBase
 
 
                     GameManager.instance.SaveUserData();
-                    mainCanvas.SetActive(false);
+                    for(int i =0; i<mainCanvas.transform.childCount; i++)
+                    {
+                        mainCanvas.transform.GetChild(i).gameObject.SetActive(false);
+                    }
                     StringBuilder end = new StringBuilder();
                     switch (GameManager.instance.userData.langaugeSet)
                     {
