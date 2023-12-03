@@ -1,9 +1,7 @@
 using Cysharp.Threading.Tasks;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum EndingType
@@ -63,7 +61,7 @@ public class GamePlayManager_HJH : ManagerBase
         {
             case EndingType.Good:
                 endings[1].SetActive(true);
-                if(GameManager.instance != null)
+                if (GameManager.instance != null)
                 {
                     GameManager.instance.AudioOff();
                     GameManager.instance.userData.stage++;
@@ -71,20 +69,46 @@ public class GamePlayManager_HJH : ManagerBase
                 }
                 if (GameManager.instance != null)
                 {
+                    //이전에 저장된 진행도랑 이번 게임 진행도 비교해서 더 크면 이번 게임 진행도로 교체
+                    int su = 0;
                     for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
                     {
                         if (ItemManager_LJH.Instance.items[i].isVisited)
                         {
-                            GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i] = true;
+                            su++;
                         }
                     }
+                    int su2 = 0;
+                    for (int i = 0; i < GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff.Length; i++)
+                    {
+                        if(GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i])
+                        {
+                            su2++;
+                        }
+                    }
+                    if (su >= su2)
+                    {
+                        for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                        {
+                            if (ItemManager_LJH.Instance.items[i].isVisited)
+                            {
+                                GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i] = true;
+                            }
+                            else
+                            {
+                                GameManager.instance.userData.stageDatas[GameManager.instance.userData.stage - 1].itemOnOff[i] = false;
+                            }
+                        }
+                    }
+
+
                     GameManager.instance.SaveUserData();
                     mainCanvas.SetActive(false);
                     StringBuilder end = new StringBuilder();
                     switch (GameManager.instance.userData.langaugeSet)
                     {
                         case 0:
-                            for(int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                            for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
                             {
                                 end.Append(ItemManager_LJH.Instance.items[i].engText);
                             }
@@ -154,7 +178,7 @@ public class GamePlayManager_HJH : ManagerBase
                 if (ItemManager_LJH.Instance.CurrItem.myItem.itemType == ItemType.Lotus)
                 {
                     characterMovement2D.SetPosition(Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0.5f)));
-                    
+
                     ItemManager_LJH.Instance.SetLotus(true);
                     ItemManager_LJH.Instance.SetLotusShield(false);
                     ItemManager_LJH.Instance.PlayLotusClip();
@@ -181,8 +205,8 @@ public class GamePlayManager_HJH : ManagerBase
         }
         if (itemCount >= ItemManager_LJH.Instance.items.Length)
         {
-           endingType = EndingType.Good;
-           gameEnd = true;
+            endingType = EndingType.Good;
+            gameEnd = true;
         }
         if (gameEnd)
         {
@@ -300,7 +324,7 @@ public class GamePlayManager_HJH : ManagerBase
             renderer.sharedMaterial = transparentMat;
         else
             renderer.sharedMaterial = backgroundMat;
-        
+
     }
 
     /*    public void GameOver()
