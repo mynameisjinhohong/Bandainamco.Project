@@ -109,7 +109,6 @@ public class GameManager : MonoBehaviour
         myAudio = gameObject.GetComponent<AudioSource>();
         audioSources.Add(myAudio);
         myAudio.volume = volume;
-        ChangeAudio(myAudio);
         foreach (GameObject obj in all)
         {
             AudioSource audio;
@@ -168,6 +167,7 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         FindAudioSource();
+        ChangeAudio(myAudio);
         //ChangeFont();
     }
     void ChangeAudio(AudioSource myaudio)
@@ -214,6 +214,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        FindAudioSource();
     }
 }

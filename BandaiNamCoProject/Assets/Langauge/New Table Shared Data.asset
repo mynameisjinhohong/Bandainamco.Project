@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1096297225109504
-    m_Key: New Entry
+    m_Key: Are you sure you quit the game?
     m_Metadata:
       m_Items: []
   - m_Id: 1362600993210368
@@ -97,7 +97,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5025453897924608
-    m_Key: New Entry 1
+    m_Key: Collect dream drops to complete the girl's dream!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5688325669896192
+    m_Key: View the full story
     m_Metadata:
       m_Items: []
   m_Metadata:

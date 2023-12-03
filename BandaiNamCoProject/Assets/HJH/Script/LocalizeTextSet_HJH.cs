@@ -35,4 +35,9 @@ public class LocalizeTextSet_HJH : MonoBehaviour
                 break;
         }
     }
+
+    private void OnEnable()
+    {
+        SetLangauge(); 
+    }
 }
