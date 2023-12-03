@@ -20,17 +20,11 @@ public class RabbitItrm_HJH : BaseItem_LJH
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                if (ItemManager_LJH.Instance.CurrItem != null)
-                {
-                    if (ItemManager_LJH.Instance.CurrItem.myItem.itemType != ItemType.Rabbit)
-                    {
-
-                    }
-                }
-                player = other.GetComponent<CharacterMovement2D_LSW>();
-                other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 ItemManager_LJH.Instance.itemCount += 1;
                 ItemManager_LJH.Instance.CurrItem = this;
+                GamePlayManager_HJH.Instance.AddConsumedItem(this);
+                player = other.GetComponent<CharacterMovement2D_LSW>();
+                other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
                 if (!myItem.isVisited)
                 {
@@ -50,6 +44,8 @@ public class RabbitItrm_HJH : BaseItem_LJH
                 {
                     bubbleAni.SetTrigger("Pop");
                 }
+                AudioSource bubbleAudio = bubble.GetComponent<AudioSource>();
+                bubbleAudio.Play();
                 myItem.isVisited = true;
                 RabbitAni();
                 not = false;
