@@ -14,6 +14,7 @@ public class StarImage_yd : MonoBehaviour
     Vector3 oriPos;
     GameObject background;
 
+    public bool starMove;
     public Star_yd star;
     // Start is called before the first frame update
     void Start()
@@ -63,53 +64,64 @@ public class StarImage_yd : MonoBehaviour
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");
         //transform.Rotate(0, 0, rotionSpeed * Time.deltaTime);  
-    
 
+        Debug.Log(background + " back");
             Vector3 dir = new Vector3(h, v, 0);
             transform.position += dir * starSpeed * Time.deltaTime;
         Vector3 tarPos = new Vector3(transform.position.x, transform.position.y -5, transform.position.z);
        if(isOn)
         {
-            if (background.transform.rotation.z < 90 && background.transform.rotation.z < 0)
+            if(background.transform.rotation.z == 0 || background.transform.rotation.z == 90 || background.transform.rotation.z == 180 || 
+                background.transform.rotation.z == -270 || background.transform.rotation.z == 360)
             {
-                Vector3 oriPos = other.transform.position;
-                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
-                transform.position = starEffectPos;
-                transform.rotation = Quaternion.Euler(0, 0, -90);
-                Debug.Log("1번");
+                starMove = false;
+                Debug.Log("starMove == false");
             }
-            if (background.transform.rotation.z < 180 && background.transform.rotation.z < 90)
+            else
             {
-                Vector3 oriPos = other.transform.position;
-                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
-                transform.position = starEffectPos;
-                transform.rotation = Quaternion.Euler(0, 0, -180);
-                Debug.Log("2번");
+                starMove = true;
+                Debug.Log("starMove == true");
 
             }
-            if (background.transform.rotation.z < 270 && background.transform.rotation.z < 180)
+            if (starMove)
             {
-                Vector3 oriPos = other.transform.position;
-                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
-                transform.position = starEffectPos;
-                transform.rotation = Quaternion.Euler(0, 0, -270);
-                Debug.Log("3번");
+                if (background.transform.rotation.z < 90 && background.transform.rotation.z < 0)
+                {
+                    Vector3 oriPos = other.transform.position;
+                    Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
+                    transform.position = starEffectPos;
+                    transform.rotation = Quaternion.Euler(0, 0, -90);
+                }
+                if (background.transform.rotation.z < 180 && background.transform.rotation.z < 90)
+                {
+                    Vector3 oriPos = other.transform.position;
+                    Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
+                    transform.position = starEffectPos;
+                    transform.rotation = Quaternion.Euler(0, 0, -180);
 
-            }
-            if (background.transform.rotation.z < 360 && background.transform.rotation.z < 270)
-            {
-                Vector3 oriPos = other.transform.position;
-                Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
-                transform.position = starEffectPos;
-                transform.rotation = Quaternion.Euler(0, 0, -360);
-                Debug.Log("4번");
+                }
+                {
+                    Vector3 oriPos = other.transform.position;
+                    Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
+                    transform.position = starEffectPos;
+                    transform.rotation = Quaternion.Euler(0, 0, -270);
 
+                }
+                if (background.transform.rotation.z < 360 && background.transform.rotation.z < 270)
+                {
+                    Vector3 oriPos = other.transform.position;
+                    Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + star.starDistance, oriPos.z);
+                    transform.position = starEffectPos;
+                    transform.rotation = Quaternion.Euler(0, 0, -360);
+
+                }
             }
             other.transform.position = Vector3.MoveTowards(collisionTr.position, tarPos, moveSpeed * Time.deltaTime);
+         
+            
         }
    //     if (star != null)
    //     {
-            Debug.Log("starr");
            
       //  }
     }
