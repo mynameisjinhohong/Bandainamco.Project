@@ -78,6 +78,24 @@ public class UIManager : ManagerBase
                 }
             }
         }
+        if (GameManager.instance != null)
+        {
+            switch (GameManager.instance.userData.langaugeSet)
+            {
+                case 0:
+                    text.text = ItemManager_LJH.Instance.CurrItem.myItem.engText;
+                    explainText.text = ItemManager_LJH.Instance.CurrItem.myItem.engExplain;
+                    break;
+                case 1:
+                    text.text = ItemManager_LJH.Instance.CurrItem.myItem.japText;
+                    explainText.text = ItemManager_LJH.Instance.CurrItem.myItem.japExplain;
+                    break;
+                case 2:
+                    text.text = ItemManager_LJH.Instance.CurrItem.myItem.korText;
+                    explainText.text = ItemManager_LJH.Instance.CurrItem.myItem.korExplain;
+                    break;
+            }
+        }
     }
 
 
