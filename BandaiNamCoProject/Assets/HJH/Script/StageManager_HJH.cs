@@ -129,16 +129,30 @@ public class StageManager_HJH : MonoBehaviour
                             }
                             else
                             {
-                                doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
-                                doorOpenSound.Play();
-                                StartCoroutine(CameraZoomIn());
-                                if (GameManager.instance != null)
+                                if(doorNum == 0)
                                 {
-                                    GameManager.instance.userData.stageTuto = true;
-                                    tuto.SetActive(false);
-                                    GameManager.instance.SaveUserData();
+                                    doors[doorNum].GetComponent<Animator>().SetTrigger("Open");
+                                    doorOpenSound.Play();
+                                    StartCoroutine(CameraZoomIn());
+                                    if (GameManager.instance != null)
+                                    {
+                                        GameManager.instance.userData.stageTuto = true;
+                                        tuto.SetActive(false);
+                                        GameManager.instance.SaveUserData();
+                                    }
+                                    Invoke("MoveScene", 2f);
                                 }
-                                Invoke("MoveScene", 2f);
+                                else
+                                {
+                                    if (!yetOn)
+                                    {
+                                        doorCantOpenSound.Play();
+                                        yetOn = true;
+                                        yetCanvas.SetActive(true);
+                                        Time.timeScale = 0f;
+                                    }
+                                }
+
                             }
                         }
                     }
@@ -205,10 +219,6 @@ public class StageManager_HJH : MonoBehaviour
                 openingCutScene.Play();
                 GameManager.instance.AudioOff();
                 skipButton.SetActive(true);
-                break;
-            default:
-                yetCanvas.SetActive(true);
-                Time.timeScale = 0f;
                 break;
         }
     }
