@@ -50383,7 +50383,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: 3e-45, y: 1e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -59618,6 +59618,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.5752334
       objectReference: {fileID: 0}
+    - target: {fileID: 3930474210788642712, guid: 88eb9633d3be14f4689c10ee4e895966, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 38c43a20d0c5072448f5621d693aee7c, type: 3}
     - target: {fileID: 8923551140945638976, guid: 88eb9633d3be14f4689c10ee4e895966, type: 3}
       propertyPath: m_Name
       value: LotusBG
