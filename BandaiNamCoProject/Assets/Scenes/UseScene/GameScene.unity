@@ -8368,58 +8368,6 @@ MonoBehaviour:
   itemParent: {fileID: 2016071355}
   backgrounds: []
   items:
-  - prefab: {fileID: 1886797856406526305, guid: bea3fe1109884b34dba1d1e0dcda3d41, type: 3}
-    itemCount: 3
-    isVisited: 0
-    korText: "\uBB3C\uC5D0 \uBE60\uC9C4 \uC18C\uB140\uB294 \uC815\uC2E0\uC744 \uC783\uACE0
-      \uBB3C\uAE38\uC5D0 \uD729\uC4F8\uB824 \uB5A0\uB0B4\uB824\uAC14\uC2B5\uB2C8\uB2E4. "
-    engText: 'The drowning girl fainted and was swept away by the current. '
-    japText: "\u6EBA\u308C\u305F\u5C11\u5973\u306F\u6C17\u3092\u5931\u3044\u3001\u6CE2\u306B\u6D41\u3055\u308C\u3066\u3044\u304D\u307E\u3057\u305F\u3002 "
-    itemSprite: {fileID: 21300000, guid: 31a7af336203f434a92103f74060832f, type: 3}
-    korExplain: "\uC870\uC2EC\uD558\uC138\uC694, \uBB3C\uC774 \uC62C\uB77C\uC624\uACE0
-      \uC788\uC2B5\uB2C8\uB2E4. \uD30C\uB3C4\uC5D0 \uD729\uC4F8\uB9AC\uC9C0 \uC54A\uB294
-      \uBC29\uBC95\uC740 \uC704\uB85C \uC62C\uB77C\uAC00\uB294 \uAC83\uBFD0\uC785\uB2C8\uB2E4."
-    engExplain: Watch out, the water is rising. The only way to avoid being swept
-      away by the waves is to go up.
-    japExplain: "\u6C17\u3092\u3064\u3051\u3066\u3001\u6C34\u304C\u4E0A\u304C\u3063\u3066\u3044\u307E\u3059\u3002
-      \u6CE2\u306B\u5DFB\u304D\u8FBC\u307E\u308C\u306A\u3044\u65B9\u6CD5\u306F\u4E0A\u306B\u4E0A\u304C\u308B\u3060\u3051\u3067\u3059\u3002"
-    itemType: 5
-    needWholeCam: 1
-    transparentMaterial: 1
-    opaqueAlphaClipMaterial: 0
-    bgObject: {fileID: 104675156}
-    renderers: []
-    isShown: 0
-  - prefab: {fileID: 1886797856406526305, guid: 6abe8bf0adc3f3a4ca153aa010cde49d, type: 3}
-    itemCount: 3
-    isVisited: 0
-    korText: "\uC5F0\uC8FC\uAC00 \uB05D\uB098\uC790 \uD1A0\uB07C\uB294 \uC2DC\uACC4\uC640
-      \uD55C\uCABD \uACF5\uAC04\uC744 \uAC00\uB9AC\uD0A4\uBA74\uC11C \uC774\uC820
-      \uAC00\uC57C\uD55C\uB2E4\uACE0 \uB9D0\uD588\uC2B5\uB2C8\uB2E4. \uD1A0\uB07C\uAC00
-      \uAC00\uB9AC\uD0A8 \uADF8 \uACF5\uAC04\uC744 \uBC14\uB77C \uBCF4\uB2C8 \uACF5\uAC04\uC774
-      \uB4A4\uD2C0\uB9AC\uACE0 \uC788\uC5C8\uC2B5\uB2C8\uB2E4. "
-    engText: 'At the end of the performance, the rabbit pointed to the clock and
-      one side and said he had to leave now. Looking at the spacee that the rabbit
-      pointed out, the space was twisted. '
-    japText: "\u6F14\u594F\u304C\u7D42\u308F\u308B\u3068\u3001\u30A6\u30B5\u30AE\u306F\u6642\u8A08\u3092\u6301\u3063\u3066\u3042\u308B\u65B9\u5411\u3092\u6307\u5DEE\u3057\u306A\u304C\u3089\u3001\u3082\u3046\u884C\u304B\u306A\u3051\u308C\u3070\u306A\u3089\u306A\u3044\u3068\u8A00\u3044\u307E\u3057\u305F\u3002
-      \u30A6\u30B5\u30AE\u304C\u6307\u3057\u305F\u305D\u306E\u5148\u3092\u898B\u3064\u3081\u308B\u3068\u3001\u7A7A\u9593\u304C\u6B6A\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
-    itemSprite: {fileID: 21300000, guid: ed8383ca655dc3d47a12997d34913b38, type: 3}
-    korExplain: "\uC2DC\uACC4\uB294 \uC2DC\uAC04\uC744 \uB3CC\uB824, \uB2F9\uC2E0\uC758
-      \uBAB8\uC744 \uAC00\uBCCD\uAC8C  \uB9CC\uB4E4\uC5B4 \uC904 \uAC81\uB2C8\uB2E4.
-      \uD558\uC9C0\uB9CC \uC870\uC2EC\uD558\uC138\uC694. \uADF8 \uB300\uAC00\uB294
-      \uC27D\uC9C0 \uC54A\uC744 \uAC81\uB2C8\uB2E4."
-    engExplain: The clock will turn back time and make your body lighter. But be
-      careful. The price won't be easy.
-    japExplain: "\u6642\u8A08\u306F\u6642\u9593\u3092\u56DE\u3057\u3066\u3001\u3042\u306A\u305F\u306E\u4F53\u3092\u8EFD\u304F\u3057\u3066\u304F\u308C\u308B\u3067\u3057\u3087\u3046\u3002
-      \u3057\u304B\u3057\u3001\u6CE8\u610F\u3057\u3066\u304F\u3060\u3055\u3044\u3002
-      \u305D\u306E\u5BFE\u4FA1\u306F\u5BB9\u6613\u3067\u306F\u306A\u3044\u3067\u3057\u3087\u3046\u3002"
-    itemType: 0
-    needWholeCam: 0
-    transparentMaterial: 1
-    opaqueAlphaClipMaterial: 0
-    bgObject: {fileID: 1591650753}
-    renderers: []
-    isShown: 0
   - prefab: {fileID: 5337970322375770073, guid: dd94b6016f523fd43b8cfc7b0bebfaf9, type: 3}
     itemCount: 3
     isVisited: 0
@@ -8449,35 +8397,6 @@ MonoBehaviour:
     transparentMaterial: 1
     opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 226081294}
-    renderers: []
-    isShown: 0
-  - prefab: {fileID: 1084897196651440658, guid: 8b6fa87c60597224286e1343420484d5, type: 3}
-    itemCount: 3
-    isVisited: 0
-    korText: "\uAE30\uCC28\uB294 \uAD6C\uB984 \uC18D\uC73C\uB85C \uC11C\uC11C\uD788
-      \uB4E4\uC5B4\uAC14\uACE0 \uACE7 \uAE30\uCC28\uC758 \uCC3D\uBB38 \uBC16\uC740
-      \uD558\uC580 \uAD6C\uB984\uC73C\uB85C \uCC44\uC6CC\uC84C\uC2B5\uB2C8\uB2E4.
-      \uAE30\uCC28\uC5D0\uC11C \uB0B4\uB9AC\uC790 \uC18C\uB140\uC758 \uBC1C \uBC11\uC740
-      \uAD6C\uB984\uC774\uC5C8\uACE0 \uD558\uB298\uC5D0\uB294 \uB2EC\uC774 \uB5A0
-      \uC788\uC5C8\uC2B5\uB2C8\uB2E4. "
-    engText: 'The train slowly entered into the clouds, and soon the view outside
-      the window was filled with white clouds. When the girl stepped off the trainn,
-      beneath her feet was a clouds and the moon hung in the sky. '
-    japText: "\u96FB\u8ECA\u306F\u5F90\u3005\u306B\u96F2\u306E\u4E2D\u3078\u5165\u308A\u3001\u96FB\u8ECA\u306E\u7A93\u304B\u3089\u898B\u305F\u5916\u306E\u666F\u8272\u306F\u767D\u3044\u96F2\u3067\u3044\u3063\u3071\u3044\u306B\u306A\u3063\u3066\u3044\u307E\u3057\u305F\u3002
-      \u96FB\u8ECA\u304B\u3089\u964D\u308A\u308B\u3068\u3001\u5730\u9762\u304C\u3059\u3079\u3066\u96F2\u306B\u306A\u3063\u3066\u3044\u3066\u3001\u7A7A\u306B\u306F\u6708\u304C\u6D6E\u304B\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
-    itemSprite: {fileID: 21300000, guid: 252c93b508c2d23418ba633662b692d4, type: 3}
-    korExplain: "\uAD6C\uB984 \uBC1C\uD310\uC740 \uB2F9\uC2E0\uC744 \uC704\uB85C
-      \uC62C\uB824\uC904 \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uD558\uC9C0\uB9CC \uD070
-      \uAD6C\uB984\uB4E4\uC740 \uB2F9\uC2E0\uC744 \uBC29\uD574\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
-    engExplain: Cloud scaffolding can lift you upwards. But big clouds can get in
-      your way.
-    japExplain: "\u96F2\u306E\u8DB3\u5834\u306F\u3042\u306A\u305F\u3092\u4E0A\u3052\u308B\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002
-      \u3057\u304B\u3057\u3001\u5927\u304D\u306A\u96F2\u306F\u3042\u306A\u305F\u3092\u59A8\u3052\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002"
-    itemType: 6
-    needWholeCam: 0
-    transparentMaterial: 1
-    opaqueAlphaClipMaterial: 0
-    bgObject: {fileID: 162475445}
     renderers: []
     isShown: 0
   - prefab: {fileID: 1886797856406526305, guid: 5f6126bfbc7d52c4fa6c9d4d12d78f6f, type: 3}
@@ -8554,6 +8473,63 @@ MonoBehaviour:
     bgObject: {fileID: 478959302}
     renderers: []
     isShown: 0
+  - prefab: {fileID: 1886797856406526305, guid: bea3fe1109884b34dba1d1e0dcda3d41, type: 3}
+    itemCount: 3
+    isVisited: 0
+    korText: "\uBB3C\uC5D0 \uBE60\uC9C4 \uC18C\uB140\uB294 \uC815\uC2E0\uC744 \uC783\uACE0
+      \uBB3C\uAE38\uC5D0 \uD729\uC4F8\uB824 \uB5A0\uB0B4\uB824\uAC14\uC2B5\uB2C8\uB2E4. "
+    engText: 'The drowning girl fainted and was swept away by the current. '
+    japText: "\u6EBA\u308C\u305F\u5C11\u5973\u306F\u6C17\u3092\u5931\u3044\u3001\u6CE2\u306B\u6D41\u3055\u308C\u3066\u3044\u304D\u307E\u3057\u305F\u3002 "
+    itemSprite: {fileID: 21300000, guid: 31a7af336203f434a92103f74060832f, type: 3}
+    korExplain: "\uC870\uC2EC\uD558\uC138\uC694, \uBB3C\uC774 \uC62C\uB77C\uC624\uACE0
+      \uC788\uC2B5\uB2C8\uB2E4. \uD30C\uB3C4\uC5D0 \uD729\uC4F8\uB9AC\uC9C0 \uC54A\uB294
+      \uBC29\uBC95\uC740 \uC704\uB85C \uC62C\uB77C\uAC00\uB294 \uAC83\uBFD0\uC785\uB2C8\uB2E4."
+    engExplain: Watch out, the water is rising. The only way to avoid being swept
+      away by the waves is to go up.
+    japExplain: "\u6C17\u3092\u3064\u3051\u3066\u3001\u6C34\u304C\u4E0A\u304C\u3063\u3066\u3044\u307E\u3059\u3002
+      \u6CE2\u306B\u5DFB\u304D\u8FBC\u307E\u308C\u306A\u3044\u65B9\u6CD5\u306F\u4E0A\u306B\u4E0A\u304C\u308B\u3060\u3051\u3067\u3059\u3002"
+    itemType: 5
+    needWholeCam: 1
+    transparentMaterial: 1
+    opaqueAlphaClipMaterial: 0
+    bgObject: {fileID: 104675156}
+    renderers: []
+    isShown: 0
+  - prefab: {fileID: 9048971040173981333, guid: 48d311d19e003034aad3ad73d0f5d77a, type: 3}
+    itemCount: 3
+    isVisited: 0
+    korText: "\uC88B\uC740 \uD5A5\uC774 \uC18C\uB140\uB97C \uAE68\uC6E0\uC2B5\uB2C8\uB2E4.
+      \uB208\uC744 \uB72C \uC18C\uB140\uB294 \uBB3C \uC704\uC5D0 \uB5A0 \uC788\uB294
+      \uC5F0\uAF43 \uC18D\uC5D0 \uC788\uC5C8\uC2B5\uB2C8\uB2E4. \uC5F0\uAF43\uC740
+      \uB9C8\uCE58 \uC18C\uB140\uB97C \uBCF4\uD638\uD558\uB294 \uAC83\uCC98\uB7FC
+      \uBCF4\uC600\uC8E0. \uC790\uC2E0\uC774 \uC81C\uC77C \uC88B\uC544\uD558\uB294
+      \uAF43 \uC18D\uC5D0 \uC788\uB294 \uD604\uC7AC\uC758 \uC0C1\uD669\uC774 \uC18C\uB140\uB294
+      \uBE44\uD604\uC2E4\uC801\uC774\uB77C\uACE0 \uB290\uAEF4\uC84C\uC2B5\uB2C8\uB2E4. "
+    engText: 'After a while, a dreamy scent woke the girl up. She opened her eyes
+      and noticed that she was in a lotus flower floating on the water. The lotus
+      flower seemed to protect her from danger. The girl felt that her current situation,
+      nestled within her favorite flowers, seemed surreal to her. '
+    japText: "\u5C11\u5973\u306F\u3044\u3044\u9999\u308A\u306B\u76EE\u3092\u899A\u307E\u3057\u307E\u3057\u305F\u3002
+      \u5C11\u5973\u306F\u3001\u6C34\u306E\u4E0A\u306B\u6D6E\u304B\u3093\u3067\u3044\u308B\u84EE\u306E\u82B1\u306E\u4E2D\u306B\u3044\u307E\u3057\u305F\u3002
+      \u84EE\u306E\u82B1\u306F\u307E\u308B\u3067\u5C11\u5973\u3092\u5B88\u3063\u3066\u3044\u308B\u3088\u3046\u306B\u898B\u3048\u307E\u3057\u305F\u3002
+      \u81EA\u5206\u304C\u4E00\u756A\u597D\u304D\u306A\u82B1\u306E\u4E2D\u306B\u3044\u308B\u306A\u3093\u3066\u3002\u5C11\u5973\u306F\u4ECA\u306E\u72B6\u6CC1\u304C\u975E\u73FE\u5B9F\u7684\u3060\u3068\u601D\u3044\u307E\u3057\u305F\u3002 "
+    itemSprite: {fileID: 21300000, guid: 795a684d04c8ba64e92c1dda44fb7f0b, type: 3}
+    korExplain: "\uC5F0\uAF43\uC740 \uB2F9\uC2E0\uC744 \uC704\uAE30\uC5D0\uC11C \uAD6C\uD574\uC904
+      \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uD558\uC9C0\uB9CC \uC870\uC2EC\uD558\uC138\uC694.
+      \uBC14\uB78C\uC744 \uB530\uB77C \uD718\uB0A0\uB9AC\uB294 \uAF43\uC78E\uB4E4\uC740
+      \uB2F9\uC2E0\uC758 \uBAB8\uC744 \uBB34\uAC81\uAC8C \uB9CC\uB4E4 \uAC81\uB2C8\uB2E4."
+    engExplain: The lotus flower can save you from danger. But be careful. The flower
+      petals blowing in the wind will make your body heavy.
+    japExplain: "\u84EE\u306E\u82B1\u306F\u3042\u306A\u305F\u3092\u5371\u6A5F\u304B\u3089\u6551\u3046\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002
+      \u3057\u304B\u3057\u3001\u6CE8\u610F\u3057\u3066\u304F\u3060\u3055\u3044\u3002
+      \u98A8\u306B\u6CBF\u3063\u3066\u5439\u304F\u82B1\u3073\u3089\u306F\u3042\u306A\u305F\u306E\u4F53\u3092\u91CD\u304F\u3059\u308B\u3067\u3057\u3087\u3046\u3002"
+    itemType: 1
+    needWholeCam: 0
+    transparentMaterial: 1
+    opaqueAlphaClipMaterial: 0
+    bgObject: {fileID: 5574624024233960966}
+    renderers: []
+    isShown: 0
   - prefab: {fileID: 7223446109375240118, guid: e1c0081ae197a4646bc4fc5aea6c8410, type: 3}
     itemCount: 3
     isVisited: 0
@@ -8597,41 +8573,6 @@ MonoBehaviour:
     bgObject: {fileID: 496606860}
     renderers: []
     isShown: 0
-  - prefab: {fileID: 9048971040173981333, guid: 48d311d19e003034aad3ad73d0f5d77a, type: 3}
-    itemCount: 3
-    isVisited: 0
-    korText: "\uC88B\uC740 \uD5A5\uC774 \uC18C\uB140\uB97C \uAE68\uC6E0\uC2B5\uB2C8\uB2E4.
-      \uB208\uC744 \uB72C \uC18C\uB140\uB294 \uBB3C \uC704\uC5D0 \uB5A0 \uC788\uB294
-      \uC5F0\uAF43 \uC18D\uC5D0 \uC788\uC5C8\uC2B5\uB2C8\uB2E4. \uC5F0\uAF43\uC740
-      \uB9C8\uCE58 \uC18C\uB140\uB97C \uBCF4\uD638\uD558\uB294 \uAC83\uCC98\uB7FC
-      \uBCF4\uC600\uC8E0. \uC790\uC2E0\uC774 \uC81C\uC77C \uC88B\uC544\uD558\uB294
-      \uAF43 \uC18D\uC5D0 \uC788\uB294 \uD604\uC7AC\uC758 \uC0C1\uD669\uC774 \uC18C\uB140\uB294
-      \uBE44\uD604\uC2E4\uC801\uC774\uB77C\uACE0 \uB290\uAEF4\uC84C\uC2B5\uB2C8\uB2E4. "
-    engText: 'After a while, a dreamy scent woke the girl up. She opened her eyes
-      and noticed that she was in a lotus flower floating on the water. The lotus
-      flower seemed to protect her from danger. The girl felt that her current situation,
-      nestled within her favorite flowers, seemed surreal to her. '
-    japText: "\u5C11\u5973\u306F\u3044\u3044\u9999\u308A\u306B\u76EE\u3092\u899A\u307E\u3057\u307E\u3057\u305F\u3002
-      \u5C11\u5973\u306F\u3001\u6C34\u306E\u4E0A\u306B\u6D6E\u304B\u3093\u3067\u3044\u308B\u84EE\u306E\u82B1\u306E\u4E2D\u306B\u3044\u307E\u3057\u305F\u3002
-      \u84EE\u306E\u82B1\u306F\u307E\u308B\u3067\u5C11\u5973\u3092\u5B88\u3063\u3066\u3044\u308B\u3088\u3046\u306B\u898B\u3048\u307E\u3057\u305F\u3002
-      \u81EA\u5206\u304C\u4E00\u756A\u597D\u304D\u306A\u82B1\u306E\u4E2D\u306B\u3044\u308B\u306A\u3093\u3066\u3002\u5C11\u5973\u306F\u4ECA\u306E\u72B6\u6CC1\u304C\u975E\u73FE\u5B9F\u7684\u3060\u3068\u601D\u3044\u307E\u3057\u305F\u3002 "
-    itemSprite: {fileID: 21300000, guid: 795a684d04c8ba64e92c1dda44fb7f0b, type: 3}
-    korExplain: "\uC5F0\uAF43\uC740 \uB2F9\uC2E0\uC744 \uC704\uAE30\uC5D0\uC11C \uAD6C\uD574\uC904
-      \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uD558\uC9C0\uB9CC \uC870\uC2EC\uD558\uC138\uC694.
-      \uBC14\uB78C\uC744 \uB530\uB77C \uD718\uB0A0\uB9AC\uB294 \uAF43\uC78E\uB4E4\uC740
-      \uB2F9\uC2E0\uC758 \uBAB8\uC744 \uBB34\uAC81\uAC8C \uB9CC\uB4E4 \uAC81\uB2C8\uB2E4."
-    engExplain: The lotus flower can save you from danger. But be careful. The flower
-      petals blowing in the wind will make your body heavy.
-    japExplain: "\u84EE\u306E\u82B1\u306F\u3042\u306A\u305F\u3092\u5371\u6A5F\u304B\u3089\u6551\u3046\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002
-      \u3057\u304B\u3057\u3001\u6CE8\u610F\u3057\u3066\u304F\u3060\u3055\u3044\u3002
-      \u98A8\u306B\u6CBF\u3063\u3066\u5439\u304F\u82B1\u3073\u3089\u306F\u3042\u306A\u305F\u306E\u4F53\u3092\u91CD\u304F\u3059\u308B\u3067\u3057\u3087\u3046\u3002"
-    itemType: 1
-    needWholeCam: 0
-    transparentMaterial: 1
-    opaqueAlphaClipMaterial: 0
-    bgObject: {fileID: 5574624024233960966}
-    renderers: []
-    isShown: 0
   - prefab: {fileID: 1993416602313422098, guid: 838abeefcb2881c488d810a12f1383cd, type: 3}
     itemCount: 3
     isVisited: 0
@@ -8666,6 +8607,36 @@ MonoBehaviour:
     bgObject: {fileID: 44976230}
     renderers: []
     isShown: 0
+  - prefab: {fileID: 1886797856406526305, guid: 6abe8bf0adc3f3a4ca153aa010cde49d, type: 3}
+    itemCount: 3
+    isVisited: 0
+    korText: "\uC5F0\uC8FC\uAC00 \uB05D\uB098\uC790 \uD1A0\uB07C\uB294 \uC2DC\uACC4\uC640
+      \uD55C\uCABD \uACF5\uAC04\uC744 \uAC00\uB9AC\uD0A4\uBA74\uC11C \uC774\uC820
+      \uAC00\uC57C\uD55C\uB2E4\uACE0 \uB9D0\uD588\uC2B5\uB2C8\uB2E4. \uD1A0\uB07C\uAC00
+      \uAC00\uB9AC\uD0A8 \uADF8 \uACF5\uAC04\uC744 \uBC14\uB77C \uBCF4\uB2C8 \uACF5\uAC04\uC774
+      \uB4A4\uD2C0\uB9AC\uACE0 \uC788\uC5C8\uC2B5\uB2C8\uB2E4. "
+    engText: 'At the end of the performance, the rabbit pointed to the clock and
+      one side and said he had to leave now. Looking at the spacee that the rabbit
+      pointed out, the space was twisted. '
+    japText: "\u6F14\u594F\u304C\u7D42\u308F\u308B\u3068\u3001\u30A6\u30B5\u30AE\u306F\u6642\u8A08\u3092\u6301\u3063\u3066\u3042\u308B\u65B9\u5411\u3092\u6307\u5DEE\u3057\u306A\u304C\u3089\u3001\u3082\u3046\u884C\u304B\u306A\u3051\u308C\u3070\u306A\u3089\u306A\u3044\u3068\u8A00\u3044\u307E\u3057\u305F\u3002
+      \u30A6\u30B5\u30AE\u304C\u6307\u3057\u305F\u305D\u306E\u5148\u3092\u898B\u3064\u3081\u308B\u3068\u3001\u7A7A\u9593\u304C\u6B6A\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
+    itemSprite: {fileID: 21300000, guid: ed8383ca655dc3d47a12997d34913b38, type: 3}
+    korExplain: "\uC2DC\uACC4\uB294 \uC2DC\uAC04\uC744 \uB3CC\uB824, \uB2F9\uC2E0\uC758
+      \uBAB8\uC744 \uAC00\uBCCD\uAC8C  \uB9CC\uB4E4\uC5B4 \uC904 \uAC81\uB2C8\uB2E4.
+      \uD558\uC9C0\uB9CC \uC870\uC2EC\uD558\uC138\uC694. \uADF8 \uB300\uAC00\uB294
+      \uC27D\uC9C0 \uC54A\uC744 \uAC81\uB2C8\uB2E4."
+    engExplain: The clock will turn back time and make your body lighter. But be
+      careful. The price won't be easy.
+    japExplain: "\u6642\u8A08\u306F\u6642\u9593\u3092\u56DE\u3057\u3066\u3001\u3042\u306A\u305F\u306E\u4F53\u3092\u8EFD\u304F\u3057\u3066\u304F\u308C\u308B\u3067\u3057\u3087\u3046\u3002
+      \u3057\u304B\u3057\u3001\u6CE8\u610F\u3057\u3066\u304F\u3060\u3055\u3044\u3002
+      \u305D\u306E\u5BFE\u4FA1\u306F\u5BB9\u6613\u3067\u306F\u306A\u3044\u3067\u3057\u3087\u3046\u3002"
+    itemType: 0
+    needWholeCam: 0
+    transparentMaterial: 1
+    opaqueAlphaClipMaterial: 0
+    bgObject: {fileID: 1591650753}
+    renderers: []
+    isShown: 0
   - prefab: {fileID: 2979148573529765494, guid: 1cd63fbcd3a2c7c4cad157e9a55e40e6, type: 3}
     itemCount: 3
     isVisited: 0
@@ -8698,6 +8669,35 @@ MonoBehaviour:
     transparentMaterial: 1
     opaqueAlphaClipMaterial: 0
     bgObject: {fileID: 1425066098}
+    renderers: []
+    isShown: 0
+  - prefab: {fileID: 1084897196651440658, guid: 8b6fa87c60597224286e1343420484d5, type: 3}
+    itemCount: 3
+    isVisited: 0
+    korText: "\uAE30\uCC28\uB294 \uAD6C\uB984 \uC18D\uC73C\uB85C \uC11C\uC11C\uD788
+      \uB4E4\uC5B4\uAC14\uACE0 \uACE7 \uAE30\uCC28\uC758 \uCC3D\uBB38 \uBC16\uC740
+      \uD558\uC580 \uAD6C\uB984\uC73C\uB85C \uCC44\uC6CC\uC84C\uC2B5\uB2C8\uB2E4.
+      \uAE30\uCC28\uC5D0\uC11C \uB0B4\uB9AC\uC790 \uC18C\uB140\uC758 \uBC1C \uBC11\uC740
+      \uAD6C\uB984\uC774\uC5C8\uACE0 \uD558\uB298\uC5D0\uB294 \uB2EC\uC774 \uB5A0
+      \uC788\uC5C8\uC2B5\uB2C8\uB2E4. "
+    engText: 'The train slowly entered into the clouds, and soon the view outside
+      the window was filled with white clouds. When the girl stepped off the trainn,
+      beneath her feet was a clouds and the moon hung in the sky. '
+    japText: "\u96FB\u8ECA\u306F\u5F90\u3005\u306B\u96F2\u306E\u4E2D\u3078\u5165\u308A\u3001\u96FB\u8ECA\u306E\u7A93\u304B\u3089\u898B\u305F\u5916\u306E\u666F\u8272\u306F\u767D\u3044\u96F2\u3067\u3044\u3063\u3071\u3044\u306B\u306A\u3063\u3066\u3044\u307E\u3057\u305F\u3002
+      \u96FB\u8ECA\u304B\u3089\u964D\u308A\u308B\u3068\u3001\u5730\u9762\u304C\u3059\u3079\u3066\u96F2\u306B\u306A\u3063\u3066\u3044\u3066\u3001\u7A7A\u306B\u306F\u6708\u304C\u6D6E\u304B\u3093\u3067\u3044\u307E\u3057\u305F\u3002 "
+    itemSprite: {fileID: 21300000, guid: 252c93b508c2d23418ba633662b692d4, type: 3}
+    korExplain: "\uAD6C\uB984 \uBC1C\uD310\uC740 \uB2F9\uC2E0\uC744 \uC704\uB85C
+      \uC62C\uB824\uC904 \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uD558\uC9C0\uB9CC \uD070
+      \uAD6C\uB984\uB4E4\uC740 \uB2F9\uC2E0\uC744 \uBC29\uD574\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+    engExplain: Cloud scaffolding can lift you upwards. But big clouds can get in
+      your way.
+    japExplain: "\u96F2\u306E\u8DB3\u5834\u306F\u3042\u306A\u305F\u3092\u4E0A\u3052\u308B\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002
+      \u3057\u304B\u3057\u3001\u5927\u304D\u306A\u96F2\u306F\u3042\u306A\u305F\u3092\u59A8\u3052\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002"
+    itemType: 6
+    needWholeCam: 0
+    transparentMaterial: 1
+    opaqueAlphaClipMaterial: 0
+    bgObject: {fileID: 162475445}
     renderers: []
     isShown: 0
   itemsDistance: 60
@@ -50382,7 +50382,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: 3e-45, y: 1e-45, z: -0, w: 1}
+  m_LocalRotation: {x: -1e-45, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -55630,7 +55630,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072907047}
-  m_LocalRotation: {x: -3e-45, y: 1e-45, z: -0, w: 1}
+  m_LocalRotation: {x: 1e-45, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: 105.5, y: -190.30002, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
