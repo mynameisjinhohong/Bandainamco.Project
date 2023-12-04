@@ -174,6 +174,10 @@ public class GameManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name != "LoadingScene")
         {
+            if(!myaudio.enabled)
+            {
+                myaudio.enabled = true;
+            }
             if (LoadingManager_HJH.nextScene == "StartScene")
             {
                 myaudio.clip = bgms[0];
