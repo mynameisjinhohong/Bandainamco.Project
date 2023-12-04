@@ -174,9 +174,16 @@ public class StageManager_HJH : MonoBehaviour
         {
             tuto.SetActive(false);
         }
-        if (optionCanvas.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            OptionOff();
+            if (optionCanvas.activeInHierarchy)
+            {
+                OptionOff();
+            }
+            else if(yetCanvas.activeInHierarchy)
+            {
+                YetOff();
+            }
         }
     }
 
