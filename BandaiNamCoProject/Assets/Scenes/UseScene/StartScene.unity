@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1467340140}
+  m_SkyboxMaterial: {fileID: 1486286867}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45353204, g: 0.23286103, b: 0.330271, a: 1}
+  m_IndirectSpecularColor: {r: 0.45288584, g: 0.23347232, b: 0.33082408, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3259,7 +3259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ko: {fileID: 11400000, guid: 7f8da8d67c5b58645b785a804200c993, type: 2}
-  ja: {fileID: 11400000, guid: cb4168eaddf0291419cb7fd2377ba0d3, type: 2}
+  ja: {fileID: 11400000, guid: 0cf2652a832debf4793d96c37ae52f20, type: 2}
   en: {fileID: 11400000, guid: c1c811cc97b2f4a46b4a874d0f105a4c, type: 2}
 --- !u!1 &1105212702
 GameObject:
@@ -4882,7 +4882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
---- !u!21 &1467340140
+--- !u!21 &1486286867
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
