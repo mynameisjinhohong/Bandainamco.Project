@@ -119,6 +119,7 @@ public class ClockBG_YD : MonoBehaviour
             yield return null;
 
         }
+        ob.transform.rotation = Quaternion.Euler(0, 0, targetE);
         ItemManager_LJH.Instance.isClockRotating = false;
 
         bool optionOff = true;
