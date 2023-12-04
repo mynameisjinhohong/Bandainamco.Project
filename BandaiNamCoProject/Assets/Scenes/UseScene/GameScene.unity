@@ -256,7 +256,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &6648026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -717,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -14.327881}
-  m_SizeDelta: {x: 637.6597, y: 637.6597}
+  m_AnchoredPosition: {x: 1.4713, y: -14.1327}
+  m_SizeDelta: {x: 745.8289, y: 637.2693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31857247
 MonoBehaviour:
@@ -1846,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766004552050422644, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: jumpPowerPlus
-      value: 2.5
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7489278491407546567, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: m_Sprite
@@ -4618,7 +4618,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &209815595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4751,7 +4751,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &220650278
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5944,7 +5944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766004552050422644, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: jumpPowerPlus
-      value: 2.5
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7489278491407546567, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: m_Sprite
@@ -6140,7 +6140,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &277582728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6772,7 +6772,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440879978}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &310670355
 AudioSource:
@@ -8240,7 +8240,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &387284131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10176,7 +10176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766004552050422644, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: jumpPowerPlus
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7489278491407546567, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: m_Sprite
@@ -14087,7 +14087,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1440879978}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &640009687
 AudioSource:
@@ -21091,7 +21091,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &726646135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21340,7 +21340,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &737796395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23798,7 +23798,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &824858761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23926,7 +23926,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &827387367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24130,7 +24130,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &837441118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24359,7 +24359,7 @@ MonoBehaviour:
   startPos: {fileID: 1731087527}
   endPos: {fileID: 2017845156}
   trainSpeed: 50
-  trainPower: 70
+  trainPower: 50
   rail: {fileID: 47036165}
 --- !u!82 &854132040
 AudioSource:
@@ -26173,7 +26173,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &925951045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26454,6 +26454,7 @@ GameObject:
   - component: {fileID: 942882366}
   - component: {fileID: 942882368}
   - component: {fileID: 942882369}
+  - component: {fileID: 942882370}
   m_Layer: 5
   m_Name: Good Ending
   m_TagString: Untagged
@@ -26517,6 +26518,102 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &942882370
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942882365}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6090d0d5b80d9dd44a48828841886b12, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &943350213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27316,7 +27413,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &992374548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27554,7 +27651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766004552050422644, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: jumpPowerPlus
-      value: 2.5
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7489278491407546567, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: m_Sprite
@@ -28685,7 +28782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766004552050422644, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: jumpPowerPlus
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7489278491407546567, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: m_Sprite
@@ -29024,7 +29121,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1043332242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30944,7 +31041,7 @@ RectTransform:
   m_GameObject: {fileID: 1155848153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4560329, y: 0.4560329, z: 0.4560329}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 36035154}
@@ -30952,8 +31049,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 314.5277, y: 479.8759}
+  m_AnchoredPosition: {x: 7.8, y: -10.5578}
+  m_SizeDelta: {x: 800, y: 1002.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155848155
 MonoBehaviour:
@@ -31126,7 +31223,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1167032181
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32266,7 +32363,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1215594187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33240,7 +33337,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1275192007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35796,134 +35893,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a913a0cd26c21409f7258b92189546, type: 3}
---- !u!1 &1366936412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1366936413}
-  - component: {fileID: 1366936414}
-  m_Layer: 0
-  m_Name: EndingSound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1366936413
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366936412}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1440879978}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1366936414
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366936412}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6090d0d5b80d9dd44a48828841886b12, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1375491346
 GameObject:
   m_ObjectHideFlags: 0
@@ -37071,7 +37040,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1256021965}
-  - {fileID: 1366936413}
   - {fileID: 640009686}
   - {fileID: 310670354}
   m_Father: {fileID: 0}
@@ -38447,7 +38415,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1522091835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38884,7 +38852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766004552050422644, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: jumpPowerPlus
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7489278491407546567, guid: 89020ad2a6d65904084bcf6fed7ade75, type: 3}
       propertyPath: m_Sprite
@@ -40007,7 +39975,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1571788270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48107,7 +48075,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1730304108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49588,7 +49556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInit: 0
   gameOverSound: {fileID: 1256021966}
-  endingSound: {fileID: 1366936414}
+  endingSound: {fileID: 942882370}
   characterMovement2D: {fileID: 1949789410}
   player: {fileID: 1949789408}
   emptyBgSpriteRenderer: {fileID: 2016071354}
@@ -50414,7 +50382,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820429441}
-  m_LocalRotation: {x: -1e-45, y: 1e-45, z: -0, w: 1}
+  m_LocalRotation: {x: 3e-45, y: 1e-45, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: -223.70001, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -52904,7 +52872,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 0
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &1965920632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53793,7 +53761,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &2019441448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56504,7 +56472,7 @@ MonoBehaviour:
   moveOffset: 50
   moveSecMinMax: {x: 5, y: 15}
   moveState: 1
-  addVelocity: 17
+  addVelocity: 12
 --- !u!61 &2105226793
 BoxCollider2D:
   m_ObjectHideFlags: 0

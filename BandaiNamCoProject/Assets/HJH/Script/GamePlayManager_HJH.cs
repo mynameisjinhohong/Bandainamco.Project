@@ -65,8 +65,6 @@ public class GamePlayManager_HJH : ManagerBase
                 {
                     GameManager.instance.AudioOff();
                     GameManager.instance.userData.stage++;
-                    endingSound.Play();
-                    //일단 임시방편 endingSound제외 다 꺼버리기
                     for(int i =0; i<GameManager.instance.audios.Count; i++) 
                     {
                         if (GameManager.instance.audios[i] != endingSound)
