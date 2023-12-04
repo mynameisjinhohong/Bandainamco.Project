@@ -78,6 +78,12 @@ public class WaveCollider_LJH : MonoBehaviour
 
         while (elapsedTime < moveSec)
         {
+            if (ItemManager_LJH.Instance.isOkayToMoveCamera() == false)
+            {
+                //시계가 회전 중이라면, 회전이 끝날 때까지 대기
+                await UniTask.WaitUntil(() => ItemManager_LJH.Instance.isOkayToMoveCamera());
+            }
+
             //if (isCollided) break;
 
             elapsedTime += Time.deltaTime;
