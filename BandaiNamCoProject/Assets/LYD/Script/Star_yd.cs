@@ -71,6 +71,11 @@ public class Star_yd : BaseItem_LJH
         Vector3 oriPos = collision.transform.position;
         Vector3 starEffectPos = new Vector3(oriPos.x, oriPos.y + starDistance +54, oriPos.z);
 
+        if(ItemManager_LJH.Instance.isClockRotating)
+        {
+            await UniTask.Delay(3 *1000);
+
+        }
         GameObject effect = Instantiate(starEffect, starEffectPos, Quaternion.Euler(90, 0, 0), collision.transform.parent); //Quaternion.Euler(64, 64, 64));
         isStar = true;
         starEffectSound.Play();
