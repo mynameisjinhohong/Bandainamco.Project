@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using Cinemachine;
 public class CharacterMovement2D_LSW : MonoBehaviour
 {
+    public Transform playerPos; //초기위치
     //점프힘
     public GameObject jumpEffect;
     public Transform effectTransform;
@@ -75,6 +76,7 @@ public class CharacterMovement2D_LSW : MonoBehaviour
     public Vector3 startScale;
     private void Start()
     {
+        transform.position = playerPos.position;
         rb = GetComponentInChildren<Rigidbody2D>();
         ani = GetComponentInChildren<Animator>();
         minBoundary = new Vector2(-(DataManager.Instance.bgSize.x / 2), -(DataManager.Instance.bgSize.y / 2));
