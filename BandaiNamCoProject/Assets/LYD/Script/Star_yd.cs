@@ -77,17 +77,17 @@ public class Star_yd : BaseItem_LJH
             await UniTask.WaitUntil(() => ItemManager_LJH.Instance.isOkayToMoveCamera());
         }
 
-        //if(ItemManager_LJH.Instance.isClockRotating)
-        //{
-        //    await UniTask.Delay(3 *1000);
+        /* if(ItemManager_LJH.Instance.isClockRotating)
+         {
+             await UniTask.Delay(3 *1000);
 
-        //}
+         }*/
         GameObject effect = Instantiate(starEffect, starEffectPos, Quaternion.Euler(90, 0, 0), collision.transform.parent); //Quaternion.Euler(64, 64, 64));
         isStar = true;
         starEffectSound.Play();
         //Debug.Log(starEffectPos);
        await UniTask.Delay(1 * 1000);
-        Vector3 startPos = new Vector3(oriPos.x, oriPos.y + starDistance, oriPos.z);
+        Vector3 startPos = new Vector3(oriPos.x, oriPos.y + starDistance, -45);
 
         star = Instantiate(starImage, startPos, Quaternion.identity, collision.transform.parent); //, collision.transform);
         Debug.Log(star + "½ºÅ¸");
