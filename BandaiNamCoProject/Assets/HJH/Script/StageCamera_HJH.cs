@@ -277,6 +277,7 @@ public class StageCamera_HJH : MonoBehaviour
     public void QuitYes()
     {
         buttonSound.Play();
+        Time.timeScale = 1f;
         Invoke("GotoStartScene", 0.3f);
     }
 
