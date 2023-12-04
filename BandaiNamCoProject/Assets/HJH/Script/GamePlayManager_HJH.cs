@@ -172,6 +172,38 @@ public class GamePlayManager_HJH : ManagerBase
             CameraManager.Instance.SetCamera(CamValues.Character);
             SetEmptyBG();
         }
+        StringBuilder end = new StringBuilder();
+        if(endingType == EndingType.Good)
+        {
+            switch (GameManager.instance.userData.langaugeSet)
+            {
+                case 0:
+                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                    {
+                        end.Append(ItemManager_LJH.Instance.items[i].engText);
+                    }
+                    end.Append(enEndingText);
+                    endingAllText.text = end.ToString();
+                    break;
+                case 1:
+                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                    {
+                        end.Append(ItemManager_LJH.Instance.items[i].japText);
+                    }
+                    end.Append(jaEndingText);
+                    endingAllText.text = end.ToString();
+                    break;
+                case 2:
+                    for (int i = 0; i < ItemManager_LJH.Instance.items.Length; i++)
+                    {
+                        end.Append(ItemManager_LJH.Instance.items[i].korText);
+                    }
+                    end.Append(koEndingText);
+                    endingAllText.text = end.ToString();
+                    break;
+            }
+        }
+
     }
 
     // Update is called once per frame
